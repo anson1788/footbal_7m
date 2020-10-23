@@ -22,6 +22,8 @@ async function getCacheData(url, folder, cacheId , type ,isCache = true){
             rtnArr = await bfUtils.parseBFDailyList(dom)  
         }else if(type=="bfDetails"){
             rtnArr = await bfUtils.parseBFLiveMatchDetails(dom)  
+        }else if(type=="bfOdd"){
+            rtnArr = await bfUtils.parseOdd(dom)  
         }
         if(rtnArr.length>0){
             if (!fs.existsSync(folder)){
@@ -52,6 +54,10 @@ async function init(defaultRange=4){
             var url = bfDailyArr[j].url
             var inMatchData =  await getCacheData(url,"bfData/matchData/"+matchDate+"/",  bfDailyArr[j].id ,"bfDetails")
             matchData.inMatchData = inMatchData
+            
+
+            var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+bfDailyArr[j].id
+            var matchOddData =  await getCacheData(url,"bfData/odd/"+matchDate+"/",  bfDailyArr[j].id ,"bfOdd")
             
         }
 

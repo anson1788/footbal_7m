@@ -69,6 +69,40 @@ class bfWinUtils {
         return matchArr
     }
 
+
+    async parseOdd(crtDom){ 
+        var table = crtDom.window.document.querySelectorAll("#webmain table")[0]
+        var tr = table.querySelectorAll("tr")
+        var tmp = {}
+        for(var i=2;i<tr.length-2;i++){
+           var style = tr[i].getAttribute("style")
+           if (!(style+"").includes("none")){
+               var tds  = tr[i].querySelectorAll("td")
+               var tdsTxt = tds[0].textContent
+               if(tds.length==12){
+                    tmp [tdsTxt] = {
+                            "start":{
+                                "home":tds[2].textContent,
+                                "away":tds[4].textContent,
+                                "point":tds[3].textContent
+                            },
+                            "end":{
+                                "home":tds[8].textContent,
+                                "away":tds[10].textContent,
+                                "point":tds[9].textContent
+                            }
+                        }
+                    
+                   
+               }
+           }
+        }
+        
+        //console.log("---"+bfid+"---")
+        //console.log(tmp)
+        return [tmp]
+       
+    }
     async parseBFLiveMatchDetails(crtDom){
         var matchArr = {}   
         var table = crtDom.window.document.querySelectorAll("#teamTechDiv_detail table")[0]
