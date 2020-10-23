@@ -1,0 +1,66 @@
+[
+  {
+    "goal": {
+      "3+h": "25%",
+      "2+h": "20%",
+      "1+h": "40%",
+      "0+h": "15%",
+      "0+a": "10%",
+      "1+a": "40%",
+      "2+a": "25%",
+      "3+a": "25%"
+    },
+    "odd": {
+      "big": "0.9",
+      "point": "2.5/3",
+      "smal": "0.8"
+    },
+    "eventArr": [
+      {
+        "homeText": "入球",
+        "mins": "2",
+        "awayText": ""
+      },
+      {
+        "homeText": "入球",
+        "mins": "38",
+        "awayText": ""
+      },
+      {
+        "homeText": "入球",
+        "mins": "59",
+        "awayText": ""
+      },
+      {
+        "homeText": "入球",
+        "mins": "62",
+        "awayText": ""
+      },
+      {
+        "homeText": "",
+        "mins": "68",
+        "awayText": "入球"
+      },
+      {
+        "homeText": "",
+        "mins": "79",
+        "awayText": "紅牌"
+      },
+      {
+        "homeText": "",
+        "mins": "81",
+        "awayText": "紅牌"
+      },
+      {
+        "homeText": "入球",
+        "mins": "86",
+        "awayText": ""
+      },
+      {
+        "homeText": "入球",
+        "mins": "90",
+        "awayText": ""
+      }
+    ]
+  }
+]

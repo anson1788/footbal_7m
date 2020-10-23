@@ -36,7 +36,7 @@ async function getCacheData(url, folder, cacheId , type ,isCache = true){
     return rtnArr
 }
 
-async function init(defaultRange=4){
+async function init(defaultRange=50){
     for(var i=2;i<defaultRange;i++){
 
         var matchDate = bcUtils.generateDate(i)
