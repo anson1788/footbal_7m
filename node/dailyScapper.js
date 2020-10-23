@@ -56,15 +56,19 @@ async function init(defaultRange=50){
             matchData.matchData = matchDate
 
             if(bfDailyArr[i]["HomeFScore"]!=" "){
+                var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+bfDailyArr[j].id
+                var OddData =  await getCacheData(url,"bfData/odd/"+matchDate+"/",  bfDailyArr[j].id ,"bfOdd")
+                matchData.OddData = OddData
+            }
+
+            /*
+            if(bfDailyArr[i]["HomeFScore"]!=" "){
                 var url = bfDailyArr[j].url
                 var inMatchData =  await getCacheData(url,"bfData/matchData/"+matchDate+"/",  bfDailyArr[j].id ,"bfDetails")
                 matchData.inMatchData = inMatchData
             }
 
-            /*
-            var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+bfDailyArr[j].id
-            var OddData =  await getCacheData(url,"bfData/odd/"+matchDate+"/",  bfDailyArr[j].id ,"bfOdd")
-            matchData.OddData = OddData
+            
 
             var url = "http://zq.win007.com/analysis/"+bfDailyArr[j].id+".htm"
             var OddData =  await getCacheData(url,"bfData/history/"+matchDate+"/",  bfDailyArr[j].id ,"bfHistory")
