@@ -3,6 +3,78 @@ class bfWinUtils {
 
     constructor() {
     }
+    async parseBFHistory(crtDom){
+
+        var rtnVal = {}
+
+
+        var homeMatch = []
+        var matchList = crtDom.window.document.querySelectorAll("#table_hn")
+        if(matchList.length > 0){
+            var trs = matchList[0].querySelectorAll("tr")
+            for(var i=0;i<trs.length;i++){
+                var tds = trs[i].querySelectorAll("td")
+                if(tds.length==15){
+                   // console.log(tds[1].textContent + " " + tds[2].textContent)
+                    tds[3].textContent.split("(")[0].split("-")[0]
+                    tds[3].textContent.split("(")[0].split("-")[1]
+                    homeMatch.push({
+                        "league":tds[0].textContent,
+                        "home":tds[2].textContent,
+                        "away":tds[5].textContent,
+                        "date":tds[1].textContent,
+                        "hfs":tds[3].textContent.split("(")[0].split("-")[0],
+                        "afs":tds[3].textContent.split("(")[0].split("-")[1],
+                        "hhs":tds[3].textContent.split("(")[1].replace(")","").split("-")[0],
+                        "ahs":tds[3].textContent.split("(")[1].replace(")","").split("-")[1]
+                    })
+                }else{
+                  //  console.log(tds[0].textContent)
+                }
+            }
+        }
+        var awayMatch = []
+        var matchList = crtDom.window.document.querySelectorAll("#table_an")
+        if(matchList.length > 0){
+            var trs = matchList[0].querySelectorAll("tr")
+            for(var i=0;i<trs.length;i++){
+                var tds = trs[i].querySelectorAll("td")
+               // console.log(tds.length)
+                if(tds.length==15){
+                //    console.log(tds[1].textContent + " " + tds[2].textContent)
+                    tds[3].textContent.split("(")[0].split("-")[0]
+                    tds[3].textContent.split("(")[0].split("-")[1]
+                    awayMatch.push({
+                        "league":tds[0].textContent,
+                        "home":tds[2].textContent,
+                        "away":tds[5].textContent,
+                        "date":tds[1].textContent,
+                        "hfs":tds[3].textContent.split("(")[0].split("-")[0],
+                        "afs":tds[3].textContent.split("(")[0].split("-")[1],
+                        "hhs":tds[3].textContent.split("(")[1].replace(")","").split("-")[0],
+                        "ahs":tds[3].textContent.split("(")[1].replace(")","").split("-")[1]
+                    })
+                }else{
+                  //  console.log(tds[0].textContent)
+                }
+            }
+        }
+        if(homeMatch.length>0){
+            rtnVal["home"] = homeMatch
+        }
+        if(awayMatch.length>0){
+            rtnVal["away"] = awayMatch
+        }
+        var idx =0 
+        for(var id in rtnVal){
+            idx ++
+        }
+        if(idx>0){
+            return [rtnVal]    
+        }else{
+            return []
+        }
+    }
 
     async parseBFDailyList(crtDom){
   
@@ -100,7 +172,17 @@ class bfWinUtils {
         
         //console.log("---"+bfid+"---")
         //console.log(tmp)
-        return [tmp]
+
+        var idx =0 
+        for(var id in tmp){
+            idx ++
+        }
+        if(idx>0){
+            return [tmp]    
+        }else{
+            return []
+        }
+
        
     }
     async parseBFLiveMatchDetails(crtDom){

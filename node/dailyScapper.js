@@ -17,13 +17,16 @@ async function getCacheData(url, folder, cacheId , type ,isCache = true){
         let rawdata = fs.readFileSync(folder+cacheId+".json");
         rtnArr = JSON.parse(rawdata);   
     }else{        
-        dom = await bcUtils.getHttpDomAsyn(url)  
+        
+        dom = await bcUtils.getHttpDomAsyn(url,type) 
         if(type=="bflist"){
             rtnArr = await bfUtils.parseBFDailyList(dom)  
         }else if(type=="bfDetails"){
             rtnArr = await bfUtils.parseBFLiveMatchDetails(dom)  
         }else if(type=="bfOdd"){
             rtnArr = await bfUtils.parseOdd(dom)  
+        }else if(type=="bfHistory"){
+            rtnArr = await bfUtils.parseBFHistory(dom)  
         }
         if(rtnArr.length>0){
             if (!fs.existsSync(folder)){
@@ -57,8 +60,12 @@ async function init(defaultRange=4){
             
 
             var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+bfDailyArr[j].id
-            var matchOddData =  await getCacheData(url,"bfData/odd/"+matchDate+"/",  bfDailyArr[j].id ,"bfOdd")
-            
+            var OddData =  await getCacheData(url,"bfData/odd/"+matchDate+"/",  bfDailyArr[j].id ,"bfOdd")
+            matchData.OddData = OddData
+
+            var url = "http://zq.win007.com/analysis/"+bfDailyArr[j].id+".htm"
+            var OddData =  await getCacheData(url,"bfData/history/"+matchDate+"/",  bfDailyArr[j].id ,"bfHistory")
+            matchData.OddData = OddData 
         }
 
     }

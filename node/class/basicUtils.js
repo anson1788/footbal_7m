@@ -8,6 +8,7 @@ const { log } = require('console');
 
 let logError = true
 class basicUtils {
+   
     constructor() {
     }
     generateDate(minus=0, format="YYYYMMDD"){
@@ -16,9 +17,9 @@ class basicUtils {
 
 
 
-    async getHttpDomAsyn(url){
+    async getHttpDomAsyn(url, type){
         return new Promise(resolve=>{
-            this.getHttpDom(url).then(result=>{
+            this.getHttpDom(url,type).then(result=>{
                 resolve(result)
             })
         }).then(result =>{
@@ -27,7 +28,7 @@ class basicUtils {
       
     }
     
-   async getHttpDom(url){
+   async getHttpDom(url,type){
    
             const launchChrome = () =>
             chromeLauncher.launch({ chromeFlags: ['--disable-gpu', '--headless'] });
@@ -36,7 +37,7 @@ class basicUtils {
             try {
     
                 const {Network, Page, Runtime} = client;
-                var dom = await this.loadUrlJSOM(Network, Page,Runtime,url);
+                var dom = await this.loadUrlJSOM(Network, Page,Runtime,url,type);
                 client.close();
                 chrome.kill();
                 return dom
@@ -51,7 +52,7 @@ class basicUtils {
    
     }
   
-    async loadUrlJSOM(mNetwork, mPage,mRuntime,mUrl){
+    async loadUrlJSOM(mNetwork, mPage,mRuntime,mUrl,type){
         const timeout = ms => new Promise(resolve => setTimeout(resolve, ms))
         await mNetwork.enable();
         await mPage.enable();
@@ -59,9 +60,27 @@ class basicUtils {
         await mPage.loadEventFired();
         //console.log('Page loaded! Now waiting a few seconds for all the JS to load...');
         await timeout(1500) // give the JS some time to load
+        if(type=="bfHistory"){
+           await this.bfJS1(mRuntime);
+           await this.bfJS2(mRuntime);
+        }
         const a = await this.f(mRuntime);
+       
         const dom = new JSDOM(a);
         return dom;
+    }
+
+    async bfJS1(b) {
+        return b.evaluate({expression: 'document.getElementById("hn_t").click()'}).then((result) => {
+            const a = result.result.value;
+            return a;
+        });
+    }
+    async bfJS2(b) {
+        return b.evaluate({expression: 'document.getElementById("an_t").click()'}).then((result) => {
+            const a = result.result.value;
+            return a;
+        });
     }
 
     async f(b) {
