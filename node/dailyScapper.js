@@ -49,16 +49,19 @@ async function init(defaultRange=4){
             bcUtils.logError("dom is null in date "+matchDate)
             continue
         }
+        
         for(var j=0;j<bfDailyArr.length;j++){
             var matchData = {}
             matchData = bfDailyArr[j]
             matchData.matchData = matchDate
 
-            var url = bfDailyArr[j].url
-            var inMatchData =  await getCacheData(url,"bfData/matchData/"+matchDate+"/",  bfDailyArr[j].id ,"bfDetails")
-            matchData.inMatchData = inMatchData
-            
+            if(bfDailyArr[i]["HomeFScore"]!=" "){
+                var url = bfDailyArr[j].url
+                var inMatchData =  await getCacheData(url,"bfData/matchData/"+matchDate+"/",  bfDailyArr[j].id ,"bfDetails")
+                matchData.inMatchData = inMatchData
+            }
 
+            /*
             var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+bfDailyArr[j].id
             var OddData =  await getCacheData(url,"bfData/odd/"+matchDate+"/",  bfDailyArr[j].id ,"bfOdd")
             matchData.OddData = OddData
@@ -66,10 +69,11 @@ async function init(defaultRange=4){
             var url = "http://zq.win007.com/analysis/"+bfDailyArr[j].id+".htm"
             var OddData =  await getCacheData(url,"bfData/history/"+matchDate+"/",  bfDailyArr[j].id ,"bfHistory")
             matchData.OddData = OddData 
+            */
         }
-
+        
     }
     
 }
 
-init()
+init(100)
