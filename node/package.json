@@ -1,0 +1,22 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dailyScapper.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "chrome-launcher": "^0.13.4",
+    "chrome-remote-interface": "^0.28.2",
+    "dashdash": "^2.0.0",
+    "fs": "0.0.1-security",
+    "jsdom": "^16.4.0",
+    "moment": "^2.29.1",
+    "node-telegram-bot-api": "^0.50.0"
+  }
+}

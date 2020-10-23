@@ -1,0 +1,191 @@
+[
+  {
+    "角球": {
+      "home": "5",
+      "away": "2"
+    },
+    "半場角球": {
+      "home": "1",
+      "away": "2"
+    },
+    "黃牌": {
+      "home": "5",
+      "away": "1"
+    },
+    "紅牌": {
+      "home": "0",
+      "away": "1"
+    },
+    "射門": {
+      "home": "5",
+      "away": "3"
+    },
+    "射正": {
+      "home": "4",
+      "away": "1"
+    },
+    "進攻": {
+      "home": "108",
+      "away": "94"
+    },
+    "危險進攻": {
+      "home": "51",
+      "away": "46"
+    },
+    "射門不中": {
+      "home": "1",
+      "away": "2"
+    },
+    "控球率": {
+      "home": "54%",
+      "away": "46%"
+    },
+    "半場控球率": {
+      "home": "52%",
+      "away": "48%"
+    },
+    "犯規": {
+      "home": "12",
+      "away": "18"
+    },
+    "越位": {
+      "home": "0",
+      "away": "4"
+    },
+    "救球": {
+      "home": "1",
+      "away": "3"
+    },
+    "goal": {
+      "3+h": "5%",
+      "2+h": "30%",
+      "1+h": "25%",
+      "0+h": "40%",
+      "0+a": "50%",
+      "1+a": "30%",
+      "2+a": "20%",
+      "3+a": "0%"
+    },
+    "odd": {
+      "big": "1.05",
+      "point": "2/2.5",
+      "smal": "0.81"
+    },
+    "eventArr": [
+      {
+        "homeText": "",
+        "mins": "44",
+        "awayText": "紅牌"
+      },
+      {
+        "homeText": "",
+        "mins": "45",
+        "awayText": "黃牌"
+      },
+      {
+        "homeText": "",
+        "mins": "46",
+        "awayText": "換人"
+      },
+      {
+        "homeText": "黃牌",
+        "mins": "49",
+        "awayText": ""
+      },
+      {
+        "homeText": "換人",
+        "mins": "50",
+        "awayText": ""
+      },
+      {
+        "homeText": "黃牌",
+        "mins": "54",
+        "awayText": ""
+      },
+      {
+        "homeText": "入球",
+        "mins": "58",
+        "awayText": ""
+      },
+      {
+        "homeText": "",
+        "mins": "60",
+        "awayText": "換人"
+      },
+      {
+        "homeText": "換人",
+        "mins": "62",
+        "awayText": ""
+      },
+      {
+        "homeText": "換人",
+        "mins": "62",
+        "awayText": ""
+      },
+      {
+        "homeText": "黃牌",
+        "mins": "65",
+        "awayText": ""
+      },
+      {
+        "homeText": "入球",
+        "mins": "67",
+        "awayText": ""
+      },
+      {
+        "homeText": "",
+        "mins": "68",
+        "awayText": "換人"
+      },
+      {
+        "homeText": "",
+        "mins": "68",
+        "awayText": "換人"
+      },
+      {
+        "homeText": "黃牌",
+        "mins": "71",
+        "awayText": ""
+      },
+      {
+        "homeText": "入球",
+        "mins": "75",
+        "awayText": ""
+      },
+      {
+        "homeText": "",
+        "mins": "78",
+        "awayText": "換人"
+      },
+      {
+        "homeText": "黃牌",
+        "mins": "80",
+        "awayText": ""
+      },
+      {
+        "homeText": "換人",
+        "mins": "81",
+        "awayText": ""
+      },
+      {
+        "homeText": "換人",
+        "mins": "81",
+        "awayText": ""
+      }
+    ],
+    "court": {
+      "h15": "10%",
+      "h30": "3%",
+      "h45": "6%",
+      "h60": "20%",
+      "h75": "16%",
+      "h90": "43%",
+      "a15": "13%",
+      "a30": "13%",
+      "a45": "16%",
+      "a60": "16%",
+      "a75": "10%",
+      "a90": "23%"
+    }
+  }
+]

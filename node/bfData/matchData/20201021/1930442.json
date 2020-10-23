@@ -1,0 +1,240 @@
+[
+  {
+    "角球": {
+      "home": "3",
+      "away": "2"
+    },
+    "半場角球": {
+      "home": "1",
+      "away": "0"
+    },
+    "黃牌": {
+      "home": "3",
+      "away": "3"
+    },
+    "射門": {
+      "home": "4",
+      "away": "11"
+    },
+    "射正": {
+      "home": "2",
+      "away": "4"
+    },
+    "進攻": {
+      "home": "76",
+      "away": "76"
+    },
+    "危險進攻": {
+      "home": "27",
+      "away": "33"
+    },
+    "射門不中": {
+      "home": "2",
+      "away": "7"
+    },
+    "控球率": {
+      "home": "48%",
+      "away": "52%"
+    },
+    "半場控球率": {
+      "home": "51%",
+      "away": "49%"
+    },
+    "goal": {
+      "3+h": "20%",
+      "2+h": "20%",
+      "1+h": "30%",
+      "0+h": "30%",
+      "0+a": "15%",
+      "1+a": "45%",
+      "2+a": "20%",
+      "3+a": "20%"
+    },
+    "odd": {
+      "big": "0.99",
+      "point": "2.5",
+      "smal": "0.81"
+    },
+    "eventArr": [
+      {
+        "homeText": "黃牌",
+        "mins": "37",
+        "awayText": ""
+      },
+      {
+        "homeText": "黃牌",
+        "mins": "39",
+        "awayText": ""
+      },
+      {
+        "homeText": "",
+        "mins": "50",
+        "awayText": "黃牌"
+      },
+      {
+        "homeText": "入球",
+        "mins": "51",
+        "awayText": ""
+      },
+      {
+        "homeText": "",
+        "mins": "66",
+        "awayText": "黃牌"
+      },
+      {
+        "homeText": "黃牌",
+        "mins": "69",
+        "awayText": ""
+      },
+      {
+        "homeText": "",
+        "mins": "74",
+        "awayText": "入球"
+      },
+      {
+        "homeText": "",
+        "mins": "84",
+        "awayText": "黃牌"
+      },
+      {
+        "homeText": "點球",
+        "mins": "1-0",
+        "awayText": ""
+      },
+      {
+        "homeText": "",
+        "mins": "1-1",
+        "awayText": "點球"
+      },
+      {
+        "homeText": "射失點球",
+        "mins": "1-1",
+        "awayText": ""
+      },
+      {
+        "homeText": "射失點球",
+        "mins": "1-1",
+        "awayText": ""
+      },
+      {
+        "homeText": "",
+        "mins": "1-2",
+        "awayText": "點球"
+      },
+      {
+        "homeText": "點球",
+        "mins": "2-2",
+        "awayText": ""
+      },
+      {
+        "homeText": "",
+        "mins": "2-3",
+        "awayText": "點球"
+      },
+      {
+        "homeText": "點球",
+        "mins": "3-3",
+        "awayText": ""
+      },
+      {
+        "homeText": "",
+        "mins": "3-3",
+        "awayText": "射失點球"
+      },
+      {
+        "homeText": "點球",
+        "mins": "4-3",
+        "awayText": ""
+      },
+      {
+        "homeText": "",
+        "mins": "4-4",
+        "awayText": "點球"
+      },
+      {
+        "homeText": "點球",
+        "mins": "5-4",
+        "awayText": ""
+      },
+      {
+        "homeText": "",
+        "mins": "5-5",
+        "awayText": "點球"
+      },
+      {
+        "homeText": "點球",
+        "mins": "6-5",
+        "awayText": ""
+      },
+      {
+        "homeText": "點球",
+        "mins": "6-5",
+        "awayText": ""
+      },
+      {
+        "homeText": "",
+        "mins": "6-6",
+        "awayText": "點球"
+      },
+      {
+        "homeText": "",
+        "mins": "7-7",
+        "awayText": "點球"
+      },
+      {
+        "homeText": "點球",
+        "mins": "8-7",
+        "awayText": ""
+      },
+      {
+        "homeText": "",
+        "mins": "8-8",
+        "awayText": "點球"
+      },
+      {
+        "homeText": "點球",
+        "mins": "9-8",
+        "awayText": ""
+      },
+      {
+        "homeText": "",
+        "mins": "9-9",
+        "awayText": "點球"
+      },
+      {
+        "homeText": "射失點球",
+        "mins": "9-9",
+        "awayText": ""
+      },
+      {
+        "homeText": "",
+        "mins": "9-10",
+        "awayText": "點球"
+      },
+      {
+        "homeText": "",
+        "mins": "9-10",
+        "awayText": "點球"
+      },
+      {
+        "homeText": "",
+        "mins": "9-10",
+        "awayText": "點球"
+      }
+    ],
+    "court": {
+      "h15": "15%",
+      "h30": "13%",
+      "h45": "13%",
+      "h60": "15%",
+      "h75": "17%",
+      "h90": "26%",
+      "a15": "12%",
+      "a30": "18%",
+      "a45": "17%",
+      "a60": "20%",
+      "a75": "10%",
+      "a90": "20%"
+    }
+  }
+]

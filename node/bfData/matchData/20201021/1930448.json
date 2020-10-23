@@ -1,0 +1,138 @@
+[
+  {
+    "黃牌": {
+      "home": "4",
+      "away": "4"
+    },
+    "紅牌": {
+      "home": "0",
+      "away": "1"
+    },
+    "goal": {
+      "3+h": "15%",
+      "2+h": "35%",
+      "1+h": "45%",
+      "0+h": "5%",
+      "0+a": "20%",
+      "1+a": "50%",
+      "2+a": "15%",
+      "3+a": "15%"
+    },
+    "odd": {
+      "big": "0.87",
+      "point": "2/2.5",
+      "smal": "0.93"
+    },
+    "eventArr": [
+      {
+        "homeText": "入球",
+        "mins": "18",
+        "awayText": ""
+      },
+      {
+        "homeText": "",
+        "mins": "30",
+        "awayText": "點球"
+      },
+      {
+        "homeText": "黃牌",
+        "mins": "30",
+        "awayText": ""
+      },
+      {
+        "homeText": "",
+        "mins": "41",
+        "awayText": "黃牌"
+      },
+      {
+        "homeText": "黃牌",
+        "mins": "43",
+        "awayText": ""
+      },
+      {
+        "homeText": "黃牌",
+        "mins": "46",
+        "awayText": ""
+      },
+      {
+        "homeText": "",
+        "mins": "55",
+        "awayText": "黃牌"
+      },
+      {
+        "homeText": "",
+        "mins": "69",
+        "awayText": "兩黃變紅"
+      },
+      {
+        "homeText": "",
+        "mins": "79",
+        "awayText": "黃牌"
+      },
+      {
+        "homeText": "黃牌",
+        "mins": "85",
+        "awayText": ""
+      },
+      {
+        "homeText": "射失點球",
+        "mins": "0-0",
+        "awayText": ""
+      },
+      {
+        "homeText": "",
+        "mins": "0-1",
+        "awayText": "點球"
+      },
+      {
+        "homeText": "射失點球",
+        "mins": "0-1",
+        "awayText": ""
+      },
+      {
+        "homeText": "",
+        "mins": "0-2",
+        "awayText": "點球"
+      },
+      {
+        "homeText": "點球",
+        "mins": "1-2",
+        "awayText": ""
+      },
+      {
+        "homeText": "",
+        "mins": "1-3",
+        "awayText": "點球"
+      },
+      {
+        "homeText": "點球",
+        "mins": "2-3",
+        "awayText": ""
+      },
+      {
+        "homeText": "點球",
+        "mins": "2-3",
+        "awayText": ""
+      },
+      {
+        "homeText": "",
+        "mins": "2-4",
+        "awayText": "點球"
+      }
+    ],
+    "court": {
+      "h15": "15%",
+      "h30": "18%",
+      "h45": "10%",
+      "h60": "15%",
+      "h75": "10%",
+      "h90": "28%",
+      "a15": "13%",
+      "a30": "13%",
+      "a45": "17%",
+      "a60": "15%",
+      "a75": "13%",
+      "a90": "25%"
+    }
+  }
+]
