@@ -30,26 +30,31 @@ class basicUtils {
     
    async getHttpDom(url,type){
    
+        try{
             const launchChrome = () =>
             chromeLauncher.launch({ chromeFlags: ['--disable-gpu', '--headless'] });
             const chrome = await launchChrome();
             const client = await CDP({ port: chrome.port });
-            try {
-    
-                const {Network, Page, Runtime} = client;
-                var dom = await this.loadUrlJSOM(Network, Page,Runtime,url,type);
-                client.close();
-                chrome.kill();
-                return dom
-       
-            } catch (err) {
-                console.error(err);
-            } finally {
-                if (client) {
-                    await client.close();
+
+                try {
+        
+                    const {Network, Page, Runtime} = client;
+                    var dom = await this.loadUrlJSOM(Network, Page,Runtime,url,type);
+                    client.close();
+                    chrome.kill();
+                    return dom
+        
+                } catch (err) {
+                    console.error(err);
+                } finally {
+                    if (client) {
+                        await client.close();
+                    }
                 }
-            }
-   
+            
+        }catch(e){
+            return null
+        }
     }
   
     async loadUrlJSOM(mNetwork, mPage,mRuntime,mUrl,type){
