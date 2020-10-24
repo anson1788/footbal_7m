@@ -18,23 +18,27 @@ async function getCacheData(url, folder, cacheId , type ,isCache = true){
         let rawdata = fs.readFileSync(folder+cacheId+".json");
         rtnArr = JSON.parse(rawdata);   
     }else{        
-   
-        dom = await bcUtils.getHttpDomAsyn(url,type) 
-        if(type=="bflist"){
-            rtnArr = await bfUtils.parseBFDailyList(dom)  
-        }else if(type=="bfDetails"){
-            rtnArr = await bfUtils.parseBFLiveMatchDetails(dom)  
-        }else if(type=="bfOdd"){
-            rtnArr = await bfUtils.parseOdd(dom)  
-        }else if(type=="bfHistory"){
-            rtnArr = await bfUtils.parseBFHistory(dom)  
-        }
-        if(rtnArr.length>0){
-            if (!fs.existsSync(folder)){
-                fs.mkdirSync(folder);
-            }           
-            console.log(folder+cacheId+".json")
-            fs.writeFileSync(folder+cacheId+".json", JSON.stringify(rtnArr,null,2))
+        
+        try{
+                dom = await bcUtils.getHttpDomAsyn(url,type) 
+                if(type=="bflist"){
+                    rtnArr = await bfUtils.parseBFDailyList(dom)  
+                }else if(type=="bfDetails"){
+                    rtnArr = await bfUtils.parseBFLiveMatchDetails(dom)  
+                }else if(type=="bfOdd"){
+                    rtnArr = await bfUtils.parseOdd(dom)  
+                }else if(type=="bfHistory"){
+                    rtnArr = await bfUtils.parseBFHistory(dom)  
+                }
+                if(rtnArr.length>0){
+                    if (!fs.existsSync(folder)){
+                        fs.mkdirSync(folder);
+                    }           
+                    console.log(folder+cacheId+".json")
+                    fs.writeFileSync(folder+cacheId+".json", JSON.stringify(rtnArr,null,2))
+                }
+        }catch(e){
+                console.log("mean error")
         }
     }
     return rtnArr
