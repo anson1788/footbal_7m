@@ -128,9 +128,9 @@ class bfWinUtils {
                             "home":home,
                             "away":away,
                             "HomeFScore":homeFullScore,
-                            "AwatFScore":awayFullScore,
+                            "AwayFScore":awayFullScore,
                             "HomeHScore":homeHalfScore,
-                            "AwatHScore":awayHalfScore,
+                            "AwayHScore":awayHalfScore,
                             "id":id,
                             "url":"http://live.win007.com/detail/"+id+".htm"
                         })
