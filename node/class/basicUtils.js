@@ -45,6 +45,7 @@ class basicUtils {
                     return dom
         
                 } catch (err) {
+                    
                     console.error(err); return null
                 } finally {
                     if (client) {

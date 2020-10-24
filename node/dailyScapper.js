@@ -69,16 +69,28 @@ async function init(defaultRange=50){
                 matchData.OddData = OddData
                 if(matchData.OddData.length > 0 && typeof(matchData.OddData[0]["香港马会"])!="undefined"){
                     halfHKJCMap ++ ;
+                    
+                    /*
+                    var url = bfDailyArr[j].url
+                    var inMatchData =  await getCacheData(url,"bfData/matchData/"+matchDate+"/",  bfDailyArr[j].id ,"bfDetails")
+                    matchData.inMatchData = inMatchData
+                    */
+                    var url = "http://zq.win007.com/analysis/"+bfDailyArr[j].id+".htm"
+                    var OddData =  await getCacheData(url,"bfData/history/"+matchDate+"/",  bfDailyArr[j].id ,"bfHistory")
                 }
                 /*
                 var url = bfDailyArr[j].url
                 var inMatchData =  await getCacheData(url,"bfData/matchData/"+matchDate+"/",  bfDailyArr[j].id ,"bfDetails")
                 matchData.inMatchData = inMatchData
                 */
+<<<<<<< HEAD
     		/*
                 var url = "http://zq.win007.com/analysis/"+bfDailyArr[j].id+".htm"
                 var OddData =  await getCacheData(url,"bfData/history/"+matchDate+"/",  bfDailyArr[j].id ,"bfHistory")
                */
+=======
+    	
+>>>>>>> 1a4ce8474c9d3e0847c731094b850aa03b572012
 		
             }
 
