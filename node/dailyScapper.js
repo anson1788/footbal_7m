@@ -75,10 +75,10 @@ async function init(defaultRange=50){
                 var inMatchData =  await getCacheData(url,"bfData/matchData/"+matchDate+"/",  bfDailyArr[j].id ,"bfDetails")
                 matchData.inMatchData = inMatchData
                 */
-    		
+    		/*
                 var url = "http://zq.win007.com/analysis/"+bfDailyArr[j].id+".htm"
                 var OddData =  await getCacheData(url,"bfData/history/"+matchDate+"/",  bfDailyArr[j].id ,"bfHistory")
-               
+               */
 		
             }
 
@@ -92,4 +92,4 @@ async function init(defaultRange=50){
     console.log("total: " + total)
 }
 
-init(80)
+init(100)
