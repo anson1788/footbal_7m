@@ -80,4 +80,4 @@ async function init(defaultRange=50){
     
 }
 
-init(100)
+init(20)
