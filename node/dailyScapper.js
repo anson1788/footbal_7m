@@ -75,11 +75,11 @@ async function init(defaultRange=50){
                 var inMatchData =  await getCacheData(url,"bfData/matchData/"+matchDate+"/",  bfDailyArr[j].id ,"bfDetails")
                 matchData.inMatchData = inMatchData
                 */
-    		/*
+    		
                 var url = "http://zq.win007.com/analysis/"+bfDailyArr[j].id+".htm"
                 var OddData =  await getCacheData(url,"bfData/history/"+matchDate+"/",  bfDailyArr[j].id ,"bfHistory")
-                matchData.OddData = OddData 
-		*/
+               
+		
             }
 
 
