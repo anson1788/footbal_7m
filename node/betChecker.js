@@ -1,6 +1,9 @@
-﻿let bfwinBetUtils = require('./class/bfWinBetUtils.js');
-let bcUtils = require('./class/basicUtils.js');
+﻿let basicUtils = require('./class/basicUtils.js');
 let bfWinBetUtils = require('./class/bfWinBetUtils.js');
+
+let bcUtils = new basicUtils()
+let bfBetUtils = new bfWinBetUtils()
+
 
 async function init(){
 
@@ -16,7 +19,7 @@ async function init(){
         console.log("get 7m data error")
         return
     }
-    var LiveMatchList  = bfWinBetUtils.parseBFLiveMatch(dom)
+    var LiveMatchList  = bfBetUtils.parseBFLiveMatch(dom)
     console.log(JSON.stringify(LiveMatchList,null,2))
 }
 
