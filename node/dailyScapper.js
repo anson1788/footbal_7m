@@ -40,7 +40,7 @@ async function getCacheData(url, folder, cacheId , type ,isCache = true){
 }
 
 async function init(defaultRange=50){
-    for(var i=2;i<defaultRange;i++){
+    for(var i=24;i<defaultRange;i++){
 
         var matchDate = bcUtils.generateDate(i)
         var url = "http://bf.win007.com/football/big/Over_%d.htm".replace("%d",matchDate)

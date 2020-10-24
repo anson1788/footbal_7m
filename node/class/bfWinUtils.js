@@ -143,6 +143,10 @@ class bfWinUtils {
 
 
     async parseOdd(crtDom){ 
+     
+        if(crtDom.window.document==null){
+            return []
+        }
         var table = crtDom.window.document.querySelectorAll("#webmain table")[0]
         var tr = table.querySelectorAll("tr")
         var tmp = {}
