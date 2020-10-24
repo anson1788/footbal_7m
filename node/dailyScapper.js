@@ -1,4 +1,4 @@
-
+﻿
 
 let basicUtils = require('./class/basicUtils.js');
 let bfwinUtils = require('./class/bfWinUtils.js');
@@ -71,10 +71,11 @@ async function init(defaultRange=50){
                 var inMatchData =  await getCacheData(url,"bfData/matchData/"+matchDate+"/",  bfDailyArr[j].id ,"bfDetails")
                 matchData.inMatchData = inMatchData
                 */
-    
+    		/*
                 var url = "http://zq.win007.com/analysis/"+bfDailyArr[j].id+".htm"
                 var OddData =  await getCacheData(url,"bfData/history/"+matchDate+"/",  bfDailyArr[j].id ,"bfHistory")
                 matchData.OddData = OddData 
+		*/
             }
 
 
@@ -87,4 +88,4 @@ async function init(defaultRange=50){
     console.log("total: " + total)
 }
 
-init(50)
+init(80)
