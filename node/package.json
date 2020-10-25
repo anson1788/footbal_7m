@@ -10,13 +10,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "-": "0.0.1",
     "bluebird": "^3.7.2",
     "chrome-launcher": "^0.13.4",
     "chrome-remote-interface": "^0.28.2",
     "dashdash": "^2.0.0",
     "fs": "0.0.1-security",
+    "g": "^2.0.1",
     "jsdom": "^16.4.0",
     "moment": "^2.29.1",
-    "node-telegram-bot-api": "^0.50.0"
+    "node-telegram-bot-api": "^0.50.0",
+    "npm": "^6.14.8"
   }
 }
