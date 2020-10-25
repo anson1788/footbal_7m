@@ -80,13 +80,7 @@ async function init(defaultRange=50){
                     var OddData =  await getCacheData(url,"bfData/history/"+matchDate+"/",  bfDailyArr[j].id ,"bfHistory")
 		    */
                 }
-                /*
-                var url = bfDailyArr[j].url
-                var inMatchData =  await getCacheData(url,"bfData/matchData/"+matchDate+"/",  bfDailyArr[j].id ,"bfDetails")
-                matchData.inMatchData = inMatchData
-                */
-    	
-		
+   
             }
 
 
