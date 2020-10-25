@@ -9,6 +9,8 @@ class bfWinBetUtils extends bfWinUtils{
             var tds = matchList[i].querySelectorAll("td")
             if(tds.length==15){
                 console.log(matchList[i].textContent)
+                var league = tds[1].textContent 
+                var status = tds[2].textContent 
                 console.log(tds[3].textContent)
             }
         }
