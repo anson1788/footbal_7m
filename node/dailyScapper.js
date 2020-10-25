@@ -97,6 +97,3 @@ async function init(defaultRange=50){
 
 
 init(150)
-=======
-init(100)
->>>>>>> 48c61607656885348e662eb925e2f3d0b40d54f2
