@@ -95,7 +95,7 @@ async function init(defaultRange=50){
     console.log("total: " + total)
 }
 
-<<<<<<< HEAD
+
 init(150)
 =======
 init(100)
