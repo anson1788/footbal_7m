@@ -6,7 +6,7 @@ let ftUtils = new filterUtils()
 function init(){
     let rawdata = fs.readFileSync("oddBook.json");
     let dataList = JSON.parse(rawdata)
-    var targetData = ftUtils.customFilter(dataList)
+    var targetData = ftUtils.lookUpTwoMatch(dataList)
     console.table(targetData)
 }
 
