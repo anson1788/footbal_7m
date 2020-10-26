@@ -1,4 +1,5 @@
 const bfWinUtils = require('./bfWinUtils.js')
+var moment = require('moment');
 class bfWinBetUtils extends bfWinUtils{
     
     async parseBFLiveMatch(crtDom){
@@ -20,8 +21,7 @@ class bfWinBetUtils extends bfWinUtils{
                         home = aTags[j].textContent
                     }    
                 }
-                var score = this.replaceAll(tds[5].textContent)
-                console.log(score)
+                var score = this.replaceAll(tds[5].textContent," ","")
                 var hfs = "-"
                 var afs = "-"
                 var hhs = "-"
@@ -37,14 +37,21 @@ class bfWinBetUtils extends bfWinUtils{
                         away = aTags[j].textContent
                     }
                 }
+                
+                var b7Mid = tds[13].querySelectorAll("a")[0]
+                        .getAttribute("onclick")
+                        .replace("analysis(","")
+                        .replace(")","")
 
                 var tmp = {
                     "lea" : league,
                     "time" : time,
+                    "status": status,
                     "home" : home,
                     "away": away,
                     "hfs":hfs,
-                    "afs":afs
+                    "afs":afs,
+                    "bfId":b7Mid
                 }
                 
                 console.log(tmp)
@@ -53,6 +60,8 @@ class bfWinBetUtils extends bfWinUtils{
         }
         return matchArr
     }
+
+    
     
     replaceAll(str, find, replace) {
         return str.replace(new RegExp(find, 'g'), replace);
