@@ -2,7 +2,7 @@ const bfWinUtils = require('./bfWinUtils.js')
 var moment = require('moment');
 class bfWinBetUtils extends bfWinUtils{
     
-    async parseBFLiveMatch(crtDom){
+    parseBFLiveMatch(crtDom){
         var matchList = crtDom.window.document.querySelectorAll("#table_live tr")
         var matchArr = []            
        
@@ -44,24 +44,63 @@ class bfWinBetUtils extends bfWinUtils{
                         .replace(")","")
 
                 var tmp = {
-                    "lea" : league,
+                    "league" : league,
                     "time" : time,
                     "status": status,
                     "home" : home,
                     "away": away,
-                    "hfs":hfs,
-                    "afs":afs,
-                    "bfId":b7Mid
+                    "HomeHScore":hfs,
+                    "AwayHScore":afs,
+                    "id":b7Mid
                 }
-                
-                console.log(tmp)
+                matchArr.push(tmp)
+                //console.log(tmp)
                 //console.log(tds[3].textContent)
             }
         }
         return matchArr
     }
 
-    
+    requiredToFillTime(obj){
+       
+       if(obj.status.length != 0){
+           return false
+       }else{
+           
+        var hr = obj.time.split(":")[0]
+        var min = obj.time.split(":")[1]
+        let d3 = moment({ 
+            year :moment().year(), 
+            month :moment().month(), 
+            day :moment().date(), 
+            hour :hr, 
+            minute :min
+            });
+           
+            var calculatedDate = d3
+            var hrDiff = parseFloat(hr) - parseFloat(moment().hour())
+            var minuteDiff = parseFloat(min) - parseFloat(moment().minute())
+            if(hrDiff<0){
+                calculatedDate = moment({ 
+                    year :moment().year(), 
+                    month :moment().month(), 
+                    day :moment().date()+1, 
+                    hour :hr, 
+                    minute :min
+                    });
+            }
+            return false
+        }
+    }
+
+    filterOutImmediateList(dataList){
+        var rtnList = []
+        
+        for(var i=0;i<dataList.length;i++){
+            this.requiredToFillTime(dataList[i])
+        }
+        return rtnList
+    }
     
     replaceAll(str, find, replace) {
         return str.replace(new RegExp(find, 'g'), replace);

@@ -2,6 +2,7 @@
 
 let basicUtils = require('./class/basicUtils.js');
 let bfwinUtils = require('./class/bfWinUtils.js');
+
 var fs = require('fs');
 
 let bcUtils = new basicUtils()
@@ -83,6 +84,7 @@ async function init(defaultRange=50){
                     matchData.history = history
                     targetMatch.push(matchData)
                     */
+                   targetMatch.push(matchData)
                 }
    
             }
@@ -104,4 +106,4 @@ async function init(defaultRange=50){
     console.log("total: " + total)
 }
 
-init(600)
+init(175)

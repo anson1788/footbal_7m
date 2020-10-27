@@ -3,7 +3,7 @@ let bfWinBetUtils = require('./class/bfWinBetUtils.js');
 
 let bcUtils = new basicUtils()
 let bfBetUtils = new bfWinBetUtils()
-
+let filterUtils = require('./class/dataFilter.js');
 
 async function init(){
 
@@ -13,14 +13,19 @@ async function init(){
         dom = await bcUtils.getHttpDomAsyn(liveUrl,"") 
     }catch(e){
         console.log("mean error "+e)
-        return
+        return null
     }
     if(dom==null){
         console.log("get 7m data error")
-        return
+    }else{
+        var LiveMatchList  = bfBetUtils.parseBFLiveMatch(dom)
+    // console.log(JSON.stringify(LiveMatchList))
+        LiveMatchList  = bfBetUtils.filterOutImmediateList(LiveMatchList)
+        
+        let ftUtils = new filterUtils()
+        var targetData = ftUtils.lookUpTwoMatch(LiveMatchList)
+        console.table(targetData)
     }
-    var LiveMatchList  = bfBetUtils.parseBFLiveMatch(dom)
-    console.log(JSON.stringify(LiveMatchList,null,2))
 }
 
 
