@@ -36,6 +36,7 @@ class dataFilter {
         for(var i=0;i<dataList.length;i++){
             var totalBroker = 0 
             var oddChange = 0
+            if(typeof( dataList[i]["OddData"])=="undefined") continue
             var oddData = dataList[i].OddData[0];
             var upOrDown = 0
             var isHome = true
@@ -47,7 +48,7 @@ class dataFilter {
                 oddData[broker]["end"]["point"].includes("受让")){
                     isHome = false
                 }
-                if(Math.abs(endPoint-startPoint)==2){
+                if(Math.abs(endPoint-startPoint)>=2){
                     oddChange ++ 
                     if(endPoint-startPoint==2){
                         upOrDown +=2
@@ -93,7 +94,11 @@ class dataFilter {
                 delete dataList[i].matchData
                 delete dataList[i].HomeHScore
                 delete dataList[i].AwayHScore
-                rtn.push(dataList[i])
+                //if(dataList[i].trend == "升" &&  dataList[i].dominant.includes("客") &&dataList[i].hkjcOdd.includes("受让平手/半球")){
+                if(upOrDown!=0){   
+                    rtn.push(dataList[i])
+                }
+                //}
             }
 
         }
