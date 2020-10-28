@@ -5,7 +5,7 @@ let bcUtils = new basicUtils()
 let bfBetUtils = new bfWinBetUtils()
 let filterUtils = require('./class/dataFilter.js');
 
-
+var acct = require('./accountInfo.json');
 const TelegramBot = require('node-telegram-bot-api');
 var token = '';
 
@@ -34,5 +34,16 @@ async function init(){
     }
 }
 
+if(typeof(acct.tgToken) !== 'undefined'){
+    token = acct.tgToken
+}
 
+var tgChanelId =""
+
+if(typeof(acct.tgChanelId) !== 'undefined'){
+    tgChanelId = acct.tgChanelId
+}
+
+bot = new TelegramBot(token, {polling: false});
+bot.sendMessage(tgChanelId,"Hello dear user");
 init()
