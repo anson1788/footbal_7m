@@ -5,6 +5,10 @@ let bcUtils = new basicUtils()
 let bfBetUtils = new bfWinBetUtils()
 let filterUtils = require('./class/dataFilter.js');
 
+
+const TelegramBot = require('node-telegram-bot-api');
+var token = '';
+
 async function init(){
 
     var liveUrl = "http://live.win007.com/indexall_big.aspx"
