@@ -49,7 +49,7 @@ class dataFilter {
                 oddData[broker]["end"]["point"].includes("受让")){
                     isHome = false
                 }
-                if(Math.abs(endPoint-startPoint)>=2){
+                if(Math.abs(endPoint-startPoint)==2){
                     oddChange ++ 
                     if(endPoint-startPoint==2){
                         upOrDown +=2
@@ -57,8 +57,6 @@ class dataFilter {
                         upOrDown -=2
                     }
                 }
-            
-                
             }
             if(totalBroker-3<oddChange){
                 if(upOrDown/oddChange > 0 && isHome){
@@ -97,7 +95,9 @@ class dataFilter {
                 delete dataList[i].matchData
                 delete dataList[i].HomeHScore
                 delete dataList[i].AwayHScore
-                if(dataList[i].trend == "降" &&  dataList[i].dominant.includes("客") ){
+                if(dataList[i].trend == "降" && 
+                  dataList[i].dominant.includes("主") &&
+                  dataList[i].hkjcOdd == "半球/一球"){
                     if(upOrDown!=0){   
                         console.log("http://vip.win007.com/AsianOdds_n.aspx?id="+dataList[i].id)
                         rtn.push(dataList[i])
@@ -108,6 +108,30 @@ class dataFilter {
         }
 
         return rtn
+    }
+
+    /*
+    
+    */
+    findSimilarMatch(condition,dataList){
+        var rtnArr = []
+        for(var i=0;i<dataList.length;i++){
+            if(typeof( dataList[i]["OddData"])=="undefined") continue
+            
+            var totalBroker = 0
+            var startPointOddCourt = 0 
+            var endPointOddCourt = 0
+            for(var broker in oddData){   
+                totalBroker ++
+                if(oddData[broker]["start"]["point"]==condition["startOdd"]){
+                    startPointOddCourt ++
+                }
+                if(oddData[broker]["end"]["point"]==condition["endOdd"]){
+                    endPointOddCourt ++
+                }
+            }
+        }
+        return rtnArr
     }
 
     oddPos(_dd){
@@ -149,7 +173,7 @@ class dataFilter {
                 }*/
 
             }
-            if(oddChange==5 && upOrDown == totalBroker){
+            if(oddChange==5 && upOrDown == totalBroker ){
                // console.log("http://vip.win007.com/AsianOdds_n.aspx?id="+dataList[i].id)
                 rtnArr.push(dataList[i])
             }
