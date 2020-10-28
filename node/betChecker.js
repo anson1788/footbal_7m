@@ -18,12 +18,14 @@ async function init(){
     if(dom==null){
         console.log("get 7m data error")
     }else{
-        var LiveMatchList  = bfBetUtils.parseBFLiveMatch(dom)
+        var liveMatchList  = bfBetUtils.parseBFLiveMatch(dom)
     // console.log(JSON.stringify(LiveMatchList))
-        LiveMatchList  = bfBetUtils.filterOutImmediateList(LiveMatchList)
-        
+        liveMatchList  = bfBetUtils.filterOutImmediateList(liveMatchList)
+        var list = await bfBetUtils.addOddData(liveMatchList,bcUtils)
+        liveMatchList = list
+        console.table(liveMatchList)
         let ftUtils = new filterUtils()
-        var targetData = ftUtils.lookUpTwoMatch(LiveMatchList)
+        var targetData = ftUtils.lookUpTwoMatch(liveMatchList)
         console.table(targetData)
     }
 }

@@ -40,6 +40,7 @@ class dataFilter {
             var oddData = dataList[i].OddData[0];
             var upOrDown = 0
             var isHome = true
+
             for(var broker in oddData){   
                 totalBroker ++
                 var startPoint = this.getOddIdx(oddData[broker]["start"]["point"])
@@ -56,6 +57,8 @@ class dataFilter {
                         upOrDown -=2
                     }
                 }
+            
+                
             }
             if(totalBroker-3<oddChange){
                 if(upOrDown/oddChange > 0 && isHome){
@@ -71,7 +74,7 @@ class dataFilter {
                     dataList[i].trend = "降"
                     dataList[i].dominant = "客"
                 }else{
-                    console.log(upOrDown/oddChange)
+                   // console.log(upOrDown/oddChange)
                 }
 
                 var homeOdd = this.oddPos(oddData["香港马会"]["end"]["home"]) + "/" +oddData["香港马会"]["end"]["home"]
@@ -94,11 +97,12 @@ class dataFilter {
                 delete dataList[i].matchData
                 delete dataList[i].HomeHScore
                 delete dataList[i].AwayHScore
-                //if(dataList[i].trend == "升" &&  dataList[i].dominant.includes("客") &&dataList[i].hkjcOdd.includes("受让平手/半球")){
-                if(upOrDown!=0){   
-                    rtn.push(dataList[i])
+                if(dataList[i].trend == "降" &&  dataList[i].dominant.includes("客") ){
+                    if(upOrDown!=0){   
+                        console.log("http://vip.win007.com/AsianOdds_n.aspx?id="+dataList[i].id)
+                        rtn.push(dataList[i])
+                    }
                 }
-                //}
             }
 
         }

@@ -150,6 +150,7 @@ class bfWinUtils {
         var table = crtDom.window.document.querySelectorAll("#webmain table")[0]
         var tr = table.querySelectorAll("tr")
         var tmp = {}
+ 
         for(var i=2;i<tr.length-2;i++){
            var style = tr[i].getAttribute("style")
            if (!(style+"").includes("none")){
@@ -181,6 +182,7 @@ class bfWinUtils {
         for(var id in tmp){
             idx ++
         }
+        
         if(idx>0){
             return [tmp]    
         }else{

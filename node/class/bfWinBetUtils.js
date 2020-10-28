@@ -84,10 +84,15 @@ class bfWinBetUtils extends bfWinUtils{
                 calculatedDate = moment({ 
                     year :moment().year(), 
                     month :moment().month(), 
-                    day :moment().date()+1, 
+                    day :moment().date(), 
                     hour :hr, 
                     minute :min
-                    });
+                    }).add(1, 'days');
+            }
+            var diff = calculatedDate.diff(moment(),"minutes")
+            //console.log(diff+ " "+obj.time + " "+obj.id)
+            if(diff<20){
+                return true
             }
             return false
         }
@@ -97,11 +102,26 @@ class bfWinBetUtils extends bfWinUtils{
         var rtnList = []
         
         for(var i=0;i<dataList.length;i++){
-            this.requiredToFillTime(dataList[i])
+            if(this.requiredToFillTime(dataList[i])){
+                rtnList.push(dataList[i])
+            }
         }
         return rtnList
     }
-    
+
+    async addOddData(dataList,bcUtils){
+        for(var i=0;i<dataList.length;i++){
+            var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+dataList[i].id
+            var dom = await bcUtils.getHttpDomAsyn(url,"") 
+            var oddData = await this.parseOdd(dom)
+            if(oddData.length >0 && typeof(oddData[0]["香港马会"])!=="undefined"){
+                dataList[i].OddData = oddData[0]
+                console.log(oddData)
+            }
+            console.log("complete  :"+ JSON.stringify(dataList[i]))
+        }
+        return dataList
+    }
     replaceAll(str, find, replace) {
         return str.replace(new RegExp(find, 'g'), replace);
     }
