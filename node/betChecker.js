@@ -55,6 +55,7 @@ async function init(){
         var hkjcId = []
         for(var i=0;i<crtOddList.length;i++){
             if(typeof(crtOddList[i].OddData) !="undefined"  &&
+                crtOddList[i].OddData.length > 0 &&
                typeof(crtOddList[i].OddData[0]["香港马会"])!=="undefined"){
                 hkjcId.push(crtOddList[i].id)
             }

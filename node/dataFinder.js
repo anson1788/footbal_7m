@@ -8,10 +8,12 @@ function init(){
     let dataList = JSON.parse(rawdata)
     //var targetData = ftUtils.lookUpTwoMatch(dataList)
     //var targetData = ftUtils.lowHalfAndUp(dataList)
-    var targetData = ftUtils.nochangeOdd(dataList)
+   // var targetData = ftUtils.nochangeOdd(dataList)
    //var targetData = ftUtils.nochangeOddn(dataList)
-   
+   //var targetData = ftUtils.halfToZero(dataList)
+   var targetData = ftUtils.halfTohalf(dataList)
    console.table(targetData)
 }
+
 
 init()
