@@ -42,7 +42,16 @@ async function init(){
 
         crtOddList = await bfBetUtils.addOddData(hkjcCrtList,bcUtils)
         let ftUtils = new filterUtils()
-        var targetData = ftUtils.oneGoalOdd(crtOddList)
+        var styList = []
+        for(var i=0;i<crtOddList.length;i++){
+            if(
+                typeof(crtOddList[i].OddData) !="undefined"  &&
+                crtOddList[i].OddData.length>0 &&
+                typeof(crtOddList[i].OddData[0]["香港马会"])!=="undefined"){
+                styList.push(crtOddList[i])
+            }
+        }
+        var targetData = ftUtils.oneGoalOdd(styList)
         console.table(targetData)
         var msg = ""
         for(var i=0;i<targetData.length;i++){
@@ -55,8 +64,10 @@ async function init(){
         var hkjcId = []
         for(var i=0;i<crtOddList.length;i++){
             console.log("aa" +JSON.stringify(crtOddList[i].OddData))
-            if(typeof(crtOddList[i].OddData) !="undefined"  &&
-               typeof(crtOddList[i].OddData["香港马会"])!=="undefined"){
+            if(
+                typeof(crtOddList[i].OddData) !="undefined"  &&
+                crtOddList[i].OddData.length>0 &&
+                typeof(crtOddList[i].OddData[0]["香港马会"])!=="undefined"){
                 hkjcId.push(crtOddList[i].id)
             }
         }

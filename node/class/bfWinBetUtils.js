@@ -92,7 +92,7 @@ class bfWinBetUtils extends bfWinUtils{
             var diff = calculatedDate.diff(moment(),"minutes")
             //console.log(diff+ " "+obj.time + " "+obj.id)
             
-            if(diff>7 && diff<23){
+            if(diff>7 && diff<21){
                 return 3
             }else if(diff<=7){
                 return 2
@@ -143,11 +143,13 @@ class bfWinBetUtils extends bfWinUtils{
             var dom = await bcUtils.getHttpDomAsyn(url,"") 
             var oddData = await this.parseOdd(dom)
             if(oddData.length >0 && typeof(oddData[0]["香港马会"])!=="undefined"){
-                dataList[i].OddData = oddData[0]
+                dataList[i].OddData = oddData
                 console.log(oddData)
             }
             console.log("complete  :"+ JSON.stringify(dataList[i]))
         }
+
+        
         return dataList
     }
     replaceAll(str, find, replace) {
