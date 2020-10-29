@@ -126,7 +126,7 @@ class bfWinBetUtils extends bfWinUtils{
             
             var tmp = -1
             for(var j=0;j<m7List.length;j++){
-                if(hkjcList[i]==m7List[j]){
+                if(hkjcList[i]==m7List[j].id){
                     tmp = j
                 }
             }

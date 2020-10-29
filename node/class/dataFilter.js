@@ -343,6 +343,7 @@ class dataFilter {
             var mcMatch = false
             var match = 0
             var match2 = 0
+            var all = 0
         
             for(var broker in oddData){   
                 totalBroker++
@@ -364,6 +365,9 @@ class dataFilter {
                 oddData[broker]["end"]["point"]=="平手/半球" ){
                     match2 ++
                 }
+                if(oddData[broker]["end"]["point"]=="平手/半球"){
+                    all++
+                }
             }
 
             dataList[i].hkjcOdd = oddData["香港马会"]["end"]["point"]     
@@ -379,7 +383,7 @@ class dataFilter {
             delete dataList[i].AwayHScore
             dataList[i].fit = match
            
-            if(hkjcMatch && mcMatch && match2>6){
+            if(hkjcMatch && mcMatch && match2>6 && all>totalBroker-2){
                 console.log("http://vip.win007.com/AsianOdds_n.aspx?id="+dataList[i].id)
                 rtnArr.push(dataList[i])
             }
