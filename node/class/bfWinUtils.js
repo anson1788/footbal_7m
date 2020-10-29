@@ -143,7 +143,9 @@ class bfWinUtils {
 
 
     async parseOdd(crtDom){ 
-     
+        if(!(typeof(crtDom.window)!="undefined")){
+            return []
+        }
         if(crtDom.window.document==null){
             return []
         }

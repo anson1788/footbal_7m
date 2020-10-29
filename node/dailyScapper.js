@@ -106,4 +106,4 @@ async function init(defaultRange=50){
     console.log("total: " + total)
 }
 
-init(360)
+init(340)
