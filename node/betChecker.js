@@ -53,10 +53,22 @@ async function init(){
         }
         var targetData = ftUtils.oneGoalOdd(styList)
         console.table(targetData)
+
         var msg = ""
         for(var i=0;i<targetData.length;i++){
-            msg += targetData[i].home +" vs "+targetData[i].away + " "+" "+targetData[i].hkjcOdd + " 主 " + targetData[i].betOdd
+            msg += "oneGoalOdd" + targetData[i].home +" vs "+targetData[i].away + " "+" "+targetData[i].hkjcOdd + " 主 " + targetData[i].betOdd
         }
+
+
+        targetData = ftUtils.halfToZero(styList)
+        var msg = ""
+        for(var i=0;i<targetData.length;i++){
+            msg += "halfToZero" + targetData[i].home +" vs "+targetData[i].away + " "+" "+targetData[i].hkjcOdd + " 客 " + targetData[i].betOdd
+        }
+
+
+     
+
         if(msg!=""){
             bot.sendMessage(tgChanelId,msg);
         }
