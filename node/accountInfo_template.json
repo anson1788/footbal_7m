@@ -6,5 +6,6 @@
     "a3":"",
     "keepBetting":true,
     "tgToken":"",
-    "tgChanelId":""
+    "tgMainChanelId":"",
+    "tgLogChanelId":""
 }

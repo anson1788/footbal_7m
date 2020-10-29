@@ -91,24 +91,45 @@ class bfWinBetUtils extends bfWinUtils{
             }
             var diff = calculatedDate.diff(moment(),"minutes")
             //console.log(diff+ " "+obj.time + " "+obj.id)
-            if(diff<20){
-                return true
+            if(diff>7 && diff<23){
+                return 3
+            }else if(diff<7){
+                return 2
             }
-            return false
+            return 0
         }
     }
 
     filterOutImmediateList(dataList){
-        var rtnList = []
-        
+        var min20List = []
+        var min7List = []
         for(var i=0;i<dataList.length;i++){
-            if(this.requiredToFillTime(dataList[i])){
-                rtnList.push(dataList[i])
+            if(this.requiredToFillTime(dataList[i])==3){
+                min20List.push(dataList[i])
+            }else if (this.requiredToFillTime(dataList[i])==2){
+                min7List.push(dataList[i])
             }
         }
-        return rtnList
+        return [min20List,min7List]
     }
 
+    getCrtHKJCList(m7List,hkjcList){
+        var rtn = []
+        for(var i=0;i<hkjcList.length;i++){
+            
+            var tmp = -1
+            for(var j=0;j<m7List.length;j++){
+                if(hkjcList[i]==m7List[j]){
+                    tmp = j
+                }
+            }
+            if(tmp!=-1){
+                rtn.push(m7List[tmp])
+            }
+        }
+
+        return rtn
+    }
     async addOddData(dataList,bcUtils){
         for(var i=0;i<dataList.length;i++){
             var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+dataList[i].id

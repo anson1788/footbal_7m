@@ -221,7 +221,7 @@ class dataFilter {
         return rtnArr 
     }
     
-    nochangeOddn(dataList){
+    oneGoalOdd(dataList){
         var rtnArr = []
         
         for(var i=0;i<dataList.length;i++){
@@ -252,7 +252,8 @@ class dataFilter {
                 }
             }
 
-            dataList[i].hkjcOdd = oddData["香港马会"]["end"]["point"]                  
+            dataList[i].hkjcOdd = oddData["香港马会"]["end"]["point"]     
+            dataList[i].betOdd = oddData["香港马会"]["end"]["home"]              
             delete dataList[i].OddData
             delete dataList[i].history
             delete dataList[i].url
