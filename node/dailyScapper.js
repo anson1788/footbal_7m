@@ -2,6 +2,7 @@
 
 let basicUtils = require('./class/basicUtils.js');
 let bfwinUtils = require('./class/bfWinUtils.js');
+
 var fs = require('fs');
 
 let bcUtils = new basicUtils()
@@ -47,7 +48,8 @@ async function getCacheData(url, folder, cacheId , type ,isCache = true){
 async function init(defaultRange=50){
 
     var total = 0
-    for(var i=100;i<defaultRange;i++){
+    var targetMatch = []
+    for(var i=2;i<defaultRange;i++){
 
         var matchDate = bcUtils.generateDate(i)
         var url = "http://bf.win007.com/football/big/Over_%d.htm".replace("%d",matchDate)
@@ -75,14 +77,16 @@ async function init(defaultRange=50){
                     var inMatchData =  await getCacheData(url,"bfData/matchData/"+matchDate+"/",  bfDailyArr[j].id ,"bfDetails")
                     matchData.inMatchData = inMatchData
                     */
-
-					/*
+                    
+                    /*
                     var url = "http://zq.win007.com/analysis/"+bfDailyArr[j].id+".htm"
-                    var OddData =  await getCacheData(url,"bfData/history/"+matchDate+"/",  bfDailyArr[j].id ,"bfHistory")
-					*/
-				}
-
-		
+                    var history =  await getCacheData(url,"bfData/history/"+matchDate+"/",  bfDailyArr[j].id ,"bfHistory")
+                    matchData.history = history
+                    targetMatch.push(matchData)
+                    */
+                   targetMatch.push(matchData)
+                }
+   
             }
 
 
@@ -90,10 +94,16 @@ async function init(defaultRange=50){
    
         console.log(matchDate + " " + halfHKJCMap)
         total +=halfHKJCMap
+        console.log("total: " + total)   
     }
     
+    /*
+    for(var i=0;i<targetMatch.length; i++){
+        
+    }*/
+    //let rawdata = fs.readFileSync("dataBook.json");
+    fs.writeFileSync("oddBook.json", JSON.stringify(targetMatch,null,2))
     console.log("total: " + total)
 }
 
-
-init(150)
+init(360)
