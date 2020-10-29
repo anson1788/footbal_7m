@@ -320,7 +320,7 @@ class dataFilter {
             delete dataList[i].AwayHScore
             dataList[i].fit = match
            
-            if(hkjcMatch && mcMatch && match>7){
+            if(hkjcMatch && mcMatch && match>8){
                 console.log("http://vip.win007.com/AsianOdds_n.aspx?id="+dataList[i].id)
                 rtnArr.push(dataList[i])
             }
@@ -347,11 +347,11 @@ class dataFilter {
             for(var broker in oddData){   
                 totalBroker++
                 if(broker=="澳门" && oddData["澳门"]["start"]["point"]=="平手"
-                && oddData["澳门"]["end"]["point"]=="平手"){
+                && oddData["澳门"]["end"]["point"]=="平手/半球"){
                     mcMatch = true
                 }
                 if(broker=="香港马会" && oddData["香港马会"]["start"]["point"]=="平手"
-                    && oddData["香港马会"]["end"]["point"]=="平手"){
+                    && oddData["香港马会"]["end"]["point"]=="平手/半球"){
                     hkjcMatch = true
                 }
                 if( broker!="香港马会"&&broker!="澳门"&& 
@@ -379,7 +379,7 @@ class dataFilter {
             delete dataList[i].AwayHScore
             dataList[i].fit = match
            
-            if(hkjcMatch && mcMatch && match2>3){
+            if(hkjcMatch && mcMatch && match2>6){
                 console.log("http://vip.win007.com/AsianOdds_n.aspx?id="+dataList[i].id)
                 rtnArr.push(dataList[i])
             }
@@ -397,14 +397,17 @@ class dataFilter {
             
 
 
-            var isMatch = false
+            var isMatch = 0
             var allMatch = 0
             for(var broker in oddData){   
                 totalBroker++
-                if(parseFloat(oddData[broker]["start"]["away"])>1.09){
-                    isMatch = true
+                
+                if(parseFloat(oddData[broker]["start"]["away"])-parseFloat(oddData[broker]["end"]["away"])>0.05){
+                    isMatch ++
                 }
-                if(parseFloat(oddData[broker]["start"]["point"])!="受让半球/一球"){
+                if(
+                    oddData[broker]["start"]["point"]=="受让半球/一球"&&
+                    oddData[broker]["end"]["point"]=="受让半球/一球"){
                     allMatch ++
                 }
             }
@@ -422,9 +425,7 @@ class dataFilter {
             delete dataList[i].AwayHScore
             //dataList[i].fit = match
            
-            if(isMatch && dataList[i].hkjcOdd.includes("受让半球/一球") &&
-            oddData["香港马会"]["start"]["point"] =="受让半球/一球" &&
-            allMatch > 8
+            if(totalBroker-3<allMatch
             ){
                 console.log("http://vip.win007.com/AsianOdds_n.aspx?id="+dataList[i].id)
                 rtnArr.push(dataList[i])
@@ -432,7 +433,66 @@ class dataFilter {
         }
         return rtnArr 
     }
-    
+    similarOdd(dataList){
+        var rtnArr = []
+        
+        for(var i=0;i<dataList.length;i++){
+            if(typeof( dataList[i]["OddData"])=="undefined") continue
+            var oddData = dataList[i].OddData[0];
+            var totalBroker = 0  
+            
+
+
+            var isMatch = 0
+            var match = 0
+            var match2 = 0
+            var allMatch = 0
+
+            var hkjcMatch = false
+            var mcMatch = false
+            for(var broker in oddData){   
+                totalBroker++
+                if(broker=="澳门" && oddData["澳门"]["start"]["point"]=="受让平手/半球"
+                && oddData["澳门"]["end"]["point"]=="受让平手/半球"){
+                    mcMatch = true
+                }
+                if(broker=="香港马会" && oddData["香港马会"]["start"]["point"]=="受让平手/半球"
+                    && oddData["香港马会"]["end"]["point"]=="受让平手/半球"){
+                    hkjcMatch = true
+                }
+                if( broker!="香港马会"&&broker!="澳门"&& 
+                oddData[broker]["start"]["point"]=="受让平手/半球" && 
+                oddData[broker]["end"]["point"]=="平手" ){
+                    match ++
+                }
+                if( broker!="香港马会"&&broker!="澳门"&& 
+                oddData[broker]["start"]["point"]=="受让平手/半球" && 
+                oddData[broker]["end"]["point"]=="受让平手/半球" ){
+                    match2 ++
+                }
+            }
+
+            dataList[i].hkjcOdd = oddData["香港马会"]["end"]["point"]     
+            //dataList[i].betOdd = oddData["香港马会"]["end"]["home"]              
+            delete dataList[i].OddData
+            delete dataList[i].history
+            delete dataList[i].url
+           // delete dataList[i].league
+            delete dataList[i].home
+            delete dataList[i].away
+           // delete dataList[i].matchData
+            delete dataList[i].HomeHScore
+            delete dataList[i].AwayHScore
+            //dataList[i].fit = match
+           
+            if(mcMatch && hkjcMatch  && match2<4 && match>6
+            ){
+                console.log("http://vip.win007.com/AsianOdds_n.aspx?id="+dataList[i].id)
+                rtnArr.push(dataList[i])
+            }
+        }
+        return rtnArr 
+    }
     nochangeOdd(dataList){
         var rtnArr = []
         

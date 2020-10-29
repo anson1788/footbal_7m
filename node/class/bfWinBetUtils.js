@@ -94,7 +94,7 @@ class bfWinBetUtils extends bfWinUtils{
             
             if(diff>7 && diff<23){
                 return 3
-            }else if(diff<7){
+            }else if(diff<=7){
                 return 2
             }
             return 0
