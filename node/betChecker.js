@@ -3,7 +3,7 @@ let bfWinBetUtils = require('./class/bfWinBetUtils.js');
 
 let bcUtils = new basicUtils()
 let bfBetUtils = new bfWinBetUtils()
-let filterUtils = require('./class/dataFilter.js');
+let filterUtils = require('./class/dataFilterStable.js');
 
 var acct = require('./accountInfo.json');
 const TelegramBot = require('node-telegram-bot-api');
@@ -42,36 +42,13 @@ async function init(){
 
         crtOddList = await bfBetUtils.addOddData(hkjcCrtList,bcUtils)
         let ftUtils = new filterUtils()
-        var styList = []
-        for(var i=0;i<crtOddList.length;i++){
-            if(
-                typeof(crtOddList[i].OddData) !="undefined"  &&
-                crtOddList[i].OddData.length>0 &&
-                typeof(crtOddList[i].OddData[0]["香港马会"])!=="undefined"){
-                styList.push(crtOddList[i])
-            }
-        }
-        var targetData = ftUtils.oneGoalOdd(styList)
-        console.table(targetData)
-
-        var msg = ""
-        for(var i=0;i<targetData.length;i++){
-            msg += "oneGoalOdd" + targetData[i].home +" vs "+targetData[i].away + " "+" "+targetData[i].hkjcOdd + " 主 " + targetData[i].betOdd
-        }
-
-
-        targetData = ftUtils.halfToZero(styList)
-        var msg = ""
-        for(var i=0;i<targetData.length;i++){
-            msg += "halfToZero" + targetData[i].home +" vs "+targetData[i].away + " "+" "+targetData[i].hkjcOdd + " 客 " + targetData[i].betOdd
-        }
-
-
-     
+        var styList = bfBetUtils.getHKJCList(crtOddList)
+        var msg = ftUtils.matchChecker(styList)
 
         if(msg!=""){
             bot.sendMessage(tgChanelId,msg);
         }
+        
         crtOddList = await bfBetUtils.addOddData(m20List,bcUtils)
         var hkjcId = []
         for(var i=0;i<crtOddList.length;i++){

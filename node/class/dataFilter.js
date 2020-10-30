@@ -545,5 +545,55 @@ class dataFilter {
         }
         return rtnArr 
     }
+
+
+
+    samePointOddSwitchHomeDown(dataList){
+        var rtnArr = []
+        for(var i=0;i<dataList.length;i++){
+            if(typeof( dataList[i]["OddData"])=="undefined") continue
+            var total = 0
+            var matchPoint = 0
+            var OddData = dataList[i].OddData[0];
+            for(var broker in OddData){   
+                total ++
+                var startOddPoint = OddData[broker]["start"]["point"]
+                var startOddHome = OddData[broker]["start"]["home"]
+                var startOddAway = OddData[broker]["start"]["away"]
+                var endOddPoint = OddData[broker]["end"]["point"]
+                var endOddHome = OddData[broker]["end"]["home"]
+                var endOddAway = OddData[broker]["end"]["away"]
+
+                /*
+                if(startOddPoint==endOddPoint){
+                    matchPoint ++
+                }*/
+
+                if(parseFloat(startOddHome)>parseFloat(endOddHome) && 
+                   startOddPoint==endOddPoint){
+                    matchPoint ++
+                }
+            }
+
+            var hkjcStart = OddData["香港马会"]["start"]["home"] 
+            var hkjcEnd = OddData["香港马会"]["end"]["home"] 
+            dataList[i].hkjcOdd = OddData["香港马会"]["end"]["point"] 
+            dataList[i].pointDiff = (parseFloat(hkjcStart) - parseFloat(hkjcEnd))
+            dataList[i].startHomePoint = this.oddPos(hkjcStart) +"/"+hkjcStart
+            dataList[i].endHomePoint = this.oddPos(hkjcEnd) +"/"+hkjcEnd
+
+            if(matchPoint > total-4 && dataList[i].hkjcOdd =="平手" 
+            && dataList[i].pointDiff>0.07
+            ){
+                dataList[i].hkjcOdd = OddData["香港马会"]["end"]["point"]                  
+                delete dataList[i].OddData
+                delete dataList[i].url
+                delete dataList[i].HomeHScore
+                delete dataList[i].AwayHScore                
+                rtnArr.push(dataList[i])
+            }
+        }
+        return rtnArr 
+    }
 }
 module.exports = dataFilter
