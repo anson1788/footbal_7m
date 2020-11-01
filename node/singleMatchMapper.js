@@ -46,11 +46,11 @@ async function getCacheData(url, folder, cacheId , type ,isCache = true){
 }
 
 async function init(defaultRange=50){
-    /*
+    
     let rawdata = fs.readFileSync("oddBook.json");
     let dataList = JSON.parse(rawdata)
     let ftUtils = new filterUtils()
-    var matchId = ["1913851"]
+    var matchId = ["1876539"]
     for(var i=0;i<matchId.length;i++){
         var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+matchId[i]
         var OddData =  await getCacheData(url,"bfData/odd/crt/",  matchId[i],"bfOdd",false)
@@ -61,8 +61,9 @@ async function init(defaultRange=50){
         }
         var feature = ftUtils.extraSimilarMatch(match,dataList)
         console.table(feature)
-    }*/
+    }
 
+    /*
     var rawdata = fs.readFileSync("oddBook.json");
     let dataList = JSON.parse(rawdata)
     let ftUtils = new filterUtils()
@@ -80,7 +81,7 @@ async function init(defaultRange=50){
             console.log("print similar Map " +feature.length)
         }
         //console.table(feature)
-    }
+    }*/
  
     
 }
