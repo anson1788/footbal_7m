@@ -46,54 +46,42 @@ async function getCacheData(url, folder, cacheId , type ,isCache = true){
 }
 
 async function init(defaultRange=50){
+    /*
     let rawdata = fs.readFileSync("oddBook.json");
     let dataList = JSON.parse(rawdata)
     let ftUtils = new filterUtils()
-    var matchId = ["1880507"]
+    var matchId = ["1913851"]
     for(var i=0;i<matchId.length;i++){
         var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+matchId[i]
         var OddData =  await getCacheData(url,"bfData/odd/crt/",  matchId[i],"bfOdd",false)
         match = {
+
+            "id":matchId[i],
             "OddData":OddData
         }
-        var feature = ftUtils.extraMatchFeature(match)
-        if(!ftUtils.isEmptyDic(feature)){
+        var feature = ftUtils.extraSimilarMatch(match,dataList)
+        console.table(feature)
+    }*/
 
-        }else{}
-        console.log(JSON.stringify(OddData))
-    }
-    /*
-    var total = 0
-    var targetMatch = []
-
-    var url = "http://live.win007.com/indexall_big.aspx"
-    var bfDailyArr =  await getCacheData(url,"bfData/",matchDate, "bflist",false)
-    if(bfDailyArr.length==0){
-        bcUtils.logError("dom is null in date "+matchDate)
-        continue
-    }
-        
-    var halfHKJCMap = 0
-    for(var j=0;j<bfDailyArr.length;j++){
-        var matchData = {}
-        matchData = bfDailyArr[j]
-        matchData.matchData = matchDate
-
-            if(typeof(bfDailyArr[j]["AwayFScore"])!=="undefined"){
-                var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+bfDailyArr[j].id
-                var OddData =  await getCacheData(url,"bfData/odd/"+matchDate+"/",  bfDailyArr[j].id ,"bfOdd")
-                matchData.OddData = OddData
-                if(matchData.OddData.length > 0 && typeof(matchData.OddData[0]["香港马会"])!="undefined"){
-                    halfHKJCMap ++ ;
-                   targetMatch.push(matchData)
-                }
-   
-            }
-
-
+    var rawdata = fs.readFileSync("oddBook.json");
+    let dataList = JSON.parse(rawdata)
+    let ftUtils = new filterUtils()
+    rawdata = fs.readFileSync("bfData/20201030.json");
+    let crt = JSON.parse(rawdata)
+    for(var i=0;i<crt.length;i++){
+        var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+crt[i].id
+        var OddData =  await getCacheData(url,"bfData/odd/20201030/",  crt[i].id ,"bfOdd")
+        match = {
+            "id":crt[i].id,
+            "OddData":OddData
         }
-    */
-
+        var feature = ftUtils.extraSimilarMatch(match,dataList)
+        if(feature.length>0){
+            console.log("print similar Map " +feature.length)
+        }
+        //console.table(feature)
+    }
+ 
     
 }
 

@@ -1,3 +1,4 @@
+const { parse } = require("dashdash");
 
 class dataFilter {
 
@@ -137,7 +138,7 @@ class dataFilter {
     oddPos(_dd){
         if(parseFloat(_dd)>1.0){
             return "高"
-        }else if(parseFloat(_dd)<=1.0 && parseFloat(_dd) >=0.8){
+        }else if(parseFloat(_dd)<=1.0 && parseFloat(_dd) >0.8){
             return "中"
         }else {
             return "低"
@@ -597,17 +598,154 @@ class dataFilter {
     }
 
 
+    extraSimilarMatch(match,dataList){
+        if(typeof( match["OddData"])=="undefined") {
+            console.log("no oddData "+match.id)
+            return []
+        }
+        if(typeof( match["OddData"][0]["香港马会"])=="undefined") {
+           // console.log("non hkjc match "+match.id)
+            return []
+        }
+        var rtn = []
+        for(var i=0;i<dataList.length;i++){
+            if(dataList[i].id == match.id )continue
+            if(typeof( dataList[i]["OddData"])=="undefined") continue
+            var pastMatch = dataList[i]
+            var total = 0
+            var brokerMatch = 0 
+            for(var broker in pastMatch["OddData"][0]){   
+                total ++
+                if(broker=="香港马会"){
+                   // continue
+                }else{
+                  //  console.log(pastMatch.id + " "+ broker )
+                    if(this.matchHKJCPointBroker(match,pastMatch,false,broker)){
+                        brokerMatch ++
+                    }
+                }
+            }
+            
+            if(this.matchHKJCPointBroker(match,pastMatch,true,"香港马会") && 
+            brokerMatch >total - 6
+            ){
+                dataList[i].hkjcOdd = dataList[i].OddData[0]["香港马会"]["end"]["point"]                  
+                delete dataList[i].OddData
+                delete dataList[i].url
+                delete dataList[i].HomeHScore
+                delete dataList[i].AwayHScore    
+                rtn.push(dataList[i])
+            }
+
+        }
+
+        return rtn
+    }
+
+    matchHKJCPointBroker(crt,past,isCompareOdd, broker){
+        if(typeof(past["OddData"][0][broker])=="undefined") return false
+        if(typeof(past["OddData"][0][broker]["start"])=="undefined") return false
+        if(typeof(crt["OddData"][0][broker])=="undefined") return false
+        if(
+        crt["OddData"][0][broker]["start"]["point"]==past["OddData"][0][broker]["start"]["point"] &&
+        crt["OddData"][0][broker]["end"]["point"]==past["OddData"][0][broker]["end"]["point"]
+        ){
+            
+            if(isCompareOdd){
+                /*
+                console.log("--- "+crt.id+ " "+ past.id)
+                console.log(crt["OddData"][0][broker]["start"]["home"] + " " +this.oddPos(crt["OddData"][0][broker]["start"]["home"]))
+                console.log(past["OddData"][0][broker]["start"]["home"] + " " +this.oddPos(past["OddData"][0][broker]["start"]["home"]))
+                console.log(crt["OddData"][0][broker]["end"]["home"] + " " +this.oddPos(crt["OddData"][0][broker]["end"]["home"]))
+                console.log(past["OddData"][0][broker]["end"]["home"] + " " +this.oddPos(past["OddData"][0][broker]["end"]["home"]))
+                */
+                /*
+                if(
+                    (parseFloat(crt["OddData"][0][broker]["start"]["home"]) - parseFloat(crt["OddData"][0][broker]["end"]["home"]) > 0.07 &&
+                    parseFloat(past["OddData"][0][broker]["start"]["home"])-parseFloat(past["OddData"][0][broker]["end"]["home"])> 0.07) 
+                    ||
+                    (parseFloat(crt["OddData"][0][broker]["start"]["home"]) - parseFloat(crt["OddData"][0][broker]["end"]["home"]) < -0.07 &&
+                    parseFloat(past["OddData"][0][broker]["start"]["home"])-parseFloat(past["OddData"][0][broker]["end"]["home"]) < -0.07) 
+                    
+                    ){
+                        return true
+                    }else{
+                        return false
+                    }
+                */
+                
+                if(
+                Math.abs(parseFloat(crt["OddData"][0][broker]["start"]["home"])- parseFloat(past["OddData"][0][broker]["start"]["home"]) )<0.1&&
+                Math.abs(parseFloat(crt["OddData"][0][broker]["end"]["home"])-parseFloat(past["OddData"][0][broker]["end"]["home"]))<0.1
+                ){
+                    return true
+                }else{
+                    return false
+                }
+            }else{
+                return true
+            }
+        }else{
+            return false
+        }
+    }
+    matchHKJCPoint(crt,past,isCompareOdd){
+        if(crt["OddData"][0]["香港马会"]["start"]["point"]==past["OddData"][0]["香港马会"]["start"]["point"] &&
+        crt["OddData"][0]["香港马会"]["end"]["point"]==past["OddData"][0]["香港马会"]["end"]["point"]
+        ){
+
+            if(isCompareOdd){
+                if(this.oddPos(crt["OddData"][0]["香港马会"]["start"]["home"])==this.oddPos(past["OddData"][0]["香港马会"]["start"]["home"]) &&
+                this.oddPos(crt["OddData"][0]["香港马会"]["end"]["home"])==this.oddPos(past["OddData"][0]["香港马会"]["end"]["home"]) &&
+                this.oddPos(crt["OddData"][0]["香港马会"]["start"]["away"])==this.oddPos(past["OddData"][0]["香港马会"]["start"]["away"]) &&
+                this.oddPos(crt["OddData"][0]["香港马会"]["end"]["away"])==this.oddPos(past["OddData"][0]["香港马会"]["end"]["away"]) 
+                ){
+                    return true
+                }else{
+                    return false
+                }
+            }else{
+                return true
+            }
+        }else{
+            return false
+        }
+    }
+
     extraMatchFeature(match){
         if(typeof( match["OddData"])=="undefined") {
             return {}
         }
-        var rtn = {}
+        if(typeof( match["OddData"][0]["香港马会"])=="undefined") {
+            return {}
+        }
+        var OddData = match["OddData"][0]
+        var rtn = {
+            "hkjcSOddP":OddData["香港马会"]["start"]["point"],
+            "hkjcEOddP":OddData["香港马会"]["end"]["point"]
+        }
+
+        var oddPoint = {"main":[],"sec":[],"diff":[]}
+        for(var broker in OddData){   
+            if(broker == "香港马会") continue
+            /*
+            if(OddData[broker]["start"]["point"]){
+
+            }*/
+            if(OddData[broker]["start"]["point"]){
+
+            }
+        }
         var total = 0
         var matchPoint = 0
         var OddData = match.OddData[0];
         return rtn
     }
 
+
+    addMatchResult(datalist){
+
+    }
     isEmptyDic(dic){
         var num = 0
         for(var id in dic){   
@@ -618,6 +756,31 @@ class dataFilter {
         }else{
             return false
         }
+    }
+
+    lemonformula(dataList){
+        var rtn = []
+        for(var i=0;i<dataList.length;i++){
+            if(typeof( dataList[i]["OddData"])=="undefined") continue
+            var OddData = dataList[i].OddData[0];
+            if(typeof( dataList[i]["OddData"][0]["易胜博"])=="undefined") continue
+            if(typeof( dataList[i]["OddData"][0]["韦德"])=="undefined") continue
+            var easyOdd = OddData["易胜博"]["start"]["point"] 
+            var waiOdd = OddData["韦德"]["start"]["point"] 
+            if(!waiOdd.includes("受") && !easyOdd.includes("受")){
+                if(this.getOddIdx(waiOdd)-this.getOddIdx(easyOdd)==1){
+                    console.log("http://vip.win007.com/AsianOdds_n.aspx?id="+dataList[i].id)
+                    dataList[i].hkjcOdd = dataList[i].OddData[0]["香港马会"]["end"]["point"]                  
+                    delete dataList[i].OddData
+                    delete dataList[i].url
+                    delete dataList[i].HomeHScore
+                    delete dataList[i].AwayHScore
+                 
+                    rtn.push(dataList[i])
+                }
+            }
+        }
+        return rtn
     }
 }
 module.exports = dataFilter
