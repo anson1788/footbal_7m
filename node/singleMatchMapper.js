@@ -46,7 +46,10 @@ async function getCacheData(url, folder, cacheId , type ,isCache = true){
 }
 
 async function init(defaultRange=50){
-
+    var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+"1880507"
+    var OddData =  await getCacheData(url,"bfData/odd/"+matchDate+"/",  bfDailyArr[j].id ,"bfOdd",false)
+    
+    /*
     var total = 0
     var targetMatch = []
 
@@ -69,19 +72,6 @@ async function init(defaultRange=50){
                 matchData.OddData = OddData
                 if(matchData.OddData.length > 0 && typeof(matchData.OddData[0]["香港马会"])!="undefined"){
                     halfHKJCMap ++ ;
-                    
-                    /*
-                    var url = bfDailyArr[j].url
-                    var inMatchData =  await getCacheData(url,"bfData/matchData/"+matchDate+"/",  bfDailyArr[j].id ,"bfDetails")
-                    matchData.inMatchData = inMatchData
-                    */
-                    
-                    /*
-                    var url = "http://zq.win007.com/analysis/"+bfDailyArr[j].id+".htm"
-                    var history =  await getCacheData(url,"bfData/history/"+matchDate+"/",  bfDailyArr[j].id ,"bfHistory")
-                    matchData.history = history
-                    targetMatch.push(matchData)
-                    */
                    targetMatch.push(matchData)
                 }
    
@@ -89,16 +79,9 @@ async function init(defaultRange=50){
 
 
         }
-   
+    */
 
     
-    /*
-    for(var i=0;i<targetMatch.length; i++){
-        
-    }*/
-    //let rawdata = fs.readFileSync("dataBook.json");
-    fs.writeFileSync("oddBook.json", JSON.stringify(targetMatch,null,2))
-    console.log("total: " + total)
 }
 
 init(450)
