@@ -31,7 +31,7 @@ class dataFilterStable extends bfWinUtils{
     console.table(targetData)
     
     for(var i=0;i<targetData.length;i++){
-        msg += "初平終平 主低水" + targetData[i].home +" vs "+targetData[i].away + " "+" "+targetData[i].hkjcOdd + " 客 " + targetData[i].endHomePoint
+        msg += "[初平終平 主降水]" + targetData[i].home +" vs "+targetData[i].away + " "+" (盤:"+targetData[i].hkjcOdd + " 買:主) " + targetData[i].endHomePoint
     }
 
     return msg

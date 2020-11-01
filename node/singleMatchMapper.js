@@ -2,7 +2,7 @@
 
 let basicUtils = require('./class/basicUtils.js');
 let bfwinUtils = require('./class/bfWinUtils.js');
-
+let filterUtils = require('./class/dataFilterStable.js');
 var fs = require('fs');
 
 let bcUtils = new basicUtils()
@@ -46,9 +46,22 @@ async function getCacheData(url, folder, cacheId , type ,isCache = true){
 }
 
 async function init(defaultRange=50){
-    var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+"1880507"
-    var OddData =  await getCacheData(url,"bfData/odd/"+matchDate+"/",  bfDailyArr[j].id ,"bfOdd",false)
-    
+    let rawdata = fs.readFileSync("oddBook.json");
+    let dataList = JSON.parse(rawdata)
+    let ftUtils = new filterUtils()
+    var matchId = ["1880507"]
+    for(var i=0;i<matchId.length;i++){
+        var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+matchId[i]
+        var OddData =  await getCacheData(url,"bfData/odd/crt/",  matchId[i],"bfOdd",false)
+        match = {
+            "OddData":OddData
+        }
+        var feature = ftUtils.extraMatchFeature(match)
+        if(!ftUtils.isEmptyDic(feature)){
+
+        }else{}
+        console.log(JSON.stringify(OddData))
+    }
     /*
     var total = 0
     var targetMatch = []

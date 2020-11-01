@@ -595,5 +595,29 @@ class dataFilter {
         }
         return rtnArr 
     }
+
+
+    extraMatchFeature(match){
+        if(typeof( match["OddData"])=="undefined") {
+            return {}
+        }
+        var rtn = {}
+        var total = 0
+        var matchPoint = 0
+        var OddData = match.OddData[0];
+        return rtn
+    }
+
+    isEmptyDic(dic){
+        var num = 0
+        for(var id in dic){   
+            num ++ 
+        }
+        if(num==0){
+            return true
+        }else{
+            return false
+        }
+    }
 }
 module.exports = dataFilter
