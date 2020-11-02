@@ -587,7 +587,7 @@ class dataFilter extends dataCommonClass{
                    // continue
                 }else{
                   //  console.log(pastMatch.id + " "+ broker )
-                    if(this.matchHKJCPointBroker(match,pastMatch,false,broker)){
+                    if(this.matchHKJCPointBroker(match,pastMatch,true,broker)){
                         brokerMatch ++
                     }
                 }
@@ -597,10 +597,12 @@ class dataFilter extends dataCommonClass{
             brokerMatch >total - 6
             ){
                 dataList[i].hkjcOdd = dataList[i].OddData[0]["香港马会"]["end"]["point"]                  
+                /*
                 delete dataList[i].OddData
                 delete dataList[i].url
                 delete dataList[i].HomeHScore
                 delete dataList[i].AwayHScore    
+                */
                 rtn.push(dataList[i])
             }
 
@@ -645,7 +647,20 @@ class dataFilter extends dataCommonClass{
                 Math.abs(parseFloat(crt["OddData"][0][broker]["start"]["home"])- parseFloat(past["OddData"][0][broker]["start"]["home"]) )<0.1&&
                 Math.abs(parseFloat(crt["OddData"][0][broker]["end"]["home"])-parseFloat(past["OddData"][0][broker]["end"]["home"]))<0.1
                 ){
-                    return true
+                    
+                    if(
+                        (parseFloat(crt["OddData"][0][broker]["start"]["home"]) - parseFloat(crt["OddData"][0][broker]["end"]["home"]) > 0 &&
+                        parseFloat(past["OddData"][0][broker]["start"]["home"])-parseFloat(past["OddData"][0][broker]["end"]["home"])> 0) 
+                        ||
+                        (parseFloat(crt["OddData"][0][broker]["start"]["home"]) - parseFloat(crt["OddData"][0][broker]["end"]["home"]) <=0 &&
+                        parseFloat(past["OddData"][0][broker]["start"]["home"])-parseFloat(past["OddData"][0][broker]["end"]["home"]) <=0) 
+                        
+                        ){
+                            return true
+                        }else{
+                            return false
+                        }
+                    //return true
                 }else{
                     return false
                 }
