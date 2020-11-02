@@ -55,7 +55,6 @@ async function init(defaultRange=50){
         var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+matchId[i]
         var OddData =  await getCacheData(url,"bfData/odd/crt/",  matchId[i],"bfOdd",false)
         match = {
-
             "id":matchId[i],
             "OddData":OddData
         }

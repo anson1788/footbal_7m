@@ -1,36 +1,7 @@
 const { parse } = require("dashdash");
+const dataCommonClass = require('./dataCommonClass.js')
+class dataFilter extends dataCommonClass{
 
-class dataFilter {
-
-    constructor() {
-
-    }
-    clearMatchName(name){
-        name = this.replaceAll(name," ","")
-        if(name.startsWith("[")){
-            name = name.split("]")[1]
-        }else{
-            name = name.split("[")[0]
-        }
-        name = name.replace("(中)","")
-        return name;
-    }
-    replaceAll(string, search, replace) {
-        return string.split(search).join(replace);
-    }
-
-    getOddIdx(_name){
-        var Arr = [
-            "受让两球半/三球","受让两球半","受让两球/两球半","受让两球", "受让球半/两球","受让球半","受让一球/球半","受让一球","受让一球/球半","受让一球","受让半球/一球","受让半球","受让平手/半球",
-            "平手","平手/半球","半球","半球/一球","一球","一球/球半","球半","球半/两球","两球","两球/两球半","两球半","两球半/三球"
-        ]
-        for(var i=0;i<Arr.length;i++){
-            if(_name==Arr[i]){
-                return i
-            }
-        }
-        return -1
-    }
 
     lookUpTwoMatch(dataList){
         var rtn = []
@@ -135,15 +106,7 @@ class dataFilter {
         return rtnArr
     }
 
-    oddPos(_dd){
-        if(parseFloat(_dd)>1.0){
-            return "高"
-        }else if(parseFloat(_dd)<=1.0 && parseFloat(_dd) >0.8){
-            return "中"
-        }else {
-            return "低"
-        }
-    }
+
     customFilter(dataList){
         var rtnArr = []
         for(var i=0;i<dataList.length;i++){
@@ -603,6 +566,10 @@ class dataFilter {
             console.log("no oddData "+match.id)
             return []
         }
+        if(match["OddData"].length <=0 ) {
+            // console.log("non hkjc match "+match.id)
+             return []
+         }
         if(typeof( match["OddData"][0]["香港马会"])=="undefined") {
            // console.log("non hkjc match "+match.id)
             return []
@@ -626,7 +593,7 @@ class dataFilter {
                 }
             }
             
-            if(this.matchHKJCPointBroker(match,pastMatch,true,"香港马会") && 
+            if(this.matchHKJCPointBroker(match,pastMatch,false,"香港马会") && 
             brokerMatch >total - 6
             ){
                 dataList[i].hkjcOdd = dataList[i].OddData[0]["香港马会"]["end"]["point"]                  
@@ -782,5 +749,7 @@ class dataFilter {
         }
         return rtn
     }
+
+
 }
 module.exports = dataFilter
