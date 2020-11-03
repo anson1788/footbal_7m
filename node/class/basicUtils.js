@@ -30,11 +30,12 @@ class basicUtils {
     
    async getHttpDom(url,type){
    
+        var client
         try{
             const launchChrome = () =>
             chromeLauncher.launch({ chromeFlags: ['--disable-gpu', '--headless'] });
             const chrome = await launchChrome();
-            const client = await CDP({ port: chrome.port });
+            client = await CDP({ port: chrome.port });
 
                 try {
         
@@ -48,6 +49,7 @@ class basicUtils {
                     if (client) {
                         await client.close();
                     }
+                    
                     console.error(err); return null
                 } finally {
                     if (client) {
@@ -56,6 +58,9 @@ class basicUtils {
                 }
             
         }catch(e){
+            if (client) {
+                await client.close();
+            }
             return null
         }
     }

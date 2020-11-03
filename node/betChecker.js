@@ -11,7 +11,6 @@ var token = '';
 var fs = require('fs');
 
 async function init(){
-  
     var liveUrl = "http://live.win007.com/indexall_big.aspx"
     var dom = null
     var log = ""
@@ -23,6 +22,7 @@ async function init(){
     }
     if(dom==null){
         console.log("get 7m data error")
+        await init()
         process.exit()
     }else{
         var liveMatchList  = bfBetUtils.parseBFLiveMatch(dom)
