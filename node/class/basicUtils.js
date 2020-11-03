@@ -30,7 +30,7 @@ class basicUtils {
     
    async getHttpDom(url,type){
    
-        var client
+        var client = null
         try{
             const launchChrome = () =>
             chromeLauncher.launch({ chromeFlags: ['--disable-gpu', '--headless'] });
