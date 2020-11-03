@@ -72,14 +72,17 @@ async function init(defaultRange=50){
     }
     */
     
+
+    var dateName = "20201031"
+    var betArr = []
     var rawdata = fs.readFileSync("oddBook.json");
     let dataList = JSON.parse(rawdata)
     let ftUtils = new filterUtils()
-    rawdata = fs.readFileSync("bfData/20201101.json");
+    rawdata = fs.readFileSync("bfData/"+dateName+".json");
     let crt = JSON.parse(rawdata)
     for(var i=0;i<crt.length;i++){
         var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+crt[i].id
-        var OddData =  await getCacheData(url,"bfData/odd/20201101/",  crt[i].id ,"bfOdd")
+        var OddData =  await getCacheData(url,"bfData/odd/"+dateName+"/",  crt[i].id ,"bfOdd")
         match = {
             "id":crt[i].id,
             "OddData":OddData
@@ -106,16 +109,58 @@ async function init(defaultRange=50){
                 t = down
                 buy = "下"
             }
+            var calBuy = buy
+
+            if(buy=="上" && !OddData[0]["香港马会"]["end"]["point"].includes("受")){
+                buy = "主/"+buy 
+            }else if(buy=="上"){
+                buy = "客/"+buy 
+            }else if (!OddData[0]["香港马会"]["end"]["point"].includes("受")){
+                buy = "客/"+buy 
+            }else{
+                buy = "主/"+buy
+            }
 
             if(t>1){
-                console.log("place bet")
-                console.log(crt[i]["home"] + " vs " + crt[i]["away"] + " "+buy + " "+ crt[i].id) 
+                //console.log("place bet")
+                //console.log(crt[i]["home"] + " vs " + crt[i]["away"] + " "+buy + " "+ crt[i].id) 
+                betArr.push(
+                    {
+                        "home":crt[i]["home"],
+                        "away":crt[i]["away"],
+                        "id":crt[i]["id"],
+                        "place":buy,
+                        "calBuy":calBuy,
+                        "buyOdd":OddData[0]["香港马会"]["end"]["point"],
+                        "OddData":OddData
+                    }
+                )
             }
         }
-        //console.table(feature)
     }
  
+    console.table(betArr)
+
+
+
+    for(var j=0;j<betArr.length;j++){
+        console.log("match ok "+betArr[j].id)
+        for(var i=0;i<crt.length;i++){
+             if(betArr[j].id==crt[i].id){
+                betArr[j]["HomeFScore"] = crt[i]["HomeFScore"]
+                betArr[j]["AwayFScore"] = crt[i]["AwayFScore"]
+             }
+        }
+    }
     
+
+    for(var i=0;i<betArr.length;i++){
+        var tmp = ftUtils.calculateResultAsianOdd([betArr[i]],betArr[i]["calBuy"])
+        betArr[i].res = tmp[0][0].res
+    }
+     
+    console.table(betArr)
+    console.table([ftUtils.calculateTotalWinLost(betArr)])
 }
 
 init(450)

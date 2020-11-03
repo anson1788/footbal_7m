@@ -209,5 +209,24 @@ class dataCommomClass {
         count["p"] = (count["贏"]*0.9 + count["贏半"] * 0.4 - count["輸"] - count["輸半"]*0.5 )/count["total"] * 10
         return [dataList,count]
     }
+
+    calculateTotalWinLost(dataList){
+        var count = {
+            "輸":0,
+            "輸半":0,
+            "走":0,
+            "贏半":0,
+            "贏":0,
+            "total":0
+        }
+        for(var i=0;i<dataList.length;i++){
+            count["total"] = count["total"] + 1
+            count[dataList[i].res] = count[dataList[i].res] + 1
+        }
+        count["p"] = (count["贏"]*0.9 + count["贏半"] * 0.4 - count["輸"] - count["輸半"]*0.5 )/count["total"] * 10
+
+        return count
+    }
+
 }
 module.exports = dataCommomClass
