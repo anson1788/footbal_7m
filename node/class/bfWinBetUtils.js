@@ -142,6 +142,9 @@ class bfWinBetUtils extends bfWinUtils{
             var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+dataList[i].id
             var dom = await bcUtils.getHttpDomAsyn(url,"") 
             var oddData = await this.parseOdd(dom)
+            if(oddData == null){
+                oddData = []
+            }
             if(oddData.length >0 && typeof(oddData[0]["香港马会"])!=="undefined"){
                 dataList[i].OddData = oddData
                 console.log(oddData)

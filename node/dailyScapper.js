@@ -28,6 +28,9 @@ async function getCacheData(url, folder, cacheId , type ,isCache = true){
                     rtnArr = await bfUtils.parseBFLiveMatchDetails(dom)  
                 }else if(type=="bfOdd"){
                     rtnArr = await bfUtils.parseOdd(dom)  
+                    if(rtnArr == null){
+                        rtnArr = []
+                    }
                 }else if(type=="bfHistory"){
                     rtnArr = await bfUtils.parseBFHistory(dom)  
                 }
@@ -78,12 +81,12 @@ async function init(defaultRange=50){
                     matchData.inMatchData = inMatchData
                     */
                     
-                    /*
+                    
                     var url = "http://zq.win007.com/analysis/"+bfDailyArr[j].id+".htm"
                     var history =  await getCacheData(url,"bfData/history/"+matchDate+"/",  bfDailyArr[j].id ,"bfHistory")
                     matchData.history = history
-                    targetMatch.push(matchData)
-                    */
+                    //targetMatch.push(matchData)
+                    
                    targetMatch.push(matchData)
                 }
    

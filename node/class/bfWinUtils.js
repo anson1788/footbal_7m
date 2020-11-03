@@ -143,16 +143,16 @@ class bfWinUtils {
 
 
     async parseOdd(crtDom){ 
-        if(crtDom.window==null){
+        if(crtDom==null){
             console.log("no dom")
-            return []
+            return null
         }
         if(!(typeof(crtDom.window)!="undefined")){
             console.log("no window")
-            return []
+            return null
         }
         if(crtDom.window.document==null){
-            return []
+            return null
         }
         var table = crtDom.window.document.querySelectorAll("#webmain table")[0]
         var tr = table.querySelectorAll("tr")

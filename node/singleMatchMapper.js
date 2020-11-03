@@ -28,6 +28,9 @@ async function getCacheData(url, folder, cacheId , type ,isCache = true){
                     rtnArr = await bfUtils.parseBFLiveMatchDetails(dom)  
                 }else if(type=="bfOdd"){
                     rtnArr = await bfUtils.parseOdd(dom)  
+                    if(rtnArr == null){
+                        rtnArr = []
+                    }
                 }else if(type=="bfHistory"){
                     rtnArr = await bfUtils.parseBFHistory(dom)  
                 }
@@ -47,11 +50,11 @@ async function getCacheData(url, folder, cacheId , type ,isCache = true){
 
 async function init(defaultRange=50){
     
-    /*
+    
     let rawdata = fs.readFileSync("oddBook.json");
     let dataList = JSON.parse(rawdata)
     let ftUtils = new filterUtils()
-    var matchId = ["1876539"]
+    var matchId = ["1936094"]
     for(var i=0;i<matchId.length;i++){
         var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+matchId[i]
         var OddData =  await getCacheData(url,"bfData/odd/crt/",  matchId[i],"bfOdd",false)
@@ -70,9 +73,9 @@ async function init(defaultRange=50){
         resultStat = calculator[1]
         console.table([resultStat])
     }
-    */
     
-
+    
+    /*
     var dateName = "20201023"
     var betArr = []
     var rawdata = fs.readFileSync("oddBook.json");
@@ -161,6 +164,7 @@ async function init(defaultRange=50){
      
     console.table(betArr)
     console.table([ftUtils.calculateTotalWinLost(betArr)])
+    */
 }
 
 init(450)
