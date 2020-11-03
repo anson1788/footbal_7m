@@ -11,7 +11,7 @@ var token = '';
 var fs = require('fs');
 
 async function init(){
-
+  
     var liveUrl = "http://live.win007.com/indexall_big.aspx"
     var dom = null
     var log = ""
@@ -23,6 +23,7 @@ async function init(){
     }
     if(dom==null){
         console.log("get 7m data error")
+        process.exit()
     }else{
         var liveMatchList  = bfBetUtils.parseBFLiveMatch(dom)
         var separateList  = bfBetUtils.filterOutImmediateList(liveMatchList)
@@ -43,8 +44,8 @@ async function init(){
         crtOddList = await bfBetUtils.addOddData(hkjcCrtList,bcUtils)
         let ftUtils = new filterUtils()
         var styList = bfBetUtils.getHKJCList(crtOddList)
-        var msg = ftUtils.matchChecker(styList)
-
+        var calculatedResult = ftUtils.matchChecker(styList)
+        var msg = calculatedResult[0]
         if(msg!=""){
             bot.sendMessage(tgChanelId,msg);
         }
@@ -61,6 +62,7 @@ async function init(){
             }
         }
         log += "futureHKJC Match :"+hkjcId.length +"\n"
+        log += calculatedResult[1]
        fs.writeFileSync("liveData/hkjcMatchList.json", JSON.stringify(hkjcId,null,2));
        
         /*

@@ -223,7 +223,7 @@ class dataCommomClass {
             count["total"] = count["total"] + 1
             count[dataList[i].res] = count[dataList[i].res] + 1
         }
-        count["p"] = (count["贏"]*0.9 + count["贏半"] * 0.4 - count["輸"] - count["輸半"]*0.5 )/count["total"] * 10
+        count["p"] = (count["贏"]*0.9 + count["贏半"] * 0.4 - count["輸"] - count["輸半"]*0.5 )
 
         return count
     }

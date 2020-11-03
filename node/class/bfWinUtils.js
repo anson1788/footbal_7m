@@ -143,6 +143,10 @@ class bfWinUtils {
 
 
     async parseOdd(crtDom){ 
+        if(crtDom.window==null){
+            console.log("no dom")
+            return []
+        }
         if(!(typeof(crtDom.window)!="undefined")){
             console.log("no window")
             return []

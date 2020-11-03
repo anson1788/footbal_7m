@@ -73,7 +73,7 @@ async function init(defaultRange=50){
     */
     
 
-    var dateName = "20201031"
+    var dateName = "20201023"
     var betArr = []
     var rawdata = fs.readFileSync("oddBook.json");
     let dataList = JSON.parse(rawdata)
