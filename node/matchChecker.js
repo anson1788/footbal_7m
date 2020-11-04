@@ -80,11 +80,11 @@ async function init(){
         fs.writeFileSync("liveData/nonhkjcMatchList.json", JSON.stringify(nonhkjcListNew,null,2));
         var log = "hkjcMatch : " + hkjcListNew.length +"\n"
         for(var i=0;i<hkjcListNew.length;i++){
-            log += hkjcListNew[i].id+"\n"
+            log += hkjcListNew[i]+"\n"
         }
         log += "non-hkjcMatch : " + nonhkjcListNew.length +"\n"
         for(var i=0;i<nonhkjcListNew.length;i++){
-            log += nonhkjcListNew[i].id+"\n"
+            log += nonhkjcListNew[i]+"\n"
         }
         await bot.sendMessage(tgLogChannel,log+"----------");
        
