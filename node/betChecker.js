@@ -59,6 +59,7 @@ async function init(){
         console.table(targetData)
         */
        bot.sendMessage(tgLogChannel,log+"----------");
+       process.exit()
     }
 }
 
