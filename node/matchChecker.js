@@ -80,13 +80,13 @@ async function init(){
         fs.writeFileSync("liveData/nonhkjcMatchList.json", JSON.stringify(nonhkjcListNew,null,2));
         var log = "hkjcMatch : " + hkjcListNew.length +"\n"
         for(var i=0;i<hkjcListNew.length;i++){
-            log += hkjcListNew.id+"\n"
+            log += hkjcListNew[i].id+"\n"
         }
-        log += "non-hkjcMatch" + nonhkjcListNew.length +"\n"
+        log += "non-hkjcMatch : " + nonhkjcListNew.length +"\n"
         for(var i=0;i<nonhkjcListNew.length;i++){
-            log += nonhkjcListNew.id+"\n"
+            log += nonhkjcListNew[i].id+"\n"
         }
-        bot.sendMessage(tgLogChannel,log+"----------");
+        await bot.sendMessage(tgLogChannel,log+"----------");
        
         process.exit()
 
