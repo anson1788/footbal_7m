@@ -99,6 +99,8 @@ class dataFilterStable extends bfWinUtils{
                 }
             )
           }
+       }else{
+        tgLog += match["home"] + " 對 "+ match["away"] +" "+match["id"]+" 無數據"+"\n"
        }
     }
     console.table(betArr)

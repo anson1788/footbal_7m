@@ -27,14 +27,69 @@ async function init(){
     }else{
         var liveMatchList  = bfBetUtils.parseBFLiveMatch(dom)
         var separateList  = bfBetUtils.filterOutImmediateList(liveMatchList)
-        var m20List = separateList[0]
-        var m7List = separateList[1]
-       
+
         var hkjcList = fs.readFileSync("liveData/hkjcMatchList.json");
         hkjcList = JSON.parse(hkjcList)
 
         var nonhkjcList = fs.readFileSync("liveData/nonhkjcMatchList.json");
         nonhkjcList = JSON.parse(nonhkjcList)
+
+        for(var i=0;i<separateList[1].length;i++){
+            separateList[0].push(separateList[1][i])
+        }
+        var workingList = separateList[0]
+        var result =bfBetUtils.listSeparator(workingList,hkjcList)
+        var InListDataHKJC = result[0]
+        var notInListDataHKJC = result[1]
+   
+        result =bfBetUtils.listSeparator(notInListDataHKJC,nonhkjcList)
+        var InListDataNONHKJC = result[0]
+        var notInListDataNONHKJC = result[1]
+
+
+        var hkjcListNew = []
+        var nonhkjcListNew = []
+        
+        for(var i=0;i<InListDataHKJC.length;i++){
+            hkjcListNew.push(InListDataHKJC[i].id)
+        }
+        for(var i=0;i<InListDataNONHKJC.length;i++){
+            nonhkjcListNew.push(InListDataNONHKJC[i].id)
+        }
+        
+        
+        var dataWithOddList = await bfBetUtils.addOddData(notInListDataNONHKJC,bcUtils)
+        
+        for(var i=0;i<dataWithOddList.length;i++){
+            if(dataWithOddList[i].isOddReady){
+                if(bfBetUtils.isHKJCData(dataWithOddList[i])){
+                    hkjcListNew.push(dataWithOddList[i].id)
+                }else{
+                    nonhkjcListNew.push(dataWithOddList[i].id)
+                }
+            }    
+        }
+
+        
+    
+        console.log(JSON.stringify(hkjcListNew))
+        console.log(JSON.stringify(nonhkjcListNew))
+
+    
+        fs.writeFileSync("liveData/hkjcMatchList.json", JSON.stringify(hkjcListNew,null,2));
+        fs.writeFileSync("liveData/nonhkjcMatchList.json", JSON.stringify(nonhkjcListNew,null,2));
+        var log = "hkjcMatch : " + hkjcListNew.length +"\n"
+        for(var i=0;i<hkjcListNew.length;i++){
+            log += hkjcListNew[i]+"\n"
+        }
+        log += "non-hkjcMatch : " + nonhkjcListNew.length +"\n"
+        for(var i=0;i<nonhkjcListNew.length;i++){
+            log += nonhkjcListNew[i]+"\n"
+        }
+        await bot.sendMessage(tgLogChannel,log+"----------");
+       
+        process.exit()
+
     }
 }
 

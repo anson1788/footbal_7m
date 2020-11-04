@@ -92,9 +92,9 @@ class bfWinBetUtils extends bfWinUtils{
             var diff = calculatedDate.diff(moment(),"minutes")
             //console.log(diff+ " "+obj.time + " "+obj.id)
             
-            if(diff>7 && diff<21){
+            if(diff>6 && diff<35){
                 return 3
-            }else if(diff<=7){
+            }else if(diff<=6){
                 return 2
             }
             return 0
@@ -134,15 +134,39 @@ class bfWinBetUtils extends bfWinUtils{
                 rtn.push(m7List[tmp])
             }
         }
-
         return rtn
     }
+
+    listSeparator(workingList, lookUpList){
+        var notInListData = []
+        var InListData = []
+        for(var i=0;i<workingList.length;i++){
+            var tmp = -1
+            for(var j=0;j<lookUpList.length;j++){
+                if(workingList[i].id==lookUpList[j]){
+                    tmp = j
+                }
+            }
+            if(tmp==-1){
+                notInListData.push(workingList[i])
+            }else{
+                InListData.push(workingList[i])
+            }
+        }
+        return [InListData,notInListData]
+    }
+    
+
     async addOddData(dataList,bcUtils){
         for(var i=0;i<dataList.length;i++){
+            console.log(JSON.stringify(dataList[i]))
             var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+dataList[i].id
+           
             var dom = await bcUtils.getHttpDomAsyn(url,"") 
             var oddData = await this.parseOdd(dom)
+            dataList[i].isOddReady = true
             if(oddData == null){
+                dataList[i].isOddReady = false
                 oddData = []
             }
             if(oddData.length >0 && typeof(oddData[0]["香港马会"])!=="undefined"){
@@ -150,6 +174,7 @@ class bfWinBetUtils extends bfWinUtils{
                 console.log(oddData)
             }
             console.log("complete  :"+ JSON.stringify(dataList[i]))
+          
         }
 
         
@@ -170,6 +195,17 @@ class bfWinBetUtils extends bfWinUtils{
             }
         }
         return styList
+    }
+
+    isHKJCData(match){
+        if(
+            typeof(match.OddData) !="undefined"  &&
+            match.OddData.length>0 &&
+            typeof(match.OddData[0]["香港马会"])!=="undefined"){
+            return true
+        }
+        
+        return false
     }
 }
 module.exports = bfWinBetUtils
