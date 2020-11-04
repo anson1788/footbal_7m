@@ -47,7 +47,7 @@ async function init(){
         var calculatedResult = ftUtils.matchChecker(styList)
         var msg = calculatedResult[0]
         if(msg!=""){
-            bot.sendMessage(tgChanelId,msg);
+           await bot.sendMessage(tgChanelId,msg);
         }
        
         /*
@@ -58,7 +58,7 @@ async function init(){
         var targetData = ftUtils.lookUpTwoMatch(liveMatchList)
         console.table(targetData)
         */
-       bot.sendMessage(tgLogChannel,log+"----------");
+       await bot.sendMessage(tgLogChannel,log+"----------");
        process.exit()
     }
 }
