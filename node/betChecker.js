@@ -28,18 +28,18 @@ async function init(){
         var liveMatchList  = bfBetUtils.parseBFLiveMatch(dom)
         var separateList  = bfBetUtils.filterOutImmediateList(liveMatchList)
 
-        log += "Total Match :"+liveMatchList.length +"\n"
+       
         var hkjcList = fs.readFileSync("liveData/hkjcMatchList.json");
         hkjcList = JSON.parse(hkjcList)
 
         var m20List = separateList[0]
         var m7List = separateList[1]
        
-        log += "m20 Match :"+m20List.length +"\n"
-        log += "m7 Match :"+m7List.length +"\n"
-
+        log += "hkjc Live Match :\n"
         var hkjcCrtList = bfBetUtils.getCrtHKJCList(m7List,hkjcList)
-        log += "liveHKJC Match :"+hkjcCrtList.length +"\n"
+        for(var i=0;i<hkjcCrtList.length;i++){
+            log += hkjcCrtList[i].id + " "+hkjcCrtList[i]["home"] + " vs "+hkjcCrtList[i]["away"] +"\n"
+        }
 
         crtOddList = await bfBetUtils.addOddData(hkjcCrtList,bcUtils)
         let ftUtils = new filterUtils()
@@ -49,21 +49,6 @@ async function init(){
         if(msg!=""){
             bot.sendMessage(tgChanelId,msg);
         }
-        
-        crtOddList = await bfBetUtils.addOddData(m20List,bcUtils)
-        var hkjcId = []
-        for(var i=0;i<crtOddList.length;i++){
-            console.log("aa" +JSON.stringify(crtOddList[i].OddData))
-            if(
-                typeof(crtOddList[i].OddData) !="undefined"  &&
-                crtOddList[i].OddData.length>0 &&
-                typeof(crtOddList[i].OddData[0]["香港马会"])!=="undefined"){
-                hkjcId.push(crtOddList[i].id)
-            }
-        }
-        log += "futureHKJC Match :"+hkjcId.length +"\n"
-        log += calculatedResult[1]
-       fs.writeFileSync("liveData/hkjcMatchList.json", JSON.stringify(hkjcId,null,2));
        
         /*
         var list = await bfBetUtils.addOddData(liveMatchList,bcUtils)
