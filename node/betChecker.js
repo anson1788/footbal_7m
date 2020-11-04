@@ -31,7 +31,7 @@ async function init(){
        
         var hkjcList = fs.readFileSync("liveData/hkjcMatchList.json");
         hkjcList = JSON.parse(hkjcList)
-
+        console.log(JSON.stringify(hkjcList))
         var m20List = separateList[0]
         var m7List = separateList[1]
        

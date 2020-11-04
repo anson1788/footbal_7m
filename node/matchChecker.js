@@ -75,9 +75,18 @@ async function init(){
         console.log(JSON.stringify(hkjcListNew))
         console.log(JSON.stringify(nonhkjcListNew))
 
-       
+    
         fs.writeFileSync("liveData/hkjcMatchList.json", JSON.stringify(hkjcListNew,null,2));
         fs.writeFileSync("liveData/nonhkjcMatchList.json", JSON.stringify(nonhkjcListNew,null,2));
+        var log = "hkjcMatch : " + hkjcListNew.length +"\n"
+        for(var i=0;i<hkjcListNew.length;i++){
+            log += hkjcListNew.id+"\n"
+        }
+        log += "non-hkjcMatch" + nonhkjcListNew.length +"\n"
+        for(var i=0;i<nonhkjcListNew.length;i++){
+            log += nonhkjcListNew.id+"\n"
+        }
+        bot.sendMessage(tgLogChannel,log+"----------");
        
         process.exit()
 
