@@ -92,9 +92,9 @@ class bfWinBetUtils extends bfWinUtils{
             var diff = calculatedDate.diff(moment(),"minutes")
             //console.log(diff+ " "+obj.time + " "+obj.id)
             
-            if(diff>5 && diff<35){
+            if(diff>6 && diff<35){
                 return 3
-            }else if(diff<=5){
+            }else if(diff<=6){
                 return 2
             }
             return 0
