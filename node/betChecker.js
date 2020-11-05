@@ -47,6 +47,7 @@ async function init(){
         var calculatedResult = ftUtils.matchChecker(styList)
         var msg = calculatedResult[0]
         log += calculatedResult[1]
+        log += calculatedResult[2]
         if(msg!=""){
            await bot.sendMessage(tgChanelId,msg);
         }

@@ -32,6 +32,7 @@ class dataFilterStable extends dataFilterSingleLogic{
     var targetData = this.samePointOddSwitchHomeDown(dataList)
     console.table(targetData)
     
+    var tgLog = ""
     for(var i=0;i<targetData.length;i++){
         msg += "[初平終平 主降水]" + targetData[i].home +" vs "+targetData[i].away + " "+" (盤:"+targetData[i].hkjcOdd + " 買:主) " + targetData[i].endHomePoint + "\n"
     }
@@ -44,7 +45,7 @@ class dataFilterStable extends dataFilterSingleLogic{
     for(var i=0;i<Operation.length ;i++){
       var tmp = this.checkingLogic( Operation[i]["method"], dataList)
       if(tmp.length==0){
-        msg += Operation[i]["method"] + " no matching"
+        tgLog += Operation[i]["method"] + " no matching"
       }
       for(var j=0;j<tmp.length;j++){
         msg += Operation[i]["displayName"] +" "+ 
@@ -57,7 +58,7 @@ class dataFilterStable extends dataFilterSingleLogic{
     var matchData = this.similarMatchChecker(dataList)
     msg += matchData[1]
 
-    return [msg,matchData[2]]
+    return [msg,matchData[2],tgLog]
   }
 
   similarMatchChecker(matchList){
