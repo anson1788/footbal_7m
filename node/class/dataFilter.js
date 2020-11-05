@@ -510,6 +510,15 @@ class dataFilter extends dataCommonClass{
         return rtnArr 
     }
 
+
+
+    pointDropOddDrop00(OddData){
+        var total = 0
+        for(var broker in OddData){
+            
+        }
+        return true
+    }
     /*
     1 .OddData["香港马会"]["end"]["point"]=="平手"
        OddData["香港马会"]["start"]["point"]=="平手"
@@ -615,6 +624,7 @@ class dataFilter extends dataCommonClass{
         }
         return rtnArr 
     }
+
 
 
     extraSimilarMatch(match,dataList){
