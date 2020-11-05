@@ -43,10 +43,13 @@ class dataFilterStable extends dataFilterSingleLogic{
     
     for(var i=0;i<Operation.length ;i++){
       var tmp = this.checkingLogic( Operation[i]["method"], dataList)
+      if(tmp.length==0){
+        msg += Operation[i]["method"] + " no matching"
+      }
       for(var j=0;j<tmp.length;j++){
         msg += Operation[i]["displayName"] +" "+ 
-                  tmp[i].home +" vs "+tmp[i].away + " "+ 
-                  " (盤:"+targetData[i].hkjcOddE + " 買:"+targetData[i].place+"/"+targetData[i].placeOdd +") " + "\n"
+               tmp[i].home +" vs "+tmp[i].away + " "+ 
+               " (盤:"+targetData[i].hkjcOddE + " 買:"+targetData[i].place+"/"+targetData[i].placeOdd +") " + "\n"
       }
     }
 
