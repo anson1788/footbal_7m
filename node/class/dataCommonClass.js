@@ -133,7 +133,11 @@ class dataCommomClass {
 
             var startHKJCOdd = dataList[i]["OddData"][0]["香港马会"]["start"]["point"]
             var endHKJCOdd = dataList[i]["OddData"][0]["香港马会"]["end"]["point"]
+            if(typeof(dataList[i].betOn)!=="undefined"){
+                betOn = dataList[i].betOn
+            }
             dataList[i].betOn = betOn
+            
             var domainant = ""
             if(endHKJCOdd=="平手"&& startHKJCOdd=="平手" ){
                 domainant = "主"

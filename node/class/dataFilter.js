@@ -512,6 +512,71 @@ class dataFilter extends dataCommonClass{
 
 
 
+    pointDropOddDrop00(OddData){
+        var total = 0
+        for(var broker in OddData){
+            
+        }
+        return true
+    }
+    /*
+    1 .OddData["香港马会"]["end"]["point"]=="平手"
+       OddData["香港马会"]["start"]["point"]=="平手"
+    2. !hkjcStart.includes("受") && !hkjcStart.includes("受")
+    3. matchCondition > total-4 
+    */
+    pointDropOdDrop(dataList){
+        var rtnArr = []
+        for(var i=0;i<dataList.length;i++){
+            if(typeof( dataList[i]["OddData"])=="undefined") continue
+            var OddData = dataList[i].OddData[0];
+            var total = 0
+
+            var hkjcStart = OddData["香港马会"]["start"]["home"] 
+            var hkjcEnd = OddData["香港马会"]["end"]["home"] 
+            var isMain = false 
+            var matchCondition = 0
+            
+                for(var broker in OddData){
+                    total ++
+                    var startOddPoint = OddData[broker]["start"]["point"]
+                    var startOddHome = parseFloat(OddData[broker]["start"]["home"])
+                    var startOddAway = parseFloat(OddData[broker]["start"]["away"])
+                    var endOddPoint = OddData[broker]["end"]["point"]
+                    var endOddHome = parseFloat(OddData[broker]["end"]["home"])
+                    var endOddAway = parseFloat(OddData[broker]["end"]["away"])
+
+                    if(startOddPoint.includes("受")){
+                        var homeOddPerStart =  startOddAway /(startOddHome + startOddAway)
+                        var homeOddPerEnd =  endOddAway /(endOddHome + endOddAway)
+                        if(homeOddPerStart>homeOddPerEnd &&
+                            this.getOddIdx(endOddPoint)-this.getOddIdx(startOddPoint)==1
+                            ){
+                            matchCondition++
+                        }
+                    }
+
+                }
+            
+
+            if(matchCondition > total-4  && OddData["香港马会"]["start"]["point"] !=OddData["香港马会"]["end"]["point"]  
+            ){                
+                dataList[i].hkjcOddS = OddData["香港马会"]["start"]["point"]  
+                dataList[i].hkjcOddE = OddData["香港马会"]["end"]["point"]  
+                //delete dataList[i].OddData
+                delete dataList[i].url
+                delete dataList[i].HomeHScore
+                delete dataList[i].AwayHScore  
+                delete dataList[i].history                 
+                rtnArr.push(dataList[i])
+            }
+
+        }
+
+
+        return rtnArr
+    }
+
     samePointOddSwitchHomeDown(dataList){
         var rtnArr = []
         for(var i=0;i<dataList.length;i++){
@@ -553,12 +618,13 @@ class dataFilter extends dataCommonClass{
                 delete dataList[i].OddData
                 delete dataList[i].url
                 delete dataList[i].HomeHScore
-                delete dataList[i].AwayHScore                
+                delete dataList[i].AwayHScore             
                 rtnArr.push(dataList[i])
             }
         }
         return rtnArr 
     }
+
 
 
     extraSimilarMatch(match,dataList){

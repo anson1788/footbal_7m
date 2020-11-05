@@ -1,7 +1,7 @@
-const bfWinUtils = require('./dataFilter.js')
+const dataFilterSingleLogic = require('./dataFilterSingleLogic.js')
 var fs = require('fs');
 
-class dataFilterStable extends bfWinUtils{
+class dataFilterStable extends dataFilterSingleLogic{
 
   matchChecker(dataList){
     /*
@@ -34,6 +34,23 @@ class dataFilterStable extends bfWinUtils{
     
     for(var i=0;i<targetData.length;i++){
         msg += "[初平終平 主降水]" + targetData[i].home +" vs "+targetData[i].away + " "+" (盤:"+targetData[i].hkjcOdd + " 買:主) " + targetData[i].endHomePoint + "\n"
+    }
+
+    var Operation = [ {
+            "method":"pointDropOddDrop00",
+            "displayName":"[降盤跌水(平手盤)]"
+          }]
+    
+    for(var i=0;i<Operation.length ;i++){
+      var tmp = this.checkingLogic( Operation[i]["method"], dataList)
+      if(tmp.length==0){
+        msg += Operation[i]["method"] + " no matching"
+      }
+      for(var j=0;j<tmp.length;j++){
+        msg += Operation[i]["displayName"] +" "+ 
+               tmp[i].home +" vs "+tmp[i].away + " "+ 
+               " (盤:"+targetData[i].hkjcOddE + " 買:"+targetData[i].place+"/"+targetData[i].placeOdd +") " + "\n"
+      }
     }
 
 
@@ -113,5 +130,38 @@ class dataFilterStable extends bfWinUtils{
     return [betArr,tgMsg,tgLog]
 
   }
+
+
+   checkingLogic(type ,dataList){
+        var rtnArr = []
+        for(var i=0;i<dataList.length;i++){
+            if(typeof( dataList[i]["OddData"])=="undefined") continue
+            var OddData = dataList[i].OddData[0];
+            var isAdd =false 
+            if(type=="pointDropOddDrop00"){
+              isAdd = this.pointDropOdDrop(OddData)
+              if(isAdd==true){
+                dataList[i].place="客"
+                dataList[i].betOn="下"
+              }
+            }
+
+            if(isAdd){ 
+              if(dataList[i].place=="主"){
+                dataList[i].placeOdd = OddData["香港马会"]["end"]["home"] 
+              }else{
+                dataList[i].placeOdd = OddData["香港马会"]["end"]["away"] 
+              }
+              delete dataList[i].url
+              delete dataList[i].HomeHScore
+              delete dataList[i].AwayHScore  
+              delete dataList[i].history        
+              rtnArr.push(dataList[i])
+            }
+
+        }
+
+        return rtnArr 
+   }
 }
 module.exports = dataFilterStable
