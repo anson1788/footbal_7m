@@ -45,7 +45,7 @@ class dataFilterStable extends dataFilterSingleLogic{
     for(var i=0;i<Operation.length ;i++){
       var tmp = this.checkingLogic( Operation[i]["method"], dataList)
       if(tmp.length==0){
-        tgLog += Operation[i]["displayName"] + " no matching"
+        tgLog += Operation[i]["displayName"] + " no data match\n"
       }
       for(var j=0;j<tmp.length;j++){
         msg += Operation[i]["displayName"] +" "+ 
