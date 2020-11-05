@@ -52,7 +52,7 @@ class dataFilterStable extends bfWinUtils{
        var match = matchList[i]
        var OddData = match.OddData
        var feature = this.extraSimilarMatch(match,pastList)
-       if(feature.length>0){
+       if(feature.length>2){
           tgLog += match["home"] + " 對 "+ match["away"] +" "+match["id"]+"\n"
           for(var k=0;k<Math.min(feature.length,5);k++){
             tgLog +=   "http://vip.win007.com/AsianOdds_n.aspx?id="+ feature[k].id + "\n"

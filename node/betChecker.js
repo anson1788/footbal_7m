@@ -46,9 +46,11 @@ async function init(){
         var styList = bfBetUtils.getHKJCList(crtOddList)
         var calculatedResult = ftUtils.matchChecker(styList)
         var msg = calculatedResult[0]
+        log += calculatedResult[1]
         if(msg!=""){
            await bot.sendMessage(tgChanelId,msg);
         }
+        
        
         /*
         var list = await bfBetUtils.addOddData(liveMatchList,bcUtils)
