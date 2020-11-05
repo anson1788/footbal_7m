@@ -102,7 +102,7 @@ class dataFilterStable extends dataFilterSingleLogic{
               buy = "主/"+buy
           }
 
-          if(t>1){
+          if(t>0.3){
             //console.log("place bet")
             //console.log(crt[i]["home"] + " vs " + crt[i]["away"] + " "+buy + " "+ crt[i].id) 
             betArr.push(
