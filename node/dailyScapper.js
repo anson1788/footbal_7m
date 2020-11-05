@@ -26,6 +26,11 @@ async function getCacheData(url, folder, cacheId , type ,isCache = true){
                     rtnArr = await bfUtils.parseBFDailyList(dom)  
                 }else if(type=="bfDetails"){
                     rtnArr = await bfUtils.parseBFLiveMatchDetails(dom)  
+                }else if(type=="bfBSOdd"){
+                    rtnArr = await bfUtils.parseOddBS(dom)  
+                    if(rtnArr == null){
+                        rtnArr = []
+                    }
                 }else if(type=="bfOdd"){
                     rtnArr = await bfUtils.parseOdd(dom)  
                     if(rtnArr == null){
@@ -80,12 +85,16 @@ async function init(defaultRange=50){
                     var inMatchData =  await getCacheData(url,"bfData/matchData/"+matchDate+"/",  bfDailyArr[j].id ,"bfDetails")
                     matchData.inMatchData = inMatchData
                     */
+
+                   var url = "http://vip.win007.com/OverDown_n.aspx?id="+bfDailyArr[j].id
+                   var BSOddData =  await getCacheData(url,"bfData/bsodd/"+matchDate+"/",  bfDailyArr[j].id ,"bfBSOdd")
+                   matchData.BSOddData = BSOddData
                     
-                    /*
+                   /*
                     var url = "http://zq.win007.com/analysis/"+bfDailyArr[j].id+".htm"
                     var history =  await getCacheData(url,"bfData/history/"+matchDate+"/",  bfDailyArr[j].id ,"bfHistory")
                     matchData.history = history
-                    */
+                  */
                     //targetMatch.push(matchData)
                     
                    targetMatch.push(matchData)

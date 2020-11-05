@@ -142,6 +142,63 @@ class bfWinUtils {
     }
 
 
+    async parseOddBS(crtDom){ 
+        if(crtDom==null){
+            console.log("no dom")
+            return null
+        }
+        if(!(typeof(crtDom.window)!="undefined")){
+            console.log("no window")
+            return null
+        }
+        if(crtDom.window.document==null){
+            return null
+        }
+        var table = crtDom.window.document.querySelectorAll("#webmain table")[0]
+        var tr = table.querySelectorAll("tr")
+        var tmp = {}
+ 
+        for(var i=2;i<tr.length-2;i++){
+           var style = tr[i].getAttribute("style")
+           if (!(style+"").includes("none")){
+               var tds  = tr[i].querySelectorAll("td")
+               var tdsTxt = tds[0].textContent
+               if(tds.length==12){
+                    tmp [tdsTxt] = {
+                            "start":{
+                                "home":tds[2].textContent,
+                                "away":tds[4].textContent,
+                                "point":tds[3].textContent
+                            },
+                            "end":{
+                                "home":tds[8].textContent,
+                                "away":tds[10].textContent,
+                                "point":tds[9].textContent
+                            }
+                        }
+                    
+                   
+               }
+           }
+        }
+        
+        //console.log("---"+bfid+"---")
+        //console.log(tmp)
+
+        var idx =0 
+        for(var id in tmp){
+            idx ++
+        }
+        
+        if(idx>0){
+            return [tmp]    
+        }else{
+            return []
+        }
+
+       
+    }
+
     async parseOdd(crtDom){ 
         if(crtDom==null){
             console.log("no dom")
