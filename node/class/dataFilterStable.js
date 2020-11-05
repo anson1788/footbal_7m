@@ -45,7 +45,7 @@ class dataFilterStable extends dataFilterSingleLogic{
     for(var i=0;i<Operation.length ;i++){
       var tmp = this.checkingLogic( Operation[i]["method"], dataList)
       if(tmp.length==0){
-        tgLog += Operation[i]["displayName"] + " no matching"
+        tgLog += Operation[i]["displayName"] + " no data match\n"
       }
       for(var j=0;j<tmp.length;j++){
         msg += Operation[i]["displayName"] +" "+ 
@@ -102,7 +102,7 @@ class dataFilterStable extends dataFilterSingleLogic{
               buy = "主/"+buy
           }
 
-          if(t>1){
+          if(t>0.3){
             //console.log("place bet")
             //console.log(crt[i]["home"] + " vs " + crt[i]["away"] + " "+buy + " "+ crt[i].id) 
             betArr.push(

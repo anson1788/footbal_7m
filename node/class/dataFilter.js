@@ -660,7 +660,7 @@ class dataFilter extends dataCommonClass{
             }
             
             if(this.matchHKJCPointBroker(match,pastMatch,false,"香港马会") && 
-            brokerMatch >total - 6
+            brokerMatch >total - 5
             ){
                 dataList[i].hkjcOdd = dataList[i].OddData[0]["香港马会"]["end"]["point"]                  
                 /*
@@ -678,6 +678,7 @@ class dataFilter extends dataCommonClass{
     }
 
     matchHKJCPointBroker(crt,past,isCompareOdd, broker){
+        broker = "香港马会"
         if(typeof(past["OddData"][0][broker])=="undefined") return false
         if(typeof(past["OddData"][0][broker]["start"])=="undefined") return false
         if(typeof(crt["OddData"][0][broker])=="undefined") return false
@@ -687,28 +688,50 @@ class dataFilter extends dataCommonClass{
         ){
             
             if(isCompareOdd){
-                /*
-                console.log("--- "+crt.id+ " "+ past.id)
-                console.log(crt["OddData"][0][broker]["start"]["home"] + " " +this.oddPos(crt["OddData"][0][broker]["start"]["home"]))
-                console.log(past["OddData"][0][broker]["start"]["home"] + " " +this.oddPos(past["OddData"][0][broker]["start"]["home"]))
-                console.log(crt["OddData"][0][broker]["end"]["home"] + " " +this.oddPos(crt["OddData"][0][broker]["end"]["home"]))
-                console.log(past["OddData"][0][broker]["end"]["home"] + " " +this.oddPos(past["OddData"][0][broker]["end"]["home"]))
-                */
-                /*
-                if(
-                    (parseFloat(crt["OddData"][0][broker]["start"]["home"]) - parseFloat(crt["OddData"][0][broker]["end"]["home"]) > 0.07 &&
-                    parseFloat(past["OddData"][0][broker]["start"]["home"])-parseFloat(past["OddData"][0][broker]["end"]["home"])> 0.07) 
-                    ||
-                    (parseFloat(crt["OddData"][0][broker]["start"]["home"]) - parseFloat(crt["OddData"][0][broker]["end"]["home"]) < -0.07 &&
-                    parseFloat(past["OddData"][0][broker]["start"]["home"])-parseFloat(past["OddData"][0][broker]["end"]["home"]) < -0.07) 
-                    
+              
+                var homeStart = parseFloat(crt["OddData"][0][broker]["start"]["home"])
+                var awayStart = parseFloat(crt["OddData"][0][broker]["start"]["away"])
+
+                var homeEnd = parseFloat(crt["OddData"][0][broker]["end"]["home"])
+                var awayEnd = parseFloat(crt["OddData"][0][broker]["end"]["away"])
+
+                var homeStartPer = homeStart/(homeStart+awayStart)
+                var awayStartPer = awayStart/(homeStart+awayStart)
+
+                var homeEndPer = homeEnd/(homeEnd+awayEnd)
+                var awayEndPer = awayEnd/(homeEnd+awayEnd)
+
+                var pasthomeStart = parseFloat(past["OddData"][0][broker]["start"]["home"])
+                var pastawayStart = parseFloat(past["OddData"][0][broker]["start"]["away"])
+
+                var pasthomeEnd = parseFloat(past["OddData"][0][broker]["end"]["home"])
+                var pastawayEnd = parseFloat(past["OddData"][0][broker]["end"]["away"])
+
+                var pasthomeStartPer = pasthomeStart/(pasthomeStart+pastawayStart)
+                var pastawayStartPer = pastawayStart/(pasthomeStart+pastawayStart)
+
+                var pasthomeEndPer = pasthomeEnd/(pasthomeEnd+pastawayEnd)
+                var pastawayEndPer = pastawayEnd/(pasthomeEnd+pastawayEnd)
+        
+                if(Math.abs(homeStartPer-pasthomeStartPer)<0.05 && Math.abs(pasthomeEndPer-homeEndPer)<0.05) {
+                    /*
+                    console.log("data2 :"+homeStartPer)
+                    console.log("data1 :"+homeEndPer)
+                    console.log("data2 :"+pasthomeStartPer)
+                    console.log("data1 :"+pasthomeEndPer)
+                    console.log("-------")
+                    */
+                    if(
+                        (homeStartPer-homeEndPer<0 &&pasthomeStartPer-pasthomeEndPer <0) ||
+                        (homeStartPer-homeEndPer > 0 &&pasthomeStartPer-pasthomeEndPer >0)
                     ){
-                        return true
-                    }else{
-                        return false
-                    }
-                */
-                
+                     return true
+                    }else
+                    return false
+                }else{
+                    return false
+                }
+                /*
                 if(
                 Math.abs(parseFloat(crt["OddData"][0][broker]["start"]["home"])- parseFloat(past["OddData"][0][broker]["start"]["home"]) )<0.1&&
                 Math.abs(parseFloat(crt["OddData"][0][broker]["end"]["home"])-parseFloat(past["OddData"][0][broker]["end"]["home"]))<0.1
@@ -729,7 +752,8 @@ class dataFilter extends dataCommonClass{
                     //return true
                 }else{
                     return false
-                }
+                }*/
+
             }else{
                 return true
             }

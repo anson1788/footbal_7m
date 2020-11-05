@@ -54,7 +54,7 @@ async function init(defaultRange=50){
     let rawdata = fs.readFileSync("oddBook.json");
     let dataList = JSON.parse(rawdata)
     let ftUtils = new filterUtils()
-    var matchId = ["1927661"]
+    var matchId = ["1936094"]
     for(var i=0;i<matchId.length;i++){
         var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+matchId[i]
         var OddData =  await getCacheData(url,"bfData/odd/crt/",  matchId[i],"bfOdd",false)
@@ -66,6 +66,7 @@ async function init(defaultRange=50){
         var calculator = ftUtils.calculateResultAsianOdd(feature)
         var resultList = calculator[0]
         var resultStat = calculator[1]
+        console.table(resultList)
         console.table([resultStat])
 
         calculator = ftUtils.calculateResultAsianOdd(feature,"下")
@@ -75,8 +76,8 @@ async function init(defaultRange=50){
     }
     
     
-    /*
-    var dateName = "20201023"
+  /*
+    var dateName = "20201101"
     var betArr = []
     var rawdata = fs.readFileSync("oddBook.json");
     let dataList = JSON.parse(rawdata)
@@ -91,7 +92,7 @@ async function init(defaultRange=50){
             "OddData":OddData
         }
         var feature = ftUtils.extraSimilarMatch(match,dataList)
-        if(feature.length>0){
+        if(feature.length>3){
            // console.log("---------------")
            // console.log("上：")
             var calculator = ftUtils.calculateResultAsianOdd(feature)
@@ -165,6 +166,7 @@ async function init(defaultRange=50){
     console.table(betArr)
     console.table([ftUtils.calculateTotalWinLost(betArr)])
     */
+    
 }
 
 init(450)
