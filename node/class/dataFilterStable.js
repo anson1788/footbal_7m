@@ -91,6 +91,7 @@ class dataFilterStable extends dataFilterSingleLogic{
               t = down
               buy = "下"
           }
+          tgLog += "t : "+ t +"\n"
           var calBuy = buy
           if(buy=="上" && !OddData[0]["香港马会"]["end"]["point"].includes("受")){
             buy = "主/"+buy 
