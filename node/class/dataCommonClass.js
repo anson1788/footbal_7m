@@ -20,6 +20,9 @@ class dataCommomClass {
         return string.split(search).join(replace);
     }
 
+    isDicEmpty(obj) {
+        return Object.keys(obj).length === 0;
+    }
     getOddIdx(_name){
         var Arr = [
             "受让八球半/九球","受让八球半",
@@ -117,8 +120,13 @@ class dataCommomClass {
         return Arr[idx]
     }
 
-    calculateResultAsianOdd(dataList, betOn="上"){
+    calculateResultAsianOdd(rtnVal, betOn="上"){
 
+
+        var dataList = []
+        for (i = 0; i < rtnVal.length; i++) {
+            dataList.push(rtnVal[i])
+        }
         var count = {
                         "輸":0,
                         "輸半":0,
@@ -133,6 +141,7 @@ class dataCommomClass {
 
             var startHKJCOdd = dataList[i]["OddData"][0]["香港马会"]["start"]["point"]
             var endHKJCOdd = dataList[i]["OddData"][0]["香港马会"]["end"]["point"]
+            
             if(typeof(dataList[i].betOn)!=="undefined"){
                 betOn = dataList[i].betOn
             }
@@ -211,6 +220,8 @@ class dataCommomClass {
         }
 
         count["p"] = (count["贏"]*0.9 + count["贏半"] * 0.4 - count["輸"] - count["輸半"]*0.5 )/count["total"] * 10
+        count["win"] = (count["贏"]*2 + count["贏半"]) / (count["total"]*2)
+        count["win"] = count["win"].toFixed(2)
         return [dataList,count]
     }
 
@@ -232,5 +243,55 @@ class dataCommomClass {
         return count
     }
 
+
+    isValidateMatch(match){
+        var rtnVal = true
+        if(typeof( match["OddData"])=="undefined") {
+           return false
+        }
+        if(match["OddData"].length <=0 ) {
+            return false
+        }
+        if(typeof( match["OddData"][0]["香港马会"])=="undefined") {
+            return false
+        }
+        return true
+    }
+
+
+
+  oddPerMap(matchOdd){
+    var tmp = {}
+
+    tmp["Shome"] = parseFloat(matchOdd["start"]["home"])/(parseFloat(matchOdd["start"]["home"]) + parseFloat(matchOdd["start"]["away"]))
+    tmp["Saway"] = parseFloat(matchOdd["start"]["away"])/(parseFloat(matchOdd["start"]["home"]) + parseFloat(matchOdd["start"]["away"]))
+    tmp["Spoint"] = matchOdd["start"]["point"]
+
+    tmp["Ehome"] = parseFloat(matchOdd["end"]["home"])/(parseFloat(matchOdd["end"]["home"]) + parseFloat(matchOdd["start"]["away"]))
+    tmp["Eaway"] = parseFloat(matchOdd["end"]["away"])/(parseFloat(matchOdd["end"]["home"]) + parseFloat(matchOdd["start"]["away"]))
+    tmp["Epoint"] = matchOdd["end"]["point"]
+
+    return tmp
+  }
+  
+  isTwoMatchSimilar(m1,m2){
+
+    //console.log("m1 :" +JSON.stringify(m1))
+    //console.log("m2 :" +JSON.stringify(m2))
+    if(m1["Spoint"]==m2["Spoint"] && 
+       m1["Epoint"]==m2["Epoint"] && 
+       Math.abs(m1["Shome"] - m2["Shome"]) <0.05 &&
+       Math.abs(m1["Ehome"] - m2["Ehome"]) <0.05 && 
+       (
+        (m1["Shome"] < m1["Ehome"] &&
+        m2["Shome"] < m2["Ehome"] ) ||
+        (m1["Shome"] > m1["Ehome"] &&
+        m2["Shome"] > m2["Ehome"] ) 
+       )
+    ){
+      return true
+    }
+    return false
+  }
 }
 module.exports = dataCommomClass

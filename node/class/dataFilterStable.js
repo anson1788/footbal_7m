@@ -126,7 +126,7 @@ class dataFilterStable extends dataFilterSingleLogic{
 
     var tgMsg = ""
     for(var j=0;j<betArr.length;j++){
-      tgMsg +=  betArr[j]["home"] + " 對 " + betArr[j]["away"] + "["+betArr[j]["buyOdd"] + "]"+ " "+betArr[j]["place"] + "\n"
+      tgMsg += "["+betArr[j].id+"]" +betArr[j]["home"] + " 對 " + betArr[j]["away"] + "["+betArr[j]["buyOdd"] + "]"+ " "+betArr[j]["place"] + "\n"
     }
 
     return [betArr,tgMsg,tgLog]

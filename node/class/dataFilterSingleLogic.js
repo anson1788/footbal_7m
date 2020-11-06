@@ -38,5 +38,7 @@ class dataFilterSingleLogic extends dataFilter{
       }
       return rtnVal 
   }
+
 }
+
 module.exports = dataFilterSingleLogic
