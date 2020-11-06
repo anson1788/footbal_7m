@@ -625,19 +625,56 @@ class dataFilter extends dataCommonClass{
         return rtnArr 
     }
 
-
+    extractSameOddMatch(match,dataList){
+        if(!this.isValidateMatch(match)){
+            return {}
+        }
+        var crtOdd = match["OddData"][0]
+        var tmp = {}
+        for(var broker in crtOdd){
+            for(var i=0;i<dataList.length;i++){
+                delete dataList[i].betOn
+            }
+            var tmpList = this.singleOddSimilarOddList(broker,match,dataList)
+            var calculatorUp = this.calculateResultAsianOdd(tmpList)
+            for(var i=0;i<tmpList.length;i++){
+                delete tmpList[i].betOn
+            }
+            var calculatorDown = this.calculateResultAsianOdd(tmpList,"下")
+            tmp[broker] = {
+                                "上":calculatorUp,
+                                "下":calculatorDown
+            }
+        }
+        return tmp
+    }
+    singleOddSimilarOddList(broker, match, dataList){
+        var rtnVal =[]
+        var crtOdd = match["OddData"][0]
+        for(var i=0;i<dataList.length;i++){
+            if(dataList[i].id == match.id )continue
+            if(!this.isValidateMatch(dataList[i])) continue
+            var pastMatchOdd = dataList[i]["OddData"][0]
+            if( typeof(pastMatchOdd[broker])!="undefined"){
+                var crtOddPer = this.oddPerMap(crtOdd[broker])
+                var pastMatchOddPer = this.oddPerMap(pastMatchOdd[broker])
+                if(this.isTwoMatchSimilar(crtOddPer,pastMatchOddPer)){
+                    dataList[i]["homeS"] = dataList[i]["OddData"][0][broker]["start"]["home"]
+                    dataList[i]["homeE"] = dataList[i]["OddData"][0][broker]["end"]["home"]
+                    dataList[i]["homeSP"] = pastMatchOddPer["Shome"]
+                    dataList[i]["homeEP"] = pastMatchOddPer["Ehome"]
+                    dataList[i]["odd"] = dataList[i]["OddData"][0][broker]["end"]["point"]
+                    rtnVal.push(dataList[i])
+                }
+            }
+        }
+        return rtnVal
+    }
 
     extraSimilarMatch(match,dataList){
-        if(typeof( match["OddData"])=="undefined") {
-            console.log("no oddData "+match.id)
-            return []
-        }
-        if(match["OddData"].length <=0 ) {
-            // console.log("non hkjc match "+match.id)
-             return []
-         }
-        if(typeof( match["OddData"][0]["香港马会"])=="undefined") {
-           // console.log("non hkjc match "+match.id)
+        console.log("erro 222r "+JSON.stringify(match))
+        if(!this.isValidateMatch(match)){
+            console.log("error")
             return []
         }
         var rtn = []
