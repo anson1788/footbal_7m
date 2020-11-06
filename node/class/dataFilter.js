@@ -646,6 +646,39 @@ class dataFilter extends dataCommonClass{
                                 "下":calculatorDown
             }
         }
+
+        if(!this.isDicEmpty(tmp)){
+            var upCount = 0
+            var dwnCount = 0
+            var total = 0
+            for(var broker in tmp){
+                if(tmp[broker]["上"][0].length >8){
+                    var upP = tmp[broker]["上"][1]["p"]
+                    var dwnP = tmp[broker]["下"][1]["p"]
+                    total++
+                    
+                    if(upP>dwnP && upP>0.2){
+                        if(tmp[broker]["上"][1]["贏"]/ (tmp[broker]["上"][1]["贏"]+tmp[broker]["上"][1]["輸"]) > 0.65){
+                            upCount ++
+                        }
+                        //console.table([tmp[broker]["上"][1]])
+                    }
+                    if(dwnP>upP && dwnP>0.2){
+                        if(tmp[broker]["下"][1]["贏"]/ (tmp[broker]["下"][1]["贏"]+tmp[broker]["下"][1]["輸"]) > 0.65){
+                            dwnCount ++
+                        }
+                       // console.table(tmp[broker]["下"][0])
+                       // console.table([tmp[broker]["下"][1]])
+                    }
+                }
+            }
+            return {
+                "total":total,
+                "up":upCount,
+                "down":dwnCount
+            }
+        }
+
         return tmp
     }
     singleOddSimilarOddList(broker, match, dataList){
