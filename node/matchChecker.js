@@ -58,7 +58,7 @@ async function init(){
         }
         
         
-        var dataWithOddList = await bfBetUtils.addOddData(notInListDataNONHKJC,bcUtils)
+        var dataWithOddList = await bfBetUtils.addOddData(notInListDataNONHKJC,bcUtils,true)
         
         for(var i=0;i<dataWithOddList.length;i++){
             if(dataWithOddList[i].isOddReady){
