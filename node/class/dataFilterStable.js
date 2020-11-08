@@ -29,7 +29,7 @@ class dataFilterStable extends dataFilterSingleLogic{
      主隊 降水 >0.07
      */
 
-    var targetData = this.samePointOddSwitchHomeDown(dataList)
+    var targetData = this.samePointOddSwitchHomeDown(this.deepClone(dataList))
     console.table(targetData)
     
     var tgLog = ""
@@ -43,7 +43,7 @@ class dataFilterStable extends dataFilterSingleLogic{
           }]
     
     for(var i=0;i<Operation.length ;i++){
-      var tmp = this.checkingLogic( Operation[i]["method"], dataList)
+      var tmp = this.checkingLogic( Operation[i]["method"], this.deepClone(dataList))
       if(tmp.length==0){
         tgLog += Operation[i]["displayName"] + " no data match\n"
       }
@@ -55,10 +55,63 @@ class dataFilterStable extends dataFilterSingleLogic{
     }
 
 
-    var matchData = this.similarMatchChecker(dataList)
+    var matchData = this.similarMatchAdvance(this.deepClone(dataList))
     msg += matchData[1]
 
     return [msg,matchData[2],tgLog]
+  }
+  similarMatchAdvance(matchList){
+    var rawdata = fs.readFileSync("oddBook.json");
+    let pastList = JSON.parse(rawdata)
+    var betArr = []
+    var tgLog = ""
+    for(var i=0;i<matchList.length;i++){
+        var match = matchList[i]
+        var feature = this.extractSameOddMatch(match, pastList) 
+
+        tgLog += match["home"] + " 對 "+ match["away"] +" "+match["id"]+
+                 "["+feature[0]["total"]+"/"+feature[0]["up"] +"/"+ feature[0]["down"]+"]"
+               
+        if(parsFloat(feature[0]["total"])>7 && 
+          (
+            parsFloat(feature[0]["up"])>0 ||
+            parsFloat(feature[0]["down"])>0
+          )
+        ){
+            tgLog +=  "\n"
+            var betData = {
+                "home":match["home"],
+                "away":match["away"],
+                "id":match["id"],
+                "buyOdd":OddData[0]["香港马会"]["end"]["point"],
+                "up": feature[0]["up"],
+                "down": feature[0]["down"],
+                "total": feature[0]["total"]
+            }
+            if( parsFloat(feature[0]["up"])> parsFloat(feature[0]["down"]))
+            {
+              betData["oddVal"] = OddData[0]["香港马会"]["end"]["home"]
+              betData["place"] = "主"
+            }else{
+              betData["oddVal"] = OddData[0]["香港马会"]["end"]["away"]
+              betData["place"] = "客"
+            }
+            betArr.push(betData)
+        }else{
+           tgLog +=  "唔合理\n"
+        }
+    }
+
+
+    var tgMsg = ""
+    for(var j=0;j<betArr.length;j++){
+      tgMsg += betArr[j]["home"] + " 對 " + betArr[j]["away"] + 
+              "["+betArr[j]["buyOdd"] + "]"+ " "+betArr[j]["place"] + "/"+betArr[j]["oddVal"] + "\n"
+      tgMsg +=  "http://vip.win007.com/AsianOdds_n.aspx?id="+betArr[j].id+ "\n"
+    }
+
+    return [betArr,tgMsg,tgLog]
+
   }
 
   similarMatchChecker(matchList){

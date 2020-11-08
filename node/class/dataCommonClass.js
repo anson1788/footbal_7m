@@ -120,13 +120,92 @@ class dataCommomClass {
         return Arr[idx]
     }
 
-    calculateResultAsianOdd(rtnVal, betOn="上"){
+
+    deepClone(data){
+        return JSON.parse(JSON.stringify(data))
+    }
 
 
-        var dataList = []
-        for (i = 0; i < rtnVal.length; i++) {
-            dataList.push(rtnVal[i])
+    calculateSingleResultAsianOdd(rtnVal,broker, betOn = "主"){
+        var workingList = this.deepClone(rtnVal)
+        var count = {
+            "輸":0,
+            "輸半":0,
+            "走":0,
+            "贏半":0,
+            "贏":0,
+            "total":0
         }
+        for(var i=0;i<workingList.length;i++){
+            workingList[i].betOn = betOn
+            var endOdd = workingList[i]["OddData"][0][broker]["end"]["point"]
+            var oddIdx = this.getOddIdx(endOdd)
+            var oddDis = this.getAsianOdd(oddIdx)
+
+            var firstOdd = parseFloat(oddDis.split("/")[0])
+            var secondOdd =  parseFloat(oddDis.split("/")[0])
+
+            if(oddDis.split("/").length>1){
+                secondOdd = parseFloat(oddDis.split("/")[1])
+            }
+            
+            var hfScore = parseFloat(workingList[i]["HomeFScore"])
+            var afScore = parseFloat(workingList[i]["AwayFScore"])
+
+            var adH1afScore = afScore + firstOdd
+            var adH2afScore = afScore + secondOdd
+            
+            var w1 = 0
+            var w2 = 0
+            if(betOn == "主"){
+                if(hfScore > adH1afScore){
+                    w1 = 1
+                }else if(hfScore<adH1afScore){
+                    w1 = -1
+                }
+                if(hfScore > adH2afScore){
+                    w2 = 1
+                }else if(hfScore<adH2afScore){
+                    w2 = -1
+                }
+            }else{
+                if(hfScore < adH1afScore){
+                    w1 = 1
+                }else if(hfScore > adH1afScore){
+                    w1 = -1
+                }
+                if(hfScore < adH2afScore){
+                    w2 = 1
+                }else if(hfScore>adH2afScore){
+                    w2 = -1
+                }
+            }
+
+            if(w1+w2 == 2 ){
+                workingList[i].res = "贏"
+            }else if(w1+w2 == -2 ){
+                workingList[i].res = "輸"
+            }else if(w1 == 0  && w2 == 0 ){
+                workingList[i].res = "走"
+            }else if(w1+w2 == 1 ){
+                workingList[i].res = "贏半"
+            }else if(w1+w2 == -1 ){
+                workingList[i].res = "輸半"
+            }
+
+            count[workingList[i].res] = count[workingList[i].res] +1
+            count["total"] = count["total"] +1
+        }
+
+        count["p"] = (count["贏"]*0.9 + count["贏半"] * 0.4 - count["輸"] - count["輸半"]*0.5 )/count["total"] * 10
+        count["win"] = (count["贏"]*2 + count["贏半"]) / (count["total"]*2)
+        count["win"] = count["win"].toFixed(2)
+        return [workingList,count]
+    }
+
+
+    calculateResultAsianOdd(rtnVal, betOn="上"){
+        var workingList = this.deepClone(rtnVal)
         var count = {
                         "輸":0,
                         "輸半":0,
@@ -136,16 +215,16 @@ class dataCommomClass {
                         "total":0
                     }
 
-        for(var i=0;i<dataList.length;i++){
+        for(var i=0;i<workingList.length;i++){
             //console.log(JSON.stringify(dataList[i]))
 
-            var startHKJCOdd = dataList[i]["OddData"][0]["香港马会"]["start"]["point"]
-            var endHKJCOdd = dataList[i]["OddData"][0]["香港马会"]["end"]["point"]
+            var startHKJCOdd = workingList[i]["OddData"][0]["香港马会"]["start"]["point"]
+            var endHKJCOdd = workingList[i]["OddData"][0]["香港马会"]["end"]["point"]
             
-            if(typeof(dataList[i].betOn)!=="undefined"){
-                betOn = dataList[i].betOn
+            if(typeof(workingList[i].betOn)!=="undefined"){
+                betOn = workingList[i].betOn
             }
-            dataList[i].betOn = betOn
+            workingList[i].betOn = betOn
             
             var domainant = ""
             if(endHKJCOdd=="平手"&& startHKJCOdd=="平手" ){
@@ -161,7 +240,7 @@ class dataCommomClass {
             }else{
                 domainant = "客"
             }
-            dataList[i].betOn = domainant + "/"+betOn
+            workingList[i].betOn = domainant + "/"+betOn
 
             var oddIdx = this.getOddIdx(endHKJCOdd)
             var oddDis = this.getAsianOdd(oddIdx)
@@ -174,8 +253,8 @@ class dataCommomClass {
 
           
 
-            var hfScore = parseFloat(dataList[i]["HomeFScore"])
-            var afScore = parseFloat(dataList[i]["AwayFScore"])
+            var hfScore = parseFloat(workingList[i]["HomeFScore"])
+            var afScore = parseFloat(workingList[i]["AwayFScore"])
 
             var firstHalf = -1
             var secondHalf = -1
@@ -205,24 +284,24 @@ class dataCommomClass {
                 }
             }
             if(firstHalf+secondHalf == 2 ){
-                dataList[i].res = "贏"
+                workingList[i].res = "贏"
             }else if(firstHalf+secondHalf == -2 ){
-                dataList[i].res = "輸"
+                workingList[i].res = "輸"
             }else if(firstHalf == 0  && secondHalf == 0 ){
-                dataList[i].res = "走"
+                workingList[i].res = "走"
             }else if(firstHalf + secondHalf == 1 ){
-                dataList[i].res = "贏半"
+                workingList[i].res = "贏半"
             }else if(firstHalf + secondHalf == -1 ){
-                dataList[i].res = "輸半"
+                workingList[i].res = "輸半"
             }
-            count[dataList[i].res] = count[dataList[i].res] +1
+            count[workingList[i].res] = count[workingList[i].res] +1
             count["total"] = count["total"] +1
         }
 
         count["p"] = (count["贏"]*0.9 + count["贏半"] * 0.4 - count["輸"] - count["輸半"]*0.5 )/count["total"] * 10
         count["win"] = (count["贏"]*2 + count["贏半"]) / (count["total"]*2)
         count["win"] = count["win"].toFixed(2)
-        return [dataList,count]
+        return [workingList,count]
     }
 
     calculateTotalWinLost(dataList){
@@ -276,8 +355,8 @@ class dataCommomClass {
   
   isTwoMatchSimilar(m1,m2){
 
-    //console.log("m1 :" +JSON.stringify(m1))
-    //console.log("m2 :" +JSON.stringify(m2))
+    //console.log("m1 s:" +m1["Spoint"])
+    //console.log("m1 e:" +m1["Epoint"])
     if(m1["Spoint"]==m2["Spoint"] && 
        m1["Epoint"]==m2["Epoint"] && 
        Math.abs(m1["Shome"] - m2["Shome"]) <0.05 &&
