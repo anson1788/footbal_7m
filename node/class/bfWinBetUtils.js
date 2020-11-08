@@ -1,5 +1,6 @@
 const bfWinUtils = require('./bfWinUtils.js')
 var moment = require('moment');
+var fs = require('fs');
 class bfWinBetUtils extends bfWinUtils{
     
     parseBFLiveMatch(crtDom){
@@ -157,13 +158,29 @@ class bfWinBetUtils extends bfWinUtils{
     }
     
 
-    async addOddData(dataList,bcUtils){
+
+    async addOddData(dataList,bcUtils,isCache = false){
         for(var i=0;i<dataList.length;i++){
             console.log(JSON.stringify(dataList[i]))
             var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+dataList[i].id
            
-            var dom = await bcUtils.getHttpDomAsyn(url,"") 
-            var oddData = await this.parseOdd(dom)
+            var dom = null 
+            var oddData = null
+            if(!isCache){
+                dom = await bcUtils.getHttpDomAsyn(url,"") 
+                oddData = await this.parseOdd(dom)
+            }else{
+                if(fs.existsSync("bfData/odd/crt/"+dataList[i].id+".json")){
+                    let rawdata = fs.readFileSync("bfData/odd/crt/"+dataList[i].id+".json");
+                    oddData = JSON.parse(rawdata);   
+                }else{
+                    dom = await bcUtils.getHttpDomAsyn(url,"") 
+                    oddData = await this.parseOdd(dom)
+                    if(oddData!=null){
+                        fs.writeFileSync("bfData/odd/crt/"+dataList[i].id+".json", JSON.stringify(oddData,null,2))
+                    }
+                }
+            }
             dataList[i].isOddReady = true
             if(oddData == null){
                 dataList[i].isOddReady = false

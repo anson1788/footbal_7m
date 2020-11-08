@@ -4,35 +4,18 @@ var fs = require('fs');
 class dataFilterStable extends dataFilterSingleLogic{
 
   matchChecker(dataList){
-    /*
-    var targetData = this.oneGoalOdd(dataList)
-    console.table(targetData)
-    */
+   
     var msg = ""
-    /* 
-    for(var i=0;i<targetData.length;i++){
-            msg += "oneGoalOdd" + targetData[i].home +" vs "+targetData[i].away + " "+" "+targetData[i].hkjcOdd + " 主 " + targetData[i].betOdd
-    }
-
-    targetData = this.halfToZero(styList)
-    console.table(targetData)
-    
-    for(var i=0;i<targetData.length;i++){
-        msg += "halfToZero" + targetData[i].home +" vs "+targetData[i].away + " "+" "+targetData[i].hkjcOdd + " 客 " + targetData[i].betOdd
-    }
-    */
-
-
-
+    var tgLog = ""
     /*
      初盤 ＝終盤 ＝平手盤
      主隊 降水 >0.07
      */
-
+    /*
     var targetData = this.samePointOddSwitchHomeDown(this.deepClone(dataList))
     console.table(targetData)
     
-    var tgLog = ""
+
     for(var i=0;i<targetData.length;i++){
         msg += "[初平終平 主降水]" + targetData[i].home +" vs "+targetData[i].away + " "+" (盤:"+targetData[i].hkjcOdd + " 買:主) " + targetData[i].endHomePoint + "\n"
     }
@@ -52,7 +35,7 @@ class dataFilterStable extends dataFilterSingleLogic{
                tmp[i].home +" vs "+tmp[i].away + " "+ 
                " (盤:"+targetData[i].hkjcOddE + " 買:"+targetData[i].place+"/"+targetData[i].placeOdd +") " + "\n"
       }
-    }
+    }*/
 
 
     var matchData = this.similarMatchAdvance(this.deepClone(dataList))
@@ -67,15 +50,16 @@ class dataFilterStable extends dataFilterSingleLogic{
     var tgLog = ""
     for(var i=0;i<matchList.length;i++){
         var match = matchList[i]
+        console.log(match.home)
         var feature = this.extractSameOddMatch(match, this.deepClone(pastList))
-
+        console.log(JSON.stringify(feature))
         tgLog += match["home"] + " 對 "+ match["away"] +" "+match["id"]+
-                 "["+feature[0]["total"]+"/"+feature[0]["up"] +"/"+ feature[0]["down"]+"]"
+                 "["+feature["total"]+"/"+feature["up"] +"/"+ feature["down"]+"]"
                
-        if(parsFloat(feature[0]["total"])>7 && 
+        if(parseFloat(feature["total"])>7 && 
           (
-            parsFloat(feature[0]["up"])>0 ||
-            parsFloat(feature[0]["down"])>0
+            parseFloat(feature["up"])>0 ||
+            parseFloat(feature["down"])>0
           )
         ){
             tgLog +=  "\n"
@@ -83,17 +67,17 @@ class dataFilterStable extends dataFilterSingleLogic{
                 "home":match["home"],
                 "away":match["away"],
                 "id":match["id"],
-                "buyOdd":OddData[0]["香港马会"]["end"]["point"],
-                "up": feature[0]["up"],
-                "down": feature[0]["down"],
-                "total": feature[0]["total"]
+                "buyOdd":match.OddData[0]["香港马会"]["end"]["point"],
+                "up": feature["up"],
+                "down": feature["down"],
+                "total": feature["total"]
             }
-            if( parsFloat(feature[0]["up"])> parsFloat(feature[0]["down"]))
+            if( parseFloat(feature["up"])> parseFloat(feature["down"]))
             {
-              betData["oddVal"] = OddData[0]["香港马会"]["end"]["home"]
+              betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["home"]
               betData["place"] = "主"
             }else{
-              betData["oddVal"] = OddData[0]["香港马会"]["end"]["away"]
+              betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["away"]
               betData["place"] = "客"
             }
             betArr.push(betData)
