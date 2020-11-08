@@ -625,6 +625,8 @@ class dataFilter extends dataCommonClass{
         return rtnArr 
     }
 
+
+
     extractSameOddMatch(match,dataList){
         if(!this.isValidateMatch(match)){
             return {}
@@ -632,15 +634,10 @@ class dataFilter extends dataCommonClass{
         var crtOdd = match["OddData"][0]
         var tmp = {}
         for(var broker in crtOdd){
-            for(var i=0;i<dataList.length;i++){
-                delete dataList[i].betOn
-            }
             var tmpList = this.singleOddSimilarOddList(broker,match,dataList)
-            var calculatorUp = this.calculateResultAsianOdd(tmpList)
-            for(var i=0;i<tmpList.length;i++){
-                delete tmpList[i].betOn
-            }
-            var calculatorDown = this.calculateResultAsianOdd(tmpList,"下")
+            
+            var calculatorUp = this.calculateSingleResultAsianOdd(tmpList,broker)
+            var calculatorDown = this.calculateSingleResultAsianOdd(tmpList,broker,"客")
             tmp[broker] = {
                                 "上":calculatorUp,
                                 "下":calculatorDown
@@ -651,6 +648,9 @@ class dataFilter extends dataCommonClass{
             var upCount = 0
             var dwnCount = 0
             var total = 0
+            var upbroker = ""
+            var dwnbroker = ""
+
             for(var broker in tmp){
                 if(tmp[broker]["上"][0].length >8){
                     var upP = tmp[broker]["上"][1]["p"]
@@ -660,44 +660,60 @@ class dataFilter extends dataCommonClass{
                     if(upP>dwnP && upP>0.2){
                         if(tmp[broker]["上"][1]["贏"]/ (tmp[broker]["上"][1]["贏"]+tmp[broker]["上"][1]["輸"]) > 0.65){
                             upCount ++
+                            upbroker += tmp[broker]["上"][0][0]["oddE"]+"/"+broker + " ,"
                         }
                         //console.table([tmp[broker]["上"][1]])
                     }
                     if(dwnP>upP && dwnP>0.2){
                         if(tmp[broker]["下"][1]["贏"]/ (tmp[broker]["下"][1]["贏"]+tmp[broker]["下"][1]["輸"]) > 0.65){
                             dwnCount ++
+                            dwnbroker += tmp[broker]["下"][0][0]["oddE"]+"/"+broker + " ,"
                         }
                        // console.table(tmp[broker]["下"][0])
                        // console.table([tmp[broker]["下"][1]])
                     }
                 }
             }
+            /*
+            for(var broker in tmp){
+                
+                if(broker.includes("Bet365")){
+                    console.table(tmp[broker]["上"][0])
+                    console.table([tmp[broker]["上"][1]])
+                    console.table(tmp[broker]["下"][0])
+                    console.table([tmp[broker]["下"][1]])
+                }
+            }*/
             return {
                 "total":total,
                 "up":upCount,
-                "down":dwnCount
+                "down":dwnCount,
+                "upbroker":upbroker,
+                "downbroker":dwnbroker
             }
         }
 
         return tmp
     }
     singleOddSimilarOddList(broker, match, dataList){
+        var workingList = this.deepClone(dataList)
         var rtnVal =[]
         var crtOdd = match["OddData"][0]
-        for(var i=0;i<dataList.length;i++){
-            if(dataList[i].id == match.id )continue
-            if(!this.isValidateMatch(dataList[i])) continue
-            var pastMatchOdd = dataList[i]["OddData"][0]
+        for(var i=0;i<workingList.length;i++){
+            if(workingList[i].id == match.id )continue
+            if(!this.isValidateMatch(workingList[i])) continue
+            var pastMatchOdd = workingList[i]["OddData"][0]
             if( typeof(pastMatchOdd[broker])!="undefined"){
                 var crtOddPer = this.oddPerMap(crtOdd[broker])
                 var pastMatchOddPer = this.oddPerMap(pastMatchOdd[broker])
-                if(this.isTwoMatchSimilar(crtOddPer,pastMatchOddPer)){
-                    dataList[i]["homeS"] = dataList[i]["OddData"][0][broker]["start"]["home"]
-                    dataList[i]["homeE"] = dataList[i]["OddData"][0][broker]["end"]["home"]
-                    dataList[i]["homeSP"] = pastMatchOddPer["Shome"]
-                    dataList[i]["homeEP"] = pastMatchOddPer["Ehome"]
-                    dataList[i]["odd"] = dataList[i]["OddData"][0][broker]["end"]["point"]
-                    rtnVal.push(dataList[i])
+            
+                if(this.isTwoMatchSimilar(crtOddPer,pastMatchOddPer) ){
+                    rtnVal.push(Object.assign({},workingList[i]))
+                    rtnVal[rtnVal.length-1]["homeS"] = workingList[i]["OddData"][0][broker]["start"]["home"]
+                    rtnVal[rtnVal.length-1]["homeE"] = workingList[i]["OddData"][0][broker]["end"]["home"]
+                    rtnVal[rtnVal.length-1]["homeSP"] = pastMatchOddPer["Shome"]
+                    rtnVal[rtnVal.length-1]["homeEP"] = pastMatchOddPer["Ehome"]
+                    rtnVal[rtnVal.length-1]["oddE"] = workingList[i]["OddData"][0][broker]["end"]["point"]
                 }
             }
         }
