@@ -67,7 +67,7 @@ class dataFilterStable extends dataFilterSingleLogic{
     var tgLog = ""
     for(var i=0;i<matchList.length;i++){
         var match = matchList[i]
-        var feature = this.extractSameOddMatch(match, pastList) 
+        var feature = this.extractSameOddMatch(match, this.deepClone(pastList))
 
         tgLog += match["home"] + " 對 "+ match["away"] +" "+match["id"]+
                  "["+feature[0]["total"]+"/"+feature[0]["up"] +"/"+ feature[0]["down"]+"]"
