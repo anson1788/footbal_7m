@@ -58,9 +58,8 @@ class dataFilterStable extends dataFilterSingleLogic{
         var upSide = hkjcData["上"][1]
         var dwnSide = hkjcData["下"][1]
         tgLog += match["home"] + " 對 "+ match["away"] +" "+match["id"]+
-         "["+upSide["p"] +"/"+ dwnSide["p"]+"]"
-
-        if(parseFloat(upSide["p"]>0) || parseFloat(dwnSide["p"]>0)){
+         "["+upSide["p"] +"/"+ dwnSide["p"]+"/" + upSide["total"]+"]"
+        if(parseFloat(upSide["p"])>0 || parseFloat(dwnSide["p"])>0){
           tgLog +=  "\n"
           var betData = {
             "home":match["home"],
@@ -78,6 +77,7 @@ class dataFilterStable extends dataFilterSingleLogic{
               betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["away"]
               betData["place"] = "客"
             }
+            betArr.push(betData)
         }else{
           tgLog +=  "唔合理\n"
         }
