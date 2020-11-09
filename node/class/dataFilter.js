@@ -674,22 +674,52 @@ class dataFilter extends dataCommonClass{
                     }
                 }
             }
-            /*
+            
+            var up = 0
+            var upbroker = ""
+            var down = 0
+            var downbroker = ""
+            var total = 0
+            var totalUp = 0
+            var totalDown = 0
+            var totalMMM = 0
             for(var broker in tmp){
-                
-                if(broker.includes("Bet365")){
-                    console.table(tmp[broker]["上"][0])
-                    console.table([tmp[broker]["上"][1]])
-                    console.table(tmp[broker]["下"][0])
-                    console.table([tmp[broker]["下"][1]])
+                if(parseFloat(tmp[broker]["上"][1]["p"])>parseFloat(tmp[broker]["下"][1]["p"])){
+                    up ++
+                    upbroker += broker + " \n"
+                }else if(parseFloat(tmp[broker]["上"][1]["p"])<parseFloat(tmp[broker]["下"][1]["p"])){
+                    down ++
+                    downbroker+= broker + " \n"
                 }
-            }*/
+                    total ++
+                    console.table( "---"+broker+"----")
+                   // console.table(tmp[broker]["上"][0])
+                    console.table([tmp[broker]["上"][1]])
+                    //console.table(tmp[broker]["下"][0])
+                    console.table([tmp[broker]["下"][1]])
+
+                    if(parseFloat(tmp[broker]["上"][1]["total"])>100){
+                        totalMMM ++
+                        totalUp = totalUp + parseFloat(tmp[broker]["上"][1]["p"])
+                    }
+                    if(parseFloat(tmp[broker]["下"][1]["total"])>100){
+                        totalDown = totalDown + parseFloat(tmp[broker]["下"][1]["p"])
+                    }
+            }
+            console.table([{
+                "total":total,
+                "up":up,
+                "down":down,
+                "totalUp":(totalUp).toFixed(2),
+                "totalDwn":(totalDown).toFixed(2),
+            }])
             return {
                 "total":total,
                 "up":upCount,
                 "down":dwnCount,
                 "upbroker":upbroker,
-                "downbroker":dwnbroker
+                "downbroker":dwnbroker,
+                "hkjcData":tmp["香港马会"]
             }
         }
 

@@ -157,6 +157,7 @@ class dataCommomClass {
             
             var w1 = 0
             var w2 = 0
+            var winodd = parseFloat(workingList[i]["OddData"][0][broker]["end"]["home"])
             if(betOn == "主"){
                 if(hfScore > adH1afScore){
                     w1 = 1
@@ -169,6 +170,7 @@ class dataCommomClass {
                     w2 = -1
                 }
             }else{
+                winodd = parseFloat(workingList[i]["OddData"][0][broker]["end"]["away"])
                 if(hfScore < adH1afScore){
                     w1 = 1
                 }else if(hfScore > adH1afScore){
@@ -197,9 +199,9 @@ class dataCommomClass {
             count["total"] = count["total"] +1
         }
 
-        count["p"] = (count["贏"]*0.9 + count["贏半"] * 0.4 - count["輸"] - count["輸半"]*0.5 )/count["total"] * 10
-        count["win"] = (count["贏"]*2 + count["贏半"]) / (count["total"]*2)
-        count["win"] = count["win"].toFixed(2)
+        count["p"] = (count["贏"]*winodd + count["贏半"] * winodd/2 - count["輸"] - count["輸半"]*0.5 )/count["total"] * 10
+       // count["win"] = (count["贏"]*2 + count["贏半"]) / (count["total"]*2)
+        count["p"] = count["p"].toFixed(2)
         return [workingList,count]
     }
 

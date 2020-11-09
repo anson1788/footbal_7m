@@ -53,6 +53,36 @@ class dataFilterStable extends dataFilterSingleLogic{
         console.log(match.home)
         var feature = this.extractSameOddMatch(match, this.deepClone(pastList))
         console.log(JSON.stringify(feature))
+
+        var hkjcData = feature["hkjcData"] 
+        var upSide = hkjcData["上"][1]
+        var dwnSide = hkjcData["下"][1]
+        tgLog += match["home"] + " 對 "+ match["away"] +" "+match["id"]+
+         "["+upSide["p"] +"/"+ dwnSide["p"]+"]"
+
+        if(parseFloat(upSide["p"]>0) || parseFloat(dwnSide["p"]>0)){
+          tgLog +=  "\n"
+          var betData = {
+            "home":match["home"],
+            "away":match["away"],
+            "id":match["id"],
+            "buyOdd":match.OddData[0]["香港马会"]["end"]["point"],
+            "up": upSide["p"],
+            "down": dwnSide["p"]
+          }
+          if( parseFloat(upSide["p"])> parseFloat(dwnSide["p"]))
+            {
+              betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["home"]
+              betData["place"] = "主"
+            }else{
+              betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["away"]
+              betData["place"] = "客"
+            }
+        }else{
+          tgLog +=  "唔合理\n"
+        }
+
+        /*
         tgLog += match["home"] + " 對 "+ match["away"] +" "+match["id"]+
                  "["+feature["total"]+"/"+feature["up"] +"/"+ feature["down"]+"]"
                
@@ -83,7 +113,7 @@ class dataFilterStable extends dataFilterSingleLogic{
             betArr.push(betData)
         }else{
            tgLog +=  "唔合理\n"
-        }
+        }*/
     }
 
 
