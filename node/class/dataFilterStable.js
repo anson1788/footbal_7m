@@ -278,7 +278,7 @@ class dataFilterStable extends dataFilterSingleLogic{
         if(typeof(matchList[i]["result"])!="undefined") continue
         var kIdx = -1
         for(var j=0;j<crtResult.length;j++){
-          if(matchList[i].id == crtResult[k].id){
+          if(matchList[i].id == crtResult[j].id){
             kIdx = j
           }
         }
