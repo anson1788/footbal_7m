@@ -117,11 +117,13 @@ class dataFilterStable extends dataFilterSingleLogic{
         }*/
     }
 
-
+    console.log("--1"+JSON.stringify(betArr))
     var tmpBet = this.saveOddResult(betArr)
+
     if(tmpBet[0].length>0 && tmpBet[1] == true){
-      betArr = tmpBet
+      betArr = tmpBet[0]
     }
+    console.log("--2"+JSON.stringify(tmpBet))
 
     var tgMsg = ""
     for(var j=0;j<betArr.length;j++){
