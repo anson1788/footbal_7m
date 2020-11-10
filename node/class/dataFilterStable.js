@@ -161,7 +161,7 @@ class dataFilterStable extends dataFilterSingleLogic{
           }
         }
         fs.writeFileSync("oddBook/"+today+"/"+"placeBet.json", JSON.stringify(oddArr,null,2))
-        return [[],true]
+        return [placeBetArr,true]
       }catch(e){
         console.log("save match error")
         return [[],false]
