@@ -322,6 +322,7 @@ class dataFilterStable extends dataFilterSingleLogic{
       }
       if (fs.existsSync("oddBook/"+today+"/"+"placeBet.json")){
         oddArr = fs.readFileSync("oddBook/"+today+"/"+"placeBet.json");
+        oddArr = JSON.parse(oddArr)
       }
 
       var yestersday = moment({ 
@@ -338,9 +339,12 @@ class dataFilterStable extends dataFilterSingleLogic{
       }
       if (fs.existsSync("oddBook/"+yestersday+"/"+"placeBet.json")){
         lastDay = fs.readFileSync("oddBook/"+yestersday+"/"+"placeBet.json");
+        lastDay = JSON.parse(lastDay)
       }
       
       var resultLastDay = this.matchingResultInList(crtResult,lastDay)
+      console.log("----")
+      console.log(JSON.stringify(resultLastDay,null,2))
       fs.writeFileSync("oddBook/"+yestersday+"/"+"placeBet.json", JSON.stringify(resultLastDay[0],null,2))
 
 
