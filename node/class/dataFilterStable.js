@@ -143,6 +143,7 @@ class dataFilterStable extends dataFilterSingleLogic{
         }
         if (fs.existsSync("oddBook/"+today+"/"+"placeBet.json")){
           oddArr = fs.readFileSync("oddBook/"+today+"/"+"placeBet.json");
+          oddArr = JSON.parse(oddArr)
         }
         
         var placeBetArr = []
