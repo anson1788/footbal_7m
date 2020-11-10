@@ -14,6 +14,7 @@ async function init(){
     var liveUrl = "http://live.win007.com/indexall_big.aspx"
     var dom = null
     var log = ""
+
     try{
         dom = await bcUtils.getHttpDomAsyn(liveUrl,"") 
     }catch(e){
@@ -26,6 +27,7 @@ async function init(){
         process.exit()
     }else{
         var liveMatchList  = bfBetUtils.parseBFLiveMatch(dom)
+        var resultMap =  JSON.parse(JSON.stringify(liveMatchList))
         var separateList  = bfBetUtils.filterOutImmediateList(liveMatchList)
 
         var hkjcList = fs.readFileSync("liveData/hkjcMatchList.json");
@@ -88,6 +90,12 @@ async function init(){
         }
         await bot.sendMessage(tgLogChannel,log+"----------");
        
+
+        let ftUtils = new filterUtils()
+        var tgmsg = ftUtils.calculateOddResult(resultMap)
+        if(tgmsg!=""){
+            await bot.sendMessage(tgChanelId,tgmsg);
+        }
         process.exit()
 
     }

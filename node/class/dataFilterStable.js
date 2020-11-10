@@ -270,5 +270,127 @@ class dataFilterStable extends dataFilterSingleLogic{
 
         return rtnArr 
    }
+
+
+   matchingResultInList(crtResult, matchList){
+      var changedMap = []
+      for(var i=0;i<matchList.length;i++){
+        if(typeof(matchList[i]["result"])!="undefined") continue
+        var kIdx = -1
+        for(var j=0;j<crtResult.length;j++){
+          if(matchList[i].id == crtResult[k].id){
+            kIdx = j
+          }
+        }
+        if(kIdx == -1) continue
+        if(!status.includes("完")) continue
+         matchList[i].HomeFScore = crtResult[k]["HomeFScore"]
+         matchList[i].AwayHScore = crtResult[k]["AwayFScore"]
+         
+         var oddKey = "home"
+         if(!matchList[i]["place"]!="主"){
+           oddKey = "away"
+         }
+
+         matchList[i].OddData = [
+           {
+             "hkjc":{
+               "end":{
+                 oddKey:{
+                  "point": matchList[i]["buyOdd"]
+                }
+               }
+             }
+           }
+         ]
+
+         result = this.calculateSingleResultAsianOdd([matchList[i]],"hkjc",matchList[i]["place"])
+         matchList[i].res = result[0][0].res
+         changedMap.push(matchList[i])
+      }
+      return [matchList, changedMap]
+   }
+
+   calculateOddResult(crtResult){
+
+    var tgResult = ""
+    try{
+      var today =  moment().format('DD-MM-YYYY');
+      var oddArr = []
+      if (!fs.existsSync("oddBook/"+today+"/")){
+        fs.mkdirSync("oddBook/"+today+"/");
+      }
+      if (fs.existsSync("oddBook/"+today+"/"+"placeBet.json")){
+        oddArr = fs.readFileSync("oddBook/"+today+"/"+"placeBet.json");
+      }
+
+      var yestersday = moment({ 
+        year :moment().year(), 
+        month :moment().month(), 
+        day :moment().date()
+        }).subtract(1, "days").format('DD-MM-YYYY');
+       console.log(today+" "+yestersday)
+       
+
+      var lastDay = []
+      if (!fs.existsSync("oddBook/"+yestersday+"/")){
+        fs.mkdirSync("oddBook/"+yestersday+"/");
+      }
+      if (fs.existsSync("oddBook/"+yestersday+"/"+"placeBet.json")){
+        lastDay = fs.readFileSync("oddBook/"+yestersday+"/"+"placeBet.json");
+      }
+      
+      var resultLastDay = this.matchingResultInList(crtResult,lastDay)
+      fs.writeFileSync("oddBook/"+yestersday+"/"+"placeBet.json", JSON.stringify(resultLastDay[0],null,2))
+
+
+      var resultoday = this.matchingResultInList(crtResult,oddArr)
+      fs.writeFileSync("oddBook/"+today+"/"+"placeBet.json", JSON.stringify(resultoday[0],null,2))
+
+
+      if(resultLastDay[1].length>0 ||resultoday[1].length>0 ){
+        var crt4HrList = []
+        for(var i=0;i<lastDay.length;i++){
+          lastDay[i].momentTime =  moment({ 
+            year :yestersday.split("-")[2], 
+            month :yestersday.split("-")[1], 
+            day :yestersday.split("-")[0],
+            hour :lastDay[i].time.split(":")[0], 
+            minute : lastDay[i].time.split(":")[1]
+            })
+            var diff = calculatedDate.diff(lastDay[i].momentTime,"minutes")
+            if(diff<120){
+              crt4HrList.push(lastDay[i])
+            }
+        }
+
+        for(var i=0;i<oddArr.length;i++){
+            oddArr[i].momentTime =  moment({ 
+              year :today.split("-")[2], 
+              month :today.split("-")[1], 
+              day :today.split("-")[0],
+              hour :oddArr[i].time.split(":")[0], 
+              minute : oddArr[i].time.split(":")[1]
+              })
+            var diff = calculatedDate.diff(oddArr[i].momentTime,"minutes")
+            if(diff<120){
+                crt4HrList.push(oddArr[i])
+            }
+        }
+
+        for(var i=0;i<crt4HrList.length;i++){
+          tgResult  += crt4HrList[i].home + " vs "+crt4HrList[i].away  + 
+                      "("+crt4HrList[i].HomeFScore+":"+crt4HrList[i].AwayFScore+")"+
+                      "["+crt4HrList[i].buyOdd+"/"+ crt4HrList[i].oddVal+"/"+crt4HrList[i].place+"]"+
+                      crt4HrList[i].res + "\n" +
+                      "http://vip.win007.com/AsianOdds_n.aspx?id="+crt4HrList[i].id+"\n"
+        }
+      }
+       return tgResult
+    }catch(e){
+       console.log("calculateOddError")
+       return "calculate Odd Error"
+    }
+   }
 }
 module.exports = dataFilterStable
