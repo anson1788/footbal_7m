@@ -284,9 +284,9 @@ class dataFilterStable extends dataFilterSingleLogic{
           }
         }
         if(kIdx == -1) continue
-        if(!status.includes("完")) continue
-         matchList[i].HomeFScore = crtResult[k]["HomeFScore"]
-         matchList[i].AwayHScore = crtResult[k]["AwayFScore"]
+        if(!crtResult[kIdx].status.includes("完")) continue
+         matchList[i].HomeFScore = crtResult[kIdx]["HomeFScore"]
+         matchList[i].AwayHScore = crtResult[kIdx]["AwayFScore"]
          
          var oddKey = "home"
          if(!matchList[i]["place"]!="主"){
