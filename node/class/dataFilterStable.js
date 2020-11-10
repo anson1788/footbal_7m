@@ -1,5 +1,6 @@
 const dataFilterSingleLogic = require('./dataFilterSingleLogic.js')
 var fs = require('fs');
+var moment = require('moment');
 
 class dataFilterStable extends dataFilterSingleLogic{
 
@@ -117,6 +118,11 @@ class dataFilterStable extends dataFilterSingleLogic{
     }
 
 
+    var tmpBet = this.saveOddResult(betArr)
+    if(tmpBet[0].length>0 && tmpBet[1] == true){
+      betArr = tmpBet
+    }
+
     var tgMsg = ""
     for(var j=0;j<betArr.length;j++){
       tgMsg += betArr[j]["home"] + " 對 " + betArr[j]["away"] + 
@@ -128,6 +134,38 @@ class dataFilterStable extends dataFilterSingleLogic{
 
   }
 
+  saveOddResult(betArr){
+      try{
+        var today =  moment().format('DD-MM-YYYY');
+        var oddArr = []
+        if (!fs.existsSync("oddBook/"+today+"/")){
+          fs.mkdirSync("oddBook/"+today+"/");
+        }
+        if (fs.existsSync("oddBook/"+today+"/"+"placeBet.json")){
+          oddArr = fs.readFileSync("oddBook/"+today+"/"+"placeBet.json");
+        }
+        
+        var placeBetArr = []
+        for(var i=0;i<betArr.length;i++){
+          var isPlaced = false 
+          for(var j=0;j<oddArr.length;j++){
+             if(oddArr[j].id == betArr[i].id){
+                isPlaced = true
+             }
+          }
+          if(!isPlaced){
+            betArr[i].time = moment().format('HH:mm');
+            placeBetArr.push(betArr[i])
+            oddArr.push(betArr[i])
+          }
+        }
+        fs.writeFileSync("oddBook/"+today+"/"+"placeBet.json", JSON.stringify(oddArr,null,2))
+        return [[],true]
+      }catch(e){
+        console.log("save match error")
+        return [[],false]
+      }
+  }
   similarMatchChecker(matchList){
     var rawdata = fs.readFileSync("oddBook.json");
     let pastList = JSON.parse(rawdata)
