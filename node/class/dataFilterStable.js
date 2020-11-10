@@ -275,7 +275,7 @@ class dataFilterStable extends dataFilterSingleLogic{
    matchingResultInList(crtResult, matchList){
       var changedMap = []
       for(var i=0;i<matchList.length;i++){
-        if(typeof(matchList[i]["result"])!="undefined") continue
+        if(typeof(matchList[i]["res"])!="undefined") continue
         var kIdx = -1
         for(var j=0;j<crtResult.length;j++){
           if(matchList[i].id == crtResult[j].id){
