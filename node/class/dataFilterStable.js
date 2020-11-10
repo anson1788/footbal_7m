@@ -388,7 +388,7 @@ class dataFilterStable extends dataFilterSingleLogic{
       }
        return tgResult
     }catch(e){
-       console.log("calculateOddError")
+       console.log("calculateOddError "+e.message)
        return "calculate Odd Error"
     }
    }
