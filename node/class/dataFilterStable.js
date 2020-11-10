@@ -297,15 +297,13 @@ class dataFilterStable extends dataFilterSingleLogic{
            {
              "hkjc":{
                "end":{
-                 oddKey:{
                   "point": matchList[i]["buyOdd"]
-                }
                }
              }
            }
          ]
-
-         result = this.calculateSingleResultAsianOdd([matchList[i]],"hkjc",matchList[i]["place"])
+         matchList[i].OddData[0]["hkjc"]["end"][""+oddKey] = matchList[i]["oddVal"]
+        var result = this.calculateSingleResultAsianOdd([matchList[i]],"hkjc",matchList[i]["place"])
          matchList[i].res = result[0][0].res
          changedMap.push(matchList[i])
       }
@@ -315,7 +313,7 @@ class dataFilterStable extends dataFilterSingleLogic{
    calculateOddResult(crtResult){
 
     var tgResult = ""
-    try{
+  //  try{
       var today =  moment().format('DD-MM-YYYY');
       var oddArr = []
       if (!fs.existsSync("oddBook/"+today+"/")){
@@ -363,7 +361,9 @@ class dataFilterStable extends dataFilterSingleLogic{
             hour :lastDay[i].time.split(":")[0], 
             minute : lastDay[i].time.split(":")[1]
             })
-            var diff = calculatedDate.diff(lastDay[i].momentTime,"minutes")
+            
+            var diff = moment().diff(lastDay[i].momentTime,"minutes")
+            console.log("--"+diff)
             if(diff<120){
               crt4HrList.push(lastDay[i])
             }
@@ -377,7 +377,8 @@ class dataFilterStable extends dataFilterSingleLogic{
               hour :oddArr[i].time.split(":")[0], 
               minute : oddArr[i].time.split(":")[1]
               })
-            var diff = calculatedDate.diff(oddArr[i].momentTime,"minutes")
+            var diff = oddArr[i].momentTime.diff(moment(),"minutes")
+            console.log("--11"+diff + " "+oddArr[i].home  + oddArr[i].momentTime.format('DD-MM-YYYY HH:mm'))
             if(diff<120){
                 crt4HrList.push(oddArr[i])
             }
@@ -392,10 +393,11 @@ class dataFilterStable extends dataFilterSingleLogic{
         }
       }
        return tgResult
+       /*
     }catch(e){
        console.log("calculateOddError "+e.message)
        return "calculate Odd Error"
-    }
+    }*/
    }
 }
 module.exports = dataFilterStable
