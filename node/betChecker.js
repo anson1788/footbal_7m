@@ -10,7 +10,11 @@ const TelegramBot = require('node-telegram-bot-api');
 var token = '';
 var fs = require('fs');
 
+
 async function init(){
+
+
+    
     var liveUrl = "http://live.win007.com/indexall_big.aspx"
     var dom = null
     var log = ""
