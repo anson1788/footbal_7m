@@ -141,6 +141,7 @@ class dataCommomClass {
         for(var i=0;i<workingList.length;i++){
             workingList[i].betOn = betOn
             var endOdd = workingList[i]["OddData"][0][broker]["end"]["point"]
+            console.log("here "+ endOdd)
             var oddIdx = this.getOddIdx(endOdd)
             var oddDis = this.getAsianOdd(oddIdx)
 

@@ -50,8 +50,8 @@ class bfWinBetUtils extends bfWinUtils{
                     "status": status,
                     "home" : home,
                     "away": away,
-                    "HomeHScore":hfs,
-                    "AwayHScore":afs,
+                    "HomeFScore":hfs,
+                    "AwayFScore":afs,
                     "id":b7Mid
                 }
                 matchArr.push(tmp)
