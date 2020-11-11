@@ -52,7 +52,21 @@
     "down": "-0.99",
     "oddVal": "0.95",
     "place": "主",
-    "time": "17:59"
+    "time": "17:59",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "平手/半球",
+            "home": "0.95",
+            "away": "0.95"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "2",
+    "AwayFScore": "0",
+    "res": "贏"
   },
   {
     "home": "FC東京",
@@ -63,7 +77,21 @@
     "down": "-0.86",
     "oddVal": "0.87",
     "place": "主",
-    "time": "17:59"
+    "time": "17:59",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "平手/半球",
+            "home": "0.87",
+            "away": "0.87"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "1",
+    "AwayFScore": "0",
+    "res": "贏"
   },
   {
     "home": "德島漩渦",
@@ -74,7 +102,21 @@
     "down": "1.30",
     "oddVal": "0.87",
     "place": "客",
-    "time": "17:59"
+    "time": "17:59",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "半球/一球",
+            "home": "0.87",
+            "away": "0.87"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "2",
+    "AwayFScore": "0",
+    "res": "輸"
   },
   {
     "home": "福岡黃蜂",
@@ -85,7 +127,21 @@
     "down": "0.53",
     "oddVal": "0.75",
     "place": "客",
-    "time": "17:59"
+    "time": "17:59",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "半球/一球",
+            "home": "0.75",
+            "away": "0.75"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "3",
+    "AwayFScore": "1",
+    "res": "輸"
   },
   {
     "home": "湘南比馬",
@@ -96,6 +152,20 @@
     "down": "-4.20",
     "oddVal": "0.89",
     "place": "主",
-    "time": "18:24"
+    "time": "18:24",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "受让一球/球半",
+            "home": "0.89",
+            "away": "0.89"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "1",
+    "AwayFScore": "0",
+    "res": "贏"
   }
 ]
