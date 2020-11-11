@@ -92,10 +92,11 @@ async function init(){
        
 
         let ftUtils = new filterUtils()
+        
         var tgmsg = ftUtils.calculateOddResult(resultMap)
         if(tgmsg!=""){
             await bot.sendMessage(tgChanelId,tgmsg);
-        }
+        } 
         process.exit()
 
     }

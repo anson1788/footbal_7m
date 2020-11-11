@@ -117,11 +117,13 @@ class dataFilterStable extends dataFilterSingleLogic{
         }*/
     }
 
-
+    console.log("--1"+JSON.stringify(betArr))
     var tmpBet = this.saveOddResult(betArr)
+
     if(tmpBet[0].length>0 && tmpBet[1] == true){
-      betArr = tmpBet
+      betArr = tmpBet[0]
     }
+    console.log("--2"+JSON.stringify(tmpBet))
 
     var tgMsg = ""
     for(var j=0;j<betArr.length;j++){
@@ -285,9 +287,7 @@ class dataFilterStable extends dataFilterSingleLogic{
         }
         if(kIdx == -1) continue
         if(!crtResult[kIdx].status.includes("完")) continue
-         matchList[i].HomeFScore = crtResult[kIdx]["HomeFScore"]
-         matchList[i].AwayHScore = crtResult[kIdx]["AwayFScore"]
-         
+        
          var oddKey = "home"
          if(!matchList[i]["place"]!="主"){
            oddKey = "away"
@@ -297,15 +297,18 @@ class dataFilterStable extends dataFilterSingleLogic{
            {
              "hkjc":{
                "end":{
-                 oddKey:{
                   "point": matchList[i]["buyOdd"]
-                }
                }
              }
            }
          ]
-
-         result = this.calculateSingleResultAsianOdd([matchList[i]],"hkjc",matchList[i]["place"])
+         matchList[i].OddData[0]["hkjc"]["end"]["home"] = matchList[i]["oddVal"]
+         matchList[i].OddData[0]["hkjc"]["end"]["away"] = matchList[i]["oddVal"]
+         matchList[i]["HomeFScore"] = crtResult[kIdx]["HomeFScore"]
+         
+         matchList[i]["AwayFScore"] = crtResult[kIdx]["AwayFScore"]
+         
+         var result = this.calculateSingleResultAsianOdd([matchList[i]],"hkjc",matchList[i]["place"])
          matchList[i].res = result[0][0].res
          changedMap.push(matchList[i])
       }
@@ -315,7 +318,7 @@ class dataFilterStable extends dataFilterSingleLogic{
    calculateOddResult(crtResult){
 
     var tgResult = ""
-    try{
+  //  try{
       var today =  moment().format('DD-MM-YYYY');
       var oddArr = []
       if (!fs.existsSync("oddBook/"+today+"/")){
@@ -347,24 +350,26 @@ class dataFilterStable extends dataFilterSingleLogic{
       console.log("----")
       console.log(JSON.stringify(resultLastDay,null,2))
       fs.writeFileSync("oddBook/"+yestersday+"/"+"placeBet.json", JSON.stringify(resultLastDay[0],null,2))
-
+      lastDay = resultLastDay[0]
 
       var resultoday = this.matchingResultInList(crtResult,oddArr)
       fs.writeFileSync("oddBook/"+today+"/"+"placeBet.json", JSON.stringify(resultoday[0],null,2))
-
+      oddArr = resultoday[0]
 
       if(resultLastDay[1].length>0 ||resultoday[1].length>0 ){
         var crt4HrList = []
         for(var i=0;i<lastDay.length;i++){
           lastDay[i].momentTime =  moment({ 
             year :yestersday.split("-")[2], 
-            month :yestersday.split("-")[1], 
+            month :parseFloat(tyestersday.split("-")[1])-1, 
             day :yestersday.split("-")[0],
             hour :lastDay[i].time.split(":")[0], 
             minute : lastDay[i].time.split(":")[1]
             })
-            var diff = calculatedDate.diff(lastDay[i].momentTime,"minutes")
-            if(diff<120){
+            
+            var diff = moment().diff(lastDay[i].momentTime,"minutes")
+            console.log("--"+diff)
+            if(diff<600 && typeof(lastDay[i].res)!="undefined"){
               crt4HrList.push(lastDay[i])
             }
         }
@@ -372,17 +377,18 @@ class dataFilterStable extends dataFilterSingleLogic{
         for(var i=0;i<oddArr.length;i++){
             oddArr[i].momentTime =  moment({ 
               year :today.split("-")[2], 
-              month :today.split("-")[1], 
+              month :parseFloat(today.split("-")[1])-1, 
               day :today.split("-")[0],
               hour :oddArr[i].time.split(":")[0], 
               minute : oddArr[i].time.split(":")[1]
               })
-            var diff = calculatedDate.diff(oddArr[i].momentTime,"minutes")
-            if(diff<120){
+            var diff = moment().diff(oddArr[i].momentTime,"minutes")
+            if(diff<600 && typeof(oddArr[i].res)!== 'undefined'){
                 crt4HrList.push(oddArr[i])
             }
         }
 
+        
         for(var i=0;i<crt4HrList.length;i++){
           tgResult  += crt4HrList[i].home + " vs "+crt4HrList[i].away  + 
                       "("+crt4HrList[i].HomeFScore+":"+crt4HrList[i].AwayFScore+")"+
@@ -392,10 +398,11 @@ class dataFilterStable extends dataFilterSingleLogic{
         }
       }
        return tgResult
+       /*
     }catch(e){
        console.log("calculateOddError "+e.message)
        return "calculate Odd Error"
-    }
+    }*/
    }
 }
 module.exports = dataFilterStable
