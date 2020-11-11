@@ -53,7 +53,7 @@ class dataFilterStable extends dataFilterSingleLogic{
         var match = matchList[i]
         console.log(match.home)
         var feature = this.extractSameOddMatch(match, this.deepClone(pastList))
-        console.log(JSON.stringify(feature))
+ 
 
         var hkjcData = feature["hkjcData"] 
         var upSide = hkjcData["上"][1]
@@ -120,10 +120,9 @@ class dataFilterStable extends dataFilterSingleLogic{
     console.log("--1"+JSON.stringify(betArr))
     var tmpBet = this.saveOddResult(betArr)
 
-    if(tmpBet[0].length>0 && tmpBet[1] == true){
+    if(tmpBet[1] == true){
       betArr = tmpBet[0]
     }
-    console.log("--2"+JSON.stringify(tmpBet))
 
     var tgMsg = ""
     for(var j=0;j<betArr.length;j++){
