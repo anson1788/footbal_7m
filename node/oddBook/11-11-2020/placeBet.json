@@ -177,6 +177,20 @@
     "down": "3.05",
     "oddVal": "0.70",
     "place": "客",
-    "time": "22:57"
+    "time": "22:57",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "球半/两球",
+            "home": "0.70",
+            "away": "0.70"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "2",
+    "AwayFScore": "1",
+    "res": "贏"
   }
 ]
