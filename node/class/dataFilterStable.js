@@ -355,13 +355,13 @@ class dataFilterStable extends dataFilterSingleLogic{
       var resultoday = this.matchingResultInList(crtResult,oddArr)
       fs.writeFileSync("oddBook/"+today+"/"+"placeBet.json", JSON.stringify(resultoday[0],null,2))
       oddArr = resultoday[0]
-
+      console.log(JSON.stringify(resultLastDay))
       if(resultLastDay[1].length>0 ||resultoday[1].length>0 ){
         var crt4HrList = []
         for(var i=0;i<lastDay.length;i++){
           lastDay[i].momentTime =  moment({ 
             year :yestersday.split("-")[2], 
-            month :parseFloat(tyestersday.split("-")[1])-1, 
+            month :parseFloat(yestersday.split("-")[1])-1, 
             day :yestersday.split("-")[0],
             hour :lastDay[i].time.split(":")[0], 
             minute : lastDay[i].time.split(":")[1]
