@@ -57,14 +57,14 @@ async function init(){
         }
         
        
-     
+        /*
         var list = await bfBetUtils.addOddData(liveMatchList,bcUtils)
         liveMatchList = list
         console.table(liveMatchList)
         let ftUtils = new filterUtils()
         var targetData = ftUtils.lookUpTwoMatch(liveMatchList)
         console.table(targetData)
-        
+        */
        await bot.sendMessage(tgLogChannel,log+"----------");
        process.exit()
     }
