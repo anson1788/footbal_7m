@@ -2,6 +2,7 @@ const CDP = require('chrome-remote-interface');
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 const chromeLauncher = require('chrome-launcher');
+
 class hkjcBetEngine {
 
     constructor() {
@@ -16,11 +17,12 @@ class hkjcBetEngine {
             chromeLauncher.launch({ chromeFlags: ['--disable-gpu', '--headless'] });
             const chrome = await launchChrome();
             client = await CDP({ port: chrome.port });
+            //client = await CDP();
 
             const {Network, Page,Runtime} = client;
             var dom = await this.loadUrlJSOM(Network, Page,Runtime,'https://bet.hkjc.com/football/odds/odds_hdc.aspx?lang=ch');
             var matchList = dom.window.document.querySelectorAll(".couponRow")
-            var isFindMatch = false
+            var isFindMatch = 0
             for(var i=0;i<betArr.length;i++){
                 for await (var item of matchList) {
                     if(item.id.includes("rmid")){
@@ -36,7 +38,7 @@ class hkjcBetEngine {
                              var input = odds[g].querySelectorAll("input")[0];
                              if(input.id.includes(betKey)){
                                 await this.runtimeClickDiv(Runtime,input.id,Network,dom)
-                                isFindMatch = true
+                                isFindMatch ++;
                             }
                            } 
                         }
@@ -44,8 +46,8 @@ class hkjcBetEngine {
                 }
             }
 
-            if(isFindMatch){
-                await this.performLogonAndBuy(Runtime,dom,actInfo)
+            if(isFindMatch>0){
+                await this.performLogonAndBuy(Runtime,dom,actInfo,isFindMatch)
             }
             client.close();
             chrome.kill();
@@ -58,7 +60,7 @@ class hkjcBetEngine {
         }
         return ""
     }
-    async performLogonAndBuy(Runtime,dom,actInfo){
+    async performLogonAndBuy(Runtime,dom,actInfo,mathcNum){
         await this.runExpressionNoReturn(Runtime,'document.getElementsByClassName("addBet")[0].click()')
         await this.runExpression(Runtime,'document.getElementById("account").value = "'+actInfo.username+'"')
         await this.runExpression(Runtime,'document.getElementById("password").value="'+actInfo.pw+'"')
@@ -78,10 +80,18 @@ class hkjcBetEngine {
         await this.runExpressionNoReturnTimeOut(Runtime,'ShowDisclaimer(false, true)',0.5)
         await this.runExpressionNoReturn(Runtime,'HideError(1)')
         var balance = await this.runExpression(Runtime,'document.getElementById("valueAccBal").innerHTML')
+        for(var i=0;i<mathcNum;i++){
+            await this.runExpressionNoReturn(Runtime,'document.getElementById("inputAmount'+i+'").value = '+actInfo.HDCBetVal)
+            await this.runExpressionNoReturn(Runtime,'CheckRefreshUnitbet('+i+');')
+            console.log('document.getElementById("inputAmount'+i+'").value = '+actInfo.HDCBetVal)
+        }
+    
         console.log(balance.result.value.replace("結餘: $ ",""))
+
 
         await this.runExpressionNoReturn(Runtime,'OnClickPreview();')
         if(!actInfo.betDebug){
+          
             await this.runExpressionNoReturn(Runtime,'OnClickConfirmBet();')
         }
        

@@ -42,7 +42,7 @@ class dataFilterStable extends dataFilterSingleLogic{
     var matchData = this.similarMatchAdvance(this.deepClone(dataList))
     msg += matchData[1]
 
-    return [msg,matchData[2],tgLog]
+    return [msg,matchData[2],tgLog,matchData[0]]
   }
   similarMatchAdvance(matchList){
     var rawdata = fs.readFileSync("oddBook.json");

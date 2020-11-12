@@ -15,7 +15,15 @@ async function init(){
     await hkjcBE.buyOdd([{
         "home":"塞爾維亞",
         "away":"蘇格蘭",
-        "place":"主"
+        "place":"客"
+    },{
+        "home":"北愛爾蘭",
+        "away":"斯洛伐克",
+        "place":"客"
+    },{
+        "home":"匈牙利",
+        "away":"冰島",
+        "place":"客"
     }],
     acct
     )
