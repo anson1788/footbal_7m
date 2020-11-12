@@ -2,7 +2,7 @@
   {
     "league": "中乙A",
     "time": "15:00",
-    "status": "43",
+    "status": "中",
     "home": "湖北楚風合力(中)",
     "away": "浙江毅騰",
     "HomeFScore": "0",
@@ -12,7 +12,7 @@
   {
     "league": "中乙A",
     "time": "15:00",
-    "status": "43",
+    "status": "中",
     "home": "西安優柯多(中)",
     "away": "中國U19",
     "HomeFScore": "0",
@@ -22,17 +22,17 @@
   {
     "league": "中乙B",
     "time": "15:00",
-    "status": "43",
+    "status": "中",
     "home": "南京枫帆(中)",
     "away": "西安FC",
-    "HomeFScore": "0",
+    "HomeFScore": "1",
     "AwayFScore": "0",
     "id": "1943586"
   },
   {
     "league": "中乙B",
     "time": "15:00",
-    "status": "43",
+    "status": "中",
     "home": "深圳寶安壆崗(中)",
     "away": "青島紅獅",
     "HomeFScore": "0",
@@ -1538,125 +1538,5 @@
     "HomeFScore": "2",
     "AwayFScore": "0",
     "id": "1950010"
-  },
-  {
-    "league": "越南乙",
-    "time": "15:30",
-    "status": "待定",
-    "home": "越電信B隊",
-    "away": "北寧交通",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1950266"
-  },
-  {
-    "league": "保盃",
-    "time": "19:30",
-    "status": "推遲",
-    "home": "斯普地特",
-    "away": "盧多格德斯",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1946694"
-  },
-  {
-    "league": "馬來盃",
-    "time": "21:00",
-    "status": "推遲",
-    "home": "彭亨",
-    "away": "彭亨UiTM俱樂部",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1950042"
-  },
-  {
-    "league": "馬來盃",
-    "time": "21:00",
-    "status": "推遲",
-    "home": "柔佛FC",
-    "away": "吉隆坡",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1950043"
-  },
-  {
-    "league": "馬來盃",
-    "time": "21:00",
-    "status": "推遲",
-    "home": "丁加奴",
-    "away": "霹靂",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1950044"
-  },
-  {
-    "league": "馬來盃",
-    "time": "21:00",
-    "status": "推遲",
-    "home": "吉打",
-    "away": "雪蘭莪",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1950045"
-  },
-  {
-    "league": "智利乙",
-    "time": "22:00",
-    "status": "推遲",
-    "home": "華迪維亞",
-    "away": "紐柏萊斯",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1948250"
-  },
-  {
-    "league": "意丙1C",
-    "time": "00:30",
-    "status": "推遲",
-    "home": "卡坦尼亞",
-    "away": "比谢列1913",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1940682"
-  },
-  {
-    "league": "德堡州聯",
-    "time": "02:00",
-    "status": "推遲",
-    "home": "克萊",
-    "away": "雅加达通尼斯",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1931873"
-  },
-  {
-    "league": "德堡州聯",
-    "time": "02:30",
-    "status": "推遲",
-    "home": "希斯菲尔德",
-    "away": "FSV杜伊斯堡",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1939839"
-  },
-  {
-    "league": "德堡州聯",
-    "time": "03:00",
-    "status": "推遲",
-    "home": "森博格SV",
-    "away": "維格帕芬多夫",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1944437"
-  },
-  {
-    "league": "西女超",
-    "time": "03:00",
-    "status": "推遲",
-    "home": "西維爾女足",
-    "away": "伊巴女足",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1940247"
   }
 ]
