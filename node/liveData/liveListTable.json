@@ -2,7 +2,7 @@
   {
     "league": "中乙A",
     "time": "15:00",
-    "status": "24",
+    "status": "40",
     "home": "湖北楚風合力(中)",
     "away": "浙江毅騰",
     "HomeFScore": "0",
@@ -12,7 +12,7 @@
   {
     "league": "中乙A",
     "time": "15:00",
-    "status": "24",
+    "status": "40",
     "home": "西安優柯多(中)",
     "away": "中國U19",
     "HomeFScore": "0",
@@ -22,7 +22,7 @@
   {
     "league": "中乙B",
     "time": "15:00",
-    "status": "24",
+    "status": "40",
     "home": "南京枫帆(中)",
     "away": "西安FC",
     "HomeFScore": "0",
@@ -32,7 +32,7 @@
   {
     "league": "中乙B",
     "time": "15:00",
-    "status": "24",
+    "status": "40",
     "home": "深圳寶安壆崗(中)",
     "away": "青島紅獅",
     "HomeFScore": "0",
@@ -42,11 +42,11 @@
   {
     "league": "越南乙",
     "time": "15:30",
-    "status": "",
+    "status": "10",
     "home": "越電信B隊",
     "away": "北寧交通",
-    "HomeFScore": "",
-    "AwayFScore": "",
+    "HomeFScore": "0",
+    "AwayFScore": "0",
     "id": "1950266"
   },
   {
@@ -558,6 +558,16 @@
     "HomeFScore": "",
     "AwayFScore": "",
     "id": "1950038"
+  },
+  {
+    "league": "國際友誼",
+    "time": "21:00",
+    "status": "",
+    "home": "喀麥隆A",
+    "away": "吉布提",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950277"
   },
   {
     "league": "欧青U21外",
