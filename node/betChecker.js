@@ -1,6 +1,6 @@
 ﻿let basicUtils = require('./class/basicUtils.js');
 let bfWinBetUtils = require('./class/bfWinBetUtils.js');
-
+let hkjcBetEngine = require('./class/hkjcBetEngine.js');
 let bcUtils = new basicUtils()
 let bfBetUtils = new bfWinBetUtils()
 let filterUtils = require('./class/dataFilterStable.js');
