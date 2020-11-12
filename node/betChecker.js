@@ -14,7 +14,7 @@ var fs = require('fs');
 async function init(){
 
 
-    
+    /*
     var liveUrl = "http://live.win007.com/indexall_big.aspx"
     var dom = null
     var log = ""
@@ -29,8 +29,10 @@ async function init(){
         await init()
         process.exit()
     }else{
-        var liveMatchList  = bfBetUtils.parseBFLiveMatch(dom)
-        fs.writeFileSync("liveData/liveListTable.json", JSON.stringify(liveMatchList,null,2));
+    */
+        var log = ""
+       // var liveMatchList  = bfBetUtils.parseBFLiveMatch(dom)
+        var liveMatchList  = fs.readFileSync("liveData/liveListTable.json");
         var separateList  = bfBetUtils.filterOutImmediateList(liveMatchList)
 
        
@@ -57,18 +59,10 @@ async function init(){
            await bot.sendMessage(tgChanelId,msg);
         }
         
-       
-        /*
-        var list = await bfBetUtils.addOddData(liveMatchList,bcUtils)
-        liveMatchList = list
-        console.table(liveMatchList)
-        let ftUtils = new filterUtils()
-        var targetData = ftUtils.lookUpTwoMatch(liveMatchList)
-        console.table(targetData)
-        */
+
        await bot.sendMessage(tgLogChannel,log+"----------");
        process.exit()
-    }
+    //}
 }
 
 if(typeof(acct.tgToken) !== 'undefined'){
