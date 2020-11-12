@@ -223,5 +223,55 @@
     "HomeFScore": "0",
     "AwayFScore": "1",
     "res": "贏"
+  },
+  {
+    "home": "蘇格蘭U21",
+    "away": "克羅地亞U21",
+    "id": "1686848",
+    "buyOdd": "受让平手/半球",
+    "up": "0.98",
+    "down": "-1.58",
+    "oddVal": "1.09",
+    "place": "主",
+    "time": "22:56",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "受让平手/半球",
+            "home": "1.09",
+            "away": "1.09"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "2",
+    "AwayFScore": "2",
+    "res": "贏半"
+  },
+  {
+    "home": "喀麥隆",
+    "away": "莫桑比克",
+    "id": "1814997",
+    "buyOdd": "一球/球半",
+    "up": "0.60",
+    "down": "-1.26",
+    "oddVal": "1.06",
+    "place": "主",
+    "time": "23:52",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "一球/球半",
+            "home": "1.06",
+            "away": "1.06"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "4",
+    "AwayFScore": "1",
+    "res": "贏"
   }
 ]
