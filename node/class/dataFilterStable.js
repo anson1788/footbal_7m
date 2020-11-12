@@ -42,7 +42,7 @@ class dataFilterStable extends dataFilterSingleLogic{
     var matchData = this.similarMatchAdvance(this.deepClone(dataList))
     msg += matchData[1]
 
-    return [msg,matchData[2],tgLog]
+    return [msg,matchData[2],tgLog,matchData[0]]
   }
   similarMatchAdvance(matchList){
     var rawdata = fs.readFileSync("oddBook.json");
@@ -82,39 +82,6 @@ class dataFilterStable extends dataFilterSingleLogic{
         }else{
           tgLog +=  "唔合理\n"
         }
-
-        /*
-        tgLog += match["home"] + " 對 "+ match["away"] +" "+match["id"]+
-                 "["+feature["total"]+"/"+feature["up"] +"/"+ feature["down"]+"]"
-               
-        if(parseFloat(feature["total"])>7 && 
-          (
-            parseFloat(feature["up"])>0 ||
-            parseFloat(feature["down"])>0
-          )
-        ){
-            tgLog +=  "\n"
-            var betData = {
-                "home":match["home"],
-                "away":match["away"],
-                "id":match["id"],
-                "buyOdd":match.OddData[0]["香港马会"]["end"]["point"],
-                "up": feature["up"],
-                "down": feature["down"],
-                "total": feature["total"]
-            }
-            if( parseFloat(feature["up"])> parseFloat(feature["down"]))
-            {
-              betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["home"]
-              betData["place"] = "主"
-            }else{
-              betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["away"]
-              betData["place"] = "客"
-            }
-            betArr.push(betData)
-        }else{
-           tgLog +=  "唔合理\n"
-        }*/
     }
 
     console.log("--1"+JSON.stringify(betArr))

@@ -4,7 +4,8 @@
     "a1":"",
     "a2":"",
     "a3":"",
-    "keepBetting":true,
+    "HDCBetVal":"",
+    "betDebug":true,
     "tgToken":"",
     "tgMainChanelId":"",
     "tgLogChanelId":""

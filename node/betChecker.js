@@ -9,7 +9,7 @@ var acct = require('./accountInfo.json');
 const TelegramBot = require('node-telegram-bot-api');
 var token = '';
 var fs = require('fs');
-
+let hkjcBE = new hkjcBetEngine()
 
 async function init(){
 
@@ -60,9 +60,15 @@ async function init(){
         if(msg!=""){
            await bot.sendMessage(tgChanelId,msg);
         }
-        
-
+   
        await bot.sendMessage(tgLogChannel,log+"----------");
+
+            
+       console.log(JSON.stringify(calculatedResult[3]))
+       await hkjcBE.buyOdd(
+            calculatedResult[3],
+            acct
+       )
        process.exit()
     //}
 }
