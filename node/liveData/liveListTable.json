@@ -2,7 +2,7 @@
   {
     "league": "中乙A",
     "time": "15:00",
-    "status": "40",
+    "status": "43",
     "home": "湖北楚風合力(中)",
     "away": "浙江毅騰",
     "HomeFScore": "0",
@@ -12,7 +12,7 @@
   {
     "league": "中乙A",
     "time": "15:00",
-    "status": "40",
+    "status": "43",
     "home": "西安優柯多(中)",
     "away": "中國U19",
     "HomeFScore": "0",
@@ -22,7 +22,7 @@
   {
     "league": "中乙B",
     "time": "15:00",
-    "status": "40",
+    "status": "43",
     "home": "南京枫帆(中)",
     "away": "西安FC",
     "HomeFScore": "0",
@@ -32,22 +32,12 @@
   {
     "league": "中乙B",
     "time": "15:00",
-    "status": "40",
+    "status": "43",
     "home": "深圳寶安壆崗(中)",
     "away": "青島紅獅",
     "HomeFScore": "0",
     "AwayFScore": "0",
     "id": "1943587"
-  },
-  {
-    "league": "越南乙",
-    "time": "15:30",
-    "status": "10",
-    "home": "越電信B隊",
-    "away": "北寧交通",
-    "HomeFScore": "0",
-    "AwayFScore": "0",
-    "id": "1950266"
   },
   {
     "league": "國際友誼",
@@ -1548,6 +1538,16 @@
     "HomeFScore": "2",
     "AwayFScore": "0",
     "id": "1950010"
+  },
+  {
+    "league": "越南乙",
+    "time": "15:30",
+    "status": "待定",
+    "home": "越電信B隊",
+    "away": "北寧交通",
+    "HomeFScore": "-",
+    "AwayFScore": "-",
+    "id": "1950266"
   },
   {
     "league": "保盃",
