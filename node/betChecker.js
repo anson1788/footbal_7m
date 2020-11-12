@@ -33,6 +33,8 @@ async function init(){
         var log = ""
        // var liveMatchList  = bfBetUtils.parseBFLiveMatch(dom)
         var liveMatchList  = fs.readFileSync("liveData/liveListTable.json");
+        liveMatchList = JSON.parse(liveMatchList)
+        
         var separateList  = bfBetUtils.filterOutImmediateList(liveMatchList)
 
        
