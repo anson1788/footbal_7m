@@ -30,6 +30,7 @@ async function init(){
         process.exit()
     }else{
         var liveMatchList  = bfBetUtils.parseBFLiveMatch(dom)
+        fs.writeFileSync("liveData/liveListTable.json", JSON.stringify(liveMatchList,null,2));
         var separateList  = bfBetUtils.filterOutImmediateList(liveMatchList)
 
        
