@@ -626,6 +626,127 @@ class dataFilter extends dataCommonClass{
     }
 
 
+    extractSameBSOddMatch(match,dataList){
+        if(!this.isValidateMatch(match)){
+            return {}
+        }
+        var crtOdd = match["BSOddData"][0]
+        var tmp = {}
+        for(var broker in crtOdd){
+            var tmpList = this.singleBSOddSimilarOddList(broker,match,dataList)
+            var calculatorUp = this.calculateSingleResultBSOdd(tmpList,broker)
+            var calculatorDown = this.calculateSingleResultBSOdd(tmpList,broker,"細")
+            tmp[broker] = {
+                                "上":calculatorUp,
+                                "下":calculatorDown
+            }
+        }
+        if(!this.isDicEmpty(tmp)){
+            var upCount = 0
+            var dwnCount = 0
+            var total = 0
+            var upbroker = ""
+            var dwnbroker = ""
+
+            for(var broker in tmp){
+                if(tmp[broker]["上"][0].length >8){
+                    var upP = tmp[broker]["上"][1]["p"]
+                    var dwnP = tmp[broker]["下"][1]["p"]
+                    total++
+                    
+                    if(upP>dwnP && upP>0.2){
+                        if(tmp[broker]["上"][1]["贏"]/ (tmp[broker]["上"][1]["贏"]+tmp[broker]["上"][1]["輸"]) > 0.65){
+                            upCount ++
+                            upbroker += tmp[broker]["上"][0][0]["oddE"]+"/"+broker + " ,"
+                        }
+                        //console.table([tmp[broker]["上"][1]])
+                    }
+                    if(dwnP>upP && dwnP>0.2){
+                        if(tmp[broker]["下"][1]["贏"]/ (tmp[broker]["下"][1]["贏"]+tmp[broker]["下"][1]["輸"]) > 0.65){
+                            dwnCount ++
+                            dwnbroker += tmp[broker]["下"][0][0]["oddE"]+"/"+broker + " ,"
+                        }
+                       // console.table(tmp[broker]["下"][0])
+                       // console.table([tmp[broker]["下"][1]])
+                    }
+                }
+            }
+            
+            var up = 0
+            var upbroker = ""
+            var down = 0
+            var downbroker = ""
+            var total = 0
+            var totalUp = 0
+            var totalDown = 0
+            var totalMMM = 0
+            for(var broker in tmp){
+                if(parseFloat(tmp[broker]["上"][1]["p"])>parseFloat(tmp[broker]["下"][1]["p"])){
+                    up ++
+                    upbroker += broker + " \n"
+                }else if(parseFloat(tmp[broker]["上"][1]["p"])<parseFloat(tmp[broker]["下"][1]["p"])){
+                    down ++
+                    downbroker+= broker + " \n"
+                }
+                    total ++
+                    console.table( "---"+broker+"----")
+                    if(broker=="香港马会"){
+                        console.table(tmp[broker]["上"][0])
+                        console.table([tmp[broker]["上"][1]])
+                        //console.table(tmp[broker]["下"][0])
+                        console.table([tmp[broker]["下"][1]])
+                    }
+                    if(parseFloat(tmp[broker]["上"][1]["total"])>100){
+                        totalMMM ++
+                        totalUp = totalUp + parseFloat(tmp[broker]["上"][1]["p"])
+                    }
+                    if(parseFloat(tmp[broker]["下"][1]["total"])>100){
+                        totalDown = totalDown + parseFloat(tmp[broker]["下"][1]["p"])
+                    }
+            }
+            console.table([{
+                "total":total,
+                "up":up,
+                "down":down,
+                "totalUp":(totalUp).toFixed(2),
+                "totalDwn":(totalDown).toFixed(2),
+            }])
+            return {
+                "total":total,
+                "up":upCount,
+                "down":dwnCount,
+                "upbroker":upbroker,
+                "downbroker":dwnbroker,
+                "hkjcData":tmp["香港马会"]
+            }
+        }
+
+        return tmp
+    }
+    singleBSOddSimilarOddList(broker, match, dataList){
+        var workingList = this.deepClone(dataList)
+        var rtnVal =[]
+        var crtOdd = match["BSOddData"][0]
+        for(var i=0;i<workingList.length;i++){
+            if(workingList[i].id == match.id )continue
+            if(!this.isValidateMatch(workingList[i])) continue
+            var pastMatchOdd = workingList[i]["BSOddData"][0]
+            if( typeof(pastMatchOdd[broker])!="undefined"){
+                var crtOddPer = this.oddPerMap(crtOdd[broker])
+                var pastMatchOddPer = this.oddPerMap(pastMatchOdd[broker])
+            
+                if(this.isTwoMatchSimilar(crtOddPer,pastMatchOddPer) ){
+                    rtnVal.push(Object.assign({},workingList[i]))
+                    rtnVal[rtnVal.length-1]["homeS"] = workingList[i]["BSOddData"][0][broker]["start"]["home"]
+                    rtnVal[rtnVal.length-1]["homeE"] = workingList[i]["BSOddData"][0][broker]["end"]["home"]
+                    rtnVal[rtnVal.length-1]["homeSP"] = pastMatchOddPer["Shome"]
+                    rtnVal[rtnVal.length-1]["homeEP"] = pastMatchOddPer["Ehome"]
+                    rtnVal[rtnVal.length-1]["oddE"] = workingList[i]["BSOddData"][0][broker]["end"]["point"]
+                }
+            }
+        }
+        return rtnVal
+    }
 
     extractSameOddMatch(match,dataList){
         if(!this.isValidateMatch(match)){
@@ -642,7 +763,10 @@ class dataFilter extends dataCommonClass{
                                 "上":calculatorUp,
                                 "下":calculatorDown
             }
-        }
+        }   
+
+        var upKey = "上"
+        var downKey = "下"
 
         if(!this.isDicEmpty(tmp)){
             var upCount = 0

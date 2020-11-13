@@ -126,7 +126,85 @@ class dataCommomClass {
     }
 
 
-  
+    calculateSingleResultBSOdd(rtnVal,broker, betOn = "大"){
+        var workingList = this.deepClone(rtnVal)
+        var count = {
+            "輸":0,
+            "輸半":0,
+            "走":0,
+            "贏半":0,
+            "贏":0,
+            "total":0
+        }
+        for(var i=0;i<workingList.length;i++){
+            workingList[i].betOn = betOn
+            var endOdd = workingList[i]["BSOddData"][0][broker]["end"]["point"]
+            //console.log("here "+ endOdd)
+            //var oddIdx = this.getOddIdx(endOdd)
+            var oddDis = endOdd
+
+            var firstOdd = parseFloat(oddDis.split("/")[0])
+            var secondOdd =  parseFloat(oddDis.split("/")[0])
+
+            if(oddDis.split("/").length>1){
+                secondOdd = parseFloat(oddDis.split("/")[1])
+            }
+            
+            var hfScore = parseFloat(workingList[i]["HomeFScore"])
+            var afScore = parseFloat(workingList[i]["AwayFScore"])
+
+            hfScore = hfScore + afScore
+            
+            var w1 = 0
+            var w2 = 0
+            var winodd = parseFloat(workingList[i]["BSOddData"][0][broker]["end"]["home"])
+            if(betOn == "大"){
+                if(hfScore > firstOdd){
+                    w1 = 1
+                }else if(hfScore<firstOdd){
+                    w1 = -1
+                }
+                if(hfScore > secondOdd){
+                    w2 = 1
+                }else if(hfScore<secondOdd){
+                    w2 = -1
+                }
+            }else{
+                winodd = parseFloat(workingList[i]["BSOddData"][0][broker]["end"]["away"])
+                if(hfScore < firstOdd){
+                    w1 = 1
+                }else if(hfScore > firstOdd){
+                    w1 = -1
+                }
+                if(hfScore < secondOdd){
+                    w2 = 1
+                }else if(hfScore>secondOdd){
+                    w2 = -1
+                }
+            }
+
+            if(w1+w2 == 2 ){
+                workingList[i].res = "贏"
+            }else if(w1+w2 == -2 ){
+                workingList[i].res = "輸"
+            }else if(w1 == 0  && w2 == 0 ){
+                workingList[i].res = "走"
+            }else if(w1+w2 == 1 ){
+                workingList[i].res = "贏半"
+            }else if(w1+w2 == -1 ){
+                workingList[i].res = "輸半"
+            }
+
+            count[workingList[i].res] = count[workingList[i].res] +1
+            count["total"] = count["total"] +1
+        }
+
+        count["p"] = (count["贏"]*winodd + count["贏半"] * winodd/2 - count["輸"] - count["輸半"]*0.5 )/count["total"] * 10
+       // count["win"] = (count["贏"]*2 + count["贏半"]) / (count["total"]*2)
+        count["p"] = count["p"].toFixed(2)
+        return [workingList,count]
+    }
+
 
     calculateSingleResultAsianOdd(rtnVal,broker, betOn = "主"){
         var workingList = this.deepClone(rtnVal)

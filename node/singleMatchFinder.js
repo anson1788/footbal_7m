@@ -26,6 +26,11 @@ async function getCacheData(url, folder, cacheId , type ,isCache = true){
                     rtnArr = await bfUtils.parseBFDailyList(dom)  
                 }else if(type=="bfDetails"){
                     rtnArr = await bfUtils.parseBFLiveMatchDetails(dom)  
+                }else if(type=="bfBSOdd"){
+                    rtnArr = await bfUtils.parseOddBS(dom)  
+                    if(rtnArr == null){
+                        rtnArr = []
+                    }
                 }else if(type=="bfOdd"){
                     rtnArr = await bfUtils.parseOdd(dom)  
                     if(rtnArr == null){
@@ -54,37 +59,29 @@ async function init(defaultRange=50){
     let rawdata = fs.readFileSync("oddBook.json");
     let dataList = JSON.parse(rawdata)
     let ftUtils = new filterUtils()
-    var matchId = ["1915328"]
+    var matchId = ["http://vip.win007.com/AsianOdds_n.aspx?id=1948729&l=1"]
     for(var i=0;i<matchId.length;i++){
         var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+matchId[i]
         var OddData =  await getCacheData(url,"bfData/odd/crt/",  matchId[i],"bfOdd",false)
+        
+        url = "http://vip.win007.com/OverDown_n.aspx?id="+matchId[i]
+        var BSOddData =  await getCacheData(url,"bfData/bsodd/crt/",  matchId[i] ,"bfBSOdd",false)
+       
         match = {
             "id":matchId[i],
-            "OddData":OddData
+            "OddData":OddData,
+            "BSOddData" : BSOddData
         }
+        
         var oddPerList = ftUtils.extractSameOddMatch(match,dataList)
         if(!ftUtils.isDicEmpty(oddPerList)){
-            /*
-            for(var broker in oddPerList){
-                console.log("----"+broker+"----")
-                console.table([oddPerList[broker]["上"][1]])
-                console.table([oddPerList[broker]["下"][1]])
-            }*/
             console.table([oddPerList])
         }
-        //console.log(JSON.stringify(oddPerList))
-        /*
-        var calculator = ftUtils.calculateResultAsianOdd(feature)
-        var resultList = calculator[0]
-        var resultStat = calculator[1]
-        console.table(resultList)
-        console.table([resultStat])
-
-        calculator = ftUtils.calculateResultAsianOdd(feature,"下")
-        resultList = calculator[0]
-        resultStat = calculator[1]
-        console.table([resultStat])
-        */
+        /* 
+        var oddBSPerList = ftUtils.extractSameBSOddMatch(match,dataList)
+        if(!ftUtils.isDicEmpty(oddBSPerList)){
+            console.table([oddBSPerList])
+        }*/
     }
     
   
