@@ -158,6 +158,20 @@
     "down": "2.40",
     "oddVal": "0.84",
     "place": "客",
-    "time": "22:12"
+    "time": "22:12",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "一球",
+            "home": "0.84",
+            "away": "0.84"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "1",
+    "AwayFScore": "0",
+    "res": "走"
   }
 ]

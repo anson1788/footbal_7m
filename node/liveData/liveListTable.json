@@ -1,2412 +1,5392 @@
 [
   {
-    "league": "阿爾巴盃",
-    "time": "20:30",
-    "status": "83",
-    "home": "維拉斯尼亞",
-    "away": "艾巴辛尼",
-    "HomeFScore": "5",
-    "AwayFScore": "0",
-    "id": "1949099"
-  },
-  {
-    "league": "球會友誼",
-    "time": "20:30",
-    "status": "80",
-    "home": "艾隆納斯(中)",
-    "away": "N.奧林比亞高斯",
-    "HomeFScore": "0",
-    "AwayFScore": "6",
-    "id": "1950354"
-  },
-  {
-    "league": "克亞U19",
-    "time": "20:30",
-    "status": "84",
-    "home": "塞瓦特U19",
-    "away": "艾斯特拉U19",
-    "HomeFScore": "1",
-    "AwayFScore": "0",
-    "id": "1950302"
-  },
-  {
-    "league": "巴帕乙",
-    "time": "20:30",
-    "status": "76",
-    "home": "皇家體育會PA",
-    "away": "維拉里加PA",
-    "HomeFScore": "1",
-    "AwayFScore": "1",
-    "id": "1950615"
-  },
-  {
-    "league": "烏克乙",
-    "time": "20:30",
-    "status": "81",
-    "home": "卡帕提",
-    "away": "切爾諾夫策",
+    "league": "日職聯",
+    "time": "14:00",
+    "status": "60",
+    "home": "大阪飛腳",
+    "away": "仙台維加泰",
     "HomeFScore": "0",
     "AwayFScore": "2",
-    "id": "1950674"
+    "id": "1872554"
   },
   {
-    "league": "阿聯酋甲",
-    "time": "20:40",
-    "status": "75",
-    "home": "邁薩菲",
-    "away": "塔亞文UAE",
-    "HomeFScore": "2",
-    "AwayFScore": "1",
-    "id": "1949140"
-  },
-  {
-    "league": "阿聯酋甲",
-    "time": "20:40",
-    "status": "72",
-    "home": "阿巴塔",
-    "away": "哈瑞亞",
-    "HomeFScore": "2",
-    "AwayFScore": "0",
-    "id": "1949146"
-  },
-  {
-    "league": "阿聯酋甲",
-    "time": "20:45",
-    "status": "67",
-    "home": "馬斯福特",
-    "away": "渡巴阿胡孫",
-    "HomeFScore": "0",
-    "AwayFScore": "3",
-    "id": "1949138"
-  },
-  {
-    "league": "以甲",
-    "time": "21:00",
-    "status": "55",
-    "home": "阿卡夏普爾",
-    "away": "里雄萊錫安夏普爾",
-    "HomeFScore": "0",
-    "AwayFScore": "0",
-    "id": "1903059"
-  },
-  {
-    "league": "以甲",
-    "time": "21:00",
-    "status": "51",
-    "home": "艾薩拉埃瑪達",
-    "away": "彼達提克瓦夏普",
+    "league": "澳布後備",
+    "time": "14:00",
+    "status": "59",
+    "home": "阿爾巴尼克里克後備隊",
+    "away": "聖喬治維萊後備隊",
     "HomeFScore": "0",
     "AwayFScore": "2",
-    "id": "1903060"
+    "id": "1951102"
   },
   {
-    "league": "以甲",
-    "time": "21:00",
-    "status": "54",
-    "home": "卡塔蒙耶路撒冷",
-    "away": "比達耶參孫特拉維夫",
+    "league": "澳昆超",
+    "time": "14:45",
+    "status": "30",
+    "home": "伊斯頓沙伯",
+    "away": "布里斯本前鋒",
     "HomeFScore": "0",
     "AwayFScore": "0",
-    "id": "1903061"
+    "id": "1840240"
   },
   {
-    "league": "以甲",
-    "time": "21:00",
-    "status": "52",
-    "home": "拉馬甘夏普爾",
-    "away": "拉那那夏普爾",
-    "HomeFScore": "1",
-    "AwayFScore": "1",
-    "id": "1903062"
+    "league": "日職聯",
+    "time": "15:00",
+    "status": "15",
+    "home": "橫濱水手",
+    "away": "浦和紅鑽",
+    "HomeFScore": "3",
+    "AwayFScore": "0",
+    "id": "1872553"
   },
   {
-    "league": "以甲",
-    "time": "21:00",
-    "status": "51",
-    "home": "阿基納紮力",
-    "away": "夏普爾烏姆法咸姆",
+    "league": "中乙A",
+    "time": "15:00",
+    "status": "20",
+    "home": "上海嘉定城發搏擊(中)",
+    "away": "武漢三鎮",
     "HomeFScore": "0",
     "AwayFScore": "0",
-    "id": "1903063"
+    "id": "1943548"
   },
   {
-    "league": "以甲",
-    "time": "21:00",
-    "status": "53",
-    "home": "塞克特茲亞",
-    "away": "拿撒勒伊里特夏普爾",
-    "HomeFScore": "1",
-    "AwayFScore": "1",
-    "id": "1903065"
-  },
-  {
-    "league": "以甲",
-    "time": "21:00",
-    "status": "55",
-    "home": "哈薩隆",
-    "away": "阿福拉哈普爾",
-    "HomeFScore": "1",
-    "AwayFScore": "0",
-    "id": "1903066"
-  },
-  {
-    "league": "球會友誼",
-    "time": "21:00",
-    "status": "54",
-    "home": "阿普爾",
-    "away": "阿爾基奧羅克林尼",
-    "HomeFScore": "1",
-    "AwayFScore": "0",
-    "id": "1950355"
-  },
-  {
-    "league": "球會友誼",
-    "time": "21:00",
-    "status": "51",
-    "home": "哥裏卡",
-    "away": "佩利根",
+    "league": "中乙A",
+    "time": "15:00",
+    "status": "20",
+    "home": "湖南湘濤(中)",
+    "away": "淄博星期天",
     "HomeFScore": "0",
     "AwayFScore": "0",
-    "id": "1950356"
+    "id": "1943549"
   },
   {
-    "league": "巴勒聯",
-    "time": "21:00",
-    "status": "50",
-    "home": "薩巴阿哈",
-    "away": "薩巴阿姆",
-    "HomeFScore": "1",
-    "AwayFScore": "0",
-    "id": "1950046"
-  },
-  {
-    "league": "委內乙",
-    "time": "21:00",
-    "status": "51",
-    "home": "丰达西翁",
-    "away": "丰达西翁竞技",
+    "league": "中乙B",
+    "time": "15:00",
+    "status": "20",
+    "home": "青島中創恒泰(中)",
+    "away": "江蘇鹽城",
     "HomeFScore": "0",
-    "AwayFScore": "1",
-    "id": "1950303"
-  },
-  {
-    "league": "委內乙",
-    "time": "21:00",
-    "status": "52",
-    "home": "委內瑞拉中央大學",
-    "away": "昂熱圖拉",
-    "HomeFScore": "1",
     "AwayFScore": "0",
-    "id": "1950462"
+    "id": "1943594"
   },
   {
-    "league": "以甲",
-    "time": "21:05",
-    "status": "50",
-    "home": "卡法爾卡瑟姆",
-    "away": "夏雷姆",
+    "league": "中乙B",
+    "time": "15:00",
+    "status": "20",
+    "home": "北京理工(中)",
+    "away": "內蒙古草上飛",
     "HomeFScore": "0",
-    "AwayFScore": "1",
-    "id": "1903064"
+    "AwayFScore": "0",
+    "id": "1943595"
   },
   {
-    "league": "球會友誼",
-    "time": "21:05",
-    "status": "45+",
-    "home": "雲達不萊梅(中)",
-    "away": "聖保利",
+    "league": "澳布甲保",
+    "time": "15:00",
+    "status": "20",
+    "home": "新農場聯",
+    "away": "佛吉尼亞聯",
+    "HomeFScore": "0",
+    "AwayFScore": "0",
+    "id": "1943811"
+  },
+  {
+    "league": "港菁盃",
+    "time": "15:00",
+    "status": "17",
+    "home": "天水圍飛馬(中)",
+    "away": "標準流浪",
+    "HomeFScore": "2",
+    "AwayFScore": "0",
+    "id": "1950363"
+  },
+  {
+    "league": "澳昆女超",
+    "time": "15:00",
+    "status": "20",
+    "home": "西南昆士蘭達雷女足",
+    "away": "摩頓灣聯女足",
+    "HomeFScore": "0",
+    "AwayFScore": "0",
+    "id": "1950373"
+  },
+  {
+    "league": "澳布女超",
+    "time": "15:00",
+    "status": "11",
+    "home": "庫梅拉女足",
+    "away": "安奈爾女足",
+    "HomeFScore": "2",
+    "AwayFScore": "0",
+    "id": "1950437"
+  },
+  {
+    "league": "澳布女超",
+    "time": "15:00",
+    "status": "9",
+    "home": "卡布爾徹女足",
+    "away": "布里斯班城女足",
     "HomeFScore": "0",
     "AwayFScore": "1",
-    "id": "1950357"
+    "id": "1951092"
   },
   {
-    "league": "匈盃",
-    "time": "21:30",
-    "status": "42",
-    "home": "薩佐諾克",
-    "away": "吉爾蒙特",
-    "HomeFScore": "0",
-    "AwayFScore": "0",
-    "id": "1944314"
-  },
-  {
-    "league": "球會友誼",
-    "time": "21:30",
-    "status": "33",
-    "home": "列特",
-    "away": "前進斯太爾",
+    "league": "澳布後備",
+    "time": "15:00",
+    "status": "15",
+    "home": "史托姆斯世紀後備隊",
+    "away": "格蘭後備隊",
     "HomeFScore": "1",
-    "AwayFScore": "1",
-    "id": "1950469"
-  },
-  {
-    "league": "智利乙",
-    "time": "22:00",
-    "status": "10",
-    "home": "聖莫寧",
-    "away": "科比亞波",
-    "HomeFScore": "0",
     "AwayFScore": "0",
-    "id": "1948254"
+    "id": "1951103"
   },
   {
-    "league": "智利乙",
-    "time": "22:00",
-    "status": "6",
-    "home": "聖馬洛科斯",
-    "away": "流浪者",
-    "HomeFScore": "0",
-    "AwayFScore": "0",
-    "id": "1948255"
-  },
-  {
-    "league": "球會友誼",
-    "time": "22:00",
-    "status": "10",
-    "home": "聖伊天",
-    "away": "格勒諾布爾",
-    "HomeFScore": "0",
-    "AwayFScore": "0",
-    "id": "1949997"
-  },
-  {
-    "league": "球會友誼",
-    "time": "22:00",
-    "status": "6",
-    "home": "SV霍恩",
-    "away": "聖波爾坦",
-    "HomeFScore": "0",
-    "AwayFScore": "0",
-    "id": "1950335"
-  },
-  {
-    "league": "球會友誼",
-    "time": "22:00",
-    "status": "10",
-    "home": "昂熱",
-    "away": "尼奧特",
-    "HomeFScore": "0",
-    "AwayFScore": "1",
-    "id": "1950358"
-  },
-  {
-    "league": "球會友誼",
-    "time": "22:00",
-    "status": "6",
-    "home": "哈特堡格",
-    "away": "卡芬堡",
-    "HomeFScore": "0",
-    "AwayFScore": "0",
-    "id": "1950359"
-  },
-  {
-    "league": "球會友誼",
-    "time": "22:00",
-    "status": "10",
-    "home": "國際米蘭",
-    "away": "莫沙",
-    "HomeFScore": "0",
-    "AwayFScore": "0",
-    "id": "1950468"
-  },
-  {
-    "league": "球會友誼",
-    "time": "22:00",
-    "status": "7",
-    "home": "維也納迅速青年隊",
-    "away": "艾特米拿",
-    "HomeFScore": "0",
-    "AwayFScore": "0",
-    "id": "1950470"
-  },
-  {
-    "league": "阿聯盃",
-    "time": "22:00",
-    "status": "6",
-    "home": "迪哈夫拉",
-    "away": "艾哈利",
-    "HomeFScore": "0",
-    "AwayFScore": "0",
-    "id": "1911294"
-  },
-  {
-    "league": "阿聯盃",
-    "time": "22:00",
-    "status": "8",
-    "home": "豪爾費坎",
-    "away": "阿爾艾因",
-    "HomeFScore": "0",
-    "AwayFScore": "0",
-    "id": "1911298"
-  },
-  {
-    "league": "巴高盃",
-    "time": "22:00",
-    "status": "7",
-    "home": "國際聖瑪利亞",
-    "away": "EC桑托安吉洛",
-    "HomeFScore": "0",
-    "AwayFScore": "0",
-    "id": "1949890"
-  },
-  {
-    "league": "國際友誼",
-    "time": "22:15",
+    "league": "烏茲女超",
+    "time": "15:30",
     "status": "",
-    "home": "日本(中)",
-    "away": "巴拿馬",
+    "home": "安迪江女足",
+    "away": "布霍羅女足",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950820"
+  },
+  {
+    "league": "日職聯",
+    "time": "16:00",
+    "status": "",
+    "home": "鹿島鹿角",
+    "away": "川崎前鋒",
     "HomeFScore": "-",
     "AwayFScore": "-",
-    "id": "1948729"
+    "id": "1872557"
+  },
+  {
+    "league": "澳布超冠",
+    "time": "16:00",
+    "status": "",
+    "home": "阿爾巴尼克里克",
+    "away": "聖喬治維萊FC",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1943864"
+  },
+  {
+    "league": "澳布甲冠",
+    "time": "16:00",
+    "status": "",
+    "home": "聖佛德流浪",
+    "away": "湖泊FC",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1943823"
+  },
+  {
+    "league": "澳昆甲",
+    "time": "16:00",
+    "status": "",
+    "home": "南國老鷹(中)",
+    "away": "葉士域治騎士",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1949270"
+  },
+  {
+    "league": "澳黃超",
+    "time": "16:00",
+    "status": "",
+    "home": "沖浪者天堂",
+    "away": "棕榈滩",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950374"
+  },
+  {
+    "league": "澳昆女超",
+    "time": "16:00",
+    "status": "",
+    "home": "南查理斯頓布女足",
+    "away": "卡帕拉巴女足",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950375"
+  },
+  {
+    "league": "台湾乙",
+    "time": "16:00",
+    "status": "",
+    "home": "臺北玩壹",
+    "away": "童傑FC",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950376"
+  },
+  {
+    "league": "澳布女超",
+    "time": "16:00",
+    "status": "",
+    "home": "布羅德海灘聯合女足",
+    "away": "格蘭女足",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950438"
+  },
+  {
+    "league": "澳布女超",
+    "time": "16:00",
+    "status": "",
+    "home": "塔林加流浪女足",
+    "away": "圖旺女足",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951100"
+  },
+  {
+    "league": "澳布女超",
+    "time": "16:00",
+    "status": "",
+    "home": "松山女足",
+    "away": "袋鼠點流浪女足",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951101"
+  },
+  {
+    "league": "越南乙",
+    "time": "16:00",
+    "status": "",
+    "home": "富安",
+    "away": "泰寧保護區",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950738"
+  },
+  {
+    "league": "澳昆超",
+    "time": "16:30",
+    "status": "",
+    "home": "半島電力",
+    "away": "昆士蘭獅隊",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1840238"
+  },
+  {
+    "league": "澳昆超",
+    "time": "16:30",
+    "status": "",
+    "home": "黃金海岸騎士",
+    "away": "卡帕拉巴",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1840239"
+  },
+  {
+    "league": "澳昆超",
+    "time": "16:30",
+    "status": "",
+    "home": "陽光海岸流浪者",
+    "away": "黃金海岸聯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1840242"
+  },
+  {
+    "league": "澳昆甲",
+    "time": "16:30",
+    "status": "",
+    "home": "南部聯合",
+    "away": "威斯頓普德",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1949271"
+  },
+  {
+    "league": "澳布女超",
+    "time": "16:30",
+    "status": "",
+    "home": "昆士蘭科技大學女足",
+    "away": "半島電力BPL女足",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950439"
+  },
+  {
+    "league": "盧旺達聯",
+    "time": "16:30",
+    "status": "",
+    "home": "埃托里",
+    "away": "因特福斯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950998"
+  },
+  {
+    "league": "泰乙",
+    "time": "16:45",
+    "status": "",
+    "home": "班布昂FC",
+    "away": "沙卡奧市",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950694"
+  },
+  {
+    "league": "泰乙",
+    "time": "16:45",
+    "status": "",
+    "home": "查亞夫姆聯",
+    "away": "烏邦克魯亞帕納斯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950695"
+  },
+  {
+    "league": "泰乙",
+    "time": "16:45",
+    "status": "",
+    "home": "穆安聯合",
+    "away": "華欣城",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950696"
+  },
+  {
+    "league": "泰乙",
+    "time": "16:45",
+    "status": "",
+    "home": "巴吞他尼聯",
+    "away": "辛哈GB",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950697"
+  },
+  {
+    "league": "泰乙",
+    "time": "16:45",
+    "status": "",
+    "home": "泰國皇家陸軍",
+    "away": "曼谷FC",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950698"
+  },
+  {
+    "league": "泰乙",
+    "time": "16:45",
+    "status": "",
+    "home": "通布裏聯",
+    "away": "非塔布裡聯合",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950699"
+  },
+  {
+    "league": "泰丙",
+    "time": "16:45",
+    "status": "",
+    "home": "甘烹碧",
+    "away": "北馬里",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950739"
+  },
+  {
+    "league": "泰丙",
+    "time": "16:45",
+    "status": "",
+    "home": "孔旺",
+    "away": "羅勇聯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950740"
+  },
+  {
+    "league": "澳布超冠",
+    "time": "17:00",
+    "status": "",
+    "home": "史托姆斯世紀",
+    "away": "格蘭",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1943865"
+  },
+  {
+    "league": "澳布超保",
+    "time": "17:00",
+    "status": "",
+    "home": "卡布爾徹",
+    "away": "布里斯班騎士",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1943873"
   },
   {
     "league": "球會友誼",
-    "time": "22:30",
+    "time": "17:00",
     "status": "",
-    "home": "吉英坎",
-    "away": "比斯特",
+    "home": "泰國",
+    "away": "泰國超級聯賽明星隊",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1950336"
+    "id": "1951166"
   },
   {
-    "league": "波蘭甲",
-    "time": "23:00",
+    "league": "澳布甲保",
+    "time": "17:00",
     "status": "",
-    "home": "阿卡",
-    "away": "比查度",
+    "home": "北松",
+    "away": "葉士域治城",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1911918"
+    "id": "1943812"
   },
   {
-    "league": "球會友誼",
-    "time": "23:00",
+    "league": "澳布甲冠",
+    "time": "17:00",
     "status": "",
-    "home": "迪瑟利亞",
-    "away": "哈斯沙尼亞",
+    "home": "布里斯本競技",
+    "away": "韋斯登司比力",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1950350"
-  },
-  {
-    "league": "球會友誼",
-    "time": "23:00",
-    "status": "",
-    "home": "高柏",
-    "away": "塔博塞扎納",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1950351"
-  },
-  {
-    "league": "巴林盃",
-    "time": "23:00",
-    "status": "",
-    "home": "東里法",
-    "away": "沙貝波",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1947410"
-  },
-  {
-    "league": "巴林盃",
-    "time": "23:00",
-    "status": "",
-    "home": "阿伊迪哈德",
-    "away": "巴林SC",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1947411"
-  },
-  {
-    "league": "巴林盃",
-    "time": "23:00",
-    "status": "",
-    "home": "布賽廷",
-    "away": "布戴亞",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1947437"
-  },
-  {
-    "league": "俄五足",
-    "time": "23:00",
-    "status": "",
-    "home": "迪那摩薩馬拉室內足球隊",
-    "away": "即錫納室內足球隊",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1948760"
-  },
-  {
-    "league": "葡錦標",
-    "time": "23:00",
-    "status": "",
-    "home": "梅拉",
-    "away": "塞圖巴爾",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1950056"
-  },
-  {
-    "league": "卡後備",
-    "time": "23:00",
-    "status": "",
-    "home": "艾舍利後備隊",
-    "away": "Al戴爾後備隊",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1950304"
-  },
-  {
-    "league": "卡後備",
-    "time": "23:00",
-    "status": "",
-    "home": "杜哈阿拉伯後備隊",
-    "away": "賽利亞後備隊",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1950360"
-  },
-  {
-    "league": "意五足",
-    "time": "23:30",
-    "status": "",
-    "home": "卡塔尼亞室內足球隊",
-    "away": "奧斯提亞馬瑞室內足",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1949310"
-  },
-  {
-    "league": "欧青U21外",
-    "time": "23:59",
-    "status": "",
-    "home": "馬爾他U21",
-    "away": "烏克蘭U21",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1686966"
-  },
-  {
-    "league": "非洲盃",
-    "time": "23:59",
-    "status": "",
-    "home": "尼日爾",
-    "away": "埃塞俄比亞",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1815058"
-  },
-  {
-    "league": "非洲盃",
-    "time": "23:59",
-    "status": "",
-    "home": "尼日利亞",
-    "away": "塞拉里昂",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1815070"
-  },
-  {
-    "league": "匈乙",
-    "time": "23:59",
-    "status": "",
-    "home": "吉奧利",
-    "away": "布達爾斯",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1884265"
-  },
-  {
-    "league": "球會友誼",
-    "time": "23:59",
-    "status": "",
-    "home": "莫拉羅",
-    "away": "梅里達AD",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1950349"
-  },
-  {
-    "league": "巴勒聯",
-    "time": "23:59",
-    "status": "",
-    "home": "瓦迪內斯",
-    "away": "賈巴爾艾爾姆卡貝",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1950047"
-  },
-  {
-    "league": "墨西丙",
-    "time": "23:59",
-    "status": "",
-    "home": "頌娜B隊",
-    "away": "萨尔蒂洛",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1950264"
-  },
-  {
-    "league": "欧青U21外",
-    "time": "00:30",
-    "status": "",
-    "home": "立陶宛U21",
-    "away": "聖馬力諾U21",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1686847"
-  },
-  {
-    "league": "智利甲",
-    "time": "00:30",
-    "status": "",
-    "home": "維拿迪馬愛華頓",
-    "away": "奧希金斯",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1948150"
-  },
-  {
-    "league": "波蘭甲",
-    "time": "00:40",
-    "status": "",
-    "home": "查洛裏",
-    "away": "奧爾什丁",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1911921"
-  },
-  {
-    "league": "法丙",
-    "time": "01:00",
-    "status": "",
-    "home": "布羅尼",
-    "away": "阿凡契斯",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1881863"
-  },
-  {
-    "league": "法丙",
-    "time": "01:00",
-    "status": "",
-    "home": "奎維利魯昂",
-    "away": "紹萊特",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1881866"
-  },
-  {
-    "league": "法丙",
-    "time": "01:00",
-    "status": "",
-    "home": "紅星",
-    "away": "里昂杜切爾",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1881867"
-  },
-  {
-    "league": "法丙",
-    "time": "01:00",
-    "status": "",
-    "home": "席特",
-    "away": "干卡紐",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1881868"
-  },
-  {
-    "league": "法丙",
-    "time": "01:00",
-    "status": "",
-    "home": "維利法蘭",
-    "away": "拉瓦勒",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1881869"
-  },
-  {
-    "league": "欧青U21外",
-    "time": "01:00",
-    "status": "",
-    "home": "土耳其U21",
-    "away": "奧地利U21",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1686832"
-  },
-  {
-    "league": "欧青U21外",
-    "time": "01:00",
-    "status": "",
-    "home": "希臘U21",
-    "away": "捷克U21",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1686849"
-  },
-  {
-    "league": "欧青U21外",
-    "time": "01:00",
-    "status": "",
-    "home": "威爾斯U21",
-    "away": "摩爾多瓦U21",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1686991"
-  },
-  {
-    "league": "球會友誼",
-    "time": "01:00",
-    "status": "",
-    "home": "哥斯達黎加(中)",
-    "away": "卡塔爾",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1948761"
-  },
-  {
-    "league": "阿聯盃",
-    "time": "01:00",
-    "status": "",
-    "home": "華斯爾",
-    "away": "阿爾華達",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1911299"
-  },
-  {
-    "league": "沙地乙A",
-    "time": "01:00",
-    "status": "",
-    "home": "安莎",
-    "away": "阿爾茲拉費",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1945990"
-  },
-  {
-    "league": "法女甲",
-    "time": "01:30",
-    "status": "",
-    "home": "里昂女足",
-    "away": "索奥克斯女足",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1902215"
-  },
-  {
-    "league": "丹麥U19",
-    "time": "01:30",
-    "status": "",
-    "home": "施克堡U19",
-    "away": "蘭達斯弗雷亞U19",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1891611"
+    "id": "1943824"
   },
   {
     "league": "羅乙",
-    "time": "01:30",
+    "time": "17:00",
     "status": "",
-    "home": "克勒拉希",
-    "away": "沃因塔特努馬格勒",
+    "home": "科穆納萊雷恰",
+    "away": "斯洛博齊亞",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1911494"
+    "id": "1911495"
+  },
+  {
+    "league": "羅乙",
+    "time": "17:00",
+    "status": "",
+    "home": "CSS斯拉提拿",
+    "away": "梅塔洛格布斯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1911498"
+  },
+  {
+    "league": "羅乙",
+    "time": "17:00",
+    "status": "",
+    "home": "奧拉迪亞",
+    "away": "班度里",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1911503"
+  },
+  {
+    "league": "烏茲甲A升",
+    "time": "17:00",
+    "status": "",
+    "home": "薩馬爾罕戴拿模",
+    "away": "舒爾坦古扎爾",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1947896"
+  },
+  {
+    "league": "烏茲甲東",
+    "time": "17:00",
+    "status": "",
+    "home": "FK魯賓",
+    "away": "帕克塔科79",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950974"
+  },
+  {
+    "league": "澳昆女超",
+    "time": "17:00",
+    "status": "",
+    "home": "伊斯頓沙伯女足",
+    "away": "洛根利泰檸女足",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950377"
+  },
+  {
+    "league": "澳布女超",
+    "time": "17:00",
+    "status": "",
+    "home": "湖泊FC女足",
+    "away": "卡利拿女足",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950440"
+  },
+  {
+    "league": "不丹廷聯",
+    "time": "17:00",
+    "status": "",
+    "home": "坦桑FC",
+    "away": "廷布聯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950700"
+  },
+  {
+    "league": "泰乙",
+    "time": "17:00",
+    "status": "",
+    "home": "清萊蘭納",
+    "away": "程逸府",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951071"
+  },
+  {
+    "league": "泰乙",
+    "time": "17:00",
+    "status": "",
+    "home": "昆肯莫丁丹",
+    "away": "尤度聯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951072"
+  },
+  {
+    "league": "澳布女超",
+    "time": "17:00",
+    "status": "",
+    "home": "北布里斯班女足",
+    "away": "布里斯班奧林匹克女足",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951099"
+  },
+  {
+    "league": "港菁盃",
+    "time": "17:30",
+    "status": "",
+    "home": "傑志(中)",
+    "away": "理文",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950364"
+  },
+  {
+    "league": "土乙白",
+    "time": "18:00",
+    "status": "",
+    "home": "古姆森士邦",
+    "away": "赫克莫古特拉仲",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1924724"
+  },
+  {
+    "league": "土乙白",
+    "time": "18:00",
+    "status": "",
+    "home": "哈錫迪比",
+    "away": "烏塔斯烏沙克士邦",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1924727"
+  },
+  {
+    "league": "土乙白",
+    "time": "18:00",
+    "status": "",
+    "home": "伊尼高爾士邦",
+    "away": "埃爾蓋內",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1924728"
+  },
+  {
+    "league": "土乙白",
+    "time": "18:00",
+    "status": "",
+    "home": "高卡爾利",
+    "away": "桑卡塔普士邦",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1924729"
+  },
+  {
+    "league": "土乙白",
+    "time": "18:00",
+    "status": "",
+    "home": "文尼沙BB",
+    "away": "卡拉曼馬士邦",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1924730"
+  },
+  {
+    "league": "土乙白",
+    "time": "18:00",
+    "status": "",
+    "home": "沙里耶爾",
+    "away": "俄辛康士邦",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1924731"
+  },
+  {
+    "league": "土乙白",
+    "time": "18:00",
+    "status": "",
+    "home": "祖古爾達克",
+    "away": "山路法斯堡",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1924732"
+  },
+  {
+    "league": "土乙紅",
+    "time": "18:00",
+    "status": "",
+    "home": "埃拉澤",
+    "away": "基克拉爾利士邦",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1926079"
+  },
+  {
+    "league": "土乙紅",
+    "time": "18:00",
+    "status": "",
+    "home": "錫瓦斯貝萊迪耶",
+    "away": "伊梅斯古特",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1926080"
+  },
+  {
+    "league": "土乙紅",
+    "time": "18:00",
+    "status": "",
+    "home": "波德魯姆士邦",
+    "away": "布沙尼路費斯堡",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1926082"
+  },
+  {
+    "league": "土乙紅",
+    "time": "18:00",
+    "status": "",
+    "home": "卡拉布克",
+    "away": "塞克爾士邦",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1926083"
+  },
+  {
+    "league": "土乙紅",
+    "time": "18:00",
+    "status": "",
+    "home": "基森海爾",
+    "away": "沙卡亞斯普",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1926084"
+  },
+  {
+    "league": "土乙紅",
+    "time": "18:00",
+    "status": "",
+    "home": "佩迪卡斯堡",
+    "away": "貝拉迪亞士邦",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1926085"
+  },
+  {
+    "league": "土乙紅",
+    "time": "18:00",
+    "status": "",
+    "home": "塞里克",
+    "away": "伊約普",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1926086"
+  },
+  {
+    "league": "土乙紅",
+    "time": "18:00",
+    "status": "",
+    "home": "杜古雷士邦",
+    "away": "加斯塔摩奴士邦",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1926087"
+  },
+  {
+    "league": "土丙D",
+    "time": "18:00",
+    "status": "",
+    "home": "叶内奥都斯",
+    "away": "布爾薩耶爾德勒姆士邦",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1927360"
+  },
+  {
+    "league": "土丙D",
+    "time": "18:00",
+    "status": "",
+    "home": "凱爾基特",
+    "away": "拜拉姆貝沙",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1927361"
+  },
+  {
+    "league": "土丙D",
+    "time": "18:00",
+    "status": "",
+    "home": "阿卡沙雷士邦",
+    "away": "比萊吉克奧澤爾",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1927362"
+  },
+  {
+    "league": "土丙D",
+    "time": "18:00",
+    "status": "",
+    "home": "帕加馬",
+    "away": "錫利維斯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1927363"
+  },
+  {
+    "league": "土丙D",
+    "time": "18:00",
+    "status": "",
+    "home": "杜茲塞",
+    "away": "凱斯特爾",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1927364"
+  },
+  {
+    "league": "土丙D",
+    "time": "18:00",
+    "status": "",
+    "home": "莫达芬",
+    "away": "艾迪亞曼士邦",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1927365"
+  },
+  {
+    "league": "土丙D",
+    "time": "18:00",
+    "status": "",
+    "home": "蘇坦貝利",
+    "away": "卡拉科普魯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1927366"
+  },
+  {
+    "league": "泰甲",
+    "time": "18:00",
+    "status": "",
+    "home": "廊莫那浦府",
+    "away": "四色菊",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1845160"
+  },
+  {
+    "league": "匈丙",
+    "time": "18:00",
+    "status": "",
+    "home": "普斯卡斯學院B隊",
+    "away": "科馬羅姆VSE",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950423"
+  },
+  {
+    "league": "波蘭丁",
+    "time": "18:00",
+    "status": "",
+    "home": "沙斯辛B隊",
+    "away": "格瓦達科沙林",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950617"
+  },
+  {
+    "league": "波蘭丁",
+    "time": "18:00",
+    "status": "",
+    "home": "索克爾克勒澤威",
+    "away": "格里夫",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950618"
+  },
+  {
+    "league": "克亞U19",
+    "time": "18:00",
+    "status": "",
+    "home": "夏積杜克U19",
+    "away": "薩格勒布戴拿模U19",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950701"
+  },
+  {
+    "league": "克亞U19",
+    "time": "18:00",
+    "status": "",
+    "home": "比路樸U19",
+    "away": "迪列高禾傑卡U19",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950702"
+  },
+  {
+    "league": "塞爾U19",
+    "time": "18:00",
+    "status": "",
+    "home": "納普里達克U19",
+    "away": "拉尼奇新貝爾格萊德U19",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951134"
+  },
+  {
+    "league": "波蘭地區",
+    "time": "18:00",
+    "status": "",
+    "home": "華沙奧林匹克",
+    "away": "達布維利舍夫",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951151"
+  },
+  {
+    "league": "波蘭地區",
+    "time": "18:00",
+    "status": "",
+    "home": "喬澤福維亞B隊",
+    "away": "茲拉基",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951156"
+  },
+  {
+    "league": "波蘭丁",
+    "time": "18:00",
+    "status": "",
+    "home": "捷豹格斯克",
+    "away": "盧齊諾",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951157"
+  },
+  {
+    "league": "土庫曼超",
+    "time": "18:00",
+    "status": "",
+    "home": "恩爾格泰",
+    "away": "內比特治",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1936977"
+  },
+  {
+    "league": "土庫曼超",
+    "time": "18:00",
+    "status": "",
+    "home": "科佩達格",
+    "away": "阿爾廷阿西爾",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1936978"
+  },
+  {
+    "league": "土庫曼超",
+    "time": "18:45",
+    "status": "",
+    "home": "薩格丹",
+    "away": "阿哈爾",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1936979"
+  },
+  {
+    "league": "葡甲",
+    "time": "19:00",
+    "status": "",
+    "home": "伊斯托里爾",
+    "away": "科瓦皮耶達迪",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1917259"
+  },
+  {
+    "league": "西丙2",
+    "time": "19:00",
+    "status": "",
+    "home": "伊波羅",
+    "away": "SD朗洛尼斯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1937340"
+  },
+  {
+    "league": "愛沙甲",
+    "time": "19:00",
+    "status": "",
+    "home": "塔林軍團",
+    "away": "雷瓦狄亞",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1868496"
+  },
+  {
+    "league": "俄乙南",
+    "time": "19:00",
+    "status": "",
+    "home": "比奧洛格",
+    "away": "德魯日巴",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1892507"
+  },
+  {
+    "league": "俄乙南",
+    "time": "19:00",
+    "status": "",
+    "home": "庫班帕夫洛夫斯卡亞",
+    "away": "軍團迪納摩",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1892509"
+  },
+  {
+    "league": "俄乙南",
+    "time": "19:00",
+    "status": "",
+    "home": "馬哈奇卡拉",
+    "away": "FK烏若扎",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1892510"
+  },
+  {
+    "league": "球會友誼",
+    "time": "19:00",
+    "status": "",
+    "home": "漢諾威",
+    "away": "沃爾夫斯堡",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950788"
+  },
+  {
+    "league": "球會友誼",
+    "time": "19:00",
+    "status": "",
+    "home": "普羅夫迪夫博特夫",
+    "away": "瑟特曼維里",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951093"
+  },
+  {
+    "league": "西丁",
+    "time": "19:00",
+    "status": "",
+    "home": "米蘭迪斯B隊",
+    "away": "布爾戈斯CF",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950424"
+  },
+  {
+    "league": "泰甲",
+    "time": "19:00",
+    "status": "",
+    "home": "阿尤塔亞聯",
+    "away": "查英特",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1845157"
+  },
+  {
+    "league": "葡錦標",
+    "time": "19:00",
+    "status": "",
+    "home": "蒙塔萊格里",
+    "away": "A.FC維苗蘇",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950704"
+  },
+  {
+    "league": "葡錦標",
+    "time": "19:00",
+    "status": "",
+    "home": "皮维德SC",
+    "away": "迪辛斯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950705"
+  },
+  {
+    "league": "泰乙",
+    "time": "19:00",
+    "status": "",
+    "home": "萬開聯",
+    "away": "赤大布瑞",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950706"
+  },
+  {
+    "league": "盧旺達聯",
+    "time": "19:00",
+    "status": "",
+    "home": "大猩猩FC",
+    "away": "盧瓦馬加納市",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950742"
+  },
+  {
+    "league": "波蘭甲",
+    "time": "19:30",
+    "status": "",
+    "home": "GKS傑斯特澤比",
+    "away": "LKS羅茲",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1911922"
+  },
+  {
+    "league": "波蘭甲",
+    "time": "19:30",
+    "status": "",
+    "home": "涅波沃米采",
+    "away": "奧波萊",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1911923"
+  },
+  {
+    "league": "球會友誼",
+    "time": "19:30",
+    "status": "",
+    "home": "巴達祖斯",
+    "away": "圭久洛",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950707"
+  },
+  {
+    "league": "西丁",
+    "time": "19:30",
+    "status": "",
+    "home": "馬納科",
+    "away": "SD波特曼",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950378"
+  },
+  {
+    "league": "意女甲",
+    "time": "19:30",
+    "status": "",
+    "home": "恩波里女足",
+    "away": "國際米蘭女足",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1912686"
+  },
+  {
+    "league": "塞爾U19",
+    "time": "19:30",
+    "status": "",
+    "home": "貝爾格萊德拉德U19",
+    "away": "瑞德尼基U19",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951135"
+  },
+  {
+    "league": "波蘭甲",
+    "time": "19:40",
+    "status": "",
+    "home": "威德優",
+    "away": "雷索維亞",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1911917"
+  },
+  {
+    "league": "瑞典乙北",
+    "time": "20:00",
+    "status": "",
+    "home": "奧雷布洛西里安斯卡",
+    "away": "卡爾斯塔德",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1871336"
+  },
+  {
+    "league": "挪乙",
+    "time": "20:00",
+    "status": "",
+    "home": "斯吉德",
+    "away": "費德列斯達",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1938850"
+  },
+  {
+    "league": "丹麥乙A",
+    "time": "20:00",
+    "status": "",
+    "home": "塞维斯特",
+    "away": "米德法特",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1912196"
+  },
+  {
+    "league": "丹麥乙B",
+    "time": "20:00",
+    "status": "",
+    "home": "雲洛斯",
+    "away": "赫勒烏普",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1912371"
+  },
+  {
+    "league": "波蘭甲",
+    "time": "20:00",
+    "status": "",
+    "home": "拉多麥科(中)",
+    "away": "索斯諾維茨",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1911920"
+  },
+  {
+    "league": "波蘭乙",
+    "time": "20:00",
+    "status": "",
+    "home": "斯塔澤舒夫",
+    "away": "比托維亞",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1901683"
+  },
+  {
+    "league": "波蘭乙",
+    "time": "20:00",
+    "status": "",
+    "home": "卡杜華斯",
+    "away": "卡利什",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1901684"
+  },
+  {
+    "league": "波蘭乙",
+    "time": "20:00",
+    "status": "",
+    "home": "波兹南波兰II",
+    "away": "弗罗茨瓦夫足球俱乐部II",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1901686"
+  },
+  {
+    "league": "波蘭乙",
+    "time": "20:00",
+    "status": "",
+    "home": "西德爾策",
+    "away": "琴斯托霍瓦火花",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1901691"
+  },
+  {
+    "league": "俄乙南",
+    "time": "20:00",
+    "status": "",
+    "home": "斯塔夫羅波爾戴拿模",
+    "away": "切爾克斯克",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1892504"
+  },
+  {
+    "league": "俄乙南",
+    "time": "20:00",
+    "status": "",
+    "home": "納爾奇克斯巴達",
+    "away": "麥呼克",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1892505"
+  },
+  {
+    "league": "俄乙南",
+    "time": "20:00",
+    "status": "",
+    "home": "查洛摩勒斯",
+    "away": "福瑞迪",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1892506"
+  },
+  {
+    "league": "球會友誼",
+    "time": "20:00",
+    "status": "",
+    "home": "古拉瑞奇",
+    "away": "因吉亞",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951158"
+  },
+  {
+    "league": "匈U19",
+    "time": "20:00",
+    "status": "",
+    "home": "艾卡迪麻亞U19",
+    "away": "帕克斯U19",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1911805"
+  },
+  {
+    "league": "泰甲",
+    "time": "20:00",
+    "status": "",
+    "home": "那可恩普拉托姆",
+    "away": "赫恩柯恩聯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1845156"
+  },
+  {
+    "league": "泰甲",
+    "time": "20:00",
+    "status": "",
+    "home": "清邁",
+    "away": "烏泰他尼森林",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1845158"
+  },
+  {
+    "league": "泰甲",
+    "time": "20:00",
+    "status": "",
+    "home": "薩穆帕肯海關聯",
+    "away": "薩穆特松柯恩",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1845164"
+  },
+  {
+    "league": "塞爾甲",
+    "time": "20:00",
+    "status": "",
+    "home": "杜博西卡",
+    "away": "格拉菲卡貝爾格萊德",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1882187"
+  },
+  {
+    "league": "塞爾甲",
+    "time": "20:00",
+    "status": "",
+    "home": "洛茲尼察",
+    "away": "玻拉斯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1882190"
+  },
+  {
+    "league": "塞爾甲",
+    "time": "20:00",
+    "status": "",
+    "home": "澤倫斯尼卡潘切沃",
+    "away": "諾維貝爾格萊德",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1882193"
+  },
+  {
+    "league": "波蘭丁",
+    "time": "20:00",
+    "status": "",
+    "home": "KS庫特諾",
+    "away": "瓦西裏科夫",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950619"
+  },
+  {
+    "league": "波蘭丁",
+    "time": "20:00",
+    "status": "",
+    "home": "KS波羅尼亞",
+    "away": "尼爾巴",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950620"
+  },
+  {
+    "league": "波蘭丁",
+    "time": "20:00",
+    "status": "",
+    "home": "新塔爾格",
+    "away": "W.登比察",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950621"
+  },
+  {
+    "league": "波蘭丁",
+    "time": "20:00",
+    "status": "",
+    "home": "普隆尼亞比唐",
+    "away": "尼薩波隆尼亞",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950622"
+  },
+  {
+    "league": "波蘭丁",
+    "time": "20:00",
+    "status": "",
+    "home": "華沙普隆尼亞",
+    "away": "歷基亞B隊",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950623"
+  },
+  {
+    "league": "波蘭丁",
+    "time": "20:00",
+    "status": "",
+    "home": "斯亞卡",
+    "away": "希特曼",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950624"
+  },
+  {
+    "league": "波蘭丁",
+    "time": "20:00",
+    "status": "",
+    "home": "斯凯尔涅维采",
+    "away": "索科爾",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950625"
+  },
+  {
+    "league": "波蘭丁",
+    "time": "20:00",
+    "status": "",
+    "home": "路賓B隊",
+    "away": "恩爾格提克",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950626"
+  },
+  {
+    "league": "波蘭丁",
+    "time": "20:00",
+    "status": "",
+    "home": "扎姆布朗",
+    "away": "布龍拉多姆",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950627"
+  },
+  {
+    "league": "波斯地區",
+    "time": "20:00",
+    "status": "",
+    "home": "FK拉迪斯卡",
+    "away": "苏捷斯卡",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950708"
+  },
+  {
+    "league": "波斯地區",
+    "time": "20:00",
+    "status": "",
+    "home": "FK波德里涅",
+    "away": "茲維耶達",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950709"
+  },
+  {
+    "league": "波斯地區",
+    "time": "20:00",
+    "status": "",
+    "home": "史洛加多波",
+    "away": "澤傑尼卡",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950710"
+  },
+  {
+    "league": "烏拉U19",
+    "time": "20:00",
+    "status": "",
+    "home": "丹紐比奧U19",
+    "away": "圖爾克U19",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950714"
+  },
+  {
+    "league": "烏拉U19",
+    "time": "20:00",
+    "status": "",
+    "home": "LA卢兹U19",
+    "away": "羅姆帕拉U19",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950715"
+  },
+  {
+    "league": "波蘭丁",
+    "time": "20:00",
+    "status": "",
+    "home": "克魯茨波克",
+    "away": "塔爾諾夫斯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950790"
+  },
+  {
+    "league": "羅丙",
+    "time": "20:00",
+    "status": "",
+    "home": "CS卡拉奧華大學B隊",
+    "away": "塞林西尼學院B隊",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951020"
+  },
+  {
+    "league": "羅丙",
+    "time": "20:00",
+    "status": "",
+    "home": "普洛佩尼",
+    "away": "塞庫耶斯克",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951021"
+  },
+  {
+    "league": "羅丙",
+    "time": "20:00",
+    "status": "",
+    "home": "沃倫塔利B隊",
+    "away": "AFC布加勒斯特",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951022"
+  },
+  {
+    "league": "羅丙",
+    "time": "20:00",
+    "status": "",
+    "home": "加拉迪",
+    "away": "瑟拉特",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951023"
+  },
+  {
+    "league": "羅丙",
+    "time": "20:00",
+    "status": "",
+    "home": "ACS塔古",
+    "away": "科羅納巴索夫",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951024"
+  },
+  {
+    "league": "羅丙",
+    "time": "20:00",
+    "status": "",
+    "home": "阿富馬齊",
+    "away": "萊奧爾代尼",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951025"
+  },
+  {
+    "league": "羅丙",
+    "time": "20:00",
+    "status": "",
+    "home": "GS吉羅特爾塔爾古石炭酸",
+    "away": "加斯梅登B隊",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951026"
+  },
+  {
+    "league": "羅丙",
+    "time": "20:00",
+    "status": "",
+    "home": "胡內多阿拉",
+    "away": "烏尼雷亞溫格內",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951027"
+  },
+  {
+    "league": "羅丙",
+    "time": "20:00",
+    "status": "",
+    "home": "格瑞埃魯卡",
+    "away": "利波瓦",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951060"
+  },
+  {
+    "league": "羅丙",
+    "time": "20:00",
+    "status": "",
+    "home": "SR巴索夫",
+    "away": "ACS奧林匹克",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951061"
+  },
+  {
+    "league": "羅丙",
+    "time": "20:00",
+    "status": "",
+    "home": "烏尼雷亞德治",
+    "away": "桑納塔特古積",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951062"
+  },
+  {
+    "league": "波蘭丁",
+    "time": "20:00",
+    "status": "",
+    "home": "弗洛塔",
+    "away": "巴特克紮林",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951094"
+  },
+  {
+    "league": "波蘭丁",
+    "time": "20:00",
+    "status": "",
+    "home": "維基勒",
+    "away": "波贡格罗兹克",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951095"
+  },
+  {
+    "league": "北馬其乙西",
+    "time": "20:00",
+    "status": "",
+    "home": "FK斯科普里",
+    "away": "瓦爾達福里諾",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1902623"
+  },
+  {
+    "league": "北馬其乙西",
+    "time": "20:00",
+    "status": "",
+    "home": "維拉利米",
+    "away": "科拉布德巴爾",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1902624"
+  },
+  {
+    "league": "北馬其乙西",
+    "time": "20:00",
+    "status": "",
+    "home": "德利塔波哥維涅",
+    "away": "卡迪諾",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1902625"
+  },
+  {
+    "league": "北馬其乙西",
+    "time": "20:00",
+    "status": "",
+    "home": "韋萊什塔",
+    "away": "奧赫里德",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1902626"
+  },
+  {
+    "league": "北馬其乙西",
+    "time": "20:00",
+    "status": "",
+    "home": "戈斯蒂瓦爾",
+    "away": "特特斯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1902627"
+  },
+  {
+    "league": "北馬其乙東",
+    "time": "20:00",
+    "status": "",
+    "home": "喀澤夫",
+    "away": "蒂克韋什",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1902708"
+  },
+  {
+    "league": "北馬其乙東",
+    "time": "20:00",
+    "status": "",
+    "home": "奧斯格維",
+    "away": "普赫謝沃",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1902709"
+  },
+  {
+    "league": "北馬其乙東",
+    "time": "20:00",
+    "status": "",
+    "home": "普拉柯維卡",
+    "away": "布雷加尼卡",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1902710"
+  },
+  {
+    "league": "北馬其乙東",
+    "time": "20:00",
+    "status": "",
+    "home": "卡梅尼察",
+    "away": "斯洛加維尼察",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1902711"
+  },
+  {
+    "league": "北馬其乙東",
+    "time": "20:00",
+    "status": "",
+    "home": "FK羅索曼",
+    "away": "樸比達",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1902712"
+  },
+  {
+    "league": "沙地乙B",
+    "time": "20:10",
+    "status": "",
+    "home": "阿爾沙爾卡",
+    "away": "阿里夫",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1946170"
+  },
+  {
+    "league": "沙地乙B",
+    "time": "20:15",
+    "status": "",
+    "home": "莫澤爾",
+    "away": "阿爾納澤馬",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1946171"
+  },
+  {
+    "league": "沙地乙B",
+    "time": "20:20",
+    "status": "",
+    "home": "Al 科爾",
+    "away": "歐魯巴赫",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1946172"
+  },
+  {
+    "league": "丹麥乙B",
+    "time": "20:30",
+    "status": "",
+    "home": "KFUM洛斯基德",
+    "away": "厄華特",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1912372"
+  },
+  {
+    "league": "阿爾巴盃",
+    "time": "20:30",
+    "status": "",
+    "home": "KF拉奇",
+    "away": "伊拿迪亚",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1949093"
+  },
+  {
+    "league": "法女甲",
+    "time": "20:30",
+    "status": "",
+    "home": "勒哈費爾女足",
+    "away": "波爾多女足",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1902214"
+  },
+  {
+    "league": "羅乙",
+    "time": "20:30",
+    "status": "",
+    "home": "斯克拉雷西塔",
+    "away": "古積大學",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1911497"
+  },
+  {
+    "league": "克亞乙",
+    "time": "20:30",
+    "status": "",
+    "home": "歐帕提亞",
+    "away": "杜國坡吉",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1895657"
+  },
+  {
+    "league": "克亞乙",
+    "time": "20:30",
+    "status": "",
+    "home": "奥利真特",
+    "away": "NK蘇林",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1895661"
+  },
+  {
+    "league": "匈丙",
+    "time": "20:30",
+    "status": "",
+    "home": "艾羅爾",
+    "away": "加爾多尼SC",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950425"
+  },
+  {
+    "league": "匈丙",
+    "time": "20:30",
+    "status": "",
+    "home": "塞格雷德",
+    "away": "普達洛克",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950426"
+  },
+  {
+    "league": "匈丙",
+    "time": "20:30",
+    "status": "",
+    "home": "迪比辛尼B隊",
+    "away": "珍珠市",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950427"
+  },
+  {
+    "league": "匈丙",
+    "time": "20:30",
+    "status": "",
+    "home": "迪歐斯捷爾二队",
+    "away": "貝倫尼FC",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950428"
+  },
+  {
+    "league": "匈丙",
+    "time": "20:30",
+    "status": "",
+    "home": "塔塔班亞",
+    "away": "摩爾菲爾瓦B隊",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950429"
+  },
+  {
+    "league": "匈丙",
+    "time": "20:30",
+    "status": "",
+    "home": "蒂薩新城",
+    "away": "福茲斯捷馬特",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950430"
+  },
+  {
+    "league": "匈丙",
+    "time": "20:30",
+    "status": "",
+    "home": "寇薩米斯蘭尼",
+    "away": "卡斯基美迪",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950431"
+  },
+  {
+    "league": "匈丙",
+    "time": "20:30",
+    "status": "",
+    "home": "利波特佩卡塞格",
+    "away": "蒙福克聖亞克",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950432"
+  },
+  {
+    "league": "匈丙",
+    "time": "20:30",
+    "status": "",
+    "home": "斯紮比德基克托",
+    "away": "佩魯茨",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950433"
+  },
+  {
+    "league": "波蘭丁",
+    "time": "20:30",
+    "status": "",
+    "home": "波兰斯威尼卡",
+    "away": "LSK戈查卓德",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950628"
+  },
+  {
+    "league": "波蘭丁",
+    "time": "20:30",
+    "status": "",
+    "home": "弗羅茨瓦夫",
+    "away": "达布热格",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950629"
+  },
+  {
+    "league": "波斯地區",
+    "time": "20:30",
+    "status": "",
+    "home": "拉德尼克",
+    "away": "维尼塞NK",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950716"
+  },
+  {
+    "league": "波斯地區",
+    "time": "20:30",
+    "status": "",
+    "home": "查普利納",
+    "away": "特拉尼克",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950717"
+  },
+  {
+    "league": "波斯地區",
+    "time": "20:30",
+    "status": "",
+    "home": "卡肯積",
+    "away": "加比拉",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950718"
+  },
+  {
+    "league": "巴聖青聯",
+    "time": "20:30",
+    "status": "",
+    "home": "中央青年隊",
+    "away": "伊波久卡青年隊",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950808"
+  },
+  {
+    "league": "沙地乙B",
+    "time": "20:30",
+    "status": "",
+    "home": "霍泰恩",
+    "away": "阿爾塞米亞",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1946173"
+  },
+  {
+    "league": "阿聯酋甲",
+    "time": "20:40",
+    "status": "",
+    "home": "泰德",
+    "away": "酋長會",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1949139"
+  },
+  {
+    "league": "阿聯酋甲",
+    "time": "20:40",
+    "status": "",
+    "home": "渡巴阿富查伊拉",
+    "away": "奧魯巴",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1949141"
+  },
+  {
+    "league": "丹麥乙B",
+    "time": "20:45",
+    "status": "",
+    "home": "法特列斯堡",
+    "away": "奈司特維德",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1912373"
+  },
+  {
+    "league": "西乙",
+    "time": "21:00",
+    "status": "",
+    "home": "富恩拉巴達",
+    "away": "愛斯賓奴",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1914810"
+  },
+  {
+    "league": "德丙",
+    "time": "21:00",
+    "status": "",
+    "home": "賀利舒查",
+    "away": "羅斯托克",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1906845"
+  },
+  {
+    "league": "德丙",
+    "time": "21:00",
+    "status": "",
+    "home": "烏丁根",
+    "away": "安達赫治",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1906847"
+  },
+  {
+    "league": "德丙",
+    "time": "21:00",
+    "status": "",
+    "home": "特庫古庫阿塔斯普",
+    "away": "杜伊斯堡",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1906848"
+  },
+  {
+    "league": "德丙",
+    "time": "21:00",
+    "status": "",
+    "home": "韋恩",
+    "away": "茨维考FC",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1906849"
+  },
+  {
+    "league": "德丙",
+    "time": "21:00",
+    "status": "",
+    "home": "凱沙羅頓",
+    "away": "馬德堡",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1906851"
+  },
+  {
+    "league": "德丙",
+    "time": "21:00",
+    "status": "",
+    "home": "曼希恩",
+    "away": "恩高斯達特",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1906852"
+  },
+  {
+    "league": "德地區西",
+    "time": "21:00",
+    "status": "",
+    "home": "艾倫",
+    "away": "慕遜加柏業余隊",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1900548"
+  },
+  {
+    "league": "德地區西",
+    "time": "21:00",
+    "status": "",
+    "home": "邦納",
+    "away": "羅迪豪森",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1900549"
+  },
+  {
+    "league": "德地區西",
+    "time": "21:00",
+    "status": "",
+    "home": "多蒙特業餘隊",
+    "away": "奧柏侯遜",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1900550"
+  },
+  {
+    "league": "德地區西",
+    "time": "21:00",
+    "status": "",
+    "home": "杜塞爾多夫業餘隊",
+    "away": "科隆福圖納",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1900551"
+  },
+  {
+    "league": "德地區西",
+    "time": "21:00",
+    "status": "",
+    "home": "科隆青年隊",
+    "away": "胡派達爾",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1900552"
+  },
+  {
+    "league": "德地區西",
+    "time": "21:00",
+    "status": "",
+    "home": "SV利比斯塔德",
+    "away": "普斯辛蒙斯達",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1900553"
+  },
+  {
+    "league": "德地區西",
+    "time": "21:00",
+    "status": "",
+    "home": "洛特",
+    "away": "漢堡格",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1900554"
+  },
+  {
+    "league": "德地區西",
+    "time": "21:00",
+    "status": "",
+    "home": "威登布拉克",
+    "away": "柏基斯兹",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1900557"
+  },
+  {
+    "league": "瑞典乙南",
+    "time": "21:00",
+    "status": "",
+    "home": "特瓦克斯",
+    "away": "連多姆",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1871104"
+  },
+  {
+    "league": "瑞典乙南",
+    "time": "21:00",
+    "status": "",
+    "home": "阿西特拉保",
+    "away": "艾斯基斯邁",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1871105"
+  },
+  {
+    "league": "瑞典乙北",
+    "time": "21:00",
+    "status": "",
+    "home": "泰比(中)",
+    "away": "加費萊",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1871331"
+  },
+  {
+    "league": "挪乙",
+    "time": "21:00",
+    "status": "",
+    "home": "埃格爾森德",
+    "away": "索特拉",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1938871"
+  },
+  {
+    "league": "丹麥乙A",
+    "time": "21:00",
+    "status": "",
+    "home": "阿曉斯費馬(中)",
+    "away": "達倫",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1912197"
+  },
+  {
+    "league": "丹麥乙A",
+    "time": "21:00",
+    "status": "",
+    "home": "弗雷姆",
+    "away": "霍貝克",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1912198"
+  },
+  {
+    "league": "丹麥乙A",
+    "time": "21:00",
+    "status": "",
+    "home": "奈斯比",
+    "away": "VSK阿曉斯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1912200"
+  },
+  {
+    "league": "丹麥乙B",
+    "time": "21:00",
+    "status": "",
+    "home": "斯科修夫",
+    "away": "希勒羅德",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1912374"
+  },
+  {
+    "league": "丹麥乙B",
+    "time": "21:00",
+    "status": "",
+    "home": "AB塔恩比",
+    "away": "AB格萊薩克瑟",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1912375"
+  },
+  {
+    "league": "捷乙",
+    "time": "21:00",
+    "status": "",
+    "home": "治魯迪",
+    "away": "維謝赫拉德",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1894204"
+  },
+  {
+    "league": "立陶甲",
+    "time": "21:00",
+    "status": "",
+    "home": "薩基列斯",
+    "away": "蘇度瓦",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1886473"
+  },
+  {
+    "league": "球會友誼",
+    "time": "21:00",
+    "status": "",
+    "home": "阿贊",
+    "away": "姆貝亞市",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951121"
+  },
+  {
+    "league": "球會友誼",
+    "time": "21:00",
+    "status": "",
+    "home": "利雲加",
+    "away": "洛辛堡B隊",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951167"
+  },
+  {
+    "league": "巴勒聯",
+    "time": "21:00",
+    "status": "",
+    "home": "阿爾比拉",
+    "away": "圖勒凱爾姆",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950720"
+  },
+  {
+    "league": "白俄乙升",
+    "time": "21:00",
+    "status": "",
+    "home": "巴拉諾維治",
+    "away": "迪尼伯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1941619"
+  },
+  {
+    "league": "白俄乙升",
+    "time": "21:00",
+    "status": "",
+    "home": "莫洛迪兹诺",
+    "away": "薩克杜亞B隊",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1941620"
+  },
+  {
+    "league": "白俄乙升",
+    "time": "21:00",
+    "status": "",
+    "home": "斯騰勒斯平斯克",
+    "away": "奧斯波維奇",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1941621"
+  },
+  {
+    "league": "比女超",
+    "time": "21:00",
+    "status": "",
+    "home": "艾爾斯特女足",
+    "away": "達梅斯女足",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1904719"
+  },
+  {
+    "league": "委內乙",
+    "time": "21:00",
+    "status": "",
+    "home": "洛斯安第斯大學",
+    "away": "該柯莫納雷",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950721"
+  },
+  {
+    "league": "國際友誼",
+    "time": "21:00",
+    "status": "",
+    "home": "南韓U23(中)",
+    "away": "巴西U23",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950281"
+  },
+  {
+    "league": "法女甲",
+    "time": "21:30",
+    "status": "",
+    "home": "迪安女足",
+    "away": "蒙彼利埃女足",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1902211"
+  },
+  {
+    "league": "法女甲",
+    "time": "21:30",
+    "status": "",
+    "home": "吉英坎女足",
+    "away": "巴黎FC女足",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1902212"
+  },
+  {
+    "league": "比女超",
+    "time": "21:30",
+    "status": "",
+    "home": "標準列治女足",
+    "away": "布魯日女足",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1904720"
+  },
+  {
+    "league": "意女甲",
+    "time": "21:30",
+    "status": "",
+    "home": "賓克史普特坦女足",
+    "away": "費倫天拿女足",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1912685"
+  },
+  {
+    "league": "意女甲",
+    "time": "21:30",
+    "status": "",
+    "home": "弗洛朗蒂亞女足",
+    "away": "祖雲達斯女足",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1912687"
+  },
+  {
+    "league": "匈盃",
+    "time": "21:45",
+    "status": "",
+    "home": "比奇斯吉",
+    "away": "費倫斯華路士",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1944319"
+  },
+  {
+    "league": "意乙",
+    "time": "22:00",
+    "status": "",
+    "home": "恩特拉",
+    "away": "威尼斯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1921973"
+  },
+  {
+    "league": "歐國聯",
+    "time": "22:00",
+    "status": "",
+    "home": "馬爾他",
+    "away": "安道爾",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1858518"
+  },
+  {
+    "league": "歐國聯",
+    "time": "22:00",
+    "status": "",
+    "home": "聖馬力諾",
+    "away": "直布羅陀",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1858526"
+  },
+  {
+    "league": "瑞典乙南",
+    "time": "22:00",
+    "status": "",
+    "home": "寧高平城",
+    "away": "卡爾期克朗",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1871106"
+  },
+  {
+    "league": "瑞典乙南",
+    "time": "22:00",
+    "status": "",
+    "home": "隆德",
+    "away": "特羅赫頓",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1871108"
+  },
+  {
+    "league": "瑞典乙北",
+    "time": "22:00",
+    "status": "",
+    "home": "哈寧厄",
+    "away": "貝爾加",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1871332"
+  },
+  {
+    "league": "芬甲附",
+    "time": "22:00",
+    "status": "",
+    "home": "TPS杜古",
+    "away": "科特卡",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1949797"
+  },
+  {
+    "league": "丹麥乙A",
+    "time": "22:00",
+    "status": "",
+    "home": "堡魯本B93",
+    "away": "SfB歐雷",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1912201"
+  },
+  {
+    "league": "丹麥乙B",
+    "time": "22:00",
+    "status": "",
+    "home": "布朗薛治",
+    "away": "B73斯萊格思",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1912376"
+  },
+  {
+    "league": "丹麥乙B",
+    "time": "22:00",
+    "status": "",
+    "home": "尼高賓",
+    "away": "洛斯基德",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1912377"
+  },
+  {
+    "league": "智利甲",
+    "time": "22:00",
+    "status": "",
+    "home": "柏利斯天奴",
+    "away": "高路高路",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1948151"
+  },
+  {
+    "league": "球會友誼",
+    "time": "22:00",
+    "status": "",
+    "home": "梅塔拉",
+    "away": "渣華爾",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951160"
+  },
+  {
+    "league": "意丁",
+    "time": "22:00",
+    "status": "",
+    "home": "瓦多",
+    "away": "德爾特霍納",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951044"
+  },
+  {
+    "league": "西丙1",
+    "time": "22:30",
+    "status": "",
+    "home": "華拉度列B隊",
+    "away": "科瓦棟卡",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1934389"
+  },
+  {
+    "league": "威超",
+    "time": "22:30",
+    "status": "",
+    "home": "巴拉鎮",
+    "away": "佩尼邦",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1919162"
+  },
+  {
+    "league": "威超",
+    "time": "22:30",
+    "status": "",
+    "home": "尼威",
+    "away": "夏維科韋斯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1919163"
+  },
+  {
+    "league": "威超",
+    "time": "22:30",
+    "status": "",
+    "home": "紐城",
+    "away": "弗林特鎮",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1919164"
+  },
+  {
+    "league": "西丙2",
+    "time": "22:45",
+    "status": "",
+    "home": "畢爾包B隊",
+    "away": "艾拉维斯B隊",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1937377"
+  },
+  {
+    "league": "英甲",
+    "time": "23:00",
+    "status": "",
+    "home": "布里斯托流浪",
+    "away": "費列活特",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1905570"
+  },
+  {
+    "league": "英甲",
+    "time": "23:00",
+    "status": "",
+    "home": "侯城",
+    "away": "伯頓",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1905571"
+  },
+  {
+    "league": "英甲",
+    "time": "23:00",
+    "status": "",
+    "home": "諾咸頓",
+    "away": "艾寧頓",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1905572"
+  },
+  {
+    "league": "英甲",
+    "time": "23:00",
+    "status": "",
+    "home": "梳士貝利",
+    "away": "史雲頓",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1905573"
+  },
+  {
+    "league": "英甲",
+    "time": "23:00",
+    "status": "",
+    "home": "克魯",
+    "away": "彼德堡",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1905574"
+  },
+  {
+    "league": "英甲",
+    "time": "23:00",
+    "status": "",
+    "home": "新特蘭",
+    "away": "米爾頓凱恩斯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1905575"
+  },
+  {
+    "league": "英乙",
+    "time": "23:00",
+    "status": "",
+    "home": "劍橋聯",
+    "away": "巴路",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1904964"
+  },
+  {
+    "league": "英乙",
+    "time": "23:00",
+    "status": "",
+    "home": "哈洛賈特",
+    "away": "卡維尼",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1904966"
+  },
+  {
+    "league": "英乙",
+    "time": "23:00",
+    "status": "",
+    "home": "摩爾甘比",
+    "away": "史提芬納治",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1904967"
+  },
+  {
+    "league": "英乙",
+    "time": "23:00",
+    "status": "",
+    "home": "格蘭森林流浪",
+    "away": "曼斯菲特",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1904968"
+  },
+  {
+    "league": "英乙",
+    "time": "23:00",
+    "status": "",
+    "home": "奧咸",
+    "away": "斯肯索普",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1904969"
+  },
+  {
+    "league": "英乙",
+    "time": "23:00",
+    "status": "",
+    "home": "維爾港",
+    "away": "燦美爾",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1904970"
+  },
+  {
+    "league": "英乙",
+    "time": "23:00",
+    "status": "",
+    "home": "卡素爾",
+    "away": "車頓咸",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1904971"
+  },
+  {
+    "league": "英乙",
+    "time": "23:00",
+    "status": "",
+    "home": "華素爾",
+    "away": "修安聯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1904972"
+  },
+  {
+    "league": "英乙",
+    "time": "23:00",
+    "status": "",
+    "home": "高車士打",
+    "away": "奧連特",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1904973"
+  },
+  {
+    "league": "英乙",
+    "time": "23:00",
+    "status": "",
+    "home": "巴拉福特",
+    "away": "埃克塞特",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1904974"
+  },
+  {
+    "league": "英議聯",
+    "time": "23:00",
+    "status": "",
+    "home": "艾川查姆",
+    "away": "艾迪索特",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1933477"
+  },
+  {
+    "league": "英議聯",
+    "time": "23:00",
+    "status": "",
+    "home": "班列特",
+    "away": "布羅姆利",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1933478"
+  },
+  {
+    "league": "英議聯",
+    "time": "23:00",
+    "status": "",
+    "home": "車士打菲特",
+    "away": "麥登赫德",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1933479"
+  },
+  {
+    "league": "英議聯",
+    "time": "23:00",
+    "status": "",
+    "home": "薩頓聯",
+    "away": "京士拉",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1933484"
+  },
+  {
+    "league": "英議聯",
+    "time": "23:00",
+    "status": "",
+    "home": "托基聯",
+    "away": "波爾漢姆",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1933485"
+  },
+  {
+    "league": "英議聯",
+    "time": "23:00",
+    "status": "",
+    "home": "禾京",
+    "away": "伊奧華",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1933487"
+  },
+  {
+    "league": "英議南",
+    "time": "23:00",
+    "status": "",
+    "home": "比勒瑞卡",
+    "away": "史羅夫",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1934766"
+  },
+  {
+    "league": "英議南",
+    "time": "23:00",
+    "status": "",
+    "home": "燦斯福特",
+    "away": "漢普頓列治文",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1934767"
+  },
+  {
+    "league": "英議南",
+    "time": "23:00",
+    "status": "",
+    "home": "茨伯翰",
+    "away": "艾比斯費列",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1934768"
+  },
+  {
+    "league": "英議南",
+    "time": "23:00",
+    "status": "",
+    "home": "杜金",
+    "away": "唐布里基",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1934770"
+  },
+  {
+    "league": "英議南",
+    "time": "23:00",
+    "status": "",
+    "home": "東伯恩",
+    "away": "布倫特里",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1934771"
+  },
+  {
+    "league": "英議南",
+    "time": "23:00",
+    "status": "",
+    "home": "哈雲特",
+    "away": "牛津城",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1934772"
+  },
+  {
+    "league": "英議南",
+    "time": "23:00",
+    "status": "",
+    "home": "希美咸史特城",
+    "away": "威靈",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1934773"
+  },
+  {
+    "league": "英議南",
+    "time": "23:00",
+    "status": "",
+    "home": "亨格福德鎮",
+    "away": "哈姆雷特",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1934774"
+  },
+  {
+    "league": "英議南",
+    "time": "23:00",
+    "status": "",
+    "home": "梅德士東聯",
+    "away": "達特福特",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1934775"
+  },
+  {
+    "league": "英議北",
+    "time": "23:00",
+    "status": "",
+    "home": "菲爾德",
+    "away": "波士頓聯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1933008"
+  },
+  {
+    "league": "英議北",
+    "time": "23:00",
+    "status": "",
+    "home": "艾費頓",
+    "away": "法士利",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1933009"
+  },
+  {
+    "league": "英議北",
+    "time": "23:00",
+    "status": "",
+    "home": "斯巴坦斯",
+    "away": "靴爾福特",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1933010"
+  },
+  {
+    "league": "英議北",
+    "time": "23:00",
+    "status": "",
+    "home": "喬勒伊",
+    "away": "雷明頓",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1933012"
+  },
+  {
+    "league": "英議北",
+    "time": "23:00",
+    "status": "",
+    "home": "達寧頓",
+    "away": "AFC特爾福德",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1933013"
+  },
+  {
+    "league": "英議北",
+    "time": "23:00",
+    "status": "",
+    "home": "基斯赫德",
+    "away": "巴克利城",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1933014"
+  },
+  {
+    "league": "英議北",
+    "time": "23:00",
+    "status": "",
+    "home": "古魯斯特城",
+    "away": "巴拉福特公園",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1933015"
+  },
+  {
+    "league": "英議北",
+    "time": "23:00",
+    "status": "",
+    "home": "基特寧",
+    "away": "阿什頓",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1933016"
+  },
+  {
+    "league": "英議北",
+    "time": "23:00",
+    "status": "",
+    "home": "修夫港",
+    "away": "斯彭尼穆爾城",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1933018"
+  },
+  {
+    "league": "比乙",
+    "time": "23:00",
+    "status": "",
+    "home": "莫倫貝克",
+    "away": "利亞斯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1896196"
+  },
+  {
+    "league": "瑞典乙北",
+    "time": "23:00",
+    "status": "",
+    "home": "希薇亞",
+    "away": "費里",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1871333"
+  },
+  {
+    "league": "挪乙",
+    "time": "23:00",
+    "status": "",
+    "home": "阿倫達爾",
+    "away": "拜尼",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1938870"
+  },
+  {
+    "league": "北愛超",
+    "time": "23:00",
+    "status": "",
+    "home": "高利寧",
+    "away": "連菲特",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1937168"
+  },
+  {
+    "league": "波蘭乙",
+    "time": "23:00",
+    "status": "",
+    "home": "包爾科維切",
+    "away": "加巴尼亞",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1901689"
+  },
+  {
+    "league": "捷甲",
+    "time": "23:00",
+    "status": "",
+    "home": "史洛特",
+    "away": "普利布蘭",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1892918"
+  },
+  {
+    "league": "蘇聯盃",
+    "time": "23:00",
+    "status": "",
+    "home": "哥頓比夫",
+    "away": "拉夫流浪",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1919899"
+  },
+  {
+    "league": "蘇聯盃",
+    "time": "23:00",
+    "status": "",
+    "home": "恩華利斯",
+    "away": "東法夫郡",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1919900"
+  },
+  {
+    "league": "蘇聯盃",
+    "time": "23:00",
+    "status": "",
+    "home": "哥維流浪",
+    "away": "福弗爾",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1919909"
+  },
+  {
+    "league": "蘇聯盃",
+    "time": "23:00",
+    "status": "",
+    "home": "布里捷城",
+    "away": "凱爾蒂赫斯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1919919"
+  },
+  {
+    "league": "蘇聯盃",
+    "time": "23:00",
+    "status": "",
+    "home": "彼德赫德",
+    "away": "聖莊士東",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1919920"
+  },
+  {
+    "league": "蘇聯盃",
+    "time": "23:00",
+    "status": "",
+    "home": "艾布亞夫",
+    "away": "艾珍城",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1919929"
+  },
+  {
+    "league": "蘇聯盃",
+    "time": "23:00",
+    "status": "",
+    "home": "羅斯郡",
+    "away": "斯特靈",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1919930"
+  },
+  {
+    "league": "蘇聯盃",
+    "time": "23:00",
+    "status": "",
+    "home": "鄧弗姆林",
+    "away": "克萊德",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1919939"
+  },
+  {
+    "league": "蘇聯盃",
+    "time": "23:00",
+    "status": "",
+    "home": "基馬諾克",
+    "away": "杜巴頓",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1919940"
+  },
+  {
+    "league": "蘇聯盃",
+    "time": "23:00",
+    "status": "",
+    "home": "巴特里",
+    "away": "摩頓",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1919949"
+  },
+  {
+    "league": "蘇聯盃",
+    "time": "23:00",
+    "status": "",
+    "home": "昆士柏",
+    "away": "聖美倫",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1919950"
+  },
+  {
+    "league": "蘇聯盃",
+    "time": "23:00",
+    "status": "",
+    "home": "阿洛厄",
+    "away": "士登後斯莫亞",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1919959"
+  },
+  {
+    "league": "蘇聯盃",
+    "time": "23:00",
+    "status": "",
+    "home": "利雲斯頓",
+    "away": "艾迪爾聯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1919960"
+  },
+  {
+    "league": "蘇聯盃",
+    "time": "23:00",
+    "status": "",
+    "home": "艾爾",
+    "away": "斯特蘭拉爾",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1919969"
+  },
+  {
+    "league": "蘇聯盃",
+    "time": "23:00",
+    "status": "",
+    "home": "咸美頓",
+    "away": "艾比安流浪",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1919970"
+  },
+  {
+    "league": "球會友誼",
+    "time": "23:00",
+    "status": "",
+    "home": "FC艾貝德",
+    "away": "Ekiti聯合足球俱樂部",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951147"
+  },
+  {
+    "league": "墨西U20",
+    "time": "23:00",
+    "status": "",
+    "home": "普埃布拉U20",
+    "away": "藍十字U20",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1892660"
+  },
+  {
+    "league": "墨西U20",
+    "time": "23:00",
+    "status": "",
+    "home": "阿特拿斯U20",
+    "away": "普馬斯U20",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1892661"
+  },
+  {
+    "league": "波蘭丁",
+    "time": "23:00",
+    "status": "",
+    "home": "克拉科維亞B隊",
+    "away": "斯塔沃拉",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950630"
+  },
+  {
+    "league": "墨西女超",
+    "time": "23:00",
+    "status": "",
+    "home": "藍十字女足",
+    "away": "拿根亞女足",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950724"
+  },
+  {
+    "league": "烏拉U19",
+    "time": "23:00",
+    "status": "",
+    "home": "坦基西斯萊U19",
+    "away": "洛斯哈爾科尼斯U19",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951146"
+  },
+  {
+    "league": "加納超",
+    "time": "23:00",
+    "status": "",
+    "home": "阿杜亞納",
+    "away": "阿克拉赫斯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950000"
+  },
+  {
+    "league": "西乙",
+    "time": "23:15",
+    "status": "",
+    "home": "艾美利亞",
+    "away": "米蘭迪斯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1914814"
+  },
+  {
+    "league": "西丙2",
+    "time": "23:30",
+    "status": "",
+    "home": "亞摩勒比塔",
+    "away": "皇家蘇斯達B隊",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1937375"
+  },
+  {
+    "league": "荷乙",
+    "time": "23:30",
+    "status": "",
+    "home": "多德勒支",
+    "away": "迪加史卓普",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1884794"
+  },
+  {
+    "league": "西丙1",
+    "time": "23:59",
+    "status": "",
+    "home": "布爾戈斯",
+    "away": "蘭格勒奧",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1934385"
+  },
+  {
+    "league": "法丙",
+    "time": "23:59",
+    "status": "",
+    "home": "昂纳西",
+    "away": "巴斯蒂亞波高",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1881861"
+  },
+  {
+    "league": "法丙",
+    "time": "23:59",
+    "status": "",
+    "home": "布爾格",
+    "away": "基迪爾",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1881864"
+  },
+  {
+    "league": "非洲盃",
+    "time": "23:59",
+    "status": "",
+    "home": "貝南",
+    "away": "莱索托",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1815069"
+  },
+  {
+    "league": "秘魯甲A",
+    "time": "23:59",
+    "status": "",
+    "home": "學術界體育(中)",
+    "away": "西恩夏諾",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1943718"
+  },
+  {
+    "league": "斯亞甲",
+    "time": "23:59",
+    "status": "",
+    "home": "亞穆尼積",
+    "away": "當姆薩尼",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1893793"
+  },
+  {
+    "league": "巴勒聯",
+    "time": "23:59",
+    "status": "",
+    "home": "希拉爾基斯",
+    "away": "图巴斯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950727"
+  },
+  {
+    "league": "西丁",
+    "time": "23:59",
+    "status": "",
+    "home": "AD聖祖安",
+    "away": "科瑞拿鍩",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950392"
+  },
+  {
+    "league": "墨西U20",
+    "time": "23:59",
+    "status": "",
+    "home": "祖亞雷斯 U20",
+    "away": "尼卡沙U20",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1892662"
+  },
+  {
+    "league": "委內乙",
+    "time": "23:59",
+    "status": "",
+    "home": "弗龍特拉",
+    "away": "艾爾維吉亞",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950728"
+  },
+  {
+    "league": "厄乙",
+    "time": "23:59",
+    "status": "",
+    "home": "坎巴亞金融",
+    "away": "因巴布拉",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950726"
+  },
+  {
+    "league": "球會友誼",
+    "time": "00:30",
+    "status": "",
+    "home": "沙地阿拉伯U23",
+    "away": "南非U23",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951136"
+  },
+  {
+    "league": "厄乙",
+    "time": "00:30",
+    "status": "",
+    "home": "皮拉羅CD大學",
+    "away": "巴爾多貝爾梅奧",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950754"
+  },
+  {
+    "league": "國際友誼",
+    "time": "00:30",
+    "status": "",
+    "home": "沙地阿拉伯",
+    "away": "牙買加",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1949313"
+  },
+  {
+    "league": "阿甲E",
+    "time": "01:00",
+    "status": "",
+    "home": "艾度思維",
+    "away": "聖羅倫素",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1945929"
+  },
+  {
+    "league": "歐國聯",
+    "time": "01:00",
+    "status": "",
+    "home": "阿塞拜疆",
+    "away": "黑山",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1858470"
+  },
+  {
+    "league": "歐國聯",
+    "time": "01:00",
+    "status": "",
+    "home": "塞浦路斯",
+    "away": "盧森堡",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1858471"
+  },
+  {
+    "league": "歐國聯",
+    "time": "01:00",
+    "status": "",
+    "home": "拉脫維亞",
+    "away": "法羅群島",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1858519"
+  },
+  {
+    "league": "波蘭甲",
+    "time": "01:00",
+    "status": "",
+    "home": "哥羅那",
+    "away": "桑德克亞",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1911919"
+  },
+  {
+    "league": "波蘭乙",
+    "time": "01:00",
+    "status": "",
+    "home": "格魯達茲",
+    "away": "斯塔加德甚切青",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1901687"
+  },
+  {
+    "league": "波蘭乙",
+    "time": "01:00",
+    "status": "",
+    "home": "索科爾奧斯羅達",
+    "away": "莫托路賓",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1901688"
+  },
+  {
+    "league": "波蘭丁",
+    "time": "01:00",
+    "status": "",
+    "home": "波美拉托倫",
+    "away": "克特威卡",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950631"
+  },
+  {
+    "league": "墨西女超",
+    "time": "01:00",
+    "status": "",
+    "home": "普馬斯女足",
+    "away": "馬薩特蘭女足",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950729"
+  },
+  {
+    "league": "巴女甲",
+    "time": "01:00",
+    "status": "",
+    "home": "金德曼女足",
+    "away": "聖保羅女足",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950756"
+  },
+  {
+    "league": "厄乙",
+    "time": "01:00",
+    "status": "",
+    "home": "拉科體育聯盟",
+    "away": "CCD阿吉拉斯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950755"
+  },
+  {
+    "league": "威超",
+    "time": "01:15",
+    "status": "",
+    "home": "新聖徒",
+    "away": "巴利鎮",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1919165"
+  },
+  {
+    "league": "英議聯",
+    "time": "01:20",
+    "status": "",
+    "home": "伊斯特雷格",
+    "away": "哈特爾浦",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1933481"
+  },
+  {
+    "league": "玻利乙",
+    "time": "01:20",
+    "status": "",
+    "home": "奧魯羅皇家",
+    "away": "EM瓦努尼",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950757"
+  },
+  {
+    "league": "西乙",
+    "time": "01:30",
+    "status": "",
+    "home": "傑羅納",
+    "away": "馬略卡",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1914808"
+  },
+  {
+    "league": "西乙",
+    "time": "01:30",
+    "status": "",
+    "home": "盧高",
+    "away": "阿爾巴塞特",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1914813"
+  },
+  {
+    "league": "北愛超",
+    "time": "01:30",
+    "status": "",
+    "home": "拉恩",
+    "away": "十字軍",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1937172"
   },
   {
     "league": "荷乙",
     "time": "01:45",
     "status": "",
-    "home": "靴蒙特",
-    "away": "SBV精英隊",
+    "home": "比達",
+    "away": "泰斯達",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1884796"
+    "id": "1884793"
   },
   {
-    "league": "德丙",
+    "league": "厄瓜甲秋",
     "time": "02:00",
     "status": "",
-    "home": "維多利科隆",
-    "away": "沙貝魯根",
+    "home": "瓜亞基爾城",
+    "away": "穆蘇克魯納",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1906854"
+    "id": "1934065"
   },
   {
-    "league": "欧青U21外",
+    "league": "巴青錦",
     "time": "02:00",
     "status": "",
-    "home": "科索沃U21",
-    "away": "阿爾巴尼亞U21",
+    "home": "巴拉納體育會青年隊",
+    "away": "利斯菲體育會青年隊",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1686819"
+    "id": "1930183"
   },
   {
-    "league": "瑞典乙南",
+    "league": "巴青錦",
     "time": "02:00",
     "status": "",
-    "home": "奎維丁",
-    "away": "烏席登斯",
+    "home": "巴希亞青年隊",
+    "away": "彭美拉斯青年隊",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1871103"
+    "id": "1930185"
   },
   {
-    "league": "瑞典乙南",
+    "league": "巴青錦",
     "time": "02:00",
     "status": "",
-    "home": "史柯瓦德",
-    "away": "慕達拉",
+    "home": "卡爾拉青年隊",
+    "away": "國際體育會青年隊",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1871107"
+    "id": "1930186"
   },
   {
-    "league": "意五足",
+    "league": "巴青錦",
     "time": "02:00",
     "status": "",
-    "home": "普雷斯迪托室內足球隊",
-    "away": "卡梅多松室內足球隊",
+    "home": "查比高恩斯青年隊",
+    "away": "保地花高RJ青年隊",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1949312"
+    "id": "1930187"
   },
   {
-    "league": "巴阿錦U23",
+    "league": "巴青錦",
     "time": "02:00",
     "status": "",
-    "home": "柏拉拿U23",
-    "away": "彼辛度U23",
+    "home": "哥連泰斯青年隊",
+    "away": "高士路青年隊",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1942238"
+    "id": "1930188"
+  },
+  {
+    "league": "巴青錦",
+    "time": "02:00",
+    "status": "",
+    "home": "甘美奧青年隊",
+    "away": "阿美利加明尼路青年隊",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1930190"
+  },
+  {
+    "league": "巴青錦",
+    "time": "02:00",
+    "status": "",
+    "home": "聖保羅青年隊",
+    "away": "維多利亞青年隊",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1930191"
+  },
+  {
+    "league": "巴聖盃",
+    "time": "02:00",
+    "status": "",
+    "home": "保地花高B隊SP",
+    "away": "路禾利桑天奴",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1948055"
+  },
+  {
+    "league": "巴聖盃",
+    "time": "02:00",
+    "status": "",
+    "home": "阿提柏",
+    "away": "費羅維亞里亞",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1948067"
+  },
+  {
+    "league": "巴聖盃",
+    "time": "02:00",
+    "status": "",
+    "home": "皮馬維拉",
+    "away": "聖保羅奧達斯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1948079"
+  },
+  {
+    "league": "巴聖盃",
+    "time": "02:00",
+    "status": "",
+    "home": "皮拉西卡巴",
+    "away": "國際里梅拉",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1948080"
+  },
+  {
+    "league": "巴聖盃",
+    "time": "02:00",
+    "status": "",
+    "home": "尤文圖斯SP",
+    "away": "桑堤斯塔",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1948091"
+  },
+  {
+    "league": "巴聖盃",
+    "time": "02:00",
+    "status": "",
+    "home": "EC聖貝拿度",
+    "away": "邦迪比達B隊",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1948092"
+  },
+  {
+    "league": "巴聖盃",
+    "time": "02:00",
+    "status": "",
+    "home": "古蘭尼B隊",
+    "away": "國民隊SP",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1948103"
+  },
+  {
+    "league": "巴聖盃",
+    "time": "02:00",
+    "status": "",
+    "home": "葡萄牙人",
+    "away": "阿故圣塔SP",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1948104"
   },
   {
     "league": "巴聖塔乙",
     "time": "02:00",
     "status": "",
-    "home": "曼斯奎拉",
-    "away": "聖約斯",
+    "home": "美國SP",
+    "away": "安德拉迪纳",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1949645"
+    "id": "1949659"
   },
   {
     "league": "巴聖塔乙",
     "time": "02:00",
     "status": "",
-    "home": "摩基競技SP",
-    "away": "烏尼昂蘇扎諾AC",
+    "home": "阿拉薩圖巴馬競",
+    "away": "班德蘭特",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1949646"
+    "id": "1949660"
   },
   {
     "league": "巴聖塔乙",
     "time": "02:00",
     "status": "",
-    "home": "國際貝貝度奧SP",
-    "away": "德昭",
+    "home": "伯拉史利斯",
+    "away": "伊塔皮倫斯SP",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1949647"
+    "id": "1949661"
+  },
+  {
+    "league": "巴聖塔乙",
+    "time": "02:00",
+    "status": "",
+    "home": "伊羅斯博特SP",
+    "away": "國際利梅拉",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1949662"
+  },
+  {
+    "league": "巴聖塔乙",
+    "time": "02:00",
+    "status": "",
+    "home": "聖塔庫魯簡斯",
+    "away": "圖帕SP",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1949663"
+  },
+  {
+    "league": "巴聖塔乙",
+    "time": "02:00",
+    "status": "",
+    "home": "鉚恩瑟SP",
+    "away": "毛阿莫FC",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1949664"
+  },
+  {
+    "league": "巴聖塔乙",
+    "time": "02:00",
+    "status": "",
+    "home": "SKA巴西利亞",
+    "away": "巴塞隆拿SP",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1949665"
+  },
+  {
+    "league": "巴聖塔乙",
+    "time": "02:00",
+    "status": "",
+    "home": "沃瑟汶",
+    "away": "阿斯聖斯SP",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1949666"
+  },
+  {
+    "league": "巴聖塔乙",
+    "time": "02:00",
+    "status": "",
+    "home": "AA利塔拉爾",
+    "away": "里奧布蘭克",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1949850"
+  },
+  {
+    "league": "巴聖塔乙",
+    "time": "02:00",
+    "status": "",
+    "home": "瓜魯賀斯SP",
+    "away": "AA法林明高",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1949851"
+  },
+  {
+    "league": "墨西丙",
+    "time": "02:00",
+    "status": "",
+    "home": "聖路易斯競技B隊",
+    "away": "鸚鵡大學",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950733"
+  },
+  {
+    "league": "巴克甲",
+    "time": "02:00",
+    "status": "",
+    "home": "安格拉杜斯雷斯",
+    "away": "貢卡倫斯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950761"
+  },
+  {
+    "league": "巴克甲",
+    "time": "02:00",
+    "status": "",
+    "home": "阿特蘇爾",
+    "away": "塞拉諾",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950762"
+  },
+  {
+    "league": "巴克甲",
+    "time": "02:00",
+    "status": "",
+    "home": "坎波斯RJ",
+    "away": "卡斯爾斯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950763"
+  },
+  {
+    "league": "巴克甲",
+    "time": "02:00",
+    "status": "",
+    "home": "哥塔卡紮RJ",
+    "away": "奧達斯里奧RJ",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950764"
+  },
+  {
+    "league": "巴克甲",
+    "time": "02:00",
+    "status": "",
+    "home": "諾瓦艾夸古",
+    "away": "CFRJ馬里卡RJ",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950765"
+  },
+  {
+    "league": "巴克甲",
+    "time": "02:00",
+    "status": "",
+    "home": "森柏歐RJ",
+    "away": "歐拉里亞",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950766"
+  },
+  {
+    "league": "巴克甲",
+    "time": "02:00",
+    "status": "",
+    "home": "聖貢薩洛",
+    "away": "挪瓦西大地",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950767"
+  },
+  {
+    "league": "巴克甲",
+    "time": "02:00",
+    "status": "",
+    "home": "邦蘇塞索",
+    "away": "里約聖保羅RJ",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950780"
   },
   {
     "league": "巴地區",
     "time": "02:00",
     "status": "",
-    "home": "康柏費倫斯RJ",
-    "away": "國民隊(PR)",
+    "home": "皇家諾羅斯特",
+    "away": "CEOV奧佩拉裏奧",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1950305"
+    "id": "1951161"
   },
   {
-    "league": "巴地區",
+    "league": "巴聖青聯",
     "time": "02:00",
     "status": "",
-    "home": "中央體育會",
-    "away": "波蒂加",
+    "home": "巴雷魯斯U20",
+    "away": "複古體育青年隊",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1950306"
+    "id": "1950809"
   },
   {
-    "league": "巴地區",
+    "league": "巴聖青聯",
     "time": "02:00",
     "status": "",
-    "home": "克鲁里佩",
-    "away": "伊塔拜亞納",
+    "home": "聖十字青年隊",
+    "away": "紐迪高青年隊",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1950307"
+    "id": "1950810"
   },
   {
-    "league": "巴地區",
+    "league": "厄乙",
     "time": "02:00",
     "status": "",
-    "home": "格羅波",
-    "away": "達因加澤拉FC",
+    "home": "瓜拉塞奧",
+    "away": "查卡裏塔斯SC",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1950308"
+    "id": "1950785"
   },
   {
-    "league": "巴地區",
+    "league": "巴丙A",
     "time": "02:00",
     "status": "",
-    "home": "加瑪",
-    "away": "維爾拉諾瓦",
+    "home": "費羅維里亞CE(中)",
+    "away": "賈古波塞",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1950309"
-  },
-  {
-    "league": "巴地區",
-    "time": "02:00",
-    "status": "",
-    "home": "維多利亞(ES)",
-    "away": "倫多諾泊里斯",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1950310"
-  },
-  {
-    "league": "烏拉U19",
-    "time": "02:00",
-    "status": "",
-    "home": "迪芬沙士砵亭U19",
-    "away": "彭拿路U19",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1950465"
-  },
-  {
-    "league": "巴聖女",
-    "time": "02:00",
-    "status": "",
-    "home": "聖弗朗西斯科女足",
-    "away": "聖瓦萊裏奧女足",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1950466"
+    "id": "1865990"
   },
   {
     "league": "巴丁",
     "time": "02:00",
     "status": "",
-    "home": "雅各巴",
-    "away": "弗雷帕利特",
+    "home": "巴西人",
+    "away": "巴海亞迪費拉",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1950467"
+    "id": "1950773"
   },
   {
-    "league": "玻利盃",
+    "league": "巴丁",
     "time": "02:00",
     "status": "",
-    "home": "奧利恩特後備隊",
-    "away": "庫佩拉蒂瓦",
+    "home": "賓古",
+    "away": "波圖格薩",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1950689"
+    "id": "1950774"
+  },
+  {
+    "league": "加納超",
+    "time": "02:00",
+    "status": "",
+    "home": "樂高城",
+    "away": "貝切",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950001"
   },
   {
     "league": "秘魯甲A",
     "time": "02:15",
     "status": "",
-    "home": "卡查馬卡大學(中)",
-    "away": "安聯大學",
+    "home": "秘魯體育大學(中)",
+    "away": "聖馬田大學",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1943716"
+    "id": "1943719"
   },
   {
-    "league": "德女聯",
+    "league": "烏拉甲",
     "time": "02:15",
     "status": "",
-    "home": "FFC法蘭克福女足",
-    "away": "圖爾賓女足",
+    "home": "漫遊者",
+    "away": "普羅格雷索俱樂部",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1894467"
+    "id": "1943053"
   },
   {
-    "league": "德地區西",
+    "league": "哥倫甲春",
     "time": "02:30",
     "status": "",
-    "home": "韋格堡貝克",
-    "away": "亞琛",
+    "home": "帕特里奧坦斯",
+    "away": "賈奎斯科爾多巴",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1900556"
+    "id": "1831834"
   },
   {
-    "league": "巴高盃",
+    "league": "巴丁",
     "time": "02:30",
     "status": "",
-    "home": "尤尼奥口琴俱乐部",
-    "away": "新奧里藏特",
+    "home": "尤文都德MA",
+    "away": "河流隊",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1950311"
+    "id": "1950775"
+  },
+  {
+    "league": "巴丁",
+    "time": "02:30",
+    "status": "",
+    "home": "托萊多科朗尼亞",
+    "away": "米拉索",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950776"
+  },
+  {
+    "league": "西丙5",
+    "time": "03:00",
+    "status": "",
+    "home": "当贝尼托",
+    "away": "艾斯馬度華",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1937920"
+  },
+  {
+    "league": "比乙",
+    "time": "03:00",
+    "status": "",
+    "home": "布魯日U23",
+    "away": "韋斯達路",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1896186"
+  },
+  {
+    "league": "非洲盃",
+    "time": "03:00",
+    "status": "",
+    "home": "剛果(金)",
+    "away": "安哥拉",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1814973"
+  },
+  {
+    "league": "非洲盃",
+    "time": "03:00",
+    "status": "",
+    "home": "埃及",
+    "away": "多哥",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1815009"
+  },
+  {
+    "league": "羅甲",
+    "time": "03:00",
+    "status": "",
+    "home": "布格勒斯特戴拿模",
+    "away": "阿斯特拉吉爾古",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1898078"
+  },
+  {
+    "league": "智利甲",
+    "time": "03:00",
+    "status": "",
+    "home": "伊基克",
+    "away": "克里科",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1948152"
+  },
+  {
+    "league": "巴聖塔乙",
+    "time": "03:00",
+    "status": "",
+    "home": "弗蘭卡納",
+    "away": "馬圖尼斯SP",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1949656"
   },
   {
     "league": "巴地區",
-    "time": "02:30",
-    "status": "",
-    "home": "摩托圣路易",
-    "away": "阿爾托斯",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1950312"
-  },
-  {
-    "league": "巴聖青聯",
-    "time": "02:30",
-    "status": "",
-    "home": "安那波裏娜青年隊",
-    "away": "戈亞尼恩斯青年隊",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1950313"
-  },
-  {
-    "league": "荷女甲",
-    "time": "02:30",
-    "status": "",
-    "home": "海牙女足",
-    "away": "阿積士女足",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1916874"
-  },
-  {
-    "league": "荷女甲",
-    "time": "02:30",
-    "status": "",
-    "home": "精英巴倫查捷特女足",
-    "away": "施禾尼女足",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1916875"
-  },
-  {
-    "league": "荷女甲",
-    "time": "02:30",
-    "status": "",
-    "home": "海倫維恩女足",
-    "away": "VV艾克馬亞女足",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1916876"
-  },
-  {
-    "league": "非洲盃",
     "time": "03:00",
     "status": "",
-    "home": "馬里",
-    "away": "納米比亞",
+    "home": "法斯特",
+    "away": "巴甘蒂诺PA",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1814938"
+    "id": "1950781"
   },
   {
-    "league": "非洲盃",
+    "league": "巴地區",
     "time": "03:00",
     "status": "",
-    "home": "南非",
-    "away": "聖多美與普林西比",
+    "home": "維列尼斯",
+    "away": "加爾韋斯",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1814962"
-  },
-  {
-    "league": "非洲盃",
-    "time": "03:00",
-    "status": "",
-    "home": "摩洛哥",
-    "away": "中非",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1814986"
-  },
-  {
-    "league": "非洲盃",
-    "time": "03:00",
-    "status": "",
-    "home": "突尼西亞",
-    "away": "坦桑尼亞",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1815046"
-  },
-  {
-    "league": "巴西乙",
-    "time": "03:00",
-    "status": "",
-    "home": "邦迪比達",
-    "away": "布拉希爾佩洛塔斯",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1859165"
-  },
-  {
-    "league": "西室內足",
-    "time": "03:00",
-    "status": "",
-    "home": "巴塞隆拿室內足球隊",
-    "away": "卡特加斯能量室內足球隊",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1935439"
-  },
-  {
-    "league": "西室內足",
-    "time": "03:00",
-    "status": "",
-    "home": "帕爾馬室內足球隊",
-    "away": "DKV瑟古羅斯室內足球隊",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1935444"
-  },
-  {
-    "league": "比女超",
-    "time": "03:00",
-    "status": "",
-    "home": "安德列治女足",
-    "away": "真特女足",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1904717"
+    "id": "1950806"
   },
   {
     "league": "玻利乙",
     "time": "03:00",
     "status": "",
-    "home": "科恰班巴大学",
-    "away": "哈普",
+    "home": "CS拉迪特",
+    "away": "波托西紫荊",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1950035"
+    "id": "1951165"
   },
   {
-    "league": "巴地區",
+    "league": "巴丙B",
     "time": "03:00",
     "status": "",
-    "home": "加查澤雷森",
-    "away": "弗羅勒斯塔",
+    "home": "派瑞加RS",
+    "away": "沃爾特雷東達",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1950321"
+    "id": "1866077"
   },
   {
-    "league": "巴地區",
+    "league": "巴丙B",
     "time": "03:00",
     "status": "",
-    "home": "坎派恩斯",
-    "away": "古亞爾尼",
+    "home": "聖本托",
+    "away": "托姆本斯",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1950322"
+    "id": "1866079"
   },
   {
-    "league": "巴地區",
+    "league": "巴丁",
     "time": "03:00",
     "status": "",
-    "home": "卡希亞斯",
-    "away": "EC佩洛塔斯",
+    "home": "馬施利奧迪亞斯",
+    "away": "聖卡坦奴",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1950323"
+    "id": "1950777"
   },
   {
-    "league": "巴地區",
+    "league": "巴丁",
     "time": "03:00",
     "status": "",
-    "home": "卡斯卡韋爾",
-    "away": "費羅維亞里亞",
+    "home": "沙古爾羅",
+    "away": "阿美利加納泰",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1950324"
+    "id": "1950778"
   },
   {
-    "league": "巴地區",
-    "time": "03:00",
+    "league": "阿甲D",
+    "time": "03:15",
     "status": "",
-    "home": "帕馬斯",
-    "away": "馬競阿拉戈伊尼亞斯",
+    "home": "拉魯斯",
+    "away": "紐維爾舊生",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1950325"
+    "id": "1945918"
   },
   {
-    "league": "巴地區",
-    "time": "03:00",
-    "status": "",
-    "home": "圖壩奧SC",
-    "away": "路禾利桑天奴",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1950326"
-  },
-  {
-    "league": "巴女甲",
-    "time": "03:00",
-    "status": "",
-    "home": "桑托斯杜蒙特SE女足",
-    "away": "施亞拉女足",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1950463"
-  },
-  {
-    "league": "巴女甲",
-    "time": "03:00",
-    "status": "",
-    "home": "埃斯科拉女足",
-    "away": "蒂拉登特斯女足",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1950464"
-  },
-  {
-    "league": "巴聖女",
-    "time": "03:00",
-    "status": "",
-    "home": "巴拉納體育會女足",
-    "away": "查比高恩斯女足",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1950314"
-  },
-  {
-    "league": "巴聖女",
-    "time": "03:00",
-    "status": "",
-    "home": "米內羅競技女足",
-    "away": "戈亞斯女足",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1950315"
-  },
-  {
-    "league": "巴聖女",
-    "time": "03:00",
-    "status": "",
-    "home": "高士路馬加巴女足",
-    "away": "EC巴伊亚女足",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1950316"
-  },
-  {
-    "league": "巴聖女",
-    "time": "03:00",
-    "status": "",
-    "home": "富明尼斯女足",
-    "away": "巴西法羅菲亞女足",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1950317"
-  },
-  {
-    "league": "巴聖女",
-    "time": "03:00",
-    "status": "",
-    "home": "巴西皇家女足",
-    "away": "華斯高女足",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1950318"
-  },
-  {
-    "league": "巴聖女",
-    "time": "03:00",
-    "status": "",
-    "home": "利斯菲體育會女足",
-    "away": "奧托艾斯波特女足",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1950319"
-  },
-  {
-    "league": "巴聖女",
-    "time": "03:00",
-    "status": "",
-    "home": "尤尼奧阿格安女足",
-    "away": "紐迪高女足",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1950320"
-  },
-  {
-    "league": "巴聖女",
-    "time": "03:00",
-    "status": "",
-    "home": "工人女足",
-    "away": "CA尤文圖斯女足",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1950344"
-  },
-  {
-    "league": "巴聖女",
-    "time": "03:00",
-    "status": "",
-    "home": "戈亞尼恩斯女足",
-    "away": "亞美利加女足",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1950616"
-  },
-  {
-    "league": "國際友誼",
-    "time": "03:00",
-    "status": "",
-    "home": "匈牙利U21",
-    "away": "俄羅斯U21",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1949996"
-  },
-  {
-    "league": "欧青U21外",
+    "league": "巴西甲",
     "time": "03:30",
     "status": "",
-    "home": "英格蘭U21",
-    "away": "安道爾U21",
+    "home": "利斯菲體育會",
+    "away": "華斯高",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1686818"
+    "id": "1858777"
   },
   {
-    "league": "巴西乙",
+    "league": "巴西甲",
     "time": "03:30",
     "status": "",
-    "home": "歐帕爾利奧",
-    "away": "紐迪高",
+    "home": "山度士",
+    "away": "國際體育會",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1859166"
+    "id": "1858786"
   },
   {
-    "league": "委內超B",
+    "league": "美職超",
     "time": "03:30",
     "status": "",
-    "home": "FC波圖格薩",
-    "away": "塔奇拉",
+    "home": "联合冲刺",
+    "away": "三葉草草原",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1941331"
-  },
-  {
-    "league": "比女超",
-    "time": "03:30",
-    "status": "",
-    "home": "亨克女足",
-    "away": "皇家白星女足",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1904718"
-  },
-  {
-    "league": "意五足",
-    "time": "03:30",
-    "status": "",
-    "home": "佩薩羅法諾室内足球隊",
-    "away": "熱拿亞室內足球隊",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1949311"
-  },
-  {
-    "league": "玻利乙",
-    "time": "03:30",
-    "status": "",
-    "home": "利伯泰迪FC",
-    "away": "基馮",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1950345"
+    "id": "1950677"
   },
   {
     "league": "委內乙",
     "time": "03:30",
     "status": "",
-    "home": "亞拉庫",
-    "away": "拉尼羅斯瓜納雷",
+    "home": "蘇利亞競技",
+    "away": "烏勒納",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1950461"
+    "id": "1950734"
   },
   {
-    "league": "英乙",
+    "league": "意丙1B",
     "time": "03:45",
     "status": "",
-    "home": "保頓",
-    "away": "索爾福德市",
+    "home": "森賓迪特斯",
+    "away": "比沙奴",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1904963"
+    "id": "1929664"
   },
   {
-    "league": "威超",
+    "league": "意丙1A",
     "time": "03:45",
     "status": "",
-    "home": "卡納芬",
-    "away": "康納斯碼頭",
+    "home": "利禾奴",
+    "away": "凱勒雷斯",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1919160"
+    "id": "1930932"
   },
   {
-    "league": "威超",
+    "league": "歐國聯",
     "time": "03:45",
     "status": "",
-    "home": "卡迪夫都市大學",
-    "away": "艾伯里斯特夫",
+    "home": "葡萄牙",
+    "away": "法國",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1919161"
+    "id": "1858398"
   },
   {
-    "league": "西乙",
+    "league": "歐國聯",
+    "time": "03:45",
+    "status": "",
+    "home": "瑞典",
+    "away": "克羅地亞",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1858399"
+  },
+  {
+    "league": "歐國聯",
+    "time": "03:45",
+    "status": "",
+    "home": "德國",
+    "away": "烏克蘭",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1858410"
+  },
+  {
+    "league": "歐國聯",
+    "time": "03:45",
+    "status": "",
+    "home": "瑞士",
+    "away": "西班牙",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1858411"
+  },
+  {
+    "league": "巴西甲",
     "time": "04:00",
     "status": "",
-    "home": "薩拉戈薩",
-    "away": "奧維多",
+    "home": "戈亞斯",
+    "away": "巴拉納體育會",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1914811"
+    "id": "1858779"
   },
   {
     "league": "荷乙",
     "time": "04:00",
     "status": "",
-    "home": "奧斯",
-    "away": "FC燕豪芬",
+    "home": "洛達",
+    "away": "馬斯特里赫特",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1884795"
+    "id": "1884792"
   },
   {
-    "league": "巴聖乙",
+    "league": "巴聖盃",
     "time": "04:00",
     "status": "",
-    "home": "維羅體育隊SP",
-    "away": "EC聖貝拿度",
+    "home": "馬里利亞",
+    "away": "里奧普圖SP",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1950051"
+    "id": "1948056"
   },
   {
-    "league": "巴丁",
+    "league": "巴地區",
     "time": "04:00",
     "status": "",
-    "home": "聖瑞蒙度PA",
-    "away": "貝爾EC",
+    "home": "聖路易斯RS",
+    "away": "祖恩維爾",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1950682"
+    "id": "1950782"
   },
   {
-    "league": "玻利盃",
+    "league": "巴馬甲",
     "time": "04:00",
     "status": "",
-    "home": "克鲁斯大学",
-    "away": "青少年體育",
+    "home": "CD尤尼維爾斯塔裏奧",
+    "away": "FC舊金山",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1950690"
+    "id": "1950783"
   },
   {
-    "league": "南美預選",
+    "league": "美職超",
+    "time": "04:00",
+    "status": "",
+    "home": "龍城俱樂部",
+    "away": "坦帕灣體育",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950833"
+  },
+  {
+    "league": "國際友誼",
+    "time": "04:00",
+    "status": "",
+    "home": "南韓(中)",
+    "away": "墨西哥",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1948730"
+  },
+  {
+    "league": "巴丙A",
+    "time": "04:00",
+    "status": "",
+    "home": "特雷澤",
+    "away": "馬瑙斯(AM)",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1865988"
+  },
+  {
+    "league": "厄瓜甲秋",
+    "time": "04:15",
+    "status": "",
+    "home": "里奧邦巴",
+    "away": "加圖尼卡大學",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1934061"
+  },
+  {
+    "league": "秘魯甲B",
     "time": "04:30",
     "status": "",
-    "home": "哥倫比亞",
-    "away": "烏拉圭",
+    "home": "慕尼斯帕爾體育(中)",
+    "away": "英迪加斯",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1936407"
+    "id": "1943763"
   },
   {
-    "league": "薩爾超春",
+    "league": "烏拉甲",
     "time": "04:30",
     "status": "",
-    "home": "亞古雷",
-    "away": "路斯天使",
+    "home": "迪芬沙士砵亭",
+    "away": "芬歷斯",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1948706"
+    "id": "1943076"
   },
   {
-    "league": "委內超B",
-    "time": "05:00",
+    "league": "哥倫乙春",
+    "time": "04:30",
     "status": "",
-    "home": "格蘭華倫西亞",
-    "away": "莫納加斯",
+    "home": "馬達萊納聯",
+    "away": "皇家桑坦德",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1941330"
+    "id": "1949063"
   },
   {
-    "league": "西丁",
-    "time": "05:00",
+    "league": "哥倫乙春",
+    "time": "04:30",
     "status": "",
-    "home": "布贊納達",
-    "away": "吉馬爾競技聯盟",
+    "home": "利奧尼格羅",
+    "away": "珀帕妍",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1950048"
+    "id": "1949064"
+  },
+  {
+    "league": "哥倫乙春",
+    "time": "04:30",
+    "status": "",
+    "home": "哥杜雷亞",
+    "away": "卡達根拿",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1949065"
+  },
+  {
+    "league": "哥倫乙春",
+    "time": "04:30",
+    "status": "",
+    "home": "奎迪奧",
+    "away": "奧爾索馬爾索",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1949066"
+  },
+  {
+    "league": "哥倫乙春",
+    "time": "04:30",
+    "status": "",
+    "home": "瓦倫杜帕爾",
+    "away": "巴瑞庫拉",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1949067"
+  },
+  {
+    "league": "哥倫乙春",
+    "time": "04:30",
+    "status": "",
+    "home": "希拿體育會",
+    "away": "錫帕基拉老虎",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1949068"
+  },
+  {
+    "league": "哥倫乙春",
+    "time": "04:30",
+    "status": "",
+    "home": "拉尼洛斯",
+    "away": "福塔雷紹查",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1949069"
+  },
+  {
+    "league": "哥倫乙春",
+    "time": "04:30",
+    "status": "",
+    "home": "波哥塔",
+    "away": "卡利競技",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1949070"
+  },
+  {
+    "league": "厄乙",
+    "time": "04:30",
+    "status": "",
+    "home": "福爾紮阿瑪利拉",
+    "away": "基多",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950346"
+  },
+  {
+    "league": "厄乙",
+    "time": "04:30",
+    "status": "",
+    "home": "曼塔",
+    "away": "9奥杜巴雷",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950786"
+  },
+  {
+    "league": "委內超A",
+    "time": "05:00",
+    "status": "",
+    "home": "亞拉庫雅諾斯",
+    "away": "艾斯圖第安特",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1941276"
+  },
+  {
+    "league": "洪都甲春",
+    "time": "05:00",
+    "status": "",
+    "home": "皇家德米納斯",
+    "away": "馬拉頓",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1936680"
   },
   {
     "league": "墨西丙",
     "time": "05:00",
     "status": "",
-    "home": "伊拉波圖",
-    "away": "伊達爾戈亞速",
+    "home": "東谷驅逐艦",
+    "away": "阿瓜塔羅斯",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1950263"
+    "id": "1950735"
   },
   {
-    "league": "巴地區",
+    "league": "墨西丙",
     "time": "05:00",
     "status": "",
-    "home": "戈艾尼亞",
-    "away": "艾帕爾斯登瑟",
+    "home": "切爾沃FC",
+    "away": "錫塔誇羅",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1950328"
+    "id": "1950736"
   },
   {
-    "league": "危地乙",
+    "league": "美職超",
     "time": "05:00",
     "status": "",
-    "home": "希納巴祖",
-    "away": "聖佩德羅體育",
+    "home": "塔爾薩體育會",
+    "away": "拉亞多斯",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1950681"
+    "id": "1950787"
   },
   {
-    "league": "巴馬甲",
+    "league": "巴丙B",
     "time": "05:00",
     "status": "",
-    "home": "CD阿拉比",
-    "away": "CA獨立隊",
+    "home": "基斯奧馬",
+    "away": "伊圖阿諾",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1950685"
+    "id": "1866078"
+  },
+  {
+    "league": "巴拉甲秋",
+    "time": "05:30",
+    "status": "",
+    "home": "瓜伊利納(中)",
+    "away": "迪亞茲",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1949106"
+  },
+  {
+    "league": "智利甲",
+    "time": "05:30",
+    "status": "",
+    "home": "艾斯賓路拿",
+    "away": "卡拉雷聯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1948153"
+  },
+  {
+    "league": "阿甲A",
+    "time": "05:45",
+    "status": "",
+    "home": "競賽會",
+    "away": "沙蘭迪兵工廠",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1945887"
+  },
+  {
+    "league": "巴西甲",
+    "time": "06:00",
+    "status": "",
+    "home": "科泰尼沙",
+    "away": "聖保羅",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1858778"
+  },
+  {
+    "league": "巴西甲",
+    "time": "06:00",
+    "status": "",
+    "home": "哥連泰斯",
+    "away": "明尼路",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1858782"
+  },
+  {
+    "league": "巴西甲",
+    "time": "06:00",
+    "status": "",
+    "home": "甘美奧",
+    "away": "施亞拉",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1858785"
   },
   {
     "league": "巴西乙",
-    "time": "05:30",
-    "status": "",
-    "home": "艾華爾",
-    "away": "巴拉納",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1859159"
-  },
-  {
-    "league": "阿甲C",
     "time": "06:00",
     "status": "",
-    "home": "羅沙里奧中央",
-    "away": "班菲特",
+    "home": "尤文都德",
+    "away": "森柏歐",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1945908"
+    "id": "1859162"
+  },
+  {
+    "league": "美職超",
+    "time": "06:00",
+    "status": "",
+    "home": "居聯合會",
+    "away": "奧蘭多國際FC",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950678"
+  },
+  {
+    "league": "美職超",
+    "time": "06:00",
+    "status": "",
+    "home": "皇家歐文",
+    "away": "福羅",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950679"
+  },
+  {
+    "league": "巴丙B",
+    "time": "06:00",
+    "status": "",
+    "home": "隆德里納",
+    "away": "普拉斯哥野",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1866081"
   },
   {
     "league": "巴丁",
     "time": "06:00",
     "status": "",
-    "home": "阿科瑞羅",
-    "away": "里奧布蘭克AC",
+    "home": "阿圭亞尼格拉",
+    "away": "戈亞內斯亞",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1950459"
+    "id": "1950779"
+  },
+  {
+    "league": "秘魯甲A",
+    "time": "07:00",
+    "status": "",
+    "home": "比尼斯納勒(中)",
+    "away": "士砵亭水晶",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1943720"
+  },
+  {
+    "league": "哥倫甲春",
+    "time": "07:00",
+    "status": "",
+    "home": "恩維加多",
+    "away": "曼特寧獨立",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1831830"
+  },
+  {
+    "league": "哥斯甲春",
+    "time": "07:00",
+    "status": "",
+    "home": "瓜皮萊斯山度士",
+    "away": "利蒙",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1897195"
+  },
+  {
+    "league": "巴馬甲",
+    "time": "07:00",
+    "status": "",
+    "home": "阿利亞",
+    "away": "聖米格利托體育",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950737"
+  },
+  {
+    "league": "烏拉甲",
+    "time": "07:15",
+    "status": "",
+    "home": "彭拿路",
+    "away": "波士頓河",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1943078"
+  },
+  {
+    "league": "厄瓜甲秋",
+    "time": "07:15",
+    "status": "",
+    "home": "馬卡拉",
+    "away": "奧倫斯SC",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1934067"
+  },
+  {
+    "league": "美職超",
+    "time": "07:45",
+    "status": "",
+    "home": "千年俱樂部",
+    "away": "戈爾曼頓城FC",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950680"
+  },
+  {
+    "league": "委內超A",
+    "time": "08:00",
+    "status": "",
+    "home": "委內瑞拉競技",
+    "away": "米拿羅斯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1941277"
+  },
+  {
+    "league": "智利甲",
+    "time": "08:00",
+    "status": "",
+    "home": "奧達斯",
+    "away": "科金博",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1948154"
+  },
+  {
+    "league": "薩爾超春",
+    "time": "08:00",
+    "status": "",
+    "home": "查莱特纳高",
+    "away": "聖塔特卡拉",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1948702"
+  },
+  {
+    "league": "尼拉甲秋附",
+    "time": "08:00",
+    "status": "",
+    "home": "馬德里斯",
+    "away": "祖雲達斯馬納瓜",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950968"
+  },
+  {
+    "league": "美職超",
+    "time": "08:00",
+    "status": "",
+    "home": "EFA地下鐵",
+    "away": "艾倫敦聯FC",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951096"
+  },
+  {
+    "league": "阿甲C",
+    "time": "08:15",
+    "status": "",
+    "home": "葛度爾古斯",
+    "away": "河床",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1945907"
+  },
+  {
+    "league": "巴西甲",
+    "time": "08:30",
+    "status": "",
+    "home": "彭美拉斯",
+    "away": "富明尼斯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1858780"
+  },
+  {
+    "league": "巴西甲",
+    "time": "08:30",
+    "status": "",
+    "home": "法林明高",
+    "away": "戈亞尼恩斯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1858781"
   },
   {
     "league": "巴西乙",
-    "time": "06:15",
+    "time": "08:30",
     "status": "",
-    "home": "歐斯特",
-    "away": "瑞加塔斯",
+    "home": "奎爾巴",
+    "away": "阿美利加明尼路",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1859161"
+    "id": "1859160"
   },
   {
-    "league": "巴地區",
-    "time": "06:30",
+    "league": "巴拉甲秋",
+    "time": "08:30",
     "status": "",
-    "home": "卡德尼斯",
-    "away": "皮特克恩",
+    "home": "索爾美洲隊",
+    "away": "河床PAR",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1950329"
+    "id": "1949107"
   },
   {
-    "league": "南美預選",
-    "time": "07:00",
+    "league": "美職超",
+    "time": "08:30",
     "status": "",
-    "home": "智利",
-    "away": "秘魯",
+    "home": "混合體育會",
+    "away": "戈萨马刺",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1936411"
+    "id": "1951097"
+  },
+  {
+    "league": "哥倫甲春",
+    "time": "09:00",
+    "status": "",
+    "home": "布卡拉曼格",
+    "away": "聖達菲",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1831833"
+  },
+  {
+    "league": "新西蘭聯",
+    "time": "09:00",
+    "status": "",
+    "home": "鷹嘯聯隊",
+    "away": "漢密爾頓流浪者",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1949215"
+  },
+  {
+    "league": "洪都甲春",
+    "time": "09:00",
+    "status": "",
+    "home": "洛沃斯墨",
+    "away": "伊斯柏納",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1936682"
+  },
+  {
+    "league": "尼拉甲秋附",
+    "time": "09:00",
+    "status": "",
+    "home": "奧科塔爾",
+    "away": "沃特爾菲爾蒂",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1950970"
   },
   {
     "league": "墨西女超",
-    "time": "07:00",
+    "time": "09:00",
     "status": "",
-    "home": "克雷塔羅女足",
-    "away": "普埃布拉女足",
+    "home": "堤格雷斯女足",
+    "away": "蒙特雷女足",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1950049"
+    "id": "1951139"
   },
   {
-    "league": "巴丙A",
-    "time": "07:00",
+    "league": "薩爾超春",
+    "time": "09:15",
     "status": "",
-    "home": "瑞模貝雷",
-    "away": "聖十字",
+    "home": "梅塔帕",
+    "away": "松索納特",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1865987"
+    "id": "1948704"
   },
   {
-    "league": "玻利乙",
-    "time": "07:30",
+    "league": "厄瓜甲秋",
+    "time": "09:30",
     "status": "",
-    "home": "加西亞阿格雷達",
-    "away": "皇家托馬亞波",
+    "home": "利加大學",
+    "away": "奧卡斯",
     "HomeFScore": "",
     "AwayFScore": "",
-    "id": "1950327"
+    "id": "1934062"
+  },
+  {
+    "league": "美職超",
+    "time": "09:30",
+    "status": "",
+    "home": "FC邁亞密",
+    "away": "邁阿密聯",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951098"
   },
   {
     "league": "厄瓜甲秋",
     "time": "08:00",
-    "status": "",
+    "status": "完",
     "home": "庫恩卡",
     "away": "德芬",
-    "HomeFScore": "",
-    "AwayFScore": "",
+    "HomeFScore": "2",
+    "AwayFScore": "1",
     "id": "1934064"
   },
   {
     "league": "阿甲A",
     "time": "08:15",
-    "status": "",
+    "status": "完",
     "home": "圖庫曼體育會",
     "away": "聖達菲聯",
-    "HomeFScore": "",
-    "AwayFScore": "",
+    "HomeFScore": "3",
+    "AwayFScore": "1",
     "id": "1945886"
   },
   {
     "league": "南美預選",
     "time": "08:30",
-    "status": "",
+    "status": "完",
     "home": "巴西",
     "away": "委內瑞拉",
-    "HomeFScore": "",
-    "AwayFScore": "",
+    "HomeFScore": "1",
+    "AwayFScore": "0",
     "id": "1936408"
   },
   {
     "league": "新西蘭聯",
     "time": "09:00",
-    "status": "",
+    "status": "完",
     "home": "威靈頓鳳凰後備隊",
     "away": "惠靈頓",
-    "HomeFScore": "",
-    "AwayFScore": "",
+    "HomeFScore": "0",
+    "AwayFScore": "1",
     "id": "1949213"
   },
   {
     "league": "新西蘭聯",
     "time": "09:00",
-    "status": "",
+    "status": "完",
     "home": "坎特伯雷",
     "away": "韋達基利聯",
-    "HomeFScore": "",
-    "AwayFScore": "",
+    "HomeFScore": "0",
+    "AwayFScore": "4",
     "id": "1949214"
   },
   {
     "league": "南澳後",
     "time": "09:30",
-    "status": "",
-    "home": "莫德柏里噴射機後備隊",
+    "status": "完",
+    "home": "莫德柏里噴射機後備隊(中)",
     "away": "阿德萊德聯後備隊",
-    "HomeFScore": "",
-    "AwayFScore": "",
+    "HomeFScore": "2",
+    "AwayFScore": "4",
     "id": "1950458"
   },
   {
     "league": "南澳後",
     "time": "09:45",
-    "status": "",
-    "home": "白城伍德維爾後備隊",
+    "status": "完",
+    "home": "白城伍德維爾後備隊(中)",
     "away": "西阿德萊後備隊",
-    "HomeFScore": "",
-    "AwayFScore": "",
+    "HomeFScore": "1",
+    "AwayFScore": "0",
     "id": "1950457"
-  },
-  {
-    "league": "日女挑聯",
-    "time": "10:00",
-    "status": "",
-    "home": "靜岡産大女足",
-    "away": "NORD北海道女足",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1950341"
   },
   {
     "league": "墨西丙",
     "time": "10:00",
-    "status": "",
+    "status": "完",
     "home": "亞拉克萊恩斯",
     "away": "哥達拿查拉大學業餘隊",
-    "HomeFScore": "",
-    "AwayFScore": "",
+    "HomeFScore": "4",
+    "AwayFScore": "2",
     "id": "1950454"
   },
   {
     "league": "南澳後",
     "time": "10:00",
-    "status": "",
-    "home": "西托任比卡拉後備隊",
+    "status": "完",
+    "home": "西托任比卡拉後備隊(中)",
     "away": "富勒姆聯後備隊",
-    "HomeFScore": "",
-    "AwayFScore": "",
+    "HomeFScore": "4",
+    "AwayFScore": "0",
     "id": "1950455"
   },
   {
     "league": "南澳後",
     "time": "10:00",
-    "status": "",
+    "status": "完",
     "home": "阿德萊德SC後備隊",
     "away": "坎貝爾市體育館後備隊",
-    "HomeFScore": "",
-    "AwayFScore": "",
+    "HomeFScore": "3",
+    "AwayFScore": "2",
     "id": "1950456"
   },
   {
-    "league": "南美預選",
-    "time": "08:00",
-    "status": "完",
-    "home": "阿根廷",
-    "away": "巴拉圭",
-    "HomeFScore": "1",
-    "AwayFScore": "1",
-    "id": "1936410"
-  },
-  {
-    "league": "委內超B",
-    "time": "08:00",
-    "status": "完",
-    "home": "都市運動會",
-    "away": "薩馬拉",
-    "HomeFScore": "0",
-    "AwayFScore": "0",
-    "id": "1941329"
-  },
-  {
-    "league": "巴西乙",
-    "time": "08:30",
-    "status": "完",
-    "home": "維多利亞",
-    "away": "費古倫斯",
-    "HomeFScore": "3",
-    "AwayFScore": "0",
-    "id": "1859158"
-  },
-  {
-    "league": "哥倫甲春",
-    "time": "09:00",
-    "status": "完",
-    "home": "古古達",
-    "away": "卡利阿美利加",
-    "HomeFScore": "0",
-    "AwayFScore": "3",
-    "id": "1831820"
-  },
-  {
-    "league": "墨西乙春",
+    "league": "日足聯",
     "time": "11:00",
     "status": "完",
-    "home": "西瑪羅雷斯索諾拉",
-    "away": "梅利達",
-    "HomeFScore": "1",
-    "AwayFScore": "0",
-    "id": "1902154"
-  },
-  {
-    "league": "越南乙",
-    "time": "15:30",
-    "status": "完",
-    "home": "越電信B隊",
-    "away": "北寧交通",
+    "home": "鈴鹿無限",
+    "away": "潤梅爾青森",
     "HomeFScore": "3",
     "AwayFScore": "0",
-    "id": "1950266"
+    "id": "1876288"
   },
   {
-    "league": "球會友誼",
-    "time": "16:00",
+    "league": "所羅島聯",
+    "time": "11:00",
     "status": "完",
-    "home": "阿斯基倫夏普爾",
-    "away": "AS阿什杜德",
+    "home": "皇家卡莫拉",
+    "away": "中央海岸足球俱樂部",
     "HomeFScore": "0",
-    "AwayFScore": "5",
-    "id": "1950676"
-  },
-  {
-    "league": "越南乙",
-    "time": "16:00",
-    "status": "完",
-    "home": "富壽",
-    "away": "人民公安",
-    "HomeFScore": "0",
-    "AwayFScore": "0",
-    "id": "1950057"
-  },
-  {
-    "league": "澳南超附",
-    "time": "17:00",
-    "status": "完",
-    "home": "阿德莱科梅兹",
-    "away": "坎貝爾市體育館",
-    "HomeFScore": "3",
-    "AwayFScore": "0",
-    "id": "1949838"
-  },
-  {
-    "league": "烏茲甲A降",
-    "time": "17:00",
-    "status": "完",
-    "home": "紮亞米尼",
-    "away": "花剌子模烏爾根奇",
-    "HomeFScore": "1",
-    "AwayFScore": "3",
-    "id": "1947908"
-  },
-  {
-    "league": "烏茲甲A降",
-    "time": "17:00",
-    "status": "完",
-    "home": "費爾幹納",
-    "away": "奧克特帕",
-    "HomeFScore": "2",
-    "AwayFScore": "1",
-    "id": "1947909"
-  },
-  {
-    "league": "烏茲女超",
-    "time": "17:00",
-    "status": "完",
-    "home": "索格迪亞納女足",
-    "away": "柏克塔哥女足",
-    "HomeFScore": "1",
-    "AwayFScore": "0",
-    "id": "1950331"
-  },
-  {
-    "league": "澳南超附",
-    "time": "17:15",
-    "status": "完",
-    "home": "克羅伊登國王",
-    "away": "阿德萊德城",
-    "HomeFScore": "1",
-    "AwayFScore": "3",
-    "id": "1949839"
+    "AwayFScore": "2",
+    "id": "1950686"
   },
   {
     "league": "日丙",
-    "time": "18:00",
+    "time": "12:00",
     "status": "完",
-    "home": "SC相模原",
-    "away": "大阪樱花U23",
-    "HomeFScore": "0",
-    "AwayFScore": "0",
-    "id": "1872843"
-  },
-  {
-    "league": "俄乙南",
-    "time": "18:00",
-    "status": "完",
-    "home": "葉森圖基FC",
-    "away": "SKA羅斯杜夫",
-    "HomeFScore": "0",
-    "AwayFScore": "8",
-    "id": "1892508"
-  },
-  {
-    "league": "球會友誼",
-    "time": "18:00",
-    "status": "完",
-    "home": "奧斯坦德",
-    "away": "登卡基",
-    "HomeFScore": "2",
-    "AwayFScore": "1",
-    "id": "1950332"
-  },
-  {
-    "league": "球會友誼",
-    "time": "18:00",
-    "status": "完",
-    "home": "布迪祖懷斯",
-    "away": "塔波斯科",
-    "HomeFScore": "2",
-    "AwayFScore": "0",
-    "id": "1950352"
-  },
-  {
-    "league": "球會友誼",
-    "time": "18:00",
-    "status": "完",
-    "home": "賀拉戴克",
-    "away": "布咸美恩斯1905",
-    "HomeFScore": "0",
-    "AwayFScore": "2",
-    "id": "1950353"
-  },
-  {
-    "league": "烏茲女超",
-    "time": "18:00",
-    "status": "完",
-    "home": "塞文奇女足",
-    "away": "賓約哥女足",
-    "HomeFScore": "2",
-    "AwayFScore": "1",
-    "id": "1950330"
-  },
-  {
-    "league": "烏茲女超",
-    "time": "18:00",
-    "status": "完",
-    "home": "阿格瑪女足",
-    "away": "麥特魯格女足",
-    "HomeFScore": "2",
-    "AwayFScore": "1",
-    "id": "1950333"
-  },
-  {
-    "league": "烏女聯",
-    "time": "18:00",
-    "status": "完",
-    "home": "EMC波多利亞女足",
-    "away": "喀爾巴阡山女足",
-    "HomeFScore": "1",
-    "AwayFScore": "2",
-    "id": "1950675"
-  },
-  {
-    "league": "土庫曼超",
-    "time": "18:15",
-    "status": "完",
-    "home": "阿什哈巴德",
-    "away": "梅爾夫",
-    "HomeFScore": "0",
-    "AwayFScore": "0",
-    "id": "1936976"
-  },
-  {
-    "league": "俄乙南",
-    "time": "18:30",
-    "status": "完",
-    "home": "安捷(中)",
-    "away": "圖阿普謝FC",
+    "home": "秋田藍閃電",
+    "away": "FC岐阜",
     "HomeFScore": "1",
     "AwayFScore": "0",
-    "id": "1892503"
+    "id": "1872839"
   },
   {
-    "league": "澳昆甲",
-    "time": "18:30",
+    "league": "日丙",
+    "time": "12:00",
     "status": "完",
-    "home": "荷蘭公園老鷹",
-    "away": "羅切達爾流浪",
-    "HomeFScore": "0",
-    "AwayFScore": "2",
-    "id": "1948758"
+    "home": "鳥取飛翔",
+    "away": "盛岡雙鶴",
+    "HomeFScore": "1",
+    "AwayFScore": "0",
+    "id": "1872841"
   },
   {
-    "league": "澳布女超",
-    "time": "18:30",
+    "league": "日丙",
+    "time": "12:00",
     "status": "完",
-    "home": "阿爾巴尼克里克女足",
-    "away": "北極星女足",
-    "HomeFScore": "4",
-    "AwayFScore": "2",
-    "id": "1950449"
-  },
-  {
-    "league": "越南乙",
-    "time": "18:30",
-    "status": "完",
-    "home": "嘉定(中)",
-    "away": "富東",
-    "HomeFScore": "2",
-    "AwayFScore": "3",
-    "id": "1950058"
-  },
-  {
-    "league": "摩爾乙",
-    "time": "19:00",
-    "status": "完",
-    "home": "蘇塞雷阿",
-    "away": "伊斯卡拉斯塔利",
-    "HomeFScore": "5",
-    "AwayFScore": "1",
-    "id": "1900099"
-  },
-  {
-    "league": "摩爾乙",
-    "time": "19:00",
-    "status": "完",
-    "home": "維多利亞巴達爾",
-    "away": "弗拉卡拉",
-    "HomeFScore": "4",
-    "AwayFScore": "1",
-    "id": "1900100"
-  },
-  {
-    "league": "不丹廷聯",
-    "time": "19:00",
-    "status": "完",
-    "home": "帕羅聯合會",
-    "away": "奎格巴雷羅",
+    "home": "今治",
+    "away": "橫濱體育",
     "HomeFScore": "3",
-    "AwayFScore": "2",
-    "id": "1950034"
-  },
-  {
-    "league": "國際友誼",
-    "time": "19:00",
-    "status": "完",
-    "home": "孟加拉",
-    "away": "尼泊爾",
-    "HomeFScore": "2",
-    "AwayFScore": "0",
-    "id": "1949844"
-  },
-  {
-    "league": "新加坡聯",
-    "time": "19:45",
-    "status": "完",
-    "home": "雅龍聯隊",
-    "away": "新潟天鵝乙隊",
-    "HomeFScore": "0",
     "AwayFScore": "1",
-    "id": "1843423"
+    "id": "1872842"
   },
   {
-    "league": "新加坡聯",
-    "time": "19:45",
+    "league": "日足聯",
+    "time": "12:00",
     "status": "完",
-    "home": "獅城水手",
-    "away": "丹戎巴葛",
-    "HomeFScore": "6",
-    "AwayFScore": "1",
-    "id": "1843427"
-  },
-  {
-    "league": "球會友誼",
-    "time": "20:00",
-    "status": "完",
-    "home": "奧斯泰華",
-    "away": "利森",
+    "home": "大阪俱樂部",
+    "away": "高知聯合",
     "HomeFScore": "0",
     "AwayFScore": "2",
-    "id": "1950334"
+    "id": "1876289"
   },
   {
-    "league": "球會友誼",
-    "time": "20:00",
+    "league": "日足聯",
+    "time": "12:00",
     "status": "完",
-    "home": "普夫迪夫火車頭",
-    "away": "比羅",
-    "HomeFScore": "1",
-    "AwayFScore": "3",
-    "id": "1950339"
-  },
-  {
-    "league": "塞爾甲",
-    "time": "20:00",
-    "status": "完",
-    "home": "雅戈丁那",
-    "away": "皮羅特",
-    "HomeFScore": "4",
-    "AwayFScore": "0",
-    "id": "1882188"
-  },
-  {
-    "league": "羅丙",
-    "time": "20:00",
-    "status": "完",
-    "home": "ACSKT巴索夫",
-    "away": "ACS謝普希B隊",
-    "HomeFScore": "0",
-    "AwayFScore": "1",
-    "id": "1950253"
-  },
-  {
-    "league": "羅丙",
-    "time": "20:00",
-    "status": "完",
-    "home": "ACS蒂米索拉",
-    "away": "佩裏亞姆阿萬圖",
-    "HomeFScore": "7",
-    "AwayFScore": "0",
-    "id": "1950254"
-  },
-  {
-    "league": "羅丙",
-    "time": "20:00",
-    "status": "完",
-    "home": "維圖爾",
-    "away": "切塔泰迪瓦",
+    "home": "奈良體育會",
+    "away": "FC本田",
     "HomeFScore": "1",
     "AwayFScore": "1",
-    "id": "1950256"
+    "id": "1876290"
   },
   {
-    "league": "羅丙",
-    "time": "20:00",
+    "league": "日職女甲",
+    "time": "12:00",
     "status": "完",
-    "home": "阿斯特拉吉爾古B隊",
-    "away": "布萊喬",
-    "HomeFScore": "0",
+    "home": "仙台維加泰女足",
+    "away": "浦和紅鑽女足",
+    "HomeFScore": "1",
     "AwayFScore": "2",
-    "id": "1950257"
+    "id": "1878495"
   },
   {
-    "league": "羅丙",
-    "time": "20:00",
+    "league": "日職女甲",
+    "time": "12:00",
     "status": "完",
-    "home": "阿里蘇爾",
-    "away": "CS奧克馬修斯",
-    "HomeFScore": "4",
+    "home": "野島斯特拉女足",
+    "away": "伊賀FC女足",
+    "HomeFScore": "0",
     "AwayFScore": "1",
-    "id": "1950258"
+    "id": "1878496"
   },
   {
-    "league": "羅丙",
-    "time": "20:00",
+    "league": "日職女甲",
+    "time": "12:00",
     "status": "完",
-    "home": "巴洛特斯帝",
-    "away": "CSA布格勒斯特星隊",
+    "home": "新潟天鵝女足",
+    "away": "貝拉薩女足",
+    "HomeFScore": "0",
+    "AwayFScore": "0",
+    "id": "1878497"
+  },
+  {
+    "league": "日職女甲",
+    "time": "12:00",
+    "status": "完",
+    "home": "FC愛媛女足",
+    "away": "千葉市原女足",
     "HomeFScore": "1",
     "AwayFScore": "5",
-    "id": "1950259"
+    "id": "1878498"
   },
   {
-    "league": "羅丙",
-    "time": "20:00",
+    "league": "澳南甲",
+    "time": "12:30",
     "status": "完",
-    "home": "莫雷尼",
-    "away": "普庫奧薩",
-    "HomeFScore": "1",
-    "AwayFScore": "3",
-    "id": "1950260"
-  },
-  {
-    "league": "羅丙",
-    "time": "20:00",
-    "status": "完",
-    "home": "巴雷拉",
-    "away": "A.瓦拉馬如魯伊",
-    "HomeFScore": "4",
+    "home": "斯特爾特獅隊",
+    "away": "南阿德萊德黑豹",
+    "HomeFScore": "3",
     "AwayFScore": "0",
-    "id": "1950261"
+    "id": "1948756"
   },
   {
-    "league": "羅丙",
-    "time": "20:00",
+    "league": "澳南甲",
+    "time": "12:30",
     "status": "完",
-    "home": "布格勒斯特星B隊",
-    "away": "布格勒斯特戴拿模B隊",
-    "HomeFScore": "2",
+    "home": "西阿德萊德",
+    "away": "白城伍德維爾",
+    "HomeFScore": "1",
+    "AwayFScore": "2",
+    "id": "1950390"
+  },
+  {
+    "league": "日職聯",
+    "time": "13:00",
+    "status": "完",
+    "home": "清水心跳",
+    "away": "大阪櫻花",
+    "HomeFScore": "3",
     "AwayFScore": "1",
-    "id": "1950262"
+    "id": "1872551"
   },
   {
-    "league": "羅丙",
-    "time": "20:00",
+    "league": "日職聯",
+    "time": "13:00",
     "status": "完",
-    "home": "維托魯康斯坦薩B隊",
-    "away": "安拿莫迪魯",
+    "home": "廣島三箭",
+    "away": "FC橫濱",
     "HomeFScore": "1",
-    "AwayFScore": "0",
-    "id": "1950340"
+    "AwayFScore": "1",
+    "id": "1872555"
   },
   {
-    "league": "波斯地區",
-    "time": "20:00",
+    "league": "日職聯",
+    "time": "13:00",
     "status": "完",
-    "home": "萊奧塔",
-    "away": "斯拉域查",
-    "HomeFScore": "4",
-    "AwayFScore": "0",
-    "id": "1950453"
-  },
-  {
-    "league": "烏克蘭盃",
-    "time": "20:05",
-    "status": "完",
-    "home": "瑪格達萊妮",
-    "away": "登尼茨克",
+    "home": "札幌岡薩多",
+    "away": "鳥栖沙岩",
     "HomeFScore": "1",
+    "AwayFScore": "1",
+    "id": "1872558"
+  },
+  {
+    "league": "日丙",
+    "time": "13:00",
+    "status": "完",
+    "home": "富山勝利",
+    "away": "福島聯",
+    "HomeFScore": "2",
+    "AwayFScore": "3",
+    "id": "1872840"
+  },
+  {
+    "league": "日丙",
+    "time": "13:00",
+    "status": "完",
+    "home": "熊本深紅",
+    "away": "藤枝MYFC",
+    "HomeFScore": "2",
+    "AwayFScore": "3",
+    "id": "1872845"
+  },
+  {
+    "league": "韓K3聯附",
+    "time": "13:00",
+    "status": "完",
+    "home": "江陵",
+    "away": "釜山運輸",
+    "HomeFScore": "0",
     "AwayFScore": "0",
-    "id": "1931303"
+    "id": "1950064"
   },
   {
-    "league": "日五足",
-    "time": "17:00",
+    "league": "日女挑聯",
+    "time": "13:00",
+    "status": "完",
+    "home": "築波女足",
+    "away": "日本足協學院福島女足",
+    "HomeFScore": "1",
+    "AwayFScore": "4",
+    "id": "1950371"
+  },
+  {
+    "league": "台湾乙",
+    "time": "13:00",
+    "status": "完",
+    "home": "SFI FC",
+    "away": "桃園國際",
+    "HomeFScore": "2",
+    "AwayFScore": "0",
+    "id": "1950372"
+  },
+  {
+    "league": "所羅島聯",
+    "time": "13:00",
+    "status": "完",
+    "home": "亨德森鰻魚",
+    "away": "勞古聯合",
+    "HomeFScore": "3",
+    "AwayFScore": "1",
+    "id": "1950692"
+  },
+  {
+    "league": "澳黃後備",
+    "time": "13:00",
+    "status": "完",
+    "home": "棕榈滩後備隊",
+    "away": "伯利海特FC後備隊",
+    "HomeFScore": "0",
+    "AwayFScore": "2",
+    "id": "1951091"
+  },
+  {
+    "league": "澳首後備",
+    "time": "12:00",
     "status": "待定",
-    "home": "橫濱體育五人足",
-    "away": "北九州五人足",
+    "home": "袋鼠點流浪後備隊",
+    "away": "克萊沃後備隊",
     "HomeFScore": "-",
     "AwayFScore": "-",
-    "id": "1948757"
+    "id": "1951116"
   },
   {
-    "league": "球會友誼",
-    "time": "18:00",
+    "league": "澳南乙",
+    "time": "12:00",
+    "status": "待定",
+    "home": "阿德萊德大學",
+    "away": "高勒",
+    "HomeFScore": "-",
+    "AwayFScore": "-",
+    "id": "1951117"
+  },
+  {
+    "league": "澳南乙",
+    "time": "12:00",
+    "status": "待定",
+    "home": "阿德萊德眼鏡蛇",
+    "away": "伊斯特恩联",
+    "HomeFScore": "-",
+    "AwayFScore": "-",
+    "id": "1951118"
+  },
+  {
+    "league": "烏茲女超",
+    "time": "13:00",
+    "status": "待定",
+    "home": "塔什干火车头女足",
+    "away": "纳弗巴霍女足",
+    "HomeFScore": "-",
+    "AwayFScore": "-",
+    "id": "1950693"
+  },
+  {
+    "league": "澳首後備",
+    "time": "13:00",
+    "status": "待定",
+    "home": "紐瑪克特後備隊",
+    "away": "裡普利穀後備隊",
+    "HomeFScore": "-",
+    "AwayFScore": "-",
+    "id": "1951119"
+  },
+  {
+    "league": "英議聯",
+    "time": "23:00",
     "status": "推遲",
-    "home": "哥本哈根",
-    "away": "赫爾辛格",
+    "home": "索利赫爾",
+    "away": "夏利法斯",
     "HomeFScore": "-",
     "AwayFScore": "-",
-    "id": "1950338"
+    "id": "1933483"
   },
   {
-    "league": "球會友誼",
-    "time": "18:55",
-    "status": "待定",
-    "home": "卡倫德拉女足",
-    "away": "比爾瓦溫室",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1950687"
-  },
-  {
-    "league": "摩爾乙",
-    "time": "19:00",
-    "status": "待定",
-    "home": "格洛德尼",
-    "away": "皇家蘇塞斯",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1900098"
-  },
-  {
-    "league": "摩爾乙",
-    "time": "19:00",
-    "status": "待定",
-    "home": "查赫爾",
-    "away": "奧林普科姆拉特",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1900101"
-  },
-  {
-    "league": "摩爾乙",
-    "time": "19:00",
-    "status": "待定",
-    "home": "舒列夫B隊",
-    "away": "巴爾蒂",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1900103"
-  },
-  {
-    "league": "日五足",
-    "time": "19:00",
-    "status": "待定",
-    "home": "墨田室内足球隊",
-    "away": "浦安室內足球隊",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1948759"
-  },
-  {
-    "league": "盧旺達聯",
-    "time": "19:00",
-    "status": "待定",
-    "home": "魯西羅FC",
-    "away": "阿爾法FC",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1950343"
-  },
-  {
-    "league": "澳布乙",
-    "time": "19:38",
-    "status": "待定",
-    "home": "那朗巴聯",
-    "away": "紅崖",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1950688"
-  },
-  {
-    "league": "羅丙",
-    "time": "20:00",
-    "status": "待定",
-    "home": "貝西Mic",
-    "away": "達姆布雷維塔",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1950252"
-  },
-  {
-    "league": "羅丙",
-    "time": "20:00",
-    "status": "待定",
-    "home": "科洛內斯蒂吠陀",
-    "away": "波特科",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1950255"
-  },
-  {
-    "league": "沙地乙B",
-    "time": "20:10",
-    "status": "待定",
-    "home": "瑞亞達",
-    "away": "雷得漢",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1946168"
-  },
-  {
-    "league": "沙地乙A",
-    "time": "20:20",
-    "status": "待定",
-    "home": "塔多姆",
-    "away": "庫馬伊特",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1945985"
-  },
-  {
-    "league": "沙地乙A",
-    "time": "20:30",
-    "status": "待定",
-    "home": "阿科多",
-    "away": "艾薩德SA",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1945986"
-  },
-  {
-    "league": "沙地乙A",
-    "time": "20:30",
-    "status": "待定",
-    "home": "積尼達",
-    "away": "阿拉畢(KSA)",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1945987"
-  },
-  {
-    "league": "沙地乙A",
-    "time": "20:30",
-    "status": "待定",
-    "home": "赫查斯",
-    "away": "恩特薩利",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1945988"
-  },
-  {
-    "league": "沙地乙A",
-    "time": "20:35",
-    "status": "待定",
-    "home": "比薩FC",
-    "away": "阿爾利瓦",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1945989"
-  },
-  {
-    "league": "球會友誼",
-    "time": "20:45",
-    "status": "待定",
-    "home": "弗列德",
-    "away": "埃斯特格拉爾",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1950691"
-  },
-  {
-    "league": "沙地乙B",
-    "time": "20:45",
-    "status": "待定",
-    "home": "阿爾達哈布",
-    "away": "阿爾特吉",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1946169"
-  },
-  {
-    "league": "布隆迪超",
-    "time": "21:00",
-    "status": "待定",
-    "home": "魯金傑FC",
-    "away": "皇家穆拉姆維亞",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1912563"
-  },
-  {
-    "league": "澳門甲",
-    "time": "21:00",
-    "status": "待定",
-    "home": "賽航",
-    "away": "名門世家加義",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
-    "id": "1948787"
-  },
-  {
-    "league": "球會友誼",
-    "time": "21:30",
+    "league": "英議聯",
+    "time": "23:00",
     "status": "推遲",
-    "home": "格拉茨AK",
-    "away": "拉夫尼茨",
+    "home": "石威德",
+    "away": "多佛",
     "HomeFScore": "-",
     "AwayFScore": "-",
-    "id": "1950451"
+    "id": "1933486"
   },
   {
-    "league": "法丙",
-    "time": "03:00",
+    "league": "北愛超",
+    "time": "23:00",
     "status": "推遲",
-    "home": "利文斯",
-    "away": "奧爾良",
+    "home": "基拿雲",
+    "away": "卡域克流浪",
     "HomeFScore": "-",
     "AwayFScore": "-",
-    "id": "1881865"
+    "id": "1937170"
   }
 ]
