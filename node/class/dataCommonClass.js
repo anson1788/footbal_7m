@@ -436,6 +436,19 @@ class dataCommomClass {
     return tmp
   }
   
+  isTwoMatchSimilarBS(m1,m2){
+
+    //console.log("m1 s:" +m1["Spoint"])
+    //console.log("m1 e:" +m1["Epoint"])
+    if(
+       m1["Epoint"]==m2["Epoint"] && 
+       Math.abs(m1["Ehome"] - m2["Ehome"]) <0.02
+    ){
+      return true
+    }
+    return false
+  }
+
   isTwoMatchSimilar(m1,m2){
 
     //console.log("m1 s:" +m1["Spoint"])

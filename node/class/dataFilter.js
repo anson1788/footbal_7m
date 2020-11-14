@@ -735,7 +735,7 @@ class dataFilter extends dataCommonClass{
                 var crtOddPer = this.oddPerMap(crtOdd[broker])
                 var pastMatchOddPer = this.oddPerMap(pastMatchOdd[broker])
             
-                if(this.isTwoMatchSimilar(crtOddPer,pastMatchOddPer) ){
+                if(this.isTwoMatchSimilarBS(crtOddPer,pastMatchOddPer) ){
                     rtnVal.push(Object.assign({},workingList[i]))
                     rtnVal[rtnVal.length-1]["homeS"] = workingList[i]["BSOddData"][0][broker]["start"]["home"]
                     rtnVal[rtnVal.length-1]["homeE"] = workingList[i]["BSOddData"][0][broker]["end"]["home"]

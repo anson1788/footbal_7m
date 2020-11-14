@@ -9,6 +9,7 @@ var acct = require('./accountInfo.json');
 const TelegramBot = require('node-telegram-bot-api');
 var token = '';
 var fs = require('fs');
+const { type } = require('os');
 let hkjcBE = new hkjcBetEngine()
 
 async function init(){
@@ -65,8 +66,22 @@ async function init(){
 
             
        console.log(JSON.stringify(calculatedResult[3]))
+       var betArr = calculatedResult[3];
+       var NameMapping = {
+           "克里科":"古里高聯",
+           "科金博":"哥甘保"
+       };
+       for(var i=0;i<betArr.length;i++){
+           if(typeof(NameMapping[betArr[i].home])!="undefined"){
+                betArr[i].home = NameMapping[betArr[i].home]
+           }
+           if(typeof(NameMapping[betArr[i].away])!="undefined"){
+                betArr[i].away = NameMapping[betArr[i].away]
+           }
+       }
+
        await hkjcBE.buyOdd(
-            calculatedResult[3],
+            betArr,
             acct
        )
        process.exit()

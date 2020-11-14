@@ -25,10 +25,14 @@ async function init(){
         }
     }
 
+
+    var pushArr = []
     for(var i=0;i<oddPlacement.length;i++){
-        oddPlacement[i].result == "贏"
+        if(oddPlacement[i].res=="輸"){
+            pushArr.push(oddPlacement[i])
+        }
     }
-    console.table(oddPlacement)
+    console.table(pushArr)
 
 }
 
