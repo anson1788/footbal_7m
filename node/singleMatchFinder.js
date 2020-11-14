@@ -59,18 +59,19 @@ async function init(defaultRange=50){
     let rawdata = fs.readFileSync("oddBook.json");
     let dataList = JSON.parse(rawdata)
     let ftUtils = new filterUtils()
-    var matchId = ["http://vip.win007.com/AsianOdds_n.aspx?id=1948729&l=1"]
+    var matchId = ["1948150"]
     for(var i=0;i<matchId.length;i++){
         var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+matchId[i]
         var OddData =  await getCacheData(url,"bfData/odd/crt/",  matchId[i],"bfOdd",false)
         
-        url = "http://vip.win007.com/OverDown_n.aspx?id="+matchId[i]
-        var BSOddData =  await getCacheData(url,"bfData/bsodd/crt/",  matchId[i] ,"bfBSOdd",false)
+        
+        //url = "http://vip.win007.com/OverDown_n.aspx?id="+matchId[i]
+        //var BSOddData =  await getCacheData(url,"bfData/bsodd/crt/",  matchId[i] ,"bfBSOdd",false)
        
         match = {
             "id":matchId[i],
-            "OddData":OddData,
-            "BSOddData" : BSOddData
+            "OddData":OddData//,
+            //"BSOddData" : BSOddData
         }
         
         var oddPerList = ftUtils.extractSameOddMatch(match,dataList)
