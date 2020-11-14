@@ -233,6 +233,70 @@
     "down": "0.66",
     "oddVal": "0.89",
     "place": "客",
-    "time": "13:56"
+    "time": "13:56",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "一球",
+            "home": "0.89",
+            "away": "0.89"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "0",
+    "AwayFScore": "4",
+    "res": "贏"
+  },
+  {
+    "home": "新特蘭",
+    "away": "米爾頓凱恩斯",
+    "id": "1905575",
+    "buyOdd": "半球/一球",
+    "up": "-1.32",
+    "down": "0.65",
+    "oddVal": "0.90",
+    "place": "客",
+    "time": "22:57",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "半球/一球",
+            "home": "0.90",
+            "away": "0.90"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "1",
+    "AwayFScore": "2",
+    "res": "贏"
+  },
+  {
+    "home": "多德勒支",
+    "away": "迪加史卓普",
+    "id": "1884794",
+    "buyOdd": "受让球半/两球",
+    "up": "9.20",
+    "down": "-10.00",
+    "oddVal": "0.95",
+    "place": "主",
+    "time": "23:28",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "受让球半/两球",
+            "home": "0.95",
+            "away": "0.95"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "0",
+    "AwayFScore": "2",
+    "res": "輸半"
   }
 ]
