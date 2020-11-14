@@ -2,17 +2,17 @@
   {
     "league": "日職聯",
     "time": "14:00",
-    "status": "79",
+    "status": "88",
     "home": "大阪飛腳",
     "away": "仙台維加泰",
     "HomeFScore": "0",
-    "AwayFScore": "3",
+    "AwayFScore": "4",
     "id": "1872554"
   },
   {
     "league": "澳布後備",
     "time": "14:00",
-    "status": "79",
+    "status": "89",
     "home": "阿爾巴尼克里克後備隊",
     "away": "聖喬治維萊後備隊",
     "HomeFScore": "0",
@@ -22,7 +22,7 @@
   {
     "league": "澳昆超",
     "time": "14:45",
-    "status": "中",
+    "status": "47",
     "home": "伊斯頓沙伯",
     "away": "布里斯本前鋒",
     "HomeFScore": "0",
@@ -32,17 +32,17 @@
   {
     "league": "日職聯",
     "time": "15:00",
-    "status": "35",
+    "status": "45",
     "home": "橫濱水手",
     "away": "浦和紅鑽",
-    "HomeFScore": "3",
+    "HomeFScore": "4",
     "AwayFScore": "1",
     "id": "1872553"
   },
   {
     "league": "中乙A",
     "time": "15:00",
-    "status": "40",
+    "status": "中",
     "home": "上海嘉定城發搏擊(中)",
     "away": "武漢三鎮",
     "HomeFScore": "0",
@@ -52,7 +52,7 @@
   {
     "league": "中乙A",
     "time": "15:00",
-    "status": "40",
+    "status": "中",
     "home": "湖南湘濤(中)",
     "away": "淄博星期天",
     "HomeFScore": "0",
@@ -62,7 +62,7 @@
   {
     "league": "中乙B",
     "time": "15:00",
-    "status": "40",
+    "status": "45+",
     "home": "青島中創恒泰(中)",
     "away": "江蘇鹽城",
     "HomeFScore": "0",
@@ -72,7 +72,7 @@
   {
     "league": "中乙B",
     "time": "15:00",
-    "status": "40",
+    "status": "中",
     "home": "北京理工(中)",
     "away": "內蒙古草上飛",
     "HomeFScore": "0",
@@ -82,7 +82,7 @@
   {
     "league": "澳布甲保",
     "time": "15:00",
-    "status": "40",
+    "status": "45+",
     "home": "新農場聯",
     "away": "佛吉尼亞聯",
     "HomeFScore": "0",
@@ -92,7 +92,7 @@
   {
     "league": "港菁盃",
     "time": "15:00",
-    "status": "37",
+    "status": "中",
     "home": "天水圍飛馬(中)",
     "away": "標準流浪",
     "HomeFScore": "3",
@@ -102,7 +102,7 @@
   {
     "league": "澳昆女超",
     "time": "15:00",
-    "status": "40",
+    "status": "45+",
     "home": "西南昆士蘭達雷女足",
     "away": "摩頓灣聯女足",
     "HomeFScore": "0",
@@ -112,17 +112,17 @@
   {
     "league": "澳布女超",
     "time": "15:00",
-    "status": "31",
+    "status": "41",
     "home": "庫梅拉女足",
     "away": "安奈爾女足",
-    "HomeFScore": "2",
+    "HomeFScore": "3",
     "AwayFScore": "0",
     "id": "1950437"
   },
   {
     "league": "澳布女超",
     "time": "15:00",
-    "status": "29",
+    "status": "39",
     "home": "卡布爾徹女足",
     "away": "布里斯班城女足",
     "HomeFScore": "0",
@@ -132,7 +132,7 @@
   {
     "league": "澳布後備",
     "time": "15:00",
-    "status": "35",
+    "status": "45",
     "home": "史托姆斯世紀後備隊",
     "away": "格蘭後備隊",
     "HomeFScore": "1",
@@ -142,11 +142,11 @@
   {
     "league": "烏茲女超",
     "time": "15:30",
-    "status": "8",
+    "status": "18",
     "home": "安迪江女足",
     "away": "布霍羅女足",
     "HomeFScore": "0",
-    "AwayFScore": "0",
+    "AwayFScore": "1",
     "id": "1950820"
   },
   {
