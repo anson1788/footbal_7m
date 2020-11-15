@@ -28,7 +28,9 @@ async function init(){
     }else{
 
         var liveMatchList  = bfBetUtils.parseBFLiveMatch(dom)
+        console.log("liveMatchList "+liveMatchList.length)
         if(liveMatchList.length==0){
+            console.log("liveMatchList using local")
             liveMatchList  = fs.readFileSync("liveData/liveListTable.json");
             liveMatchList = JSON.parse(liveMatchList)
         }
