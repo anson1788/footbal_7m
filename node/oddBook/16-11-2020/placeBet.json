@@ -33,6 +33,31 @@
     "down": "-1.59",
     "oddVal": "1.17",
     "place": "主",
-    "time": "00:57"
+    "time": "00:57",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "半球/一球",
+            "home": "1.17",
+            "away": "1.17"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "1",
+    "AwayFScore": "2",
+    "res": "輸"
+  },
+  {
+    "home": "奧地利",
+    "away": "北愛爾蘭",
+    "id": "1858423",
+    "buyOdd": "球半/两球",
+    "up": "0.30",
+    "down": "-0.92",
+    "oddVal": "0.98",
+    "place": "主",
+    "time": "03:41"
   }
 ]
