@@ -73,7 +73,10 @@ async function init(){
            "金澤聯隊":"金澤薩維根",
            "名古屋八鯨":"名古屋鯨魚",
            "草津溫泉":"群馬草津溫泉",
-           "丹博斯治":"丹保殊"
+           "丹博斯治":"丹保殊",
+           "喜百年":"喜伯年",
+           "雲達拿斯":"聖地牙哥漫遊者",
+           "科布雷索":"科布雷素"
        };
        for(var i=0;i<betArr.length;i++){
            if(typeof(NameMapping[betArr[i].home])!="undefined"){
