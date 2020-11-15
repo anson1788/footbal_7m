@@ -13,13 +13,13 @@ class hkjcBetEngine {
         let client;
         if(betArr.length==0) return
         try {
-            /*
+            
             const launchChrome = () =>
             chromeLauncher.launch({ chromeFlags: ['--disable-gpu', '--headless'] });
             const chrome = await launchChrome();
             client = await CDP({ port: chrome.port });
-            */
-            client = await CDP();
+       
+            //client = await CDP();
 
             const {Network, Page,Runtime} = client;
             var dom = await this.loadUrlJSOM(Network, Page,Runtime,'https://bet.hkjc.com/football/odds/odds_hdc.aspx?lang=ch');
@@ -53,8 +53,8 @@ class hkjcBetEngine {
             if(isFindMatch>0){
                 await this.performLogonAndBuy(Runtime,dom,actInfo,isFindMatch,betArr)
             }
-           // client.close();
-           // chrome.kill();
+            client.close();
+            chrome.kill();
         } catch (err) {
             console.error(err);
         } finally {
