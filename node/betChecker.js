@@ -76,7 +76,8 @@ async function init(){
            "丹博斯治":"丹保殊",
            "喜百年":"喜伯年",
            "雲達拿斯":"聖地牙哥漫遊者",
-           "科布雷索":"科布雷素"
+           "科布雷索":"科布雷素",
+           "塔勒瑞斯":"泰拿尼斯"
        };
        for(var i=0;i<betArr.length;i++){
            if(typeof(NameMapping[betArr[i].home])!="undefined"){
