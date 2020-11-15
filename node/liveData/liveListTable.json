@@ -2,7 +2,7 @@
   {
     "league": "日職乙",
     "time": "12:00",
-    "status": "77",
+    "status": "90+",
     "home": "岡山綠雉",
     "away": "磐田山葉",
     "HomeFScore": "1",
@@ -12,7 +12,7 @@
   {
     "league": "日丙",
     "time": "12:00",
-    "status": "78",
+    "status": "90+",
     "home": "阿祖爾克拉羅沼津",
     "away": "鹿兒島聯隊",
     "HomeFScore": "2",
@@ -22,17 +22,7 @@
   {
     "league": "日丙",
     "time": "12:00",
-    "status": "79",
-    "home": "雲羅里八戶",
-    "away": "大阪飛腳U23",
-    "HomeFScore": "1",
-    "AwayFScore": "1",
-    "id": "1872846"
-  },
-  {
-    "league": "日丙",
-    "time": "12:00",
-    "status": "79",
+    "status": "90+",
     "home": "讚岐烏冬",
     "away": "AC長野柏西路",
     "HomeFScore": "1",
@@ -42,7 +32,7 @@
   {
     "league": "日足聯",
     "time": "12:00",
-    "status": "79",
+    "status": "90+",
     "home": "仙臺新力",
     "away": "威蒂恩三重",
     "HomeFScore": "0",
@@ -52,7 +42,7 @@
   {
     "league": "日足聯",
     "time": "12:00",
-    "status": "85",
+    "status": "90+",
     "home": "本田洛克",
     "away": "武藏野橫河",
     "HomeFScore": "1",
@@ -60,39 +50,9 @@
     "id": "1876292"
   },
   {
-    "league": "日足聯",
-    "time": "12:00",
-    "status": "85",
-    "home": "偉士帕大分",
-    "away": "特格瓦嘉洛宮崎",
-    "HomeFScore": "2",
-    "AwayFScore": "1",
-    "id": "1876293"
-  },
-  {
-    "league": "日足聯",
-    "time": "12:00",
-    "status": "81",
-    "home": "琵琶湖滋賀",
-    "away": "班迪特斯磐城",
-    "HomeFScore": "0",
-    "AwayFScore": "2",
-    "id": "1876294"
-  },
-  {
-    "league": "日足聯",
-    "time": "12:00",
-    "status": "81",
-    "home": "松江FC",
-    "away": "丸安岡崎",
-    "HomeFScore": "1",
-    "AwayFScore": "0",
-    "id": "1876295"
-  },
-  {
     "league": "日職女乙",
     "time": "12:00",
-    "status": "85",
+    "status": "90+",
     "home": "橫濱海鷗女足",
     "away": "AC長野女足",
     "HomeFScore": "1",
@@ -102,47 +62,27 @@
   {
     "league": "日職女乙",
     "time": "12:00",
-    "status": "82",
-    "home": "大和西芙德女足",
-    "away": "京都兔子女足",
-    "HomeFScore": "1",
-    "AwayFScore": "0",
-    "id": "1878591"
-  },
-  {
-    "league": "日職女乙",
-    "time": "12:00",
-    "status": "85",
+    "status": "90+",
     "home": "伊分埼玉女足",
     "away": "FC十文字女足",
-    "HomeFScore": "0",
+    "HomeFScore": "1",
     "AwayFScore": "0",
     "id": "1878592"
   },
   {
     "league": "日職女乙",
     "time": "12:00",
-    "status": "85",
+    "status": "90+",
     "home": "虎鯨鴨川女足",
     "away": "日本體育大學女足",
-    "HomeFScore": "1",
+    "HomeFScore": "4",
     "AwayFScore": "1",
     "id": "1878593"
   },
   {
-    "league": "日職女乙",
-    "time": "12:00",
-    "status": "84",
-    "home": "世田谷女足",
-    "away": "播磨阿爾比恩女足",
-    "HomeFScore": "2",
-    "AwayFScore": "0",
-    "id": "1878594"
-  },
-  {
     "league": "日職聯",
     "time": "13:00",
-    "status": "36",
+    "status": "中",
     "home": "神戶勝利船",
     "away": "湘南比馬",
     "HomeFScore": "0",
@@ -152,7 +92,7 @@
   {
     "league": "日職乙",
     "time": "13:00",
-    "status": "35",
+    "status": "中",
     "home": "新潟天鵝",
     "away": "千葉市原",
     "HomeFScore": "0",
@@ -162,7 +102,7 @@
   {
     "league": "日職乙",
     "time": "13:00",
-    "status": "36",
+    "status": "中",
     "home": "水戶蜀葵",
     "away": "京都不死鳥",
     "HomeFScore": "0",
@@ -172,7 +112,7 @@
   {
     "league": "日職乙",
     "time": "13:00",
-    "status": "36",
+    "status": "中",
     "home": "山口雷法",
     "away": "福岡黃蜂",
     "HomeFScore": "0",
@@ -182,7 +122,7 @@
   {
     "league": "日職乙",
     "time": "13:00",
-    "status": "36",
+    "status": "中",
     "home": "長崎成功丸",
     "away": "FC琉球",
     "HomeFScore": "0",
@@ -192,7 +132,7 @@
   {
     "league": "日職乙",
     "time": "13:00",
-    "status": "36",
+    "status": "中",
     "home": "山形山神",
     "away": "德島漩渦",
     "HomeFScore": "0",
@@ -202,7 +142,7 @@
   {
     "league": "日職乙",
     "time": "13:00",
-    "status": "36",
+    "status": "中",
     "home": "大宮松鼠",
     "away": "金澤聯隊",
     "HomeFScore": "1",
@@ -212,7 +152,7 @@
   {
     "league": "日職乙",
     "time": "13:00",
-    "status": "36",
+    "status": "中",
     "home": "町田澤維亞",
     "away": "松本山雅",
     "HomeFScore": "0",
@@ -222,7 +162,7 @@
   {
     "league": "俄甲",
     "time": "13:00",
-    "status": "37",
+    "status": "中",
     "home": "SKA哈巴羅夫斯克",
     "away": "泰提席克",
     "HomeFScore": "1",
@@ -232,7 +172,7 @@
   {
     "league": "韓K4聯",
     "time": "13:00",
-    "status": "39",
+    "status": "中",
     "home": "晉州市民",
     "away": "坡州市民",
     "HomeFScore": "0",
@@ -242,7 +182,7 @@
   {
     "league": "所羅島聯",
     "time": "13:00",
-    "status": "36",
+    "status": "中",
     "home": "科薩",
     "away": "赫姆城FC",
     "HomeFScore": "1",
@@ -5538,6 +5478,66 @@
     "HomeFScore": "0",
     "AwayFScore": "6",
     "id": "1951252"
+  },
+  {
+    "league": "日丙",
+    "time": "12:00",
+    "status": "完",
+    "home": "雲羅里八戶",
+    "away": "大阪飛腳U23",
+    "HomeFScore": "1",
+    "AwayFScore": "1",
+    "id": "1872846"
+  },
+  {
+    "league": "日足聯",
+    "time": "12:00",
+    "status": "完",
+    "home": "偉士帕大分",
+    "away": "特格瓦嘉洛宮崎",
+    "HomeFScore": "2",
+    "AwayFScore": "1",
+    "id": "1876293"
+  },
+  {
+    "league": "日足聯",
+    "time": "12:00",
+    "status": "完",
+    "home": "琵琶湖滋賀",
+    "away": "班迪特斯磐城",
+    "HomeFScore": "0",
+    "AwayFScore": "3",
+    "id": "1876294"
+  },
+  {
+    "league": "日足聯",
+    "time": "12:00",
+    "status": "完",
+    "home": "松江FC",
+    "away": "丸安岡崎",
+    "HomeFScore": "1",
+    "AwayFScore": "0",
+    "id": "1876295"
+  },
+  {
+    "league": "日職女乙",
+    "time": "12:00",
+    "status": "完",
+    "home": "大和西芙德女足",
+    "away": "京都兔子女足",
+    "HomeFScore": "1",
+    "AwayFScore": "0",
+    "id": "1878591"
+  },
+  {
+    "league": "日職女乙",
+    "time": "12:00",
+    "status": "完",
+    "home": "世田谷女足",
+    "away": "播磨阿爾比恩女足",
+    "HomeFScore": "2",
+    "AwayFScore": "0",
+    "id": "1878594"
   },
   {
     "league": "日五足",

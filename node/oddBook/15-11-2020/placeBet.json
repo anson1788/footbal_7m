@@ -123,5 +123,16 @@
     "HomeFScore": "2",
     "AwayFScore": "0",
     "res": "贏"
+  },
+  {
+    "home": "北九州向日葵",
+    "away": "櫪木SC",
+    "id": "1873262",
+    "buyOdd": "平手",
+    "up": "0.53",
+    "down": "-1.09",
+    "oddVal": "0.82",
+    "place": "主",
+    "time": "13:56"
   }
 ]
