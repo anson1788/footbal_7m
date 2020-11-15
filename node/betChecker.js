@@ -69,7 +69,8 @@ async function init(){
        var betArr = calculatedResult[3];
        var NameMapping = {
            "克里科":"古里高聯",
-           "科金博":"哥甘保"
+           "科金博":"哥甘保",
+           "金澤聯隊":"金澤薩維根"
        };
        for(var i=0;i<betArr.length;i++){
            if(typeof(NameMapping[betArr[i].home])!="undefined"){
