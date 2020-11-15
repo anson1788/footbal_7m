@@ -25,13 +25,18 @@ async function init(){
         }
     }
 
+    //var rawdata = fs.readFileSync("oddBook.json");
+    //let pastList = JSON.parse(rawdata)
 
     var pushArr = []
     for(var i=0;i<oddPlacement.length;i++){
-        if(oddPlacement[i].res=="輸"){
+        if(oddPlacement[i].res=="輸" || oddPlacement[i].res=="輸半"){
+           // pushArr.push(oddPlacement[i])
+        }else{
             pushArr.push(oddPlacement[i])
         }
     }
+    
     console.table(pushArr)
 
 }
