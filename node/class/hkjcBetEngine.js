@@ -13,18 +13,21 @@ class hkjcBetEngine {
         let client;
         if(betArr.length==0) return
         try {
+            /*
             const launchChrome = () =>
             chromeLauncher.launch({ chromeFlags: ['--disable-gpu', '--headless'] });
             const chrome = await launchChrome();
             client = await CDP({ port: chrome.port });
-            //client = await CDP();
+            */
+            client = await CDP();
 
             const {Network, Page,Runtime} = client;
             var dom = await this.loadUrlJSOM(Network, Page,Runtime,'https://bet.hkjc.com/football/odds/odds_hdc.aspx?lang=ch');
             var matchList = dom.window.document.querySelectorAll(".couponRow")
             var isFindMatch = 0
-            for(var i=0;i<betArr.length;i++){
-                for await (var item of matchList) {
+            
+            for (var item of matchList) {
+                for(var i=0;i<betArr.length;i++){
                     if(item.id.includes("rmid")){
                         var cteams = dom.window.document.querySelector("#"+item.id+" .cteams").textContent;
                         if(cteams.includes(betArr[i].home) && 
@@ -50,8 +53,8 @@ class hkjcBetEngine {
             if(isFindMatch>0){
                 await this.performLogonAndBuy(Runtime,dom,actInfo,isFindMatch,betArr)
             }
-            client.close();
-            chrome.kill();
+           // client.close();
+           // chrome.kill();
         } catch (err) {
             console.error(err);
         } finally {
@@ -84,9 +87,10 @@ class hkjcBetEngine {
         for(var i=0;i<mathcNum;i++){
 
             var oddBet = actInfo.HDCBetVal
-            for(var j=0;j<betArr[j];j++){
-                
+         
+            for(var j=0;j<betArr.length;j++){
                 if(typeof(betArr[j].clickIdx)!="undefined"){
+                    console.log(betArr[j].clickIdx)
                     if(betArr[j].clickIdx==i){
                         if(parseFloat(betArr[j].oddVal)<0.8){
                             oddBet = "400"
