@@ -37,6 +37,7 @@ class hkjcBetEngine {
                            for(var g=0;g<odds.length;g++){
                              var input = odds[g].querySelectorAll("input")[0];
                              if(input.id.includes(betKey)){
+                                betArr[i].clickIdx = isFindMatch
                                 await this.runtimeClickDiv(Runtime,input.id,Network,dom)
                                 isFindMatch ++;
                             }
@@ -47,7 +48,7 @@ class hkjcBetEngine {
             }
 
             if(isFindMatch>0){
-                await this.performLogonAndBuy(Runtime,dom,actInfo,isFindMatch)
+                await this.performLogonAndBuy(Runtime,dom,actInfo,isFindMatch,betArr)
             }
             client.close();
             chrome.kill();
@@ -60,7 +61,7 @@ class hkjcBetEngine {
         }
         return ""
     }
-    async performLogonAndBuy(Runtime,dom,actInfo,mathcNum){
+    async performLogonAndBuy(Runtime,dom,actInfo,mathcNum,betArr){
         await this.runExpressionNoReturn(Runtime,'document.getElementsByClassName("addBet")[0].click()')
         await this.runExpression(Runtime,'document.getElementById("account").value = "'+actInfo.username+'"')
         await this.runExpression(Runtime,'document.getElementById("password").value="'+actInfo.pw+'"')
@@ -81,9 +82,24 @@ class hkjcBetEngine {
         await this.runExpressionNoReturn(Runtime,'HideError(1)')
         var balance = await this.runExpression(Runtime,'document.getElementById("valueAccBal").innerHTML')
         for(var i=0;i<mathcNum;i++){
-            await this.runExpressionNoReturn(Runtime,'document.getElementById("inputAmount'+i+'").value = '+actInfo.HDCBetVal)
+
+            var oddBet = actInfo.HDCBetVal
+            for(var j=0;j<betArr[j];j++){
+                
+                if(typeof(betArr[j].clickIdx)!="undefined"){
+                    if(betArr[j].clickIdx==i){
+                        if(parseFloat(betArr[j].oddVal)<0.8){
+                            oddBet = "400"
+                        }
+                        if(parseFloat(betArr[j].oddVal)>1){
+                            oddBet = "600"
+                        }
+                    }
+                }
+            }
+            await this.runExpressionNoReturn(Runtime,'document.getElementById("inputAmount'+i+'").value = '+oddBet)
             await this.runExpressionNoReturn(Runtime,'CheckRefreshUnitbet('+i+');')
-            console.log('document.getElementById("inputAmount'+i+'").value = '+actInfo.HDCBetVal)
+            console.log('document.getElementById("inputAmount'+i+'").value = '+oddBet)
         }
     
         console.log(balance.result.value.replace("結餘: $ ",""))

@@ -59,7 +59,7 @@ async function init(defaultRange=50){
     let rawdata = fs.readFileSync("oddBook.json");
     let dataList = JSON.parse(rawdata)
     let ftUtils = new filterUtils()
-    var matchId = ["1914810"]
+    var matchId = ["1948152"]
     for(var i=0;i<matchId.length;i++){
         var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+matchId[i]
         var OddData =  await getCacheData(url,"bfData/odd/crt/",  matchId[i],"bfOdd",false)
@@ -73,16 +73,16 @@ async function init(defaultRange=50){
             "OddData":OddData,
             "BSOddData" : BSOddData
         }
-        /*
+      
         var oddPerList = ftUtils.extractSameOddMatch(match,dataList)
         if(!ftUtils.isDicEmpty(oddPerList)){
             console.table([oddPerList])
-        }*/
- 
+        }
+        /*
         var oddBSPerList = ftUtils.extractSameBSOddMatch(match,dataList)
         if(!ftUtils.isDicEmpty(oddBSPerList)){
             console.table([oddBSPerList])
-        }
+        }*/
     }
     
   
