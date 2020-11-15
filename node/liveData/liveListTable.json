@@ -1,18 +1,8 @@
 [
   {
-    "league": "日職乙",
-    "time": "14:00",
-    "status": "90+",
-    "home": "北九州向日葵",
-    "away": "櫪木SC",
-    "HomeFScore": "1",
-    "AwayFScore": "0",
-    "id": "1873262"
-  },
-  {
     "league": "中乙A",
     "time": "15:00",
-    "status": "中",
+    "status": "49",
     "home": "中國U19(中)",
     "away": "廣西寶韻",
     "HomeFScore": "1",
@@ -22,7 +12,7 @@
   {
     "league": "中乙A",
     "time": "15:00",
-    "status": "中",
+    "status": "49",
     "home": "浙江毅騰(中)",
     "away": "西安優柯多",
     "HomeFScore": "0",
@@ -32,7 +22,7 @@
   {
     "league": "中乙A",
     "time": "15:00",
-    "status": "中",
+    "status": "49",
     "home": "山西龍晉華艦(中)",
     "away": "湖北楚風合力",
     "HomeFScore": "0",
@@ -42,7 +32,7 @@
   {
     "league": "中乙B",
     "time": "15:00",
-    "status": "中",
+    "status": "49",
     "home": "河北精英(中)",
     "away": "西安FC",
     "HomeFScore": "0",
@@ -52,7 +42,7 @@
   {
     "league": "中乙B",
     "time": "15:00",
-    "status": "中",
+    "status": "49",
     "home": "青島紅獅(中)",
     "away": "南京枫帆",
     "HomeFScore": "0",
@@ -62,7 +52,7 @@
   {
     "league": "中乙B",
     "time": "15:00",
-    "status": "中",
+    "status": "49",
     "home": "青島中能(中)",
     "away": "深圳寶安壆崗",
     "HomeFScore": "1",
@@ -82,7 +72,7 @@
   {
     "league": "港菁盃",
     "time": "15:00",
-    "status": "中",
+    "status": "48",
     "home": "晉峰足球會",
     "away": "愉園",
     "HomeFScore": "0",
@@ -92,7 +82,7 @@
   {
     "league": "澳布甲保",
     "time": "15:20",
-    "status": "36",
+    "status": "40",
     "home": "卡利拿",
     "away": "安納利",
     "HomeFScore": "1",
@@ -112,7 +102,7 @@
   {
     "league": "澳布超冠",
     "time": "16:00",
-    "status": "1",
+    "status": "4",
     "home": "塔林加流浪",
     "away": "圖旺",
     "HomeFScore": "0",
@@ -122,7 +112,7 @@
   {
     "league": "澳布超保",
     "time": "16:00",
-    "status": "1",
+    "status": "4",
     "home": "阿卡西亞嶺",
     "away": "北極星",
     "HomeFScore": "0",
@@ -132,7 +122,7 @@
   {
     "league": "澳布超保",
     "time": "16:00",
-    "status": "1",
+    "status": "4",
     "home": "甲普",
     "away": "貝賽聯",
     "HomeFScore": "0",
@@ -142,7 +132,7 @@
   {
     "league": "澳昆超",
     "time": "16:00",
-    "status": "1",
+    "status": "4",
     "home": "布里斯班奧林匹克",
     "away": "布里斯班",
     "HomeFScore": "0",
@@ -152,7 +142,7 @@
   {
     "league": "澳昆甲",
     "time": "16:00",
-    "status": "1",
+    "status": "4",
     "home": "米切爾頓",
     "away": "洛根利泰檸",
     "HomeFScore": "0",
@@ -5508,6 +5498,16 @@
     "HomeFScore": "1",
     "AwayFScore": "1",
     "id": "1951254"
+  },
+  {
+    "league": "日職乙",
+    "time": "14:00",
+    "status": "完",
+    "home": "北九州向日葵",
+    "away": "櫪木SC",
+    "HomeFScore": "1",
+    "AwayFScore": "0",
+    "id": "1873262"
   },
   {
     "league": "澳昆甲",
