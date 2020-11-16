@@ -154,17 +154,17 @@ class hkjcBetEngine {
         var balance = await this.runExpression(Runtime,'document.getElementById("valueAccBal").innerHTML')
         for(var i=0;i<mathcNum;i++){
 
-            var oddBet = actInfo.HDCBetVal
+            var oddBet = "600"
          
             for(var j=0;j<betArr.length;j++){
                 if(typeof(betArr[j].clickIdx)!="undefined"){
                     console.log(betArr[j].clickIdx)
                     if(betArr[j].clickIdx==i){
                         if(parseFloat(betArr[j].oddVal)<0.8){
-                            oddBet = "400"
+                            oddBet = "500"
                         }
                         if(parseFloat(betArr[j].oddVal)>1){
-                            oddBet = "600"
+                            oddBet = "700"
                         }
                     }
                 }
