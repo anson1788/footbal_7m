@@ -19,7 +19,9 @@ class hkjcBetEngine {
             "喜百年":"喜伯年",
             "雲達拿斯":"聖地牙哥漫遊者",
             "科布雷索":"科布雷素",
-            "塔勒瑞斯":"泰拿尼斯"
+            "塔勒瑞斯":"泰拿尼斯",
+            "伯拉根森":"巴拉干天奴紅牛",
+            "科爾多瓦中央SDE":"CA科爾多瓦中央"
         };
         for(var i=0;i<m7list.length;i++){
             if(typeof(NameMapping[m7list[i].home])!="undefined"){
@@ -152,17 +154,17 @@ class hkjcBetEngine {
         var balance = await this.runExpression(Runtime,'document.getElementById("valueAccBal").innerHTML')
         for(var i=0;i<mathcNum;i++){
 
-            var oddBet = actInfo.HDCBetVal
+            var oddBet = "600"
          
             for(var j=0;j<betArr.length;j++){
                 if(typeof(betArr[j].clickIdx)!="undefined"){
                     console.log(betArr[j].clickIdx)
                     if(betArr[j].clickIdx==i){
                         if(parseFloat(betArr[j].oddVal)<0.8){
-                            oddBet = "400"
+                            oddBet = "500"
                         }
                         if(parseFloat(betArr[j].oddVal)>1){
-                            oddBet = "600"
+                            oddBet = "700"
                         }
                     }
                 }
