@@ -171,6 +171,7 @@ class bfWinBetUtils extends bfWinUtils{
                 dom = await bcUtils.getHttpDomAsyn(url,"") 
                 oddData = await this.parseOdd(dom)
             }else{
+                console.log(dataList[i].id)
                 if(fs.existsSync("bfData/odd/crt/"+dataList[i].id+".json")){
                     let rawdata = fs.readFileSync("bfData/odd/crt/"+dataList[i].id+".json");
                     oddData = JSON.parse(rawdata);   

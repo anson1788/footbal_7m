@@ -74,9 +74,23 @@ class dataFilterStable extends dataFilterSingleLogic{
             {
               betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["home"]
               betData["place"] = "主"
+              betData["oddDev"] = upSide["oddDev"]
+              betData["贏"] = upSide["贏"]
+              betData["贏半"] = upSide["贏半"]
+              betData["走"] = upSide["走"]
+              betData["輸半"] = upSide["輸半"]
+              betData["輸"] = upSide["輸"]
+              betData["total"] = upSide["total"]
             }else{
               betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["away"]
               betData["place"] = "客"
+              betData["oddDev"] = dwnSide["oddDev"]
+              betData["贏"] = dwnSide["贏"]
+              betData["贏半"] = dwnSide["贏半"]
+              betData["走"] = dwnSide["走"]
+              betData["輸半"] = dwnSide["輸半"]
+              betData["輸"] = dwnSide["輸"]
+              betData["total"] = dwnSide["total"]
             }
             betArr.push(betData)
         }else{
@@ -84,12 +98,13 @@ class dataFilterStable extends dataFilterSingleLogic{
         }
     }
 
+    /*
     console.log("--1"+JSON.stringify(betArr))
     var tmpBet = this.saveOddResult(betArr)
 
     if(tmpBet[1] == true){
       betArr = tmpBet[0]
-    }
+    }*/
 
     var tgMsg = ""
     for(var j=0;j<betArr.length;j++){
@@ -274,7 +289,7 @@ class dataFilterStable extends dataFilterSingleLogic{
          
          matchList[i]["AwayFScore"] = crtResult[kIdx]["AwayFScore"]
          
-         var result = this.calculateSingleResultAsianOdd([matchList[i]],"hkjc",matchList[i]["place"])
+         var result = this.calculateSingleResultAsianOdd([matchList[i]],"hkjc",matchList[i],matchList[i]["place"])
          matchList[i].res = result[0][0].res
          changedMap.push(matchList[i])
       }

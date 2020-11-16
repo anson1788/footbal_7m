@@ -157,7 +157,6 @@ class dataCommomClass {
             
             var w1 = 0
             var w2 = 0
-            var winodd = parseFloat(workingList[i]["BSOddData"][0][broker]["end"]["home"])
             if(betOn == "大"){
                 if(hfScore > firstOdd){
                     w1 = 1
@@ -198,7 +197,7 @@ class dataCommomClass {
             count[workingList[i].res] = count[workingList[i].res] +1
             count["total"] = count["total"] +1
         }
-
+    
         count["p"] = (count["贏"]*winodd + count["贏半"] * winodd/2 - count["輸"] - count["輸半"]*0.5 )/count["total"] * 10
        // count["win"] = (count["贏"]*2 + count["贏半"]) / (count["total"]*2)
         count["p"] = count["p"].toFixed(2)
@@ -206,7 +205,7 @@ class dataCommomClass {
     }
 
 
-    calculateSingleResultAsianOdd(rtnVal,broker, betOn = "主"){
+    calculateSingleResultAsianOdd(rtnVal,broker,crtMatch, betOn = "主"){
         var workingList = this.deepClone(rtnVal)
         var count = {
             "輸":0,
@@ -216,6 +215,9 @@ class dataCommomClass {
             "贏":0,
             "total":0
         }
+
+        var oddAverage = 0
+        var winodd = 0
         for(var i=0;i<workingList.length;i++){
             workingList[i].betOn = betOn
             var endOdd = workingList[i]["OddData"][0][broker]["end"]["point"]
@@ -238,7 +240,8 @@ class dataCommomClass {
             
             var w1 = 0
             var w2 = 0
-            var winodd = parseFloat(workingList[i]["OddData"][0][broker]["end"]["home"])
+            winodd = parseFloat(workingList[i]["OddData"][0][broker]["end"]["home"])
+            var tmpOdd = parseFloat(crtMatch["OddData"][0][broker]["end"]["home"])
             if(betOn == "主"){
                 if(hfScore > adH1afScore){
                     w1 = 1
@@ -252,6 +255,7 @@ class dataCommomClass {
                 }
             }else{
                 winodd = parseFloat(workingList[i]["OddData"][0][broker]["end"]["away"])
+                tmpOdd = parseFloat(crtMatch["OddData"][0][broker]["end"]["away"])
                 if(hfScore < adH1afScore){
                     w1 = 1
                 }else if(hfScore > adH1afScore){
@@ -263,15 +267,17 @@ class dataCommomClass {
                     w2 = -1
                 }
             }
-
+          
             if(w1+w2 == 2 ){
                 workingList[i].res = "贏"
+                oddAverage += Math.abs(winodd-tmpOdd)
             }else if(w1+w2 == -2 ){
                 workingList[i].res = "輸"
             }else if(w1 == 0  && w2 == 0 ){
                 workingList[i].res = "走"
             }else if(w1+w2 == 1 ){
                 workingList[i].res = "贏半"
+                oddAverage += Math.abs(winodd-tmpOdd)
             }else if(w1+w2 == -1 ){
                 workingList[i].res = "輸半"
             }
@@ -279,10 +285,22 @@ class dataCommomClass {
             count[workingList[i].res] = count[workingList[i].res] +1
             count["total"] = count["total"] +1
         }
+        console.log("---" + broker + "---")
+        console.log(count["贏"])
+        var calculatedOdd = parseFloat(crtMatch["OddData"][0][broker]["end"]["away"])
+        if(betOn == "主"){
+            calculatedOdd = parseFloat(crtMatch["OddData"][0][broker]["end"]["home"])
+        }
 
-        count["p"] = (count["贏"]*winodd + count["贏半"] * winodd/2 - count["輸"] - count["輸半"]*0.5 )/count["total"] * 10
+
+
+        console.log(calculatedOdd)
+        count["p"] = (count["贏"]*calculatedOdd + count["贏半"] * calculatedOdd/2 - count["輸"] - count["輸半"]*0.5 )/count["total"] * 10
+      // count["p"] = (count["贏"]*winodd + count["贏半"] * winodd/2 - count["輸"] - count["輸半"]*0.5 )/count["total"] * 10
        // count["win"] = (count["贏"]*2 + count["贏半"]) / (count["total"]*2)
         count["p"] = count["p"].toFixed(2)
+        count["oddDev"] = oddAverage/(count["贏"]+count["贏半"])
+        count["oddDev"]= count["oddDev"].toFixed(2)
         return [workingList,count]
     }
 
@@ -455,8 +473,8 @@ class dataCommomClass {
     //console.log("m1 e:" +m1["Epoint"])
     if(m1["Spoint"]==m2["Spoint"] && 
        m1["Epoint"]==m2["Epoint"] && 
-       Math.abs(m1["Shome"] - m2["Shome"]) <0.05 &&
-       Math.abs(m1["Ehome"] - m2["Ehome"]) <0.05 && 
+       Math.abs(m1["Shome"] - m2["Shome"]) <0.02 &&
+       Math.abs(m1["Ehome"] - m2["Ehome"]) <0.02 && 
        (
         (m1["Shome"] < m1["Ehome"] &&
         m2["Shome"] < m2["Ehome"] ) ||
@@ -466,7 +484,6 @@ class dataCommomClass {
     ){
       return true
     }
-    return false
   }
 }
 module.exports = dataCommomClass
