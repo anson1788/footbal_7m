@@ -33,6 +33,95 @@
     "down": "-1.59",
     "oddVal": "1.17",
     "place": "主",
-    "time": "00:57"
+    "time": "00:57",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "半球/一球",
+            "home": "1.17",
+            "away": "1.17"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "1",
+    "AwayFScore": "2",
+    "res": "輸"
+  },
+  {
+    "home": "奧地利",
+    "away": "北愛爾蘭",
+    "id": "1858423",
+    "buyOdd": "球半/两球",
+    "up": "0.30",
+    "down": "-0.92",
+    "oddVal": "0.98",
+    "place": "主",
+    "time": "03:41",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "球半/两球",
+            "home": "0.98",
+            "away": "0.98"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "2",
+    "AwayFScore": "1",
+    "res": "輸"
+  },
+  {
+    "home": "天主教大學",
+    "away": "科布雷索",
+    "id": "1948158",
+    "buyOdd": "一球/球半",
+    "up": "0.07",
+    "down": "-0.88",
+    "oddVal": "0.73",
+    "place": "主",
+    "time": "07:56",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "一球/球半",
+            "home": "0.73",
+            "away": "0.73"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "2",
+    "AwayFScore": "1",
+    "res": "輸半"
+  },
+  {
+    "home": "小保加",
+    "away": "塔勒瑞斯",
+    "id": "1945917",
+    "buyOdd": "一球",
+    "up": "0.07",
+    "down": "-0.64",
+    "oddVal": "0.90",
+    "place": "主",
+    "time": "08:20",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "一球",
+            "home": "0.90",
+            "away": "0.90"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "0",
+    "AwayFScore": "1",
+    "res": "輸"
   }
 ]
