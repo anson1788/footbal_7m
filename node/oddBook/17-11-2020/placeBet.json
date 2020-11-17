@@ -1,0 +1,102 @@
+[
+  {
+    "home": "法國U21",
+    "away": "瑞士U21",
+    "id": "1686790",
+    "buyOdd": "半球/一球",
+    "up": "8.64",
+    "down": "-9.00",
+    "oddVal": "0.88",
+    "place": "主",
+    "time": "03:56",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "半球/一球",
+            "home": "0.88",
+            "away": "0.88"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "3",
+    "AwayFScore": "1",
+    "res": "贏"
+  },
+  {
+    "home": "哥列迪巴",
+    "away": "巴希亞",
+    "id": "1858783",
+    "buyOdd": "平手",
+    "up": "-1.37",
+    "down": "0.72",
+    "oddVal": "0.84",
+    "place": "客",
+    "time": "04:56",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "平手",
+            "home": "0.84",
+            "away": "0.84"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "1",
+    "AwayFScore": "2",
+    "res": "贏"
+  },
+  {
+    "home": "保地花高",
+    "away": "伯拉根森",
+    "id": "1858784",
+    "buyOdd": "平手",
+    "up": "-0.63",
+    "down": "0.03",
+    "oddVal": "0.99",
+    "place": "客",
+    "time": "07:00",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "平手",
+            "home": "0.99",
+            "away": "0.99"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "1",
+    "AwayFScore": "2",
+    "res": "贏"
+  },
+  {
+    "home": "高隆",
+    "away": "科爾多瓦中央SDE",
+    "id": "1945896",
+    "buyOdd": "平手/半球",
+    "up": "-0.98",
+    "down": "0.29",
+    "oddVal": "0.98",
+    "place": "客",
+    "time": "08:12",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "平手/半球",
+            "home": "0.98",
+            "away": "0.98"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "2",
+    "AwayFScore": "0",
+    "res": "輸"
+  }
+]

@@ -148,5 +148,30 @@
     "HomeFScore": "2",
     "AwayFScore": "2",
     "res": "輸"
+  },
+  {
+    "home": "莫桑比克",
+    "away": "喀麥隆",
+    "id": "1814999",
+    "buyOdd": "受让半球/一球",
+    "up": "-1.95",
+    "down": "1.38",
+    "oddVal": "0.77",
+    "place": "客",
+    "time": "23:56",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "受让半球/一球",
+            "home": "0.77",
+            "away": "0.77"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "0",
+    "AwayFScore": "2",
+    "res": "贏"
   }
 ]
