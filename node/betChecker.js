@@ -67,11 +67,12 @@ async function init(){
             
        console.log(JSON.stringify(calculatedResult[3]))
        var betArr = calculatedResult[3];
-   
+    
+       /*
        await hkjcBE.buyOdd(
             betArr,
             acct
-       )
+       )*/
        process.exit()
     //}
 }
