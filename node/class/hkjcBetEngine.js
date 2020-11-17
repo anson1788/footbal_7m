@@ -3,6 +3,7 @@ const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 const chromeLauncher = require('chrome-launcher');
 var fs = require('fs');
+var moment  = require('moment');
 const NameMapping  = JSON.parse(fs.readFileSync("7m2hkjcName.json"))
 class hkjcBetEngine {
 
@@ -54,6 +55,7 @@ class hkjcBetEngine {
                             cteams.includes(m7list[i].away)){
                                 isMatchIdx = i
                                 m7list[i].matchDate = dom.window.document.querySelector("#"+item.id+" .cesst").textContent
+                                m7list[i].hkjcDate = dom.window.document.querySelector("#"+item.id+" .cday").textContent
                         }
                     }
                 }
@@ -74,6 +76,72 @@ class hkjcBetEngine {
             
             //console.table(hkjcCrtListArr)
             //console.log(firstMatchTxt)
+            console.table("------------")
+            var crtList = {
+                "matchDate": firstMatchTxt,
+                "matchList":hkjcCrtListArr
+            }
+            
+            var oldList = JSON.parse(fs.readFileSync("./liveData/hkjcList.json"))
+            console.log( oldList["matchDate"]+"|"+crtList["matchDate"])
+            if(crtList["matchDate"]==oldList["matchDate"]){
+                    var localList = oldList["matchList"]
+                    var realTimeList = crtList["matchList"]
+                 
+                    var extraList = []
+                    for(var i=0;i<realTimeList.length;i++){
+                        var containInList = false
+                        for(var j=0;j<localList.length;j++){
+                            if(realTimeList[i].id == localList[j].id ){
+                                containInList = true
+                            }
+                        }
+                        if(!containInList){
+                            extraList.push(realTimeList[i])
+                        }
+                    }
+
+                    for(var i=0;i<extraList.length;i++){
+                        var week = extraList[i].hkjcDate.split(" ")[1]
+                        var weekNum = extraList[i].hkjcDate.split(" ")[2]
+                        console.log(extraList[i].hkjcDate.split(" "))
+                        var InsertIdx = -99
+                        for(var j=0;j<localList.length;j++){
+                            var weekLocal = localList[j].hkjcDate.split(" ")[1]
+                            var weekNumLocal = localList[j].hkjcDate.split(" ")[2]
+                            if(weekLocal==week){
+                                if(weekNum<weekNumLocal){
+                                    console.log(weekNumLocal + ' '+weekNum)
+                                    InsertIdx = j
+                                    break
+                                }
+                            }
+                        } 
+
+                        if(InsertIdx!=-99){
+                            localList.splice(InsertIdx, 0, extraList[i]);
+                        }else{
+                            localList.push(extraList[i])
+                        }
+                    }
+
+                    for(var i=0;i<localList.length;i++){
+                        var weekLocal = localList[i].hkjcDate.split(" ")[1]
+                        var weekNumLocal = localList[i].hkjcDate.split(" ")[2]
+                        console.log(localList[i].hkjcDate)
+                    } 
+                    oldList["matchList"] = localList
+                    fs.writeFileSync("./liveData/hkjcList.json", JSON.stringify(oldList,null,2))
+            }else{
+                var today =  moment().format('DD-MM-YYYY');
+                if (!fs.existsSync("./liveData/"+today+"/")){
+                    fs.mkdirSync("./liveData/"+today+"/");
+                }
+                fs.writeFileSync("./liveData/"+today+"/"+"hkjcList.json", JSON.stringify(oldList,null,2))
+                fs.writeFileSync("./liveData/hkjcList.json", JSON.stringify(crtList,null,2))
+            }
+
+
             client.close();
             chrome.kill();
         } catch (err) {
@@ -86,6 +154,7 @@ class hkjcBetEngine {
         return ""
     }
 
+    
     async buyOdd(betArr,actInfo){
         let client;
         if(betArr.length==0) return
