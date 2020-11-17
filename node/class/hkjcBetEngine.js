@@ -2,35 +2,30 @@ const CDP = require('chrome-remote-interface');
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 const chromeLauncher = require('chrome-launcher');
-
+var fs = require('fs');
+const NameMapping  = JSON.parse(fs.readFileSync("7m2hkjcName.json"))
 class hkjcBetEngine {
 
     constructor() {
     }
 
-    async outputDiffMatchName(m7list){
-        var NameMapping = {
-            "克里科":"古里高聯",
-            "科金博":"哥甘保",
-            "金澤聯隊":"金澤薩維根",
-            "名古屋八鯨":"名古屋鯨魚",
-            "草津溫泉":"群馬草津溫泉",
-            "丹博斯治":"丹保殊",
-            "喜百年":"喜伯年",
-            "雲達拿斯":"聖地牙哥漫遊者",
-            "科布雷索":"科布雷素",
-            "塔勒瑞斯":"泰拿尼斯",
-            "伯拉根森":"巴拉干天奴紅牛",
-            "科爾多瓦中央SDE":"CA科爾多瓦中央"
-        };
-        for(var i=0;i<m7list.length;i++){
-            if(typeof(NameMapping[m7list[i].home])!="undefined"){
-                m7list[i].home = NameMapping[m7list[i].home]
+    updateMatchingName(list){
+      
+        for(var i=0;i<list.length;i++){
+            if(typeof(NameMapping[list[i].home])!="undefined"){
+                list[i].home = NameMapping[list[i].home]
             }
-            if(typeof(NameMapping[m7list[i].away])!="undefined"){
-                m7list[i].away = NameMapping[m7list[i].away]
+            if(typeof(NameMapping[list[i].away])!="undefined"){
+                list[i].away = NameMapping[list[i].away]
             }
         }
+        return list
+    }
+    async outputDiffMatchName(m7list){
+
+        console.log(JSON.stringify(NameMapping))
+
+        m7list = this.updateMatchingName(m7list)
 
         let client;
         if(m7list.length==0) return
@@ -47,24 +42,38 @@ class hkjcBetEngine {
             var dom = await this.loadUrlJSOM(Network, Page,Runtime,'https://bet.hkjc.com/football/odds/odds_hdc.aspx?lang=ch');
             var matchList = dom.window.document.querySelectorAll(".couponRow")
             var isFindMatch = 0
-            
+            var hkjcCrtListArr = []
+            var tgCouIdx = 0
+            var firstMatchTxt = ""
             for (var item of matchList) {
-                var isMatch = false
-                for(var i=0;i<m7list.length;i++){
-                    if(item.id.includes("rmid")){
+                var isMatchIdx = -999
+                if(item.id.includes("rmid")){
+                    for(var i=0;i<m7list.length;i++){
                         var cteams = dom.window.document.querySelector("#"+item.id+" .cteams").textContent;
                         if(cteams.includes(m7list[i].home) && 
-                           cteams.includes(m7list[i].away)){
-                            isMatch = true
+                            cteams.includes(m7list[i].away)){
+                                isMatchIdx = i
+                                m7list[i].matchDate = dom.window.document.querySelector("#"+item.id+" .cesst").textContent
                         }
                     }
                 }
-                if(!isMatch){
-                    console.log(cteams)
+                if(item.id.includes("tgCou")){
+                    if(tgCouIdx == 0){
+                        firstMatchTxt = dom.window.document.querySelector("#"+item.id).textContent;
+                    }
+                    tgCouIdx = tgCouIdx+1
+                }
+                if(isMatchIdx == -999){
+                    if(item.id.includes("rmid")){
+                        console.log(dom.window.document.querySelector("#"+item.id+" .cteams").textContent)
+                    }
+                }else if(tgCouIdx<2){
+                    hkjcCrtListArr.push(m7list[isMatchIdx])
                 }
             }
-
-           
+            
+            //console.table(hkjcCrtListArr)
+            //console.log(firstMatchTxt)
             client.close();
             chrome.kill();
         } catch (err) {
@@ -80,6 +89,9 @@ class hkjcBetEngine {
     async buyOdd(betArr,actInfo){
         let client;
         if(betArr.length==0) return
+        betArr = this.updateMatchingName(betArr)
+
+        
         try {
             
             const launchChrome = () =>
