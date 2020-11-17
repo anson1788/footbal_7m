@@ -98,5 +98,41 @@
     "HomeFScore": "2",
     "AwayFScore": "0",
     "res": "輸"
+  },
+  {
+    "home": "蘇丹",
+    "away": "加納",
+    "id": "1814964",
+    "buyOdd": "受让半球/一球",
+    "up": "0.11",
+    "down": "-0.81",
+    "oddVal": "0.92",
+    "place": "主",
+    "time": "20:56",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "受让半球/一球",
+            "home": "0.92",
+            "away": "0.92"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "1",
+    "AwayFScore": "0",
+    "res": "贏"
+  },
+  {
+    "home": "奧希金斯",
+    "away": "柏利斯天奴",
+    "id": "1950282",
+    "buyOdd": "受让平手/半球",
+    "up": "2.00",
+    "down": "-2.65",
+    "oddVal": "0.80",
+    "place": "主",
+    "time": "21:24"
   }
 ]
