@@ -1,18 +1,8 @@
 [
   {
-    "league": "球會友誼",
-    "time": "21:20",
-    "status": "90+",
-    "home": "斯瓦",
-    "away": "阿斯卡",
-    "HomeFScore": "3",
-    "AwayFScore": "0",
-    "id": "1951636"
-  },
-  {
     "league": "非洲盃",
     "time": "21:30",
-    "status": "81",
+    "status": "90+",
     "home": "埃塞俄比亞",
     "away": "尼日爾",
     "HomeFScore": "3",
@@ -22,17 +12,17 @@
   {
     "league": "智利甲",
     "time": "21:30",
-    "status": "79",
+    "status": "89",
     "home": "奧希金斯",
     "away": "柏利斯天奴",
-    "HomeFScore": "0",
+    "HomeFScore": "1",
     "AwayFScore": "0",
     "id": "1950282"
   },
   {
     "league": "烏拉乙",
     "time": "21:30",
-    "status": "77",
+    "status": "88",
     "home": "賽利托(中)",
     "away": "阿爾比恩",
     "HomeFScore": "2",
@@ -42,7 +32,7 @@
   {
     "league": "欧青U21外",
     "time": "22:00",
-    "status": "53",
+    "status": "63",
     "home": "馬爾他U21",
     "away": "芬蘭U21",
     "HomeFScore": "0",
@@ -52,7 +42,7 @@
   {
     "league": "國際友誼",
     "time": "22:00",
-    "status": "50",
+    "status": "60",
     "home": "烏茲別克(中)",
     "away": "伊拉克",
     "HomeFScore": "1",
@@ -62,7 +52,7 @@
   {
     "league": "沙地甲",
     "time": "22:30",
-    "status": "38",
+    "status": "中",
     "home": "亞達禾",
     "away": "卡赫利塞哈特",
     "HomeFScore": "0",
@@ -72,17 +62,17 @@
   {
     "league": "意五足",
     "time": "22:30",
-    "status": "40",
+    "status": "45+",
     "home": "熱拿亞室內足球隊",
     "away": "卡塔尼亞室內足球隊",
-    "HomeFScore": "2",
+    "HomeFScore": "4",
     "AwayFScore": "1",
     "id": "1949807"
   },
   {
     "league": "葡U23",
     "time": "23:00",
-    "status": "9",
+    "status": "19",
     "home": "科英布拉大學U23",
     "away": "甘馬雷斯U23",
     "HomeFScore": "0",
@@ -92,7 +82,7 @@
   {
     "league": "愛沙U19",
     "time": "23:00",
-    "status": "4",
+    "status": "14",
     "home": "FC雷瓦狄亞U19",
     "away": "塔巴沙盧查瑪U19",
     "HomeFScore": "0",
@@ -102,20 +92,20 @@
   {
     "league": "愛沙U19",
     "time": "23:00",
-    "status": "10",
+    "status": "20",
     "home": "JK諾姆卡盧U19",
     "away": "拉普拉市U19",
-    "HomeFScore": "0",
+    "HomeFScore": "1",
     "AwayFScore": "0",
     "id": "1951645"
   },
   {
     "league": "愛沙U19",
     "time": "23:00",
-    "status": "8",
+    "status": "18",
     "home": "塔林軍團U19",
     "away": "內姆梅區聯U19",
-    "HomeFScore": "0",
+    "HomeFScore": "1",
     "AwayFScore": "0",
     "id": "1951646"
   },
@@ -1788,6 +1778,16 @@
     "HomeFScore": "2",
     "AwayFScore": "1",
     "id": "1945552"
+  },
+  {
+    "league": "球會友誼",
+    "time": "21:20",
+    "status": "完",
+    "home": "斯瓦",
+    "away": "阿斯卡",
+    "HomeFScore": "3",
+    "AwayFScore": "0",
+    "id": "1951636"
   },
   {
     "league": "澳布後備",
