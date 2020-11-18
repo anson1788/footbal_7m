@@ -23,5 +23,130 @@
     "HomeFScore": "1",
     "AwayFScore": "0",
     "res": "輸"
+  },
+  {
+    "home": "波斯尼亞",
+    "away": "意大利",
+    "id": "1858383",
+    "buyOdd": "受让一球/球半",
+    "up": "-1.49",
+    "down": "0.53",
+    "oddVal": "0.68",
+    "place": "客",
+    "time": "03:40",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "受让一球/球半",
+            "home": "0.68",
+            "away": "0.68"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "0",
+    "AwayFScore": "2",
+    "res": "贏"
+  },
+  {
+    "home": "以色列",
+    "away": "蘇格蘭",
+    "id": "1858437",
+    "buyOdd": "平手",
+    "up": "0.26",
+    "down": "-0.86",
+    "oddVal": "1.14",
+    "place": "主",
+    "time": "03:40",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "平手",
+            "home": "1.14",
+            "away": "1.14"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "1",
+    "AwayFScore": "0",
+    "res": "贏"
+  },
+  {
+    "home": "比利時",
+    "away": "丹麥",
+    "id": "1858392",
+    "buyOdd": "半球/一球",
+    "up": "-1.43",
+    "down": "0.71",
+    "oddVal": "0.89",
+    "place": "客",
+    "time": "03:41",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "半球/一球",
+            "home": "0.89",
+            "away": "0.89"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "4",
+    "AwayFScore": "2",
+    "res": "輸"
+  },
+  {
+    "home": "英格蘭",
+    "away": "冰島",
+    "id": "1858393",
+    "buyOdd": "两球/两球半",
+    "up": "0.75",
+    "down": "-1.77",
+    "oddVal": "1.10",
+    "place": "主",
+    "time": "03:41",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "两球/两球半",
+            "home": "1.10",
+            "away": "1.10"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "4",
+    "AwayFScore": "0",
+    "res": "贏"
+  },
+  {
+    "home": "波蘭",
+    "away": "荷蘭",
+    "id": "1858384",
+    "buyOdd": "受让平手/半球",
+    "up": "-0.90",
+    "down": "0.06",
+    "oddVal": "0.86",
+    "place": "客",
+    "time": "03:44",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "受让平手/半球",
+            "home": "0.86",
+            "away": "0.86"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "1",
+    "AwayFScore": "2",
+    "res": "贏"
   }
 ]
