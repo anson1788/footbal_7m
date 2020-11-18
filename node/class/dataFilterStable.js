@@ -48,6 +48,7 @@ class dataFilterStable extends dataFilterSingleLogic{
     var rawdata = fs.readFileSync("oddBook.json");
     let pastList = JSON.parse(rawdata)
     var betArr = []
+    var notMakeSenseArr = []
     var tgLog = ""
     for(var i=0;i<matchList.length;i++){
         var match = matchList[i]
@@ -80,6 +81,13 @@ class dataFilterStable extends dataFilterSingleLogic{
             }
             betArr.push(betData)
         }else{
+          notMakeSenseArr.push(
+            {
+              "home":match["home"],
+              "away":match["away"],
+              "id":match["id"]
+            }
+          )
           tgLog +=  "唔合理\n"
         }
     }
@@ -98,7 +106,7 @@ class dataFilterStable extends dataFilterSingleLogic{
       tgMsg +=  "http://vip.win007.com/AsianOdds_n.aspx?id="+betArr[j].id+ "\n"
     }
 
-    return [betArr,tgMsg,tgLog]
+    return [betArr,tgMsg,tgLog,notMakeSenseArr]
 
   }
 
