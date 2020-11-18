@@ -88,12 +88,12 @@ async function init(defaultRange=50){
 
                     var url = "http://vip.win007.com/OverDown_n.aspx?id="+bfDailyArr[j].id
                     var BSOddData =  await getCacheData(url,"bfData/bsodd/"+matchDate+"/",  bfDailyArr[j].id ,"bfBSOdd")
-                    matchData.BSOddData = BSOddData
+                    //matchData.BSOddData = BSOddData
                     
                    
                     var url = "http://zq.win007.com/analysis/"+bfDailyArr[j].id+".htm"
                     var history =  await getCacheData(url,"bfData/history/"+matchDate+"/",  bfDailyArr[j].id ,"bfHistory")
-                    matchData.history = history
+                    //matchData.history = history
                   
                     //targetMatch.push(matchData)
                     
