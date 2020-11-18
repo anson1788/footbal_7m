@@ -141,6 +141,7 @@ class hkjcBetEngine {
                 fs.writeFileSync("./liveData/hkjcList.json", JSON.stringify(crtList,null,2))
             }
 
+            console.table(JSON.parse(fs.readFileSync("./liveData/hkjcList.json")))
 
             client.close();
             chrome.kill();
