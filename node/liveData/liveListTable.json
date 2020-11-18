@@ -1,18 +1,8 @@
 [
   {
-    "league": "英女盃",
-    "time": "03:30",
-    "status": "點",
-    "home": "阿仙奴女足",
-    "away": "熱刺女足",
-    "HomeFScore": "2",
-    "AwayFScore": "2",
-    "id": "1936596"
-  },
-  {
     "league": "智利甲",
     "time": "04:00",
-    "status": "78",
+    "status": "88",
     "home": "科布雷索",
     "away": "塞雷那",
     "HomeFScore": "1",
@@ -22,27 +12,27 @@
   {
     "league": "哥倫盃",
     "time": "04:00",
-    "status": "81",
+    "status": "90+",
     "home": "奎迪奧",
     "away": "卡利",
     "HomeFScore": "1",
-    "AwayFScore": "0",
+    "AwayFScore": "1",
     "id": "1950398"
   },
   {
     "league": "巴聖盃",
     "time": "04:00",
-    "status": "83",
+    "status": "90+",
     "home": "維羅體育隊SP",
     "away": "商業足球會",
-    "HomeFScore": "1",
+    "HomeFScore": "2",
     "AwayFScore": "1",
     "id": "1948068"
   },
   {
     "league": "巴聖盃",
     "time": "04:00",
-    "status": "81",
+    "status": "90+",
     "home": "國際里梅拉",
     "away": "皮拉西卡巴",
     "HomeFScore": "1",
@@ -50,19 +40,9 @@
     "id": "1948082"
   },
   {
-    "league": "北愛女超",
-    "time": "04:00",
-    "status": "83",
-    "home": "克里夫頓維爾女足",
-    "away": "十字軍前鋒女足",
-    "HomeFScore": "0",
-    "AwayFScore": "4",
-    "id": "1951813"
-  },
-  {
     "league": "智利丙",
     "time": "04:00",
-    "status": "75",
+    "status": "85",
     "home": "伊比利亞洛杉磯",
     "away": "AC科林納",
     "HomeFScore": "0",
@@ -72,7 +52,7 @@
   {
     "league": "危地乙",
     "time": "04:00",
-    "status": "79",
+    "status": "89",
     "home": "钮瓦康賽普森吉姆",
     "away": "蘇奇特佩基",
     "HomeFScore": "2",
@@ -82,7 +62,7 @@
   {
     "league": "巴馬甲",
     "time": "04:00",
-    "status": "80",
+    "status": "90",
     "home": "CA獨立隊",
     "away": "CD尤尼維爾斯塔裏奧",
     "HomeFScore": "3",
@@ -92,7 +72,7 @@
   {
     "league": "巴馬甲",
     "time": "04:00",
-    "status": "80",
+    "status": "90",
     "home": "CD阿拉比",
     "away": "馬德裏競技奇裏基",
     "HomeFScore": "0",
@@ -102,7 +82,7 @@
   {
     "league": "哥倫盃",
     "time": "04:30",
-    "status": "49",
+    "status": "58",
     "home": "恩維加多",
     "away": "青年體育會",
     "HomeFScore": "2",
@@ -112,7 +92,7 @@
   {
     "league": "秘魯乙",
     "time": "04:30",
-    "status": "52",
+    "status": "62",
     "home": "開普敦山度士",
     "away": "哥梅里卡奧",
     "HomeFScore": "2",
@@ -122,7 +102,7 @@
   {
     "league": "委內超A",
     "time": "05:00",
-    "status": "40",
+    "status": "中",
     "home": "拉羅競技(中)",
     "away": "委內瑞拉競技",
     "HomeFScore": "1",
@@ -132,17 +112,17 @@
   {
     "league": "墨西丙",
     "time": "05:00",
-    "status": "34",
+    "status": "44",
     "home": "CD奧特拉",
     "away": "伊拉波圖",
     "HomeFScore": "0",
-    "AwayFScore": "0",
+    "AwayFScore": "1",
     "id": "1951885"
   },
   {
     "league": "危地乙",
     "time": "05:00",
-    "status": "35",
+    "status": "45",
     "home": "奎赫FC",
     "away": "馬昆森",
     "HomeFScore": "0",
@@ -152,7 +132,7 @@
   {
     "league": "危地乙",
     "time": "05:00",
-    "status": "35",
+    "status": "中",
     "home": "聖佩德羅體育",
     "away": "普拉塔諾洛斯布蘭卡",
     "HomeFScore": "4",
@@ -162,7 +142,7 @@
   {
     "league": "危地乙",
     "time": "05:00",
-    "status": "41",
+    "status": "中",
     "home": "佩特帕",
     "away": "齊奧內斯交流會B隊",
     "HomeFScore": "1",
@@ -172,17 +152,17 @@
   {
     "league": "巴馬甲",
     "time": "05:00",
-    "status": "37",
+    "status": "中",
     "home": "聖米格利托體育",
     "away": "FC舊金山",
     "HomeFScore": "0",
-    "AwayFScore": "0",
+    "AwayFScore": "1",
     "id": "1951899"
   },
   {
     "league": "危地甲春",
     "time": "05:10",
-    "status": "27",
+    "status": "37",
     "home": "瓜斯塔托亞",
     "away": "夏拉祖",
     "HomeFScore": "2",
@@ -192,11 +172,11 @@
   {
     "league": "厄瓜甲秋",
     "time": "05:45",
-    "status": "",
+    "status": "4",
     "home": "特尼高大學",
     "away": "馬卡拉",
-    "HomeFScore": "",
-    "AwayFScore": "",
+    "HomeFScore": "0",
+    "AwayFScore": "0",
     "id": "1934072"
   },
   {
@@ -3053,6 +3033,16 @@
     "league": "英女盃",
     "time": "03:30",
     "status": "完",
+    "home": "阿仙奴女足",
+    "away": "熱刺女足",
+    "HomeFScore": "2",
+    "AwayFScore": "2",
+    "id": "1936596"
+  },
+  {
+    "league": "英女盃",
+    "time": "03:30",
+    "status": "完",
     "home": "白禮頓女足",
     "away": "雷丁女足",
     "HomeFScore": "0",
@@ -3218,6 +3208,16 @@
     "HomeFScore": "1",
     "AwayFScore": "3",
     "id": "1936617"
+  },
+  {
+    "league": "北愛女超",
+    "time": "04:00",
+    "status": "完",
+    "home": "克里夫頓維爾女足",
+    "away": "十字軍前鋒女足",
+    "HomeFScore": "0",
+    "AwayFScore": "7",
+    "id": "1951813"
   },
   {
     "league": "羅乙",
