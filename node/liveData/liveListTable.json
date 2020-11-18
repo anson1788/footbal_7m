@@ -2,11 +2,11 @@
   {
     "league": "所羅島聯",
     "time": "13:00",
-    "status": "63",
+    "status": "73",
     "home": "馬里斯特",
     "away": "所羅門勇士",
-    "HomeFScore": "0",
-    "AwayFScore": "3",
+    "HomeFScore": "1",
+    "AwayFScore": "4",
     "id": "1951792"
   },
   {
@@ -1138,6 +1138,16 @@
     "HomeFScore": "",
     "AwayFScore": "",
     "id": "1951829"
+  },
+  {
+    "league": "巴聖青聯",
+    "time": "20:30",
+    "status": "",
+    "home": "卡賓斯U20",
+    "away": "聖十字青年隊",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1951940"
   },
   {
     "league": "西丙4",
