@@ -755,13 +755,15 @@ class dataFilter extends dataCommonClass{
         var crtOdd = match["OddData"][0]
         var tmp = {}
         for(var broker in crtOdd){
-            var tmpList = this.singleOddSimilarOddList(broker,match,dataList)
-            
-            var calculatorUp = this.calculateSingleResultAsianOdd(tmpList,broker)
-            var calculatorDown = this.calculateSingleResultAsianOdd(tmpList,broker,"客")
-            tmp[broker] = {
-                                "上":calculatorUp,
-                                "下":calculatorDown
+            if(broker=="香港马会"){
+                var tmpList = this.singleOddSimilarOddList(broker,match,dataList)
+                
+                var calculatorUp = this.calculateSingleResultAsianOdd(tmpList,broker)
+                var calculatorDown = this.calculateSingleResultAsianOdd(tmpList,broker,"客")
+                tmp[broker] = {
+                                    "上":calculatorUp,
+                                    "下":calculatorDown
+                }
             }
         }   
 
