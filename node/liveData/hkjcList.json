@@ -14,6 +14,18 @@
       "hkjcDate": " 星期三 1 "
     },
     {
+      "league": "亞冠盃",
+      "time": "18:00",
+      "status": "",
+      "home": "珀斯光輝",
+      "away": "FC上海",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1840866",
+      "matchDate": "18/11 18:00",
+      "hkjcDate": " 星期三 2 "
+    },
+    {
       "league": "日職聯",
       "time": "18:00",
       "status": "",
@@ -38,6 +50,18 @@
       "hkjcDate": " 星期三 4 "
     },
     {
+      "league": "智利甲",
+      "time": "21:30",
+      "status": "",
+      "home": "古里高聯",
+      "away": "康塞普森大學",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1950283",
+      "matchDate": "18/11 21:30",
+      "hkjcDate": " 星期三 5 "
+    },
+    {
       "league": "歐國聯",
       "time": "23:00",
       "status": "",
@@ -48,6 +72,18 @@
       "id": "1858508",
       "matchDate": "18/11 23:00",
       "hkjcDate": " 星期三 6 "
+    },
+    {
+      "league": "歐國聯",
+      "time": "01:00",
+      "status": "",
+      "home": "阿美尼亞",
+      "away": "北馬其頓",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1858484",
+      "matchDate": "19/11 01:00",
+      "hkjcDate": " 星期三 9 "
     },
     {
       "league": "歐國聯",
@@ -120,6 +156,18 @@
       "id": "1858437",
       "matchDate": "19/11 03:45",
       "hkjcDate": " 星期三 20 "
+    },
+    {
+      "league": "巴西甲",
+      "time": "06:00",
+      "status": "",
+      "home": "明尼路",
+      "away": "帕拉尼恩斯",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1858636",
+      "matchDate": "19/11 06:00",
+      "hkjcDate": " 星期三 28 "
     },
     {
       "league": "智利甲",

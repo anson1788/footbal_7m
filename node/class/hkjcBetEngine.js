@@ -11,12 +11,15 @@ class hkjcBetEngine {
     }
 
     updateMatchingName(list){
-      
+        
         for(var i=0;i<list.length;i++){
+            list[i].home =  list[i].home.replace("(中)","")
+            list[i].away =  list[i].away.replace("(中)","")
+            
             if(typeof(NameMapping[list[i].home])!="undefined"){
                 list[i].home = NameMapping[list[i].home]
             }
-            if(typeof(NameMapping[list[i].away])!="undefined"){
+            if(typeof(NameMapping[list[i].away.replace("(中)","")])!="undefined"){
                 list[i].away = NameMapping[list[i].away]
             }
         }
@@ -67,7 +70,7 @@ class hkjcBetEngine {
                 }
                 if(isMatchIdx == -999){
                     if(item.id.includes("rmid")){
-                        console.log(dom.window.document.querySelector("#"+item.id+" .cteams").textContent)
+                        console.log(dom.window.document.querySelector("#"+item.id+" .cteams").textContent + " "+  dom.window.document.querySelector("#"+item.id+" .cday").textContent)
                     }
                 }else if(tgCouIdx<2){
                     hkjcCrtListArr.push(m7list[isMatchIdx])
@@ -104,13 +107,13 @@ class hkjcBetEngine {
                     for(var i=0;i<extraList.length;i++){
                         var week = extraList[i].hkjcDate.split(" ")[1]
                         var weekNum = extraList[i].hkjcDate.split(" ")[2]
-                        console.log(extraList[i].hkjcDate.split(" "))
+                       // console.log(extraList[i].hkjcDate.split(" "))
                         var InsertIdx = -99
                         for(var j=0;j<localList.length;j++){
                             var weekLocal = localList[j].hkjcDate.split(" ")[1]
                             var weekNumLocal = localList[j].hkjcDate.split(" ")[2]
                             if(weekLocal==week){
-                                if(weekNum<weekNumLocal){
+                                if(parseFloat(weekNum)<parseFloat(weekNumLocal)){
                                     console.log(weekNumLocal + ' '+weekNum)
                                     InsertIdx = j
                                     break
@@ -128,7 +131,7 @@ class hkjcBetEngine {
                     for(var i=0;i<localList.length;i++){
                         var weekLocal = localList[i].hkjcDate.split(" ")[1]
                         var weekNumLocal = localList[i].hkjcDate.split(" ")[2]
-                        console.log(localList[i].hkjcDate)
+                       // console.log(localList[i].hkjcDate)
                     } 
                     oldList["matchList"] = localList
                     fs.writeFileSync("./liveData/hkjcList.json", JSON.stringify(oldList,null,2))
@@ -140,8 +143,8 @@ class hkjcBetEngine {
                 fs.writeFileSync("./liveData/"+today+"/"+"hkjcList.json", JSON.stringify(oldList,null,2))
                 fs.writeFileSync("./liveData/hkjcList.json", JSON.stringify(crtList,null,2))
             }
-
-            console.table(JSON.parse(fs.readFileSync("./liveData/hkjcList.json")))
+            console.log(JSON.parse(fs.readFileSync("./liveData/hkjcList.json"))["matchDate"] )
+            console.table(JSON.parse(fs.readFileSync("./liveData/hkjcList.json"))["matchList"] )
 
             client.close();
             chrome.kill();
