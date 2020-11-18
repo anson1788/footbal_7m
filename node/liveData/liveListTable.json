@@ -2,17 +2,17 @@
   {
     "league": "中乙A",
     "time": "15:00",
-    "status": "20",
+    "status": "40",
     "home": "山西龍晉華艦(中)",
     "away": "中國U19",
     "HomeFScore": "0",
-    "AwayFScore": "1",
+    "AwayFScore": "2",
     "id": "1943552"
   },
   {
     "league": "中乙A",
     "time": "15:00",
-    "status": "20",
+    "status": "40",
     "home": "西安優柯多(中)",
     "away": "湖南湘濤",
     "HomeFScore": "0",
@@ -22,7 +22,7 @@
   {
     "league": "中乙A",
     "time": "15:00",
-    "status": "20",
+    "status": "40",
     "home": "淄博星期天(中)",
     "away": "上海嘉定城發搏擊",
     "HomeFScore": "1",
@@ -32,11 +32,11 @@
   {
     "league": "中甲保",
     "time": "15:30",
-    "status": "",
+    "status": "9",
     "home": "江西聯盛(中)",
     "away": "北京人和",
-    "HomeFScore": "-",
-    "AwayFScore": "-",
+    "HomeFScore": "0",
+    "AwayFScore": "0",
     "id": "1950271"
   },
   {
