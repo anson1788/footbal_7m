@@ -5,6 +5,7 @@ const chromeLauncher = require('chrome-launcher');
 var fs = require('fs');
 var moment  = require('moment');
 const NameMapping  = JSON.parse(fs.readFileSync("7m2hkjcName.json"))
+var request = require('sync-request');
 class hkjcBetEngine {
 
     constructor() {
@@ -259,11 +260,13 @@ class hkjcBetEngine {
             console.log('document.getElementById("inputAmount'+i+'").value = '+oddBet)
         }
     
-        console.log(balance.result.value.replace("結餘: $ ",""))
+
+        var money = parseFloat(balance.result.value.replace("結餘: $ ",""))
+        console.log("balance :" + money)
 
 
         await this.runExpressionNoReturn(Runtime,'OnClickPreview();')
-        if(!actInfo.betDebug){
+        if(!actInfo.betDebug && money<9100){
           
             await this.runExpressionNoReturn(Runtime,'OnClickConfirmBet();')
         }
@@ -369,7 +372,8 @@ class hkjcBetEngine {
         }
 
         var onfootballRealTime = [];
-        onfootballRealTime = this.getONFootballList(onfootballRealTime)
+   
+        console.table(onfootballRealTime)
         JSON.stringify(onfootballRealTime)
         for(var i =0;i<betList.length;i++){
             var dateStr = betList[i].matchDate 
@@ -388,7 +392,12 @@ class hkjcBetEngine {
             console.log(diff + " --  "+ date + " "+ time)
             if(diff<0 && typeof(betList[i]["isEnd"])!="undefined"){
                 if(Math.abs(diff)>79 && Math.abs(diff)<130){
-
+                    onfootballRealTime = await this.getONFootballList(onfootballRealTime)
+                    for(var j=0;j<onfootballRealTime.length;j++){
+                        if(onfootballRealTime[j].MatchStatus!="90完"){
+                            
+                        }
+                    }
                 }
             }
         }
@@ -397,10 +406,12 @@ class hkjcBetEngine {
 
     async getONFootballList(onfootballRealTime){
         if(onfootballRealTime.length == 0){
-            var res = request('GET', 'https://football.on.cc/cnt/result/result/current/js/score_UTF8.js');
+            var url = 'https://football.on.cc/cnt/result/result/current/js/score_UTF8.js?'+Date.now()
+            console.log(url)
+            var res = request('GET', url);
             var dataInStr = "{\"arr\":"+res.getBody('utf8').replace(/\s+/g, ' ').trim()+"}"
             let matchResult= JSON.parse(dataInStr)
-            onfootballRealTime = matchResult
+            onfootballRealTime = matchResult.arr[0].Matches
         }
         return onfootballRealTime
     }
