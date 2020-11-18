@@ -8,7 +8,21 @@
     "down": "-0.96",
     "oddVal": "0.74",
     "place": "主",
-    "time": "03:40"
+    "time": "03:40",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "受让半球/一球",
+            "home": "0.74",
+            "away": "0.74"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "2",
+    "AwayFScore": "3",
+    "res": "輸半"
   },
   {
     "home": "西班牙",
@@ -19,7 +33,21 @@
     "down": "-0.82",
     "oddVal": "1.02",
     "place": "主",
-    "time": "03:40"
+    "time": "03:40",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "平手/半球",
+            "home": "1.02",
+            "away": "1.02"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "6",
+    "AwayFScore": "0",
+    "res": "贏"
   },
   {
     "home": "法國",
@@ -30,6 +58,70 @@
     "down": "-3.15",
     "oddVal": "0.70",
     "place": "主",
-    "time": "03:45"
+    "time": "03:45",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "半球/一球",
+            "home": "0.70",
+            "away": "0.70"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "4",
+    "AwayFScore": "2",
+    "res": "贏"
+  },
+  {
+    "home": "烏拉圭",
+    "away": "巴西",
+    "id": "1936412",
+    "buyOdd": "受让半球/一球",
+    "up": "-5.00",
+    "down": "5.55",
+    "oddVal": "1.23",
+    "place": "客",
+    "time": "06:56",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "受让半球/一球",
+            "home": "1.23",
+            "away": "1.23"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "0",
+    "AwayFScore": "2",
+    "res": "贏"
+  },
+  {
+    "home": "秘魯",
+    "away": "阿根廷",
+    "id": "1936413",
+    "buyOdd": "受让半球/一球",
+    "up": "-1.13",
+    "down": "0.44",
+    "oddVal": "0.74",
+    "place": "客",
+    "time": "08:24",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "受让半球/一球",
+            "home": "0.74",
+            "away": "0.74"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "0",
+    "AwayFScore": "2",
+    "res": "贏"
   }
 ]
