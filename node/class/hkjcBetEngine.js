@@ -343,6 +343,67 @@ class hkjcBetEngine {
         });
     }
 
+    async calculateAccumulatedOdd(betArr, noMatchArr){
+        //if(betArr.length==0 && noMatchArr.length ==0) return [betArr,noMatchArr]
+        var hkjcDailySch = JSON.parse(fs.readFileSync("./liveData/hkjcList.json"))
+        var betList = hkjcDailySch["matchList"]
+
+        for(var j=0;j<betArr.length;j++){
+            for(var i =0;i<betList.length;i++){
+                if(betArr[j].id == betList[i].id){
+                    betList[i]["buyOdd"] = betArr[j]["buyOdd"]
+                    betList[i]["place"] = betArr[j]["place"]
+                    betList[i]["oddVal"] = betArr[j]["oddVal"]
+                    betList[i]["sumVal"] = -1
+                }
+            }
+        }
+
+
+        for(var j=0;j<noMatchArr.length;j++){
+            for(var i =0;i<betList.length;i++){
+                if(noMatchArr[j].id == betList[i].id){
+                    betList[i]["sumVal"] = 0
+                }
+            }
+        }
+
+        var onfootballRealTime = [];
+        onfootballRealTime = this.getONFootballList(onfootballRealTime)
+        JSON.stringify(onfootballRealTime)
+        for(var i =0;i<betList.length;i++){
+            var dateStr = betList[i].matchDate 
+            var date = dateStr.split(" ")[0]
+            var time = dateStr.split(" ")[1]
+
+            let d3 = moment({ 
+                year :moment().year(), 
+                month : (parseFloat(date.split("/")[1]) -1), 
+                day :parseFloat(date.split("/")[0]), 
+                hour :parseFloat(time.split(":")[0]), 
+                minute:parseFloat(time.split(":")[1])
+                });
+            betList[i].momentDate = d3
+            var diff = d3.diff(moment(),"minutes")
+            console.log(diff + " --  "+ date + " "+ time)
+            if(diff<0 && typeof(betList[i]["isEnd"])!="undefined"){
+                if(Math.abs(diff)>79 && Math.abs(diff)<130){
+
+                }
+            }
+        }
+        return [[],[]]
+    }
+
+    async getONFootballList(onfootballRealTime){
+        if(onfootballRealTime.length == 0){
+            var res = request('GET', 'https://football.on.cc/cnt/result/result/current/js/score_UTF8.js');
+            var dataInStr = "{\"arr\":"+res.getBody('utf8').replace(/\s+/g, ' ').trim()+"}"
+            let matchResult= JSON.parse(dataInStr)
+            onfootballRealTime = matchResult
+        }
+        return onfootballRealTime
+    }
 
 }
 module.exports = hkjcBetEngine
