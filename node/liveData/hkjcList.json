@@ -2,6 +2,18 @@
   "matchDate": "周四賽事",
   "matchList": [
     {
+      "league": "亞冠盃",
+      "time": "18:00",
+      "status": "",
+      "home": "FC悉尼",
+      "away": "上海SP",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1840890",
+      "matchDate": "19/11 18:00",
+      "hkjcDate": " 星期四 1 "
+    },
+    {
       "league": "智利甲",
       "time": "21:30",
       "status": "",
@@ -60,6 +72,18 @@
       "id": "1950289",
       "matchDate": "20/11 05:30",
       "hkjcDate": " 星期四 6 "
+    },
+    {
+      "league": "巴西甲",
+      "time": "06:00",
+      "status": "",
+      "home": "華斯高",
+      "away": "福塔雷薩",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1858732",
+      "matchDate": "20/11 06:00",
+      "hkjcDate": " 星期四 7 "
     },
     {
       "league": "智利甲",
