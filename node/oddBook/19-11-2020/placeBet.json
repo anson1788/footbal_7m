@@ -148,5 +148,55 @@
     "HomeFScore": "1",
     "AwayFScore": "2",
     "res": "贏"
+  },
+  {
+    "home": "卡拉雷聯",
+    "away": "智利大學",
+    "id": "1950285",
+    "buyOdd": "平手/半球",
+    "up": "-1.58",
+    "down": "1.08",
+    "oddVal": "1.07",
+    "place": "客",
+    "time": "06:12",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "平手/半球",
+            "home": "1.07",
+            "away": "1.07"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "1",
+    "AwayFScore": "0",
+    "res": "輸"
+  },
+  {
+    "home": "阿美利加明尼路",
+    "away": "國際體育會",
+    "id": "1949835",
+    "buyOdd": "受让平手/半球",
+    "up": "-0.68",
+    "down": "0.03",
+    "oddVal": "1.02",
+    "place": "客",
+    "time": "08:24",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "受让平手/半球",
+            "home": "1.02",
+            "away": "1.02"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "0",
+    "AwayFScore": "1",
+    "res": "贏"
   }
 ]
