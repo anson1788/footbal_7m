@@ -264,7 +264,7 @@ class hkjcBetEngine {
         }
     
 
-        var money = parseFloat(balance.result.value.replace("結餘: $ ",""))
+        var money = balance.result.value.replace("結餘: $ ","")
         console.log("balance :" + money)
 
 
@@ -275,7 +275,7 @@ class hkjcBetEngine {
         }
        
         var v = await this.runExpression(Runtime,'document.getElementsByClassName("previewTableCell4")[0].innerHTML')
-        console.log(v.result.value)        
+        //console.log(v.result.value)        
         return balance.result.value.replace("結餘: $ ","");
     }
 
