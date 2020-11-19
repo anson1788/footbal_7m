@@ -372,9 +372,8 @@ class hkjcBetEngine {
         }
 
         var onfootballRealTime = [];
-   
-        console.table(onfootballRealTime)
-        JSON.stringify(onfootballRealTime)
+        onfootballRealTime = await this.getONFootballList(onfootballRealTime)
+        console.log(JSON.stringify(onfootballRealTime))
         for(var i =0;i<betList.length;i++){
             var dateStr = betList[i].matchDate 
             var date = dateStr.split(" ")[0]
@@ -390,14 +389,27 @@ class hkjcBetEngine {
             betList[i].momentDate = d3
             var diff = d3.diff(moment(),"minutes")
             console.log(diff + " --  "+ date + " "+ time)
-            if(diff<0 && typeof(betList[i]["isEnd"])!="undefined"){
-                if(Math.abs(diff)>79 && Math.abs(diff)<130){
-                    onfootballRealTime = await this.getONFootballList(onfootballRealTime)
-                    for(var j=0;j<onfootballRealTime.length;j++){
-                        if(onfootballRealTime[j].MatchStatus!="90完"){
-                            
+
+
+            for(var j=0;j<onfootballRealTime.length;j++){
+               if(betList[i].hkjcDate.includes(onfootballRealTime[j].DayOfWeek)){
+                    if(onfootballRealTime[j].MatchNum == betList[i].hkjcDate.split(" ")[2]){
+                        console.log(onfootballRealTime[j].MatchStatus)
+                        if(onfootballRealTime[j].MatchStatus=="90完"){
+                            betList[i]["isEnd"] = 'y'
+                            betList[i]["HomeFScore"] = onfootballRealTime[j].HomeFullScore
+                            betList[i]["AwayFScore"] = onfootballRealTime[j].AwayFullScore
                         }
                     }
+               }
+                /*
+                if(onfootballRealTime[j].MatchStatus!="90完"){
+                    betList[i]["isEnd"] = 'y'
+                }*/
+            }
+            if(diff<0 && typeof(betList[i]["isEnd"])!="undefined"){
+                if(Math.abs(diff)>79 && Math.abs(diff)<130){
+                    
                 }
             }
         }
@@ -405,12 +417,14 @@ class hkjcBetEngine {
     }
 
     async getONFootballList(onfootballRealTime){
+        
         if(onfootballRealTime.length == 0){
             var url = 'https://football.on.cc/cnt/result/result/current/js/score_UTF8.js?'+Date.now()
             console.log(url)
             var res = request('GET', url);
             var dataInStr = "{\"arr\":"+res.getBody('utf8').replace(/\s+/g, ' ').trim()+"}"
             let matchResult= JSON.parse(dataInStr)
+            
             onfootballRealTime = matchResult.arr[0].Matches
         }
         return onfootballRealTime

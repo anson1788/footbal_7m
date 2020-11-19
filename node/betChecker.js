@@ -69,16 +69,17 @@ async function init(){
        var betArr = calculatedResult[3];
        var noMatchArr = calculatedResult[4];
 
-       /*
+        
+        /*
        var finalPlaceBetArr = await hkjcBE.calculateAccumulatedOdd(betArr,noMatchArr)
        var newBetArr = finalPlaceBetArr[0]
        var newNoMatchArr = finalPlaceBetArr[1]
         */
-       /*
+       
        await hkjcBE.buyOdd(
             betArr,
             acct
-       )*/
+       )
        process.exit()
     //}
 }
