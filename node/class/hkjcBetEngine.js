@@ -6,6 +6,9 @@ var fs = require('fs');
 var moment  = require('moment');
 const NameMapping  = JSON.parse(fs.readFileSync("7m2hkjcName.json"))
 var request = require('sync-request');
+let filterUtils = require('./dataFilterStable.js');
+let ftUtils = new filterUtils()
+
 class hkjcBetEngine {
 
     constructor() {
@@ -240,17 +243,17 @@ class hkjcBetEngine {
         var balance = await this.runExpression(Runtime,'document.getElementById("valueAccBal").innerHTML')
         for(var i=0;i<mathcNum;i++){
 
-            var oddBet = "600"
+            var oddBet = "800"
          
             for(var j=0;j<betArr.length;j++){
                 if(typeof(betArr[j].clickIdx)!="undefined"){
                     console.log(betArr[j].clickIdx)
                     if(betArr[j].clickIdx==i){
                         if(parseFloat(betArr[j].oddVal)<0.8){
-                            oddBet = "500"
+                            oddBet = "700"
                         }
                         if(parseFloat(betArr[j].oddVal)>1){
-                            oddBet = "700"
+                            oddBet = "900"
                         }
                     }
                 }
@@ -266,7 +269,7 @@ class hkjcBetEngine {
 
 
         await this.runExpressionNoReturn(Runtime,'OnClickPreview();')
-        if(!actInfo.betDebug && money<9100){
+        if(!actInfo.betDebug ){
           
             await this.runExpressionNoReturn(Runtime,'OnClickConfirmBet();')
         }
@@ -399,6 +402,8 @@ class hkjcBetEngine {
                             betList[i]["isEnd"] = 'y'
                             betList[i]["HomeFScore"] = onfootballRealTime[j].HomeFullScore
                             betList[i]["AwayFScore"] = onfootballRealTime[j].AwayFullScore
+                       
+                       
                         }
                     }
                }
