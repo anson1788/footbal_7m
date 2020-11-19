@@ -70,11 +70,12 @@ async function init(){
        var noMatchArr = calculatedResult[4];
 
         
-        /*
+     
+       /*
        var finalPlaceBetArr = await hkjcBE.calculateAccumulatedOdd(betArr,noMatchArr)
        var newBetArr = finalPlaceBetArr[0]
        var newNoMatchArr = finalPlaceBetArr[1]
-        */
+      */
        
        await hkjcBE.buyOdd(
             betArr,

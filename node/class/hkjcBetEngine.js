@@ -402,8 +402,13 @@ class hkjcBetEngine {
                             betList[i]["isEnd"] = 'y'
                             betList[i]["HomeFScore"] = onfootballRealTime[j].HomeFullScore
                             betList[i]["AwayFScore"] = onfootballRealTime[j].AwayFullScore
-                       
-                       
+                            if(typeof(betList[i]["buyOdd"])!="undefined"){
+                                betList[i] = this.tiggerMatchChecking(betList[i])
+                            }
+                        }else if(onfootballRealTime[j].MatchStatus.includes("分鐘")){
+                            var min = onfootballRealTime[j].MatchStatus.replace("分鐘","")
+                            min = parseFloat(min)
+                            
                         }
                     }
                }
@@ -419,6 +424,23 @@ class hkjcBetEngine {
             }
         }
         return [[],[]]
+    }
+
+    tiggerMatchChecking(match){
+        match.OddData = [
+            {
+              "hkjc":{
+                "end":{
+                   "point": match["buyOdd"]
+                }
+              }
+            }
+          ]
+          match.OddData[0]["hkjc"]["end"]["home"] = match["oddVal"]
+          match.OddData[0]["hkjc"]["end"]["away"] = match["oddVal"]
+          var result = ftUtils.calculateSingleResultAsianOdd([match],"hkjc",match["place"])
+          match.res = result[0][0].res
+          return match
     }
 
     async getONFootballList(onfootballRealTime){
