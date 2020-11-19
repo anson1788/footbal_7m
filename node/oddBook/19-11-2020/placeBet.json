@@ -208,6 +208,45 @@
     "down": "1.10",
     "oddVal": "1.02",
     "place": "客",
-    "time": "17:56"
+    "time": "17:56",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "受让半球/一球",
+            "home": "1.02",
+            "away": "1.02"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "1",
+    "AwayFScore": "2",
+    "res": "贏半"
+  },
+  {
+    "home": "安圖法加斯達",
+    "away": "維拿迪馬愛華頓",
+    "id": "1950287",
+    "buyOdd": "平手",
+    "up": "-1.43",
+    "down": "0.68",
+    "oddVal": "0.74",
+    "place": "客",
+    "time": "21:24",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "平手",
+            "home": "0.74",
+            "away": "0.74"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "1",
+    "AwayFScore": "1",
+    "res": "走"
   }
 ]
