@@ -422,6 +422,7 @@ class hkjcBetEngine {
                                 typeof(tmpMatchArr[i]["buyOdd"])!="undefined"){
                             var min = onfootballRealTime[j].MatchStatus.replace("分鐘","")
                             betList[i].matchLiveMin = ""+min
+                            tmpMatchArr[i].matchLiveMin = ""+min
                             if(min>0){
                                 tmpMatchArr[i]["HomeFScore"] = onfootballRealTime[j].HomeFullScore
                                 tmpMatchArr[i]["AwayFScore"] = onfootballRealTime[j].AwayFullScore

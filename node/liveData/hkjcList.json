@@ -12,17 +12,13 @@
       "down": "0.15",
       "oddVal": "0.66",
       "place": "客",
-      "HomeFScore": "0",
+      "HomeFScore": "1",
       "AwayFScore": "1",
       "id": "1884797",
       "matchDate": "21/11 01:45",
       "hkjcDate": " 星期五 2 ",
-<<<<<<< HEAD
-      "momentDate": "2020-11-20T17:45:00.000Z"
-=======
       "momentDate": "2020-11-20T17:45:00.000Z",
-      "matchLiveMin": "62"
->>>>>>> b53ca7c53837674a2a4cef4241351402feba8941
+      "matchLiveMin": "82"
     },
     {
       "league": "法甲",
