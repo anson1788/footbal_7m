@@ -420,11 +420,16 @@ class hkjcBetEngine {
                             }
                         }
                         else if(onfootballRealTime[j].MatchStatus.includes("分鐘") && 
-                                typeof(tmpMatchArr[i]["buyOdd"])!="undefined" || onfootballRealTime[j].MatchStatus.includes("90+")){
+                                typeof(tmpMatchArr[i]["buyOdd"])!="undefined" || 
+                                onfootballRealTime[j].MatchStatus.includes("90+")||
+                                onfootballRealTime[j].MatchStatus.includes("中場")){
                             var min = onfootballRealTime[j].MatchStatus.replace("分鐘","")
                             min = min.replace("+","")
                             betList[i].matchLiveMin = ""+min
                             tmpMatchArr[i].matchLiveMin = ""+min
+                            if(min=="中場"){
+                                min = "45"
+                            }
                             if(min>0){
                                 console.log("here")
                                 tmpMatchArr[i]["HomeFScore"] = onfootballRealTime[j].HomeFullScore
