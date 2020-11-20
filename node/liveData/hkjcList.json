@@ -18,7 +18,21 @@
       "matchDate": "21/11 01:45",
       "hkjcDate": " 星期五 2 ",
       "momentDate": "2020-11-20T17:45:00.000Z",
-      "matchLiveMin": "89"
+      "matchLiveMin": "90",
+      "isEnd": "y",
+      "OddData": [
+        {
+          "hkjc": {
+            "end": {
+              "point": "平手/半球",
+              "home": "1.02",
+              "away": "1.02"
+            }
+          }
+        }
+      ],
+      "res": "贏半",
+      "sumVal": 0.5
     },
     {
       "league": "法甲",
