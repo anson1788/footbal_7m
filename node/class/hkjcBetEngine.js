@@ -456,7 +456,7 @@ class hkjcBetEngine {
     shouldPlaceBet(betList,config){
         var sumVar = 0
         for(var i=0;i<betList.length;i++){
-            if(typeof(betList[i]["sumVal"])!="undefined" && betList[i]["matchLiveMin"]>75){
+            if(typeof(betList[i]["sumVal"])!="undefined" ){
                 sumVar +=betList[i]["sumVal"]
             }
         }

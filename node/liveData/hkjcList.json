@@ -55,8 +55,8 @@
       "status": "",
       "home": "高雲地利",
       "away": "伯明翰",
-      "HomeFScore": "",
-      "AwayFScore": "",
+      "HomeFScore": "0",
+      "AwayFScore": "0",
       "buyOdd": "平手",
       "up": "-2.14",
       "down": "1.47",
@@ -66,7 +66,7 @@
       "matchDate": "21/11 03:45",
       "hkjcDate": " 星期五 6 ",
       "momentDate": "2020-11-20T19:45:00.000Z",
-      "matchLiveMin": "-"
+      "matchLiveMin": "31"
     },
     {
       "league": "西甲",
@@ -74,8 +74,8 @@
       "status": "",
       "home": "奧沙辛拿",
       "away": "侯爾斯卡",
-      "HomeFScore": "",
-      "AwayFScore": "",
+      "HomeFScore": "0",
+      "AwayFScore": "1",
       "buyOdd": "平手/半球",
       "up": "0.31",
       "down": "-0.94",
@@ -85,25 +85,26 @@
       "matchDate": "21/11 04:00",
       "hkjcDate": " 星期五 7 ",
       "momentDate": "2020-11-20T20:00:00.000Z",
-      "matchLiveMin": "-"
+      "matchLiveMin": "17"
     },
     {
       "league": "法甲",
       "time": "04:00",
       "status": "",
       "home": "摩納哥",
-      "away": "巴黎聖日耳門","buyOdd": "受让一球",
+      "away": "巴黎聖日耳門",
+      "buyOdd": "受让一球",
       "up": "-4.37",
       "down": "3.51",
       "oddVal": "0.76",
       "place": "客",
-      "HomeFScore": "",
-      "AwayFScore": "",
+      "HomeFScore": "0",
+      "AwayFScore": "0",
       "id": "1877315",
       "matchDate": "21/11 04:00",
       "hkjcDate": " 星期五 8 ",
       "momentDate": "2020-11-20T20:00:00.000Z",
-      "matchLiveMin": "-"
+      "matchLiveMin": "17"
     },
     {
       "league": "阿甲D",
