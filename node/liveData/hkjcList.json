@@ -7,11 +7,18 @@
       "status": "",
       "home": "奈梅亨",
       "away": "洛達",
-      "HomeFScore": "",
-      "AwayFScore": "",
+      "buyOdd": "半球/一球",
+      "up": "-1.03",
+      "down": "0.15",
+      "oddVal": "0.66",
+      "place": "客",
+      "HomeFScore": "0",
+      "AwayFScore": "1",
       "id": "1884797",
       "matchDate": "21/11 01:45",
-      "hkjcDate": " 星期五 2 "
+      "hkjcDate": " 星期五 2 ",
+      "momentDate": "2020-11-20T17:45:00.000Z",
+      "matchLiveMin": "62"
     },
     {
       "league": "法甲",
@@ -23,7 +30,9 @@
       "AwayFScore": "",
       "id": "1877319",
       "matchDate": "21/11 02:00",
-      "hkjcDate": " 星期五 4 "
+      "hkjcDate": " 星期五 4 ",
+      "momentDate": "2020-11-20T18:00:00.000Z",
+      "matchLiveMin": "-"
     },
     {
       "league": "英冠",
@@ -35,7 +44,9 @@
       "AwayFScore": "",
       "id": "1906155",
       "matchDate": "21/11 03:45",
-      "hkjcDate": " 星期五 6 "
+      "hkjcDate": " 星期五 6 ",
+      "momentDate": "2020-11-20T19:45:00.000Z",
+      "matchLiveMin": "-"
     },
     {
       "league": "西甲",
@@ -47,7 +58,9 @@
       "AwayFScore": "",
       "id": "1913870",
       "matchDate": "21/11 04:00",
-      "hkjcDate": " 星期五 7 "
+      "hkjcDate": " 星期五 7 ",
+      "momentDate": "2020-11-20T20:00:00.000Z",
+      "matchLiveMin": "-"
     },
     {
       "league": "法甲",
@@ -59,7 +72,9 @@
       "AwayFScore": "",
       "id": "1877315",
       "matchDate": "21/11 04:00",
-      "hkjcDate": " 星期五 8 "
+      "hkjcDate": " 星期五 8 ",
+      "momentDate": "2020-11-20T20:00:00.000Z",
+      "matchLiveMin": "-"
     },
     {
       "league": "阿甲D",
@@ -71,7 +86,9 @@
       "AwayFScore": "",
       "id": "1945919",
       "matchDate": "21/11 06:20",
-      "hkjcDate": " 星期五 14 "
+      "hkjcDate": " 星期五 14 ",
+      "momentDate": "2020-11-20T22:20:00.000Z",
+      "matchLiveMin": "-"
     },
     {
       "league": "美職業附",
@@ -83,7 +100,9 @@
       "AwayFScore": "",
       "id": "1949896",
       "matchDate": "21/11 07:30",
-      "hkjcDate": " 星期五 16 "
+      "hkjcDate": " 星期五 16 ",
+      "momentDate": "2020-11-20T23:30:00.000Z",
+      "matchLiveMin": "-"
     },
     {
       "league": "阿甲C",
@@ -95,7 +114,9 @@
       "AwayFScore": "",
       "id": "1945909",
       "matchDate": "21/11 08:30",
-      "hkjcDate": " 星期五 17 "
+      "hkjcDate": " 星期五 17 ",
+      "momentDate": "2020-11-21T00:30:00.000Z",
+      "matchLiveMin": "-"
     },
     {
       "league": "美職業附",
@@ -107,7 +128,9 @@
       "AwayFScore": "",
       "id": "1949897",
       "matchDate": "21/11 10:00",
-      "hkjcDate": " 星期五 18 "
+      "hkjcDate": " 星期五 18 ",
+      "momentDate": "2020-11-21T02:00:00.000Z",
+      "matchLiveMin": "-"
     }
   ]
 }

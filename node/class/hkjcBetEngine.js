@@ -361,6 +361,7 @@ class hkjcBetEngine {
                     betList[i]["buyOdd"] = betArr[j]["buyOdd"]
                     betList[i]["place"] = betArr[j]["place"]
                     betList[i]["oddVal"] = betArr[j]["oddVal"]
+                    betList[i]["oddTime"] = moment().format('MM/DD/YYYY, hh:mm'); 
                     betList[i]["sumVal"] = -1
                     placeBetArr.push(betList[i])
                 }
@@ -373,6 +374,7 @@ class hkjcBetEngine {
                 if(noMatchArr[j].id == betList[i].id  && typeof(betList[i].place)!="undefined"){
                     betList[i]["place"] ="不買"
                     betList[i]["sumVal"] = 0
+                    betList[i]["oddTime"] = moment().format('MM/DD/YYYY, hh:mm'); 
                 }
             }
         }
@@ -380,6 +382,7 @@ class hkjcBetEngine {
         var onfootballRealTime = [];
         onfootballRealTime = await this.getONFootballList(onfootballRealTime)
         console.log(JSON.stringify(onfootballRealTime))
+        var tmpMatchArr = JSON.parse(JSON.stringify(betList))
         for(var i =0;i<betList.length;i++){
             var dateStr = betList[i].matchDate 
             var date = dateStr.split(" ")[0]
@@ -394,15 +397,13 @@ class hkjcBetEngine {
                 });
             betList[i].momentDate = d3
             var diff = d3.diff(moment(),"minutes")
-            console.log(diff + " --  "+ date + " "+ time)
-
-
-            var tmpMatchArr = JSON.parse(JSON.stringify(betList[i]))
+         
             for(var j=0;j<onfootballRealTime.length;j++){
                if(betList[i].hkjcDate.includes(onfootballRealTime[j].DayOfWeek)){
                     if(onfootballRealTime[j].MatchNum == betList[i].hkjcDate.split(" ")[2]){
-                        console.log(onfootballRealTime[j].MatchStatus)
+                        betList[i].matchLiveMin = "-"
                         if(onfootballRealTime[j].MatchStatus=="90完"){
+                            betList[i].matchLiveMin = "90"
                             betList[i]["isEnd"] = 'y'
                             betList[i]["HomeFScore"] = onfootballRealTime[j].HomeFullScore
                             betList[i]["AwayFScore"] = onfootballRealTime[j].AwayFullScore
@@ -420,41 +421,45 @@ class hkjcBetEngine {
                         }else if(onfootballRealTime[j].MatchStatus.includes("分鐘") && 
                                 typeof(tmpMatchArr[i]["buyOdd"])!="undefined"){
                             var min = onfootballRealTime[j].MatchStatus.replace("分鐘","")
-                            min = parseFloat(min)
-                            
-                            if(min>75){
+                            betList[i].matchLiveMin = ""+min
+                            if(min>0){
+                                tmpMatchArr[i]["HomeFScore"] = onfootballRealTime[j].HomeFullScore
+                                tmpMatchArr[i]["AwayFScore"] = onfootballRealTime[j].AwayFullScore
+                                betList[i]["HomeFScore"] = onfootballRealTime[j].HomeFullScore
+                                betList[i]["AwayFScore"] = onfootballRealTime[j].AwayFullScore
                                     if(tmpMatchArr[i]["place"]=="主"){
                                         tmpMatchArr[i]["AwayFScore"] = ""+(parseFloat(tmpMatchArr[i]["AwayFScore"]) + 1)
                                     }else{
                                         tmpMatchArr[i]["HomeFScore"] = ""+(parseFloat(tmpMatchArr[i]["HomeFScore"]) + 1)
                                     }
-                                    tmpMatchArr[i] = this.tiggerMatchChecking(tmpMatchArr[i])
-                                    
+                                tmpMatchArr[i] = this.tiggerMatchChecking(tmpMatchArr[i])
                             }
                         }
                     }
                }
             }
 
-        
-            hkjcDailySch["matchList"] = betList
-            fs.writeFileSync("./liveData/hkjcList.json", JSON.stringify(hkjcDailySch,null,2))
-            
         }
-        return [placeBetArr,hkjcDailySch]
+
+        console.table(tmpMatchArr)
+        
+        hkjcDailySch["matchList"] = betList
+        fs.writeFileSync("./liveData/hkjcList.json", JSON.stringify(hkjcDailySch,null,2))
+        
+        return [placeBetArr,hkjcDailySch,tmpMatchArr]
     }
 
     shouldPlaceBet(betList,config){
         var sumVar = 0
         for(var i=0;i<betList.length;i++){
-            if(typeof(betList[i]["sumVal"])!="undefined"){
+            if(typeof(betList[i]["sumVal"])!="undefined" && betList[i]["matchLiveMin"]>75){
                 sumVar +=betList[i]["sumVal"]
             }
         }
         if(sumVar < config.dailyBetLimit ){
-            return true
+            return [true,sumVar]
         }
-        return false
+        return [false,sumVar]
     }
 
     tiggerMatchChecking(match){
@@ -472,19 +477,19 @@ class hkjcBetEngine {
           var result = ftUtils.calculateSingleResultAsianOdd([match],"hkjc",match["place"])
           match.res = result[0][0].res
 
-          if(match[i].res =="贏"){
-            match[i]["sumVal"] = 1
-          }else if(match[i].res =="贏半"){
-            match[i]["sumVal"] = 0.5
+          if(match.res =="贏"){
+            match["sumVal"] = 1
+          }else if(match.res =="贏半"){
+            match["sumVal"] = 0.5
           }
-          else if(match[i].res =="走"){
-            match[i]["sumVal"] = 0
+          else if(match.res =="走"){
+            match["sumVal"] = 0
           }
-          else if(match[i].res =="輸半"){
-            match[i]["sumVal"] = -0.5
+          else if(match.res =="輸半"){
+            match["sumVal"] = -0.5
           }     
-          else if(match[i].res =="輸"){
-            match[i]["sumVal"] = -1
+          else if(match.res =="輸"){
+            match["sumVal"] = -1
           }
           return match
     }
