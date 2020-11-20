@@ -12,7 +12,7 @@ var fs = require('fs');
 const { type } = require('os');
 let hkjcBE = new hkjcBetEngine()
 
-let programVersion = 1.24
+let programVersion = 1.25
 async function init(){
 
 
@@ -83,11 +83,11 @@ async function init(){
        var winingVal = hkjcBE.shouldPlaceBet(ListSummary,acct)
        if(winingVal[0]){
             console.log("Total Daily Wining Bet :" + winingVal[1])
+            await hkjcBE.buyOdd(
+                betArr,
+                acct
+           )
        }
-        await hkjcBE.buyOdd(
-            betArr,
-            acct
-       )
        process.exit()
     //}
 }
