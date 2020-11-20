@@ -2,7 +2,7 @@
   {
     "league": "中甲保",
     "time": "15:30",
-    "status": "加",
+    "status": "點",
     "home": "黑龍江火山鳴泉(中)",
     "away": "新疆雪豹納歡",
     "HomeFScore": "2",
@@ -12,17 +12,17 @@
   {
     "league": "不丹廷聯",
     "time": "16:30",
-    "status": "76",
+    "status": "86",
     "home": "烏金學院",
     "away": "廷布聯",
-    "HomeFScore": "2",
-    "AwayFScore": "1",
+    "HomeFScore": "3",
+    "AwayFScore": "2",
     "id": "1952026"
   },
   {
     "league": "越女錦標",
     "time": "16:55",
-    "status": "中",
+    "status": "54",
     "home": "河內女足",
     "away": "河內B隊女足",
     "HomeFScore": "1",
@@ -32,7 +32,7 @@
   {
     "league": "烏茲甲A升",
     "time": "17:00",
-    "status": "47",
+    "status": "57",
     "home": "費爾幹納夫茲",
     "away": "舒爾坦古扎爾",
     "HomeFScore": "0",
@@ -42,7 +42,7 @@
   {
     "league": "烏茲甲B升",
     "time": "17:00",
-    "status": "46",
+    "status": "52",
     "home": "賓約哥B隊",
     "away": "吉杜雲",
     "HomeFScore": "2",
@@ -52,7 +52,7 @@
   {
     "league": "以青杯",
     "time": "17:20",
-    "status": "38",
+    "status": "中",
     "home": "荷茲利亞U19",
     "away": "克拉瑪甘馬卡比U19",
     "HomeFScore": "0",
@@ -62,7 +62,7 @@
   {
     "league": "烏茲甲B升",
     "time": "17:35",
-    "status": "22",
+    "status": "32",
     "home": "雅基耶",
     "away": "FK魯賓",
     "HomeFScore": "0",
@@ -72,7 +72,7 @@
   {
     "league": "以盃",
     "time": "18:00",
-    "status": "1",
+    "status": "9",
     "home": "比卡塔哈亞登(中)",
     "away": "夏普爾霍",
     "HomeFScore": "0",
@@ -82,7 +82,7 @@
   {
     "league": "以盃",
     "time": "18:00",
-    "status": "1",
+    "status": "10",
     "home": "伊羅尼太巴列",
     "away": "普爾考凱",
     "HomeFScore": "0",
@@ -92,27 +92,27 @@
   {
     "league": "烏茲超",
     "time": "18:00",
-    "status": "1",
+    "status": "8",
     "home": "比克波德",
     "away": "賓約哥",
     "HomeFScore": "0",
-    "AwayFScore": "0",
+    "AwayFScore": "1",
     "id": "1950406"
   },
   {
     "league": "烏茲超",
     "time": "18:00",
-    "status": "1",
+    "status": "8",
     "home": "索格迪納吉扎克",
     "away": "納薩夫",
-    "HomeFScore": "0",
+    "HomeFScore": "1",
     "AwayFScore": "0",
     "id": "1950407"
   },
   {
     "league": "烏克U21",
     "time": "18:00",
-    "status": "1",
+    "status": "10",
     "home": "登尼茨克U21",
     "away": "柔亞U21",
     "HomeFScore": "0",
@@ -122,17 +122,17 @@
   {
     "league": "烏克U21",
     "time": "18:00",
-    "status": "1",
+    "status": "6",
     "home": "薩克達U21",
     "away": "阿拉卡森德里亞U21",
-    "HomeFScore": "0",
+    "HomeFScore": "1",
     "AwayFScore": "0",
     "id": "1903571"
   },
   {
     "league": "白俄乙升",
     "time": "18:00",
-    "status": "1",
+    "status": "10",
     "home": "莫洛迪兹诺",
     "away": "迪尼伯",
     "HomeFScore": "0",
@@ -142,7 +142,7 @@
   {
     "league": "阿塞甲",
     "time": "18:00",
-    "status": "1",
+    "status": "5",
     "home": "卡拉巴克B隊",
     "away": "紮塔拉",
     "HomeFScore": "0",
@@ -162,7 +162,7 @@
   {
     "league": "阿塞甲",
     "time": "18:00",
-    "status": "1",
+    "status": "10",
     "home": "薩姆加耶特B隊",
     "away": "尼菲治B隊",
     "HomeFScore": "0",

@@ -2,6 +2,18 @@
   "matchDate": "周五賽事",
   "matchList": [
     {
+      "league": "荷乙",
+      "time": "01:45",
+      "status": "",
+      "home": "奈梅亨",
+      "away": "洛達",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1884797",
+      "matchDate": "21/11 01:45",
+      "hkjcDate": " 星期五 2 "
+    },
+    {
       "league": "法甲",
       "time": "02:00",
       "status": "",
@@ -48,6 +60,18 @@
       "id": "1949896",
       "matchDate": "21/11 07:30",
       "hkjcDate": " 星期五 16 "
+    },
+    {
+      "league": "美職業附",
+      "time": "10:00",
+      "status": "",
+      "home": "拿舒維爾",
+      "away": "國際邁亞密",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1949897",
+      "matchDate": "21/11 10:00",
+      "hkjcDate": " 星期五 18 "
     }
   ]
 }
