@@ -12,6 +12,7 @@ var fs = require('fs');
 const { type } = require('os');
 let hkjcBE = new hkjcBetEngine()
 
+let programVersion = 1.21
 async function init(){
 
 
@@ -59,9 +60,11 @@ async function init(){
         log += calculatedResult[1]
         log += calculatedResult[2]
         if(msg!="" && acct.isTgMsgEnble ){
+            msg = "Program Version :" + programVersion +"\n" + msg
            await bot.sendMessage(tgChanelId,msg);
         }
         if(acct.isTgMsgEnble){
+            log = "Program Version :" + programVersion +"\n" + log
             await bot.sendMessage(tgLogChannel,log+"----------");
         }
             
