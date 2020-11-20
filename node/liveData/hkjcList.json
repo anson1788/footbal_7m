@@ -40,13 +40,14 @@
       "status": "",
       "home": "雷恩",
       "away": "波爾多",
-      "HomeFScore": "",
-      "AwayFScore": "",
+      "HomeFScore": "0",
+      "AwayFScore": "1",
       "id": "1877319",
       "matchDate": "21/11 02:00",
       "hkjcDate": " 星期五 4 ",
       "momentDate": "2020-11-20T18:00:00.000Z",
-      "matchLiveMin": "-"
+      "matchLiveMin": "90",
+      "isEnd": "y"
     },
     {
       "league": "英冠",
