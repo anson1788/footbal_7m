@@ -12,7 +12,7 @@ var fs = require('fs');
 const { type } = require('os');
 let hkjcBE = new hkjcBetEngine()
 
-let programVersion = 1.21
+let programVersion = 1.23
 async function init(){
 
 
@@ -68,7 +68,6 @@ async function init(){
             await bot.sendMessage(tgLogChannel,log+"----------");
         }
             
-       console.log(JSON.stringify(calculatedResult[3]))
        var betArr = calculatedResult[3];
        var noMatchArr = calculatedResult[4];
 

@@ -418,12 +418,14 @@ class hkjcBetEngine {
                                 tmpMatchArr[i] = this.tiggerMatchChecking(tmpMatchArr[i])
                                 
                             }
-                        }else if(onfootballRealTime[j].MatchStatus.includes("分鐘") && 
-                                typeof(tmpMatchArr[i]["buyOdd"])!="undefined"){
+                        }
+                        else if(onfootballRealTime[j].MatchStatus.includes("分鐘") && 
+                                typeof(tmpMatchArr[i]["buyOdd"])!="undefined" || onfootballRealTime[j].MatchStatus.includes("90+")){
                             var min = onfootballRealTime[j].MatchStatus.replace("分鐘","")
                             betList[i].matchLiveMin = ""+min
                             tmpMatchArr[i].matchLiveMin = ""+min
                             if(min>0){
+                                console.log("here")
                                 tmpMatchArr[i]["HomeFScore"] = onfootballRealTime[j].HomeFullScore
                                 tmpMatchArr[i]["AwayFScore"] = onfootballRealTime[j].AwayFullScore
                                 betList[i]["HomeFScore"] = onfootballRealTime[j].HomeFullScore
