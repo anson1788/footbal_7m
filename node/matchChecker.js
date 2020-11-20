@@ -68,11 +68,11 @@ async function init(){
         }
         
         
-        var dataWithOddList = await bfBetUtils.addOddData(notInListDataNONHKJC,bcUtils,true)
-        
+       // var dataWithOddList = await bfBetUtils.addOddData(notInListDataNONHKJC,bcUtils,true)
+       var hkjcMatchList = JSON.parse(fs.readFileSync("./liveData/liveListTable.json"))
         for(var i=0;i<dataWithOddList.length;i++){
             if(dataWithOddList[i].isOddReady){
-                if(bfBetUtils.isHKJCData(dataWithOddList[i])){
+                if(bfBetUtils.isHKJCDataLocal(dataWithOddList[i],hkjcMatchList)){
                     hkjcListNew.push(dataWithOddList[i].id)
                 }else{
                     nonhkjcListNew.push(dataWithOddList[i].id)
