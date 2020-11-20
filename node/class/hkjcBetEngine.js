@@ -243,17 +243,17 @@ class hkjcBetEngine {
         var balance = await this.runExpression(Runtime,'document.getElementById("valueAccBal").innerHTML')
         for(var i=0;i<mathcNum;i++){
 
-            var oddBet = "900"
+            var oddBet = actInfo.HDCNormal
          
             for(var j=0;j<betArr.length;j++){
                 if(typeof(betArr[j].clickIdx)!="undefined"){
                     console.log(betArr[j].clickIdx)
                     if(betArr[j].clickIdx==i){
                         if(parseFloat(betArr[j].oddVal)<0.8){
-                            oddBet = "800"
+                            oddBet = actInfo.HDCLower
                         }
                         if(parseFloat(betArr[j].oddVal)>1){
-                            oddBet = "1000"
+                            oddBet =  actInfo.HDCUpper
                         }
                     }
                 }
@@ -354,13 +354,15 @@ class hkjcBetEngine {
         var hkjcDailySch = JSON.parse(fs.readFileSync("./liveData/hkjcList.json"))
         var betList = hkjcDailySch["matchList"]
 
+        var placeBetArr = []
         for(var j=0;j<betArr.length;j++){
             for(var i =0;i<betList.length;i++){
-                if(betArr[j].id == betList[i].id){
+                if(betArr[j].id == betList[i].id && typeof(betList[i].place)!="undefined"){
                     betList[i]["buyOdd"] = betArr[j]["buyOdd"]
                     betList[i]["place"] = betArr[j]["place"]
                     betList[i]["oddVal"] = betArr[j]["oddVal"]
                     betList[i]["sumVal"] = -1
+                    placeBetArr.push(betList[i])
                 }
             }
         }
@@ -368,7 +370,8 @@ class hkjcBetEngine {
 
         for(var j=0;j<noMatchArr.length;j++){
             for(var i =0;i<betList.length;i++){
-                if(noMatchArr[j].id == betList[i].id){
+                if(noMatchArr[j].id == betList[i].id  && typeof(betList[i].place)!="undefined"){
+                    betList[i]["place"] ="不買"
                     betList[i]["sumVal"] = 0
                 }
             }
@@ -405,19 +408,20 @@ class hkjcBetEngine {
                             betList[i]["AwayFScore"] = onfootballRealTime[j].AwayFullScore
                             if(typeof(betList[i]["buyOdd"])!="undefined"){
                                 betList[i] = this.tiggerMatchChecking(betList[i])
+                               
                             }
                             tmpMatchArr[i]["isEnd"] = 'y'
                             tmpMatchArr[i]["HomeFScore"] = onfootballRealTime[j].HomeFullScore
                             tmpMatchArr[i]["AwayFScore"] = onfootballRealTime[j].AwayFullScore
                             if(typeof(tmpMatchArr[i]["buyOdd"])!="undefined"){
                                 tmpMatchArr[i] = this.tiggerMatchChecking(tmpMatchArr[i])
+                                
                             }
-                        }else if(onfootballRealTime[j].MatchStatus.includes("分鐘") && typeof(tmpMatchArr[i]["buyOdd"])!="undefined"){
+                        }else if(onfootballRealTime[j].MatchStatus.includes("分鐘") && 
+                                typeof(tmpMatchArr[i]["buyOdd"])!="undefined"){
                             var min = onfootballRealTime[j].MatchStatus.replace("分鐘","")
                             min = parseFloat(min)
-                            if(min>0){
-
-                            }
+                            
                             if(min>75){
                                     if(tmpMatchArr[i]["place"]=="主"){
                                         tmpMatchArr[i]["AwayFScore"] = ""+(parseFloat(tmpMatchArr[i]["AwayFScore"]) + 1)
@@ -425,18 +429,32 @@ class hkjcBetEngine {
                                         tmpMatchArr[i]["HomeFScore"] = ""+(parseFloat(tmpMatchArr[i]["HomeFScore"]) + 1)
                                     }
                                     tmpMatchArr[i] = this.tiggerMatchChecking(tmpMatchArr[i])
+                                    
                             }
                         }
                     }
                }
             }
-            if(diff<0 && typeof(betList[i]["isEnd"])!="undefined"){
-                if(Math.abs(diff)>79 && Math.abs(diff)<130){
-                    
-                }
+
+        
+            hkjcDailySch["matchList"] = betList
+            fs.writeFileSync("./liveData/hkjcList.json", JSON.stringify(hkjcDailySch,null,2))
+            
+        }
+        return [placeBetArr,hkjcDailySch]
+    }
+
+    shouldPlaceBet(betList,config){
+        var sumVar = 0
+        for(var i=0;i<betList.length;i++){
+            if(typeof(betList[i]["sumVal"])!="undefined"){
+                sumVar +=betList[i]["sumVal"]
             }
         }
-        return [[],[]]
+        if(sumVar < config.dailyBetLimit ){
+            return true
+        }
+        return false
     }
 
     tiggerMatchChecking(match){
@@ -453,6 +471,21 @@ class hkjcBetEngine {
           match.OddData[0]["hkjc"]["end"]["away"] = match["oddVal"]
           var result = ftUtils.calculateSingleResultAsianOdd([match],"hkjc",match["place"])
           match.res = result[0][0].res
+
+          if(match[i].res =="贏"){
+            match[i]["sumVal"] = 1
+          }else if(match[i].res =="贏半"){
+            match[i]["sumVal"] = 0.5
+          }
+          else if(match[i].res =="走"){
+            match[i]["sumVal"] = 0
+          }
+          else if(match[i].res =="輸半"){
+            match[i]["sumVal"] = -0.5
+          }     
+          else if(match[i].res =="輸"){
+            match[i]["sumVal"] = -1
+          }
           return match
     }
 

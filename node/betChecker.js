@@ -58,12 +58,12 @@ async function init(){
         var msg = calculatedResult[0]
         log += calculatedResult[1]
         log += calculatedResult[2]
-        if(msg!=""){
+        if(msg!="" && acct.isTgMsgEnble ){
            await bot.sendMessage(tgChanelId,msg);
         }
-   
-       await bot.sendMessage(tgLogChannel,log+"----------");
-
+        if(acct.isTgMsgEnble){
+            await bot.sendMessage(tgLogChannel,log+"----------");
+        }
             
        console.log(JSON.stringify(calculatedResult[3]))
        var betArr = calculatedResult[3];
@@ -71,13 +71,17 @@ async function init(){
 
         
      
-       /*
+   
        var finalPlaceBetArr = await hkjcBE.calculateAccumulatedOdd(betArr,noMatchArr)
        var newBetArr = finalPlaceBetArr[0]
-       var newNoMatchArr = finalPlaceBetArr[1]
-      */
-       
-       await hkjcBE.buyOdd(
+       var ListSummary = finalPlaceBetArr[1]
+       console.log("")
+       console.log("bet summary table")
+       console.table(ListSummary)
+       if(hkjcBE.shouldPlaceBet(ListSummary,acct)){
+            console.log("should place bet")
+       }
+        await hkjcBE.buyOdd(
             betArr,
             acct
        )
