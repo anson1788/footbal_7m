@@ -243,17 +243,17 @@ class hkjcBetEngine {
         var balance = await this.runExpression(Runtime,'document.getElementById("valueAccBal").innerHTML')
         for(var i=0;i<mathcNum;i++){
 
-            var oddBet = "800"
+            var oddBet = "900"
          
             for(var j=0;j<betArr.length;j++){
                 if(typeof(betArr[j].clickIdx)!="undefined"){
                     console.log(betArr[j].clickIdx)
                     if(betArr[j].clickIdx==i){
                         if(parseFloat(betArr[j].oddVal)<0.8){
-                            oddBet = "700"
+                            oddBet = "800"
                         }
                         if(parseFloat(betArr[j].oddVal)>1){
-                            oddBet = "900"
+                            oddBet = "1000"
                         }
                     }
                 }
@@ -394,6 +394,7 @@ class hkjcBetEngine {
             console.log(diff + " --  "+ date + " "+ time)
 
 
+            var tmpMatchArr = JSON.parse(JSON.stringify(betList[i]))
             for(var j=0;j<onfootballRealTime.length;j++){
                if(betList[i].hkjcDate.includes(onfootballRealTime[j].DayOfWeek)){
                     if(onfootballRealTime[j].MatchNum == betList[i].hkjcDate.split(" ")[2]){
@@ -405,10 +406,23 @@ class hkjcBetEngine {
                             if(typeof(betList[i]["buyOdd"])!="undefined"){
                                 betList[i] = this.tiggerMatchChecking(betList[i])
                             }
-                        }else if(onfootballRealTime[j].MatchStatus.includes("分鐘")){
+                            tmpMatchArr[i]["isEnd"] = 'y'
+                            tmpMatchArr[i]["HomeFScore"] = onfootballRealTime[j].HomeFullScore
+                            tmpMatchArr[i]["AwayFScore"] = onfootballRealTime[j].AwayFullScore
+                            if(typeof(tmpMatchArr[i]["buyOdd"])!="undefined"){
+                                tmpMatchArr[i] = this.tiggerMatchChecking(tmpMatchArr[i])
+                            }
+                        }else if(onfootballRealTime[j].MatchStatus.includes("分鐘") && typeof(tmpMatchArr[i]["buyOdd"])!="undefined"){
                             var min = onfootballRealTime[j].MatchStatus.replace("分鐘","")
                             min = parseFloat(min)
-                            
+                            if(min>75){
+                                    if(tmpMatchArr[i]["place"]=="主"){
+                                        tmpMatchArr[i]["AwayFScore"] = ""+(parseFloat(tmpMatchArr[i]["AwayFScore"]) + 1)
+                                    }else{
+                                        tmpMatchArr[i]["HomeFScore"] = ""+(parseFloat(tmpMatchArr[i]["HomeFScore"]) + 1)
+                                    }
+                                    tmpMatchArr[i] = this.tiggerMatchChecking(tmpMatchArr[i])
+                            }
                         }
                     }
                }
