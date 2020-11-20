@@ -76,11 +76,11 @@ async function init(){
        var newBetArr = finalPlaceBetArr[0]
        var newNoMatchArr = finalPlaceBetArr[1]
       */
-       /*
+       
        await hkjcBE.buyOdd(
             betArr,
             acct
-       )*/
+       )
        process.exit()
     //}
 }
