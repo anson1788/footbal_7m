@@ -7,10 +7,10 @@
       "status": "",
       "home": "奈梅亨",
       "away": "洛達",
-      "buyOdd": "半球/一球",
+      "buyOdd": "平手/半球",
       "up": "-1.03",
       "down": "0.15",
-      "oddVal": "0.66",
+      "oddVal": "1.02",
       "place": "客",
       "HomeFScore": "1",
       "AwayFScore": "1",
@@ -18,7 +18,7 @@
       "matchDate": "21/11 01:45",
       "hkjcDate": " 星期五 2 ",
       "momentDate": "2020-11-20T17:45:00.000Z",
-      "matchLiveMin": "87"
+      "matchLiveMin": "89"
     },
     {
       "league": "法甲",
