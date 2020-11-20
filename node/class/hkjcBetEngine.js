@@ -415,6 +415,9 @@ class hkjcBetEngine {
                         }else if(onfootballRealTime[j].MatchStatus.includes("分鐘") && typeof(tmpMatchArr[i]["buyOdd"])!="undefined"){
                             var min = onfootballRealTime[j].MatchStatus.replace("分鐘","")
                             min = parseFloat(min)
+                            if(min>0){
+
+                            }
                             if(min>75){
                                     if(tmpMatchArr[i]["place"]=="主"){
                                         tmpMatchArr[i]["AwayFScore"] = ""+(parseFloat(tmpMatchArr[i]["AwayFScore"]) + 1)
@@ -426,10 +429,6 @@ class hkjcBetEngine {
                         }
                     }
                }
-                /*
-                if(onfootballRealTime[j].MatchStatus!="90完"){
-                    betList[i]["isEnd"] = 'y'
-                }*/
             }
             if(diff<0 && typeof(betList[i]["isEnd"])!="undefined"){
                 if(Math.abs(diff)>79 && Math.abs(diff)<130){
