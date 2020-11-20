@@ -381,7 +381,6 @@ class hkjcBetEngine {
 
         var onfootballRealTime = [];
         onfootballRealTime = await this.getONFootballList(onfootballRealTime)
-        console.log(JSON.stringify(onfootballRealTime))
         var tmpMatchArr = JSON.parse(JSON.stringify(betList))
         for(var i =0;i<betList.length;i++){
             var dateStr = betList[i].matchDate 
@@ -422,6 +421,7 @@ class hkjcBetEngine {
                         else if(onfootballRealTime[j].MatchStatus.includes("分鐘") && 
                                 typeof(tmpMatchArr[i]["buyOdd"])!="undefined" || onfootballRealTime[j].MatchStatus.includes("90+")){
                             var min = onfootballRealTime[j].MatchStatus.replace("分鐘","")
+                            min = onfootballRealTime[j].MatchStatus.replace("+","")
                             betList[i].matchLiveMin = ""+min
                             tmpMatchArr[i].matchLiveMin = ""+min
                             if(min>0){
