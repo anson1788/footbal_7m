@@ -67,22 +67,25 @@ async function init(){
             nonhkjcListNew.push(InListDataNONHKJC[i].id)
         }
         
+
         
-       // var dataWithOddList = await bfBetUtils.addOddData(notInListDataNONHKJC,bcUtils,true)
-       var hkjcMatchList = JSON.parse(fs.readFileSync("./liveData/liveListTable.json"))
+      //var dataWithOddList = await bfBetUtils.addOddData(notInListDataNONHKJC,bcUtils,true)
+       dataWithOddList = notInListDataNONHKJC
+       var hkjcMatchList = JSON.parse(fs.readFileSync("./liveData/hkjcList.json"))["matchList"]
         for(var i=0;i<dataWithOddList.length;i++){
-            if(dataWithOddList[i].isOddReady){
+            //if(dataWithOddList[i].isOddReady){
                 if(bfBetUtils.isHKJCDataLocal(dataWithOddList[i],hkjcMatchList)){
                     hkjcListNew.push(dataWithOddList[i].id)
                 }else{
                     nonhkjcListNew.push(dataWithOddList[i].id)
                 }
-            }    
+            //}    
         }
 
         
-    
+        console.log("hkjcList")
         console.log(JSON.stringify(hkjcListNew))
+        console.log("non-hkjcList")
         console.log(JSON.stringify(nonhkjcListNew))
 
     
