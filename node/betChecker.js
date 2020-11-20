@@ -74,12 +74,13 @@ async function init(){
    
        var finalPlaceBetArr = await hkjcBE.calculateAccumulatedOdd(betArr,noMatchArr)
        var newBetArr = finalPlaceBetArr[0]
-       var ListSummary = finalPlaceBetArr[1]
+       var ListSummary = finalPlaceBetArr[2]
        console.log("")
        console.log("bet summary table")
-       console.table(ListSummary)
-       if(hkjcBE.shouldPlaceBet(ListSummary,acct)){
-            console.log("should place bet")
+       console.table(finalPlaceBetArr[1]["matchList"])
+       var winingVal = hkjcBE.shouldPlaceBet(ListSummary,acct)
+       if(winingVal[0]){
+            console.log("Total Daily Wining Bet :" + winingVal[1])
        }
         await hkjcBE.buyOdd(
             betArr,
