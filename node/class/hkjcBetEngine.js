@@ -356,8 +356,9 @@ class hkjcBetEngine {
 
         var placeBetArr = []
         for(var j=0;j<betArr.length;j++){
+            console.log(betArr[j].id)
             for(var i =0;i<betList.length;i++){
-                if(betArr[j].id == betList[i].id && typeof(betList[i].place)!="undefined"){
+                if(betArr[j].id == betList[i].id && typeof(betList[i].place)=="undefined"){
                     betList[i]["buyOdd"] = betArr[j]["buyOdd"]
                     betList[i]["place"] = betArr[j]["place"]
                     betList[i]["oddVal"] = betArr[j]["oddVal"]
@@ -371,7 +372,7 @@ class hkjcBetEngine {
 
         for(var j=0;j<noMatchArr.length;j++){
             for(var i =0;i<betList.length;i++){
-                if(noMatchArr[j].id == betList[i].id  && typeof(betList[i].place)!="undefined"){
+                if(noMatchArr[j].id == betList[i].id  && typeof(betList[i].place)=="undefined"){
                     betList[i]["place"] ="不買"
                     betList[i]["sumVal"] = 0
                     betList[i]["oddTime"] = moment().format('MM/DD/YYYY, hh:mm'); 
@@ -421,7 +422,7 @@ class hkjcBetEngine {
                         else if(onfootballRealTime[j].MatchStatus.includes("分鐘") && 
                                 typeof(tmpMatchArr[i]["buyOdd"])!="undefined" || onfootballRealTime[j].MatchStatus.includes("90+")){
                             var min = onfootballRealTime[j].MatchStatus.replace("分鐘","")
-                            min = onfootballRealTime[j].MatchStatus.replace("+","")
+                            min = min.replace("+","")
                             betList[i].matchLiveMin = ""+min
                             tmpMatchArr[i].matchLiveMin = ""+min
                             if(min>0){
