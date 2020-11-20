@@ -322,15 +322,15 @@ class dataFilterStable extends dataFilterSingleLogic{
       }
       
       var resultLastDay = this.matchingResultInList(crtResult,lastDay)
-      console.log("----")
-      console.log(JSON.stringify(resultLastDay,null,2))
+      //console.log("----")
+      //console.log(JSON.stringify(resultLastDay,null,2))
       fs.writeFileSync("oddBook/"+yestersday+"/"+"placeBet.json", JSON.stringify(resultLastDay[0],null,2))
       lastDay = resultLastDay[0]
 
       var resultoday = this.matchingResultInList(crtResult,oddArr)
       fs.writeFileSync("oddBook/"+today+"/"+"placeBet.json", JSON.stringify(resultoday[0],null,2))
       oddArr = resultoday[0]
-      console.log(JSON.stringify(resultLastDay))
+      //console.log(JSON.stringify(resultLastDay))
       if(resultLastDay[1].length>0 ||resultoday[1].length>0 ){
         var crt4HrList = []
         for(var i=0;i<lastDay.length;i++){
