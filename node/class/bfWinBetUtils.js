@@ -225,6 +225,25 @@ class bfWinBetUtils extends bfWinUtils{
         
         return false
     }
+
+
+    isHKJCDataLocal(match,hkjcMatchList){
+        /*
+        if(
+            typeof(match.OddData) !="undefined"  &&
+            match.OddData.length>0 &&
+            typeof(match.OddData[0]["香港马会"])!=="undefined"){
+            return true
+        }*/
+
+        for(var i=0;i<hkjcMatchList.length;i++){
+            if(hkjcMatchList[i].id == match.id){
+                return true
+            }
+        }
+        
+        return false
+    }
 }
 module.exports = bfWinBetUtils
 
