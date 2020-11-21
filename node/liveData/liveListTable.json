@@ -2,7 +2,7 @@
   {
     "league": "日足聯",
     "time": "11:00",
-    "status": "62",
+    "status": "82",
     "home": "仙臺新力",
     "away": "本田洛克",
     "HomeFScore": "1",
@@ -12,7 +12,7 @@
   {
     "league": "所羅島聯",
     "time": "11:00",
-    "status": "58",
+    "status": "78",
     "home": "所羅門勇士",
     "away": "科薩",
     "HomeFScore": "2",
@@ -22,7 +22,7 @@
   {
     "league": "斐濟杯",
     "time": "11:30",
-    "status": "中",
+    "status": "50",
     "home": "勞托卡",
     "away": "納迪",
     "HomeFScore": "0",
@@ -32,7 +32,7 @@
   {
     "league": "日足聯",
     "time": "12:00",
-    "status": "19",
+    "status": "39",
     "home": "丸安岡崎",
     "away": "特格瓦嘉洛宮崎",
     "HomeFScore": "0",
@@ -42,7 +42,7 @@
   {
     "league": "日足聯",
     "time": "12:00",
-    "status": "19",
+    "status": "39",
     "home": "松江FC",
     "away": "FC本田",
     "HomeFScore": "0",
@@ -52,17 +52,17 @@
   {
     "league": "日職女甲",
     "time": "12:00",
-    "status": "20",
+    "status": "40",
     "home": "千葉市原女足",
     "away": "大阪櫻花女足",
-    "HomeFScore": "0",
+    "HomeFScore": "1",
     "AwayFScore": "0",
     "id": "1878501"
   },
   {
     "league": "日職女甲",
     "time": "12:00",
-    "status": "19",
+    "status": "39",
     "home": "貝拉薩女足",
     "away": "FC愛媛女足",
     "HomeFScore": "0",
@@ -72,7 +72,7 @@
   {
     "league": "日職女甲",
     "time": "12:00",
-    "status": "19",
+    "status": "39",
     "home": "伊納卡女足",
     "away": "新潟天鵝女足",
     "HomeFScore": "1",
@@ -185,8 +185,8 @@
     "status": "",
     "home": "仙台維加泰",
     "away": "鹿島鹿角",
-    "HomeFScore": "",
-    "AwayFScore": "",
+    "HomeFScore": "-",
+    "AwayFScore": "-",
     "id": "1872561"
   },
   {
@@ -195,8 +195,8 @@
     "status": "",
     "home": "柏雷素爾",
     "away": "鳥栖沙岩",
-    "HomeFScore": "",
-    "AwayFScore": "",
+    "HomeFScore": "-",
+    "AwayFScore": "-",
     "id": "1872564"
   },
   {
