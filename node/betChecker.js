@@ -81,12 +81,22 @@ async function init(){
        console.log("bet summary table")
        console.table(finalPlaceBetArr[1]["matchList"])
        var winingVal = hkjcBE.shouldPlaceBet(ListSummary,acct)
-       if(winingVal[0]){
-            console.log("Total Daily Wining Bet :" + winingVal[1])
+       try{
+            
+            if(winingVal[0]){
+                console.log("Total Daily Wining Bet :" + winingVal[1])
+                    await hkjcBE.buyOdd(
+                        betArr,
+                        acct
+                    )
+            }   
+       }catch(e){
+            console.log(e.message)
+            console.log("---- ")
             await hkjcBE.buyOdd(
                 betArr,
                 acct
-           )
+            )
        }
        process.exit()
     //}
