@@ -277,7 +277,18 @@
       "matchDate": "21/11 18:00",
       "hkjcDate": " 星期六 17 ",
       "momentDate": "2020-11-21T10:00:00.000Z",
-      "matchLiveMin": "-"
+      "matchLiveMin": "-",
+      "OddData": [
+        {
+          "hkjc": {
+            "end": {
+              "point": "受让半球/一球",
+              "home": "0.98",
+              "away": "0.98"
+            }
+          }
+        }
+      ]
     },
     {
       "league": "俄超",
