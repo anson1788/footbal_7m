@@ -208,7 +208,21 @@
     "down": "2.00",
     "oddVal": "0.88",
     "place": "客",
-    "time": "13:58"
+    "time": "13:58",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "受让一球",
+            "home": "0.88",
+            "away": "0.88"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "1",
+    "AwayFScore": "3",
+    "res": "贏"
   },
   {
     "home": "柏雷素爾",
@@ -219,7 +233,21 @@
     "down": "0.85",
     "oddVal": "0.71",
     "place": "客",
-    "time": "13:58"
+    "time": "13:58",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "半球/一球",
+            "home": "0.71",
+            "away": "0.71"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "1",
+    "AwayFScore": "2",
+    "res": "贏"
   },
   {
     "home": "大阪櫻花",
@@ -230,7 +258,21 @@
     "down": "0.02",
     "oddVal": "0.98",
     "place": "客",
-    "time": "14:56"
+    "time": "14:56",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "受让平手/半球",
+            "home": "0.98",
+            "away": "0.98"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "0",
+    "AwayFScore": "1",
+    "res": "贏"
   },
   {
     "home": "FC琉球",
@@ -241,6 +283,31 @@
     "down": "-1.09",
     "oddVal": "0.82",
     "place": "主",
-    "time": "14:56"
+    "time": "14:56",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "平手",
+            "home": "0.82",
+            "away": "0.82"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "1",
+    "AwayFScore": "1",
+    "res": "走"
+  },
+  {
+    "home": "名古屋八鯨",
+    "away": "湘南比馬",
+    "id": "1872566",
+    "buyOdd": "一球",
+    "up": "-0.74",
+    "down": "0.08",
+    "oddVal": "0.84",
+    "place": "客",
+    "time": "16:00"
   }
 ]
