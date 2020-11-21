@@ -168,7 +168,20 @@
       "place": "客",
       "oddVal": "0.88",
       "oddTime": "11/21/2020, 01:58",
-      "sumVal": -1
+      "sumVal": 1,
+      "isEnd": "y",
+      "OddData": [
+        {
+          "hkjc": {
+            "end": {
+              "point": "受让一球",
+              "home": "0.88",
+              "away": "0.88"
+            }
+          }
+        }
+      ],
+      "res": "贏"
     },
     {
       "league": "日職乙",
@@ -194,13 +207,14 @@
       "status": "",
       "home": "大阪櫻花",
       "away": "廣島三箭",
-      "HomeFScore": "",
-      "AwayFScore": "",
+      "HomeFScore": "0",
+      "AwayFScore": "1",
       "id": "1872562",
       "matchDate": "21/11 15:00",
       "hkjcDate": " 星期六 13 ",
       "momentDate": "2020-11-21T07:00:00.000Z",
-      "matchLiveMin": "-"
+      "matchLiveMin": "90",
+      "isEnd": "y"
     },
     {
       "league": "日職乙",
@@ -208,13 +222,14 @@
       "status": "",
       "home": "FC琉球",
       "away": "北九州向日葵",
-      "HomeFScore": "",
-      "AwayFScore": "",
+      "HomeFScore": "1",
+      "AwayFScore": "1",
       "id": "1873273",
       "matchDate": "21/11 15:00",
       "hkjcDate": " 星期六 14 ",
       "momentDate": "2020-11-21T07:00:00.000Z",
-      "matchLiveMin": "-"
+      "matchLiveMin": "90",
+      "isEnd": "y"
     },
     {
       "league": "日職聯",
@@ -245,7 +260,10 @@
       "matchDate": "21/11 17:00",
       "hkjcDate": " 星期六 16 ",
       "momentDate": "2020-11-21T09:00:00.000Z",
-      "matchLiveMin": "-"
+      "matchLiveMin": "-",
+      "place": "不買",
+      "sumVal": 0,
+      "oddTime": "11/21/2020, 05:00"
     },
     {
       "league": "亞冠盃",
