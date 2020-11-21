@@ -2,7 +2,11 @@
   {
     "league": "香港超",
     "time": "17:30",
+<<<<<<< HEAD
     "status": "80",
+=======
+    "status": "81",
+>>>>>>> 288e046750329b60d961e4cef0bc81f65d82d101
     "home": "天水圍飛馬",
     "away": "冠忠南區",
     "HomeFScore": "0",
@@ -12,7 +16,11 @@
   {
     "league": "亞冠盃",
     "time": "18:00",
+<<<<<<< HEAD
     "status": "50",
+=======
+    "status": "51",
+>>>>>>> 288e046750329b60d961e4cef0bc81f65d82d101
     "home": "FC首爾(中)",
     "away": "北京中赫國安",
     "HomeFScore": "0",
@@ -42,7 +50,11 @@
   {
     "league": "白俄後備",
     "time": "18:00",
+<<<<<<< HEAD
     "status": "47",
+=======
+    "status": "48",
+>>>>>>> 288e046750329b60d961e4cef0bc81f65d82d101
     "home": "魯赫布雷斯特後備隊",
     "away": "薩克杜亞後備隊",
     "HomeFScore": "2",
@@ -52,7 +64,11 @@
   {
     "league": "波蘭丁",
     "time": "18:00",
+<<<<<<< HEAD
     "status": "49",
+=======
+    "status": "50",
+>>>>>>> 288e046750329b60d961e4cef0bc81f65d82d101
     "home": "朱特澤卡",
     "away": "克拉斯尼克",
     "HomeFScore": "1",
@@ -62,7 +78,11 @@
   {
     "league": "克亞U19",
     "time": "18:00",
+<<<<<<< HEAD
     "status": "48",
+=======
+    "status": "49",
+>>>>>>> 288e046750329b60d961e4cef0bc81f65d82d101
     "home": "艾斯特拉U19",
     "away": "國際薩佩斯克U19",
     "HomeFScore": "2",
@@ -72,7 +92,11 @@
   {
     "league": "波蘭丁",
     "time": "18:00",
+<<<<<<< HEAD
     "status": "49",
+=======
+    "status": "50",
+>>>>>>> 288e046750329b60d961e4cef0bc81f65d82d101
     "home": "斯維特",
     "away": "維基勒",
     "HomeFScore": "0",
@@ -92,7 +116,11 @@
   {
     "league": "土超",
     "time": "18:30",
+<<<<<<< HEAD
     "status": "36",
+=======
+    "status": "37",
+>>>>>>> 288e046750329b60d961e4cef0bc81f65d82d101
     "home": "卡拉古拉克",
     "away": "施華斯",
     "HomeFScore": "0",
@@ -112,7 +140,11 @@
   {
     "league": "土甲",
     "time": "18:30",
+<<<<<<< HEAD
     "status": "37",
+=======
+    "status": "38",
+>>>>>>> 288e046750329b60d961e4cef0bc81f65d82d101
     "home": "布魯斯堡",
     "away": "奧斯曼利",
     "HomeFScore": "0",
@@ -132,7 +164,11 @@
   {
     "league": "泰甲",
     "time": "18:30",
+<<<<<<< HEAD
     "status": "35",
+=======
+    "status": "36",
+>>>>>>> 288e046750329b60d961e4cef0bc81f65d82d101
     "home": "薩穆帕肯海關聯",
     "away": "皇家海軍",
     "HomeFScore": "2",
@@ -142,7 +178,11 @@
   {
     "league": "丹麥U19",
     "time": "18:45",
+<<<<<<< HEAD
     "status": "18",
+=======
+    "status": "19",
+>>>>>>> 288e046750329b60d961e4cef0bc81f65d82d101
     "home": "蘭達斯弗雷亞U19",
     "away": "米迪蘭特U19",
     "HomeFScore": "0",
@@ -162,17 +202,21 @@
   {
     "league": "西丙2",
     "time": "19:00",
+<<<<<<< HEAD
     "status": "7",
+=======
+    "status": "8",
+>>>>>>> 288e046750329b60d961e4cef0bc81f65d82d101
     "home": "伊波羅",
     "away": "圖德拉諾",
-    "HomeFScore": "0",
+    "HomeFScore": "1",
     "AwayFScore": "0",
     "id": "1937380"
   },
   {
     "league": "俄甲",
     "time": "19:00",
-    "status": "1",
+    "status": "2",
     "home": "阿克倫托格里蒂",
     "away": "莫斯科魚雷",
     "HomeFScore": "0",
@@ -182,7 +226,7 @@
   {
     "league": "俄甲",
     "time": "19:00",
-    "status": "1",
+    "status": "2",
     "home": "莫斯科斯巴達B隊",
     "away": "湯斯克",
     "HomeFScore": "0",
@@ -192,7 +236,11 @@
   {
     "league": "俄甲",
     "time": "19:00",
+<<<<<<< HEAD
     "status": "4",
+=======
+    "status": "5",
+>>>>>>> 288e046750329b60d961e4cef0bc81f65d82d101
     "home": "韋萊斯",
     "away": "沃爾加阿斯特拉罕",
     "HomeFScore": "0",
@@ -212,7 +260,11 @@
   {
     "league": "羅甲",
     "time": "19:00",
+<<<<<<< HEAD
     "status": "6",
+=======
+    "status": "7",
+>>>>>>> 288e046750329b60d961e4cef0bc81f65d82d101
     "home": "塞林西尼",
     "away": "維托魯康斯坦薩",
     "HomeFScore": "0",
@@ -232,7 +284,11 @@
   {
     "league": "愛沙甲",
     "time": "19:00",
+<<<<<<< HEAD
     "status": "3",
+=======
+    "status": "4",
+>>>>>>> 288e046750329b60d961e4cef0bc81f65d82d101
     "home": "卡勒威(中)",
     "away": "塔林軍團",
     "HomeFScore": "0",
@@ -242,7 +298,11 @@
   {
     "league": "愛沙甲",
     "time": "19:00",
+<<<<<<< HEAD
     "status": "7",
+=======
+    "status": "8",
+>>>>>>> 288e046750329b60d961e4cef0bc81f65d82d101
     "home": "庫雷撒勒",
     "away": "納爾瓦",
     "HomeFScore": "0",
@@ -252,7 +312,11 @@
   {
     "league": "泰超",
     "time": "19:00",
+<<<<<<< HEAD
     "status": "2",
+=======
+    "status": "3",
+>>>>>>> 288e046750329b60d961e4cef0bc81f65d82d101
     "home": "曼谷玻璃隊",
     "away": "春武里",
     "HomeFScore": "0",
@@ -272,7 +336,7 @@
   {
     "league": "西丁",
     "time": "19:00",
-    "status": "1",
+    "status": "2",
     "home": "阿魯卡斯",
     "away": "維埃拉聯邦",
     "HomeFScore": "0",
@@ -292,7 +356,11 @@
   {
     "league": "波蘭丁",
     "time": "19:00",
+<<<<<<< HEAD
     "status": "6",
+=======
+    "status": "7",
+>>>>>>> 288e046750329b60d961e4cef0bc81f65d82d101
     "home": "哥羅那二隊",
     "away": "KSW",
     "HomeFScore": "2",
@@ -302,7 +370,11 @@
   {
     "league": "波蘭丁",
     "time": "19:00",
+<<<<<<< HEAD
     "status": "7",
+=======
+    "status": "8",
+>>>>>>> 288e046750329b60d961e4cef0bc81f65d82d101
     "home": "瓦西裏科夫",
     "away": "扎姆布朗",
     "HomeFScore": "0",
@@ -312,7 +384,11 @@
   {
     "league": "波蘭丁",
     "time": "19:00",
+<<<<<<< HEAD
     "status": "4",
+=======
+    "status": "5",
+>>>>>>> 288e046750329b60d961e4cef0bc81f65d82d101
     "home": "華沙熊",
     "away": "RKS雷多美高",
     "HomeFScore": "0",
@@ -322,7 +398,11 @@
   {
     "league": "西女超",
     "time": "19:00",
+<<<<<<< HEAD
     "status": "5",
+=======
+    "status": "6",
+>>>>>>> 288e046750329b60d961e4cef0bc81f65d82d101
     "home": "巴塞隆拿女足",
     "away": "皇家蘇斯達女足",
     "HomeFScore": "0",
