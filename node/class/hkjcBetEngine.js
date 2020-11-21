@@ -229,12 +229,29 @@ class hkjcBetEngine {
         var Q1 = await this.runExpression(Runtime,'document.getElementById("ekbaSeqQuestion").innerHTML')
 
         var Ans = actInfo.a1
-        if(Q1.result.value.includes("你最喜愛")){
-            Ans = actInfo.a1
-        }else if(Q1.result.value.includes("你求學時最喜愛的科目?")){
-            Ans = actInfo.a2
-        }else if(Q1.result.value.includes("你第一份工作")){
-            Ans = actInfo.a3
+    
+        if( typeof(actInfo.isCustom)!="undefined" &&
+            typeof(actInfo.q1)!="undefined" &&
+            typeof(actInfo.q2)!="undefined" &&
+            typeof(actInfo.q2)!="undefined" 
+            && actInfo.isCustom){
+
+            if(Q1.result.value.includes(actInfo.q1)){
+                Ans = actInfo.a1
+            }else if(Q1.result.value.includes(actInfo.q2)){
+                Ans = actInfo.a2
+            }else if(Q1.result.value.includes(actInfo.q3)){
+                Ans = actInfo.a3
+            }
+           
+        }else{
+            if(Q1.result.value.includes("你最喜愛")){
+                Ans = actInfo.a1
+            }else if(Q1.result.value.includes("你求學時最喜愛的科目?")){
+                Ans = actInfo.a2
+            }else if(Q1.result.value.includes("你第一份工作")){
+                Ans = actInfo.a3
+            }
         }
         await this.runExpression(Runtime,'document.getElementById("ekbaDivInput").value="'+Ans+'"')
         await this.runExpressionNoReturn(Runtime,'OnClickLoginEKBA()')
