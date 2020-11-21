@@ -284,7 +284,7 @@
       "place": "客",
       "sumVal": -1,
       "momentDate": "2020-11-21T10:00:00.000Z",
-      "matchLiveMin": "-",
+      "matchLiveMin": "50",
       "OddData": [
         {
           "hkjc": {
@@ -309,7 +309,7 @@
       "matchDate": "21/11 19:00",
       "hkjcDate": " 星期六 18 ",
       "momentDate": "2020-11-21T11:00:00.000Z",
-      "matchLiveMin": "2",
+      "matchLiveMin": "6",
       "buyOdd": "一球/球半",
       "place": "客",
       "oddVal": "0.90",
