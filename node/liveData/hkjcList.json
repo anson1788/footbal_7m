@@ -255,13 +255,16 @@
       "status": "",
       "home": "櫪木SC",
       "away": "水戶蜀葵",
-      "HomeFScore": "",
-      "AwayFScore": "",
+      "HomeFScore": "1",
+      "AwayFScore": "1",
       "id": "1873268",
       "matchDate": "21/11 17:00",
       "hkjcDate": " 星期六 16 ",
       "momentDate": "2020-11-21T09:00:00.000Z",
-      "matchLiveMin": "-"
+      "matchLiveMin": "75",
+      "place": "不買",
+      "sumVal": 0,
+      "oddTime": "11/21/2020, 05:00"
     },
     {
       "league": "亞冠盃",
@@ -269,13 +272,29 @@
       "status": "",
       "home": "FC首爾",
       "away": "FC北京",
-      "HomeFScore": "",
-      "AwayFScore": "",
+      "HomeFScore": "0",
+      "AwayFScore": "1",
+      "buyOdd": "受让半球/一球",
+      "oddVal": "0.98",
+      "oddTime": "11/21/2020, 01:58",
       "id": "1840862",
       "matchDate": "21/11 18:00",
       "hkjcDate": " 星期六 17 ",
+      "place": "客",
+      "sumVal": -1,
       "momentDate": "2020-11-21T10:00:00.000Z",
-      "matchLiveMin": "-"
+      "matchLiveMin": "37",
+      "OddData": [
+        {
+          "hkjc": {
+            "end": {
+              "point": "受让半球/一球",
+              "home": "0.98",
+              "away": "0.98"
+            }
+          }
+        }
+      ]
     },
     {
       "league": "俄超",
