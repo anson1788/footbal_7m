@@ -2,7 +2,7 @@
   {
     "league": "日足聯",
     "time": "11:00",
-    "status": "82",
+    "status": "90+",
     "home": "仙臺新力",
     "away": "本田洛克",
     "HomeFScore": "1",
@@ -12,17 +12,17 @@
   {
     "league": "所羅島聯",
     "time": "11:00",
-    "status": "78",
+    "status": "88",
     "home": "所羅門勇士",
     "away": "科薩",
-    "HomeFScore": "2",
+    "HomeFScore": "4",
     "AwayFScore": "0",
     "id": "1952375"
   },
   {
     "league": "斐濟杯",
     "time": "11:30",
-    "status": "50",
+    "status": "60",
     "home": "勞托卡",
     "away": "納迪",
     "HomeFScore": "0",
@@ -32,7 +32,7 @@
   {
     "league": "日足聯",
     "time": "12:00",
-    "status": "39",
+    "status": "中",
     "home": "丸安岡崎",
     "away": "特格瓦嘉洛宮崎",
     "HomeFScore": "0",
@@ -42,7 +42,7 @@
   {
     "league": "日足聯",
     "time": "12:00",
-    "status": "39",
+    "status": "中",
     "home": "松江FC",
     "away": "FC本田",
     "HomeFScore": "0",
@@ -52,17 +52,17 @@
   {
     "league": "日職女甲",
     "time": "12:00",
-    "status": "40",
+    "status": "中",
     "home": "千葉市原女足",
     "away": "大阪櫻花女足",
-    "HomeFScore": "1",
+    "HomeFScore": "2",
     "AwayFScore": "0",
     "id": "1878501"
   },
   {
     "league": "日職女甲",
     "time": "12:00",
-    "status": "39",
+    "status": "中",
     "home": "貝拉薩女足",
     "away": "FC愛媛女足",
     "HomeFScore": "0",
@@ -72,7 +72,7 @@
   {
     "league": "日職女甲",
     "time": "12:00",
-    "status": "39",
+    "status": "中",
     "home": "伊納卡女足",
     "away": "新潟天鵝女足",
     "HomeFScore": "1",
@@ -205,8 +205,8 @@
     "status": "",
     "home": "松本山雅",
     "away": "岡山綠雉",
-    "HomeFScore": "",
-    "AwayFScore": "",
+    "HomeFScore": "-",
+    "AwayFScore": "-",
     "id": "1873272"
   },
   {
@@ -280,6 +280,16 @@
     "id": "1951434"
   },
   {
+    "league": "澳布甲保",
+    "time": "15:00",
+    "status": "",
+    "home": "佛吉尼亞聯",
+    "away": "安納利",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1943804"
+  },
+  {
     "league": "澳昆甲",
     "time": "15:00",
     "status": "",
@@ -338,6 +348,16 @@
     "HomeFScore": "",
     "AwayFScore": "",
     "id": "1925913"
+  },
+  {
+    "league": "澳布甲冠",
+    "time": "16:00",
+    "status": "",
+    "home": "布里斯本競技",
+    "away": "聖佛德流浪",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1943815"
   },
   {
     "league": "越女錦標",
