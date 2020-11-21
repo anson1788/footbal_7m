@@ -237,16 +237,17 @@
       "status": "",
       "home": "名古屋鯨魚",
       "away": "湘南比馬",
-      "HomeFScore": "",
-      "AwayFScore": "",
+      "HomeFScore": "3",
+      "AwayFScore": "1",
       "id": "1872566",
       "matchDate": "21/11 16:00",
       "hkjcDate": " 星期六 15 ",
       "momentDate": "2020-11-21T08:00:00.000Z",
-      "matchLiveMin": "-",
+      "matchLiveMin": "90",
       "place": "不買",
       "sumVal": 0,
-      "oddTime": "11/21/2020, 03:56"
+      "oddTime": "11/21/2020, 03:56",
+      "isEnd": "y"
     },
     {
       "league": "日職乙",

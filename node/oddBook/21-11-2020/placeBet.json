@@ -308,6 +308,31 @@
     "down": "0.08",
     "oddVal": "0.84",
     "place": "客",
-    "time": "16:00"
+    "time": "16:00",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "一球",
+            "home": "0.84",
+            "away": "0.84"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "3",
+    "AwayFScore": "1",
+    "res": "輸"
+  },
+  {
+    "home": "FC首爾(中)",
+    "away": "北京中赫國安",
+    "id": "1840862",
+    "buyOdd": "受让半球/一球",
+    "up": "-2.01",
+    "down": "1.62",
+    "oddVal": "0.98",
+    "place": "客",
+    "time": "17:56"
   }
 ]
