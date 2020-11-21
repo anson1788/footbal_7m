@@ -417,7 +417,10 @@ class hkjcBetEngine {
          
             for(var j=0;j<onfootballRealTime.length;j++){
                if(betList[i].hkjcDate.includes(onfootballRealTime[j].DayOfWeek)){
+                   
                     if(onfootballRealTime[j].MatchNum == betList[i].hkjcDate.split(" ")[2]){
+
+
                         betList[i].matchLiveMin = "-"
                         if(onfootballRealTime[j].MatchStatus=="90完"){
                             betList[i].matchLiveMin = "90"
@@ -426,7 +429,6 @@ class hkjcBetEngine {
                             betList[i]["AwayFScore"] = onfootballRealTime[j].AwayFullScore
                             if(typeof(betList[i]["buyOdd"])!="undefined"){
                                 betList[i] = this.tiggerMatchChecking(betList[i])
-                               
                             }
                             tmpMatchArr[i]["isEnd"] = 'y'
                             tmpMatchArr[i]["HomeFScore"] = onfootballRealTime[j].HomeFullScore
@@ -436,19 +438,21 @@ class hkjcBetEngine {
                                 
                             }
                         }
-                        else if(onfootballRealTime[j].MatchStatus.includes("分鐘") && 
-                                typeof(tmpMatchArr[i]["buyOdd"])!="undefined" || 
+                        else if(onfootballRealTime[j].MatchStatus.includes("分鐘") ||
                                 onfootballRealTime[j].MatchStatus.includes("90+")||
                                 onfootballRealTime[j].MatchStatus.includes("中場")){
+
                             var min = onfootballRealTime[j].MatchStatus.replace("分鐘","")
                             min = min.replace("+","")
                             betList[i].matchLiveMin = ""+min
                             tmpMatchArr[i].matchLiveMin = ""+min
+
+                            console.log(tmpMatchArr[i].home)
                             if(min=="中場"){
                                 min = "45"
                             }
                             if(min>0){
-                                console.log("here")
+                                console.log(" "+betList[i].home)
                                 tmpMatchArr[i]["HomeFScore"] = onfootballRealTime[j].HomeFullScore
                                 tmpMatchArr[i]["AwayFScore"] = onfootballRealTime[j].AwayFullScore
                                 betList[i]["HomeFScore"] = onfootballRealTime[j].HomeFullScore
@@ -476,9 +480,10 @@ class hkjcBetEngine {
     }
 
     shouldPlaceBet(betList,config){
+      
         var sumVar = 0
         for(var i=0;i<betList.length;i++){
-            if(typeof(betList[i]["sumVal"])!="undefined" ){
+            if(typeof(betList[i].sumVal)!="undefined" ){
                 sumVar +=betList[i]["sumVal"]
             }
         }
@@ -489,35 +494,43 @@ class hkjcBetEngine {
     }
 
     tiggerMatchChecking(match){
-        match.OddData = [
-            {
-              "hkjc":{
-                "end":{
-                   "point": match["buyOdd"]
-                }
-              }
-            }
-          ]
-          match.OddData[0]["hkjc"]["end"]["home"] = match["oddVal"]
-          match.OddData[0]["hkjc"]["end"]["away"] = match["oddVal"]
-          var result = ftUtils.calculateSingleResultAsianOdd([match],"hkjc",match["place"])
-          match.res = result[0][0].res
-
-          if(match.res =="贏"){
-            match["sumVal"] = 1
-          }else if(match.res =="贏半"){
-            match["sumVal"] = 0.5
-          }
-          else if(match.res =="走"){
+        if( (typeof(match.place)=="undefined" || (match.place!="主" && match.place!="客")) || 
+            typeof(match.place)=="buyOdd"
+        ){
             match["sumVal"] = 0
-          }
-          else if(match.res =="輸半"){
-            match["sumVal"] = -0.5
-          }     
-          else if(match.res =="輸"){
-            match["sumVal"] = -1
-          }
-          return match
+            return match
+        }else{
+            match.OddData = [
+                {
+                  "hkjc":{
+                    "end":{
+                       "point": match["buyOdd"]
+                    }
+                  }
+                }
+              ]
+              match.OddData[0]["hkjc"]["end"]["home"] = match["oddVal"]
+              match.OddData[0]["hkjc"]["end"]["away"] = match["oddVal"]
+              var result = ftUtils.calculateSingleResultAsianOdd([match],"hkjc",match["place"])
+              match.res = result[0][0].res
+    
+              if(match.res =="贏"){
+                match["sumVal"] = 1
+              }else if(match.res =="贏半"){
+                match["sumVal"] = 0.5
+              }
+              else if(match.res =="走"){
+                match["sumVal"] = 0
+              }
+              else if(match.res =="輸半"){
+                match["sumVal"] = -0.5
+              }     
+              else if(match.res =="輸"){
+                match["sumVal"] = -1
+              }
+              return match
+        }
+       
     }
 
     async getONFootballList(onfootballRealTime){
