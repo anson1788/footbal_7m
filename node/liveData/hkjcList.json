@@ -312,11 +312,7 @@
       "matchLiveMin": "6",
       "buyOdd": "一球/球半",
       "place": "客",
-<<<<<<< HEAD
       "oddVal": "0.88",
-=======
-      "oddVal": "0.90",
->>>>>>> 95af99b7d587cdd1cd24275d2c0c511f15915300
       "oddTime": "11/21/2020, 06:56",
       "sumVal": -1
     },
