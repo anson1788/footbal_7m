@@ -440,7 +440,9 @@ class hkjcBetEngine {
                         }
                         else if(onfootballRealTime[j].MatchStatus.includes("分鐘") ||
                                 onfootballRealTime[j].MatchStatus.includes("90+")||
-                                onfootballRealTime[j].MatchStatus.includes("中場")){
+                                onfootballRealTime[j].MatchStatus.includes("中場") ||
+                                onfootballRealTime[j].MatchStatus.includes("半場") 
+                                ){
 
                             var min = onfootballRealTime[j].MatchStatus.replace("分鐘","")
                             min = min.replace("+","")
@@ -448,7 +450,7 @@ class hkjcBetEngine {
                             tmpMatchArr[i].matchLiveMin = ""+min
 
                             console.log(tmpMatchArr[i].home)
-                            if(min=="中場"){
+                            if(min=="中場" || min=="半場" ){
                                 min = "45"
                             }
                             if(min>0){
