@@ -256,15 +256,16 @@
       "home": "櫪木SC",
       "away": "水戶蜀葵",
       "HomeFScore": "1",
-      "AwayFScore": "1",
+      "AwayFScore": "3",
       "id": "1873268",
       "matchDate": "21/11 17:00",
       "hkjcDate": " 星期六 16 ",
       "momentDate": "2020-11-21T09:00:00.000Z",
-      "matchLiveMin": "75",
+      "matchLiveMin": "90",
       "place": "不買",
       "sumVal": 0,
-      "oddTime": "11/21/2020, 05:00"
+      "oddTime": "11/21/2020, 05:00",
+      "isEnd": "y"
     },
     {
       "league": "亞冠盃",
@@ -283,7 +284,7 @@
       "place": "客",
       "sumVal": -1,
       "momentDate": "2020-11-21T10:00:00.000Z",
-      "matchLiveMin": "37",
+      "matchLiveMin": "-",
       "OddData": [
         {
           "hkjc": {
@@ -302,13 +303,18 @@
       "status": "",
       "home": "卡斯洛達",
       "away": "FC坦波夫",
-      "HomeFScore": "",
-      "AwayFScore": "",
+      "HomeFScore": "0",
+      "AwayFScore": "0",
       "id": "1886688",
       "matchDate": "21/11 19:00",
       "hkjcDate": " 星期六 18 ",
       "momentDate": "2020-11-21T11:00:00.000Z",
-      "matchLiveMin": "-"
+      "matchLiveMin": "2",
+      "buyOdd": "一球/球半",
+      "place": "客",
+      "oddVal": "0.88",
+      "oddTime": "11/21/2020, 06:56",
+      "sumVal": -1
     },
     {
       "league": "德乙",
