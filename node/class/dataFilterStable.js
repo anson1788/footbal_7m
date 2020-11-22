@@ -10,8 +10,19 @@ class dataFilterStable extends dataFilterSingleLogic{
     var tgLog = ""
 
     var matchData = this.similarMatchAdvance(this.deepClone(dataList))
+    /*
+    [betArr,tgMsg,tgLog,notMakeSenseArr]
+    */
+    
     msg += matchData[1]
 
+    /*
+    [0]tg betting msg
+    [1]tg similar log
+    [2]tg local log
+    [3]betArr
+    [4]no match Sense Arr
+    */
     return [msg,matchData[2],tgLog,matchData[0],matchData[3]]
   }
   similarMatchAdvance(matchList){
