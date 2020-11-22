@@ -179,9 +179,8 @@ class bfWinBetUtils extends bfWinUtils{
 
     async addOddData(dataList,bcUtils,isCache = false){
         for(var i=0;i<dataList.length;i++){
-            console.log(JSON.stringify(dataList[i]))
             var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+dataList[i].id
-           
+            console.log("match url :"+url)
             var dom = null 
             var oddData = null
             if(!isCache){

@@ -8,36 +8,6 @@ class dataFilterStable extends dataFilterSingleLogic{
    
     var msg = ""
     var tgLog = ""
-    /*
-     初盤 ＝終盤 ＝平手盤
-     主隊 降水 >0.07
-     */
-    /*
-    var targetData = this.samePointOddSwitchHomeDown(this.deepClone(dataList))
-    console.table(targetData)
-    
-
-    for(var i=0;i<targetData.length;i++){
-        msg += "[初平終平 主降水]" + targetData[i].home +" vs "+targetData[i].away + " "+" (盤:"+targetData[i].hkjcOdd + " 買:主) " + targetData[i].endHomePoint + "\n"
-    }
-
-    var Operation = [ {
-            "method":"pointDropOddDrop00",
-            "displayName":"[降盤跌水(平手盤)]"
-          }]
-    
-    for(var i=0;i<Operation.length ;i++){
-      var tmp = this.checkingLogic( Operation[i]["method"], this.deepClone(dataList))
-      if(tmp.length==0){
-        tgLog += Operation[i]["displayName"] + " no data match\n"
-      }
-      for(var j=0;j<tmp.length;j++){
-        msg += Operation[i]["displayName"] +" "+ 
-               tmp[i].home +" vs "+tmp[i].away + " "+ 
-               " (盤:"+targetData[i].hkjcOddE + " 買:"+targetData[i].place+"/"+targetData[i].placeOdd +") " + "\n"
-      }
-    }*/
-
 
     var matchData = this.similarMatchAdvance(this.deepClone(dataList))
     msg += matchData[1]

@@ -25,15 +25,18 @@ async function init(){
         var result = bfBetUtils.filterGetClosestMatch(hkjcMatchList,6)
         
         hkjcMatchList = result[1]
-        var readyToStartList = result[0]
+        //coneThisJson out
+        var readyToStartList = JSON.parse(JSON.stringify(result[0]))
 
         console.log("------TBC match------")
         console.table(readyToStartList)
+        var crtOddList = await bfBetUtils.addOddData(readyToStartList,bcUtils)
 
-        crtOddList = await bfBetUtils.addOddData(hkjcCrtList,bcUtils)
         let ftUtils = new filterUtils()
         var styList = bfBetUtils.getHKJCList(crtOddList)
         var calculatedResult = ftUtils.matchChecker(styList)
+
+        
         var msg = calculatedResult[0]
         log += calculatedResult[1]
         log += calculatedResult[2]
