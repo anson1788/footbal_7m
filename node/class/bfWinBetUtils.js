@@ -112,7 +112,6 @@ class bfWinBetUtils extends bfWinUtils{
         var min20List = []
         var min7List = []
         for(var i=0;i<dataList.length;i++){
-           
             if(this.requiredToFillTime(dataList[i])==3){
                 min20List.push(dataList[i])
             }else if (this.requiredToFillTime(dataList[i])==2){
@@ -120,6 +119,24 @@ class bfWinBetUtils extends bfWinUtils{
             }
         }
         return [min20List,min7List]
+    }
+
+    getCurrentTimeDiff(match){
+        var timeInMoment=this.timeFormatToMoment(match["matchDate"])
+        var diff = timeInMoment.diff(moment(),"minutes")
+        match["timeBeforeStart"] = diff   
+        return match
+    }
+
+    filterGetClosestMatch(hkjcMatchList,mins){
+        var readyToCalculatedList = []
+        for(var i=0;i<hkjcMatchList.length;i++){
+            hkjcMatchList[i] = this.getCurrentTimeDiff(hkjcMatchList[i])
+            if(hkjcMatchList[i]<=mins){
+                readyToCalculatedList.push(hkjcMatchList[i])
+            }
+        }
+        return [readyToCalculatedList,hkjcMatchList]
     }
 
     getCrtHKJCList(m7List,hkjcList){

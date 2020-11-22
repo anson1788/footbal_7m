@@ -15,28 +15,10 @@ let hkjcBE = new hkjcBetEngine()
 let programVersion = 1.27
 async function init(){
 
-
-    /*
-    var liveUrl = "http://live.win007.com/indexall_big.aspx"
-    var dom = null
-    var log = ""
-    try{
-        dom = await bcUtils.getHttpDomAsyn(liveUrl,"") 
-    }catch(e){
-        console.log("mean error "+e)
-        return null
-    }
-    if(dom==null){
-        console.log("get 7m data error")
-        await init()
-        process.exit()
-    }else{
-    */
         var log = ""
        // var liveMatchList  = bfBetUtils.parseBFLiveMatch(dom)
         var liveMatchList  = fs.readFileSync("liveData/liveListTable.json");
         liveMatchList = JSON.parse(liveMatchList)
-        
         var separateList  = bfBetUtils.filterOutImmediateList(liveMatchList)
 
        

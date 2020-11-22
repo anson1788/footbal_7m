@@ -1,7 +1,24 @@
-
+var moment = require('moment');
 class bfWinUtils {
 
     constructor() {
+    }
+
+    //DD/MM HH:mm
+    timeFormatToMoment(string){
+        var hr = match["matchDate"].split(" ")[1].split(":")[0]
+        var min = match["matchDate"].split(" ")[1].split(":")[0]
+        var month = match["matchDate"].split(" ")[0].split("/")[1]
+        var days = match["matchDate"].split(" ")[0].split("/")[0]
+        
+        let d3 = moment({ 
+            year :moment().year(), 
+            month :parseFloat(month)-1, 
+            day :days, 
+            hour :hr, 
+            minute :min
+            });
+        return d3
     }
     async parseBFHistory(crtDom){
 
