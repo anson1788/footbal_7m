@@ -117,3 +117,8 @@ dist
 
 #custom
 accountInfo.json
+oddBook/
+liveData/hkjcMatchList.json
+liveData/liveListTable.json
+liveData/nonhkjcMatchList.json
+liveData/hkjcList.json
