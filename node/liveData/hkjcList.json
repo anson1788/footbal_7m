@@ -26,6 +26,30 @@
       "hkjcDate": " 星期日 2 "
     },
     {
+      "league": "亞冠盃",
+      "time": "18:00",
+      "status": "",
+      "home": "水原藍翼",
+      "away": "FC廣州",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1840886",
+      "matchDate": "22/11 18:00",
+      "hkjcDate": " 星期日 3 "
+    },
+    {
+      "league": "俄超",
+      "time": "19:00",
+      "status": "",
+      "home": "莫斯科中央陸軍",
+      "away": "PFC索契",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1886690",
+      "matchDate": "22/11 19:00",
+      "hkjcDate": " 星期日 4 "
+    },
+    {
       "league": "意甲",
       "time": "19:30",
       "status": "",
@@ -122,6 +146,18 @@
       "hkjcDate": " 星期日 14 "
     },
     {
+      "league": "西甲",
+      "time": "21:00",
+      "status": "",
+      "home": "伊巴",
+      "away": "伊巴",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1913871",
+      "matchDate": "22/11 21:00",
+      "hkjcDate": " 星期日 15 "
+    },
+    {
       "league": "亞冠盃",
       "time": "21:00",
       "status": "",
@@ -144,6 +180,30 @@
       "id": "1883899",
       "matchDate": "22/11 21:30",
       "hkjcDate": " 星期日 17 "
+    },
+    {
+      "league": "俄超",
+      "time": "21:30",
+      "status": "",
+      "home": "羅達",
+      "away": "烏拉爾",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1886689",
+      "matchDate": "22/11 21:30",
+      "hkjcDate": " 星期日 19 "
+    },
+    {
+      "league": "瑞典超",
+      "time": "21:30",
+      "status": "",
+      "home": "卡爾馬",
+      "away": "佐加頓斯",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1876551",
+      "matchDate": "22/11 21:30",
+      "hkjcDate": " 星期日 22 "
     },
     {
       "league": "英超",
@@ -182,6 +242,18 @@
       "hkjcDate": " 星期日 26 "
     },
     {
+      "league": "意甲",
+      "time": "22:00",
+      "status": "",
+      "home": "維羅納",
+      "away": "薩斯索羅",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1915347",
+      "matchDate": "22/11 22:00",
+      "hkjcDate": " 星期日 27 "
+    },
+    {
       "league": "法甲",
       "time": "22:00",
       "status": "",
@@ -194,6 +266,30 @@
       "hkjcDate": " 星期日 29 "
     },
     {
+      "league": "法甲",
+      "time": "22:00",
+      "status": "",
+      "home": "蒙彼利埃",
+      "away": "斯特拉斯堡",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1877316",
+      "matchDate": "22/11 22:00",
+      "hkjcDate": " 星期日 30 "
+    },
+    {
+      "league": "德甲",
+      "time": "22:30",
+      "status": "",
+      "home": "弗賴堡",
+      "away": "緬恩斯",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1894618",
+      "matchDate": "22/11 22:30",
+      "hkjcDate": " 星期日 32 "
+    },
+    {
       "league": "西甲",
       "time": "23:15",
       "status": "",
@@ -204,6 +300,18 @@
       "id": "1913876",
       "matchDate": "22/11 23:15",
       "hkjcDate": " 星期日 34 "
+    },
+    {
+      "league": "荷甲",
+      "time": "23:45",
+      "status": "",
+      "home": "川迪",
+      "away": "燕豪芬",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1883897",
+      "matchDate": "22/11 23:45",
+      "hkjcDate": " 星期日 35 "
     },
     {
       "league": "法甲",
@@ -266,6 +374,18 @@
       "hkjcDate": " 星期日 49 "
     },
     {
+      "league": "荷甲",
+      "time": "03:00",
+      "status": "",
+      "home": "阿爾克馬爾",
+      "away": "安曼",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1883902",
+      "matchDate": "23/11 03:00",
+      "hkjcDate": " 星期日 50 "
+    },
+    {
       "league": "巴西甲",
       "time": "03:00",
       "status": "",
@@ -312,6 +432,18 @@
       "id": "1913873",
       "matchDate": "23/11 04:00",
       "hkjcDate": " 星期日 57 "
+    },
+    {
+      "league": "法甲",
+      "time": "04:00",
+      "status": "",
+      "home": "里爾",
+      "away": "羅連安特",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1877313",
+      "matchDate": "23/11 04:00",
+      "hkjcDate": " 星期日 58 "
     },
     {
       "league": "美職業附",
