@@ -1,28 +1,18 @@
 [
   {
-    "league": "日女挑聯",
-    "time": "10:00",
-    "status": "84",
-    "home": "日本足協學院福島女足",
-    "away": "新泻大学女足",
-    "HomeFScore": "3",
-    "AwayFScore": "0",
-    "id": "1953061"
-  },
-  {
     "league": "新西蘭聯",
     "time": "11:00",
-    "status": "33",
+    "status": "中",
     "home": "伊斯特恩沙伯奧克蘭",
     "away": "坎特伯雷",
-    "HomeFScore": "0",
+    "HomeFScore": "2",
     "AwayFScore": "0",
     "id": "1949220"
   },
   {
     "league": "斐濟杯",
     "time": "11:00",
-    "status": "35",
+    "status": "中",
     "home": "拉巴薩",
     "away": "雷瓦",
     "HomeFScore": "0",
@@ -32,7 +22,7 @@
   {
     "league": "所羅島聯",
     "time": "11:00",
-    "status": "40",
+    "status": "中",
     "home": "霍尼亚拉南部联合医院",
     "away": "皇家卡莫拉",
     "HomeFScore": "1",
@@ -42,7 +32,7 @@
   {
     "league": "墨西聯春",
     "time": "11:10",
-    "status": "29",
+    "status": "43",
     "home": "哥達拿查拉",
     "away": "尼卡沙",
     "HomeFScore": "0",
@@ -718,6 +708,26 @@
     "HomeFScore": "",
     "AwayFScore": "",
     "id": "1953054"
+  },
+  {
+    "league": "匈丙",
+    "time": "18:00",
+    "status": "",
+    "home": "費倫斯華路士B隊",
+    "away": "寇薩米斯蘭尼",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1953251"
+  },
+  {
+    "league": "匈丙",
+    "time": "18:00",
+    "status": "",
+    "home": "蒙福克聖亞克",
+    "away": "索普龙",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1953252"
   },
   {
     "league": "西女超",
@@ -2080,6 +2090,16 @@
     "id": "1953197"
   },
   {
+    "league": "匈丙",
+    "time": "20:00",
+    "status": "",
+    "home": "拉克史梅迪",
+    "away": "漢維特B隊",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1953253"
+  },
+  {
     "league": "德乙",
     "time": "20:30",
     "status": "",
@@ -3290,6 +3310,16 @@
     "id": "1952515"
   },
   {
+    "league": "匈丙",
+    "time": "23:00",
+    "status": "",
+    "home": "卡斯基美迪",
+    "away": "伊萬喬",
+    "HomeFScore": "",
+    "AwayFScore": "",
+    "id": "1953254"
+  },
+  {
     "league": "加納超",
     "time": "23:00",
     "status": "",
@@ -3778,16 +3808,6 @@
     "HomeFScore": "",
     "AwayFScore": "",
     "id": "1876553"
-  },
-  {
-    "league": "意丙1B",
-    "time": "00:30",
-    "status": "",
-    "home": "阿雷素",
-    "away": "阿爾瑪祖云達斯法諾",
-    "HomeFScore": "",
-    "AwayFScore": "",
-    "id": "1929665"
   },
   {
     "league": "意丙1B",
@@ -5230,6 +5250,16 @@
     "id": "1934077"
   },
   {
+    "league": "日女挑聯",
+    "time": "10:00",
+    "status": "完",
+    "home": "日本足協學院福島女足",
+    "away": "新泻大学女足",
+    "HomeFScore": "3",
+    "AwayFScore": "0",
+    "id": "1953061"
+  },
+  {
     "league": "西丙1",
     "time": "19:00",
     "status": "推遲",
@@ -5328,6 +5358,16 @@
     "HomeFScore": "0",
     "AwayFScore": "0",
     "id": "1832321"
+  },
+  {
+    "league": "意丙1B",
+    "time": "00:30",
+    "status": "推遲",
+    "home": "阿雷素",
+    "away": "阿爾瑪祖云達斯法諾",
+    "HomeFScore": "-",
+    "AwayFScore": "-",
+    "id": "1929665"
   },
   {
     "league": "冰島超",
