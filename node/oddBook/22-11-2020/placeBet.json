@@ -8,7 +8,11 @@
     "down": "1.89",
     "oddVal": "0.70",
     "place": "客",
+<<<<<<< HEAD
     "time": "00:56",
+=======
+    "time": "00:54",
+>>>>>>> d912b0284346378cae2c8ea09dcedcb6bc1bfaef
     "OddData": [
       {
         "hkjc": {
@@ -133,7 +137,11 @@
     "down": "0.36",
     "oddVal": "0.96",
     "place": "客",
+<<<<<<< HEAD
     "time": "03:45",
+=======
+    "time": "03:42",
+>>>>>>> d912b0284346378cae2c8ea09dcedcb6bc1bfaef
     "OddData": [
       {
         "hkjc": {

@@ -383,7 +383,11 @@
     "down": "-0.87",
     "oddVal": "0.97",
     "place": "主",
+<<<<<<< HEAD
     "time": "19:54",
+=======
+    "time": "19:56",
+>>>>>>> d912b0284346378cae2c8ea09dcedcb6bc1bfaef
     "OddData": [
       {
         "hkjc": {
@@ -400,6 +404,7 @@
     "res": "輸半"
   },
   {
+<<<<<<< HEAD
     "home": "柏德博恩",
     "away": "聖保利",
     "id": "1894925",
@@ -425,6 +430,8 @@
     "res": "輸"
   },
   {
+=======
+>>>>>>> d912b0284346378cae2c8ea09dcedcb6bc1bfaef
     "home": "紐卡素",
     "away": "車路士",
     "id": "1903874",
@@ -475,6 +482,7 @@
     "res": "輸"
   },
   {
+<<<<<<< HEAD
     "home": "利雲特",
     "away": "艾爾切",
     "id": "1913872",
@@ -500,6 +508,8 @@
     "res": "贏"
   },
   {
+=======
+>>>>>>> d912b0284346378cae2c8ea09dcedcb6bc1bfaef
     "home": "蔚山現代(中)",
     "away": "上海绿地申花",
     "id": "1840876",
@@ -508,7 +518,11 @@
     "down": "-5.27",
     "oddVal": "1.07",
     "place": "主",
+<<<<<<< HEAD
     "time": "20:54",
+=======
+    "time": "20:56",
+>>>>>>> d912b0284346378cae2c8ea09dcedcb6bc1bfaef
     "OddData": [
       {
         "hkjc": {
@@ -558,7 +572,11 @@
     "down": "2.61",
     "oddVal": "0.84",
     "place": "客",
+<<<<<<< HEAD
     "time": "22:24",
+=======
+    "time": "22:25",
+>>>>>>> d912b0284346378cae2c8ea09dcedcb6bc1bfaef
     "OddData": [
       {
         "hkjc": {
@@ -583,7 +601,11 @@
     "down": "-1.33",
     "oddVal": "1.21",
     "place": "主",
+<<<<<<< HEAD
     "time": "22:24",
+=======
+    "time": "22:25",
+>>>>>>> d912b0284346378cae2c8ea09dcedcb6bc1bfaef
     "OddData": [
       {
         "hkjc": {
@@ -708,7 +730,11 @@
     "down": "-1.38",
     "oddVal": "0.98",
     "place": "主",
+<<<<<<< HEAD
     "time": "23:25",
+=======
+    "time": "23:24",
+>>>>>>> d912b0284346378cae2c8ea09dcedcb6bc1bfaef
     "OddData": [
       {
         "hkjc": {
