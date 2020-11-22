@@ -1,1303 +1,377 @@
 {
-  "matchDate": "周六賽事",
+  "matchDate": "周日賽事",
   "matchList": [
     {
-      "league": "日職聯",
-      "time": "13:00",
-      "status": "",
-      "home": "大分三神",
-      "away": "川崎前鋒",
-      "HomeFScore": "1",
-      "AwayFScore": "0",
-      "id": "1872567",
-      "matchDate": "21/11 13:00",
-      "hkjcDate": " 星期六 1 ",
-      "momentDate": "2020-11-21T05:00:00.000Z",
-      "matchLiveMin": "90",
-      "place": "不買",
-      "sumVal": 0,
-      "oddTime": "11/21/2020, 12:57",
-      "isEnd": "y"
-    },
-    {
-      "league": "日職聯",
-      "time": "13:00",
-      "status": "",
-      "home": "札幌岡薩多",
-      "away": "清水心跳",
-      "HomeFScore": "5",
-      "AwayFScore": "1",
-      "id": "1872563",
-      "matchDate": "21/11 13:00",
-      "hkjcDate": " 星期六 2 ",
-      "momentDate": "2020-11-21T05:00:00.000Z",
-      "matchLiveMin": "90",
-      "buyOdd": "半球/一球",
-      "place": "客",
-      "oddVal": "0.76",
-      "oddTime": "11/21/2020, 12:57",
-      "sumVal": -1,
-      "isEnd": "y",
-      "OddData": [
-        {
-          "hkjc": {
-            "end": {
-              "point": "半球/一球",
-              "home": "0.76",
-              "away": "0.76"
-            }
-          }
-        }
-      ],
-      "res": "輸"
-    },
-    {
       "league": "日職乙",
       "time": "13:00",
       "status": "",
-      "home": "福岡黃蜂",
-      "away": "山形山神",
-      "HomeFScore": "1",
-      "AwayFScore": "1",
-      "id": "1873269",
-      "matchDate": "21/11 13:00",
-      "hkjcDate": " 星期六 3 ",
-      "momentDate": "2020-11-21T05:00:00.000Z",
-      "matchLiveMin": "90",
-      "place": "不買",
-      "sumVal": 0,
-      "oddTime": "11/21/2020, 12:57",
-      "isEnd": "y"
-    },
-    {
-      "league": "日職乙",
-      "time": "13:00",
-      "status": "",
-      "home": "京都不死鳥",
-      "away": "德島漩渦",
-      "HomeFScore": "2",
-      "AwayFScore": "0",
-      "id": "1873276",
-      "matchDate": "21/11 13:00",
-      "hkjcDate": " 星期六 6 ",
-      "momentDate": "2020-11-21T05:00:00.000Z",
-      "matchLiveMin": "90",
-      "place": "不買",
-      "sumVal": 0,
-      "oddTime": "11/21/2020, 12:57",
-      "isEnd": "y"
-    },
-    {
-      "league": "日職乙",
-      "time": "13:00",
-      "status": "",
-      "home": "金澤薩維根",
-      "away": "新潟天鵝",
-      "HomeFScore": "1",
-      "AwayFScore": "2",
-      "id": "1873267",
-      "matchDate": "21/11 13:00",
-      "hkjcDate": " 星期六 9 ",
-      "momentDate": "2020-11-21T05:00:00.000Z",
-      "matchLiveMin": "90",
-      "buyOdd": "平手/半球",
-      "place": "主",
-      "oddVal": "1.00",
-      "oddTime": "11/21/2020, 12:57",
-      "sumVal": -1,
-      "isEnd": "y",
-      "OddData": [
-        {
-          "hkjc": {
-            "end": {
-              "point": "平手/半球",
-              "home": "1.00",
-              "away": "1.00"
-            }
-          }
-        }
-      ],
-      "res": "輸"
-    },
-    {
-      "league": "日職聯",
-      "time": "14:00",
-      "status": "",
-      "home": "柏雷素爾",
-      "away": "鳥棲砂岩",
-      "HomeFScore": "1",
-      "AwayFScore": "2",
-      "id": "1872564",
-      "matchDate": "21/11 14:00",
-      "hkjcDate": " 星期六 10 ",
-      "momentDate": "2020-11-21T06:00:00.000Z",
-      "matchLiveMin": "90",
-      "buyOdd": "半球/一球",
-      "place": "客",
-      "oddVal": "0.71",
-      "oddTime": "11/21/2020, 01:58",
-      "sumVal": 1,
-      "isEnd": "y",
-      "OddData": [
-        {
-          "hkjc": {
-            "end": {
-              "point": "半球/一球",
-              "home": "0.71",
-              "away": "0.71"
-            }
-          }
-        }
-      ],
-      "res": "贏"
-    },
-    {
-      "league": "日職聯",
-      "time": "14:00",
-      "status": "",
-      "home": "仙台維加泰",
-      "away": "鹿島鹿角",
-      "HomeFScore": "1",
-      "AwayFScore": "3",
-      "id": "1872561",
-      "matchDate": "21/11 14:00",
-      "hkjcDate": " 星期六 11 ",
-      "momentDate": "2020-11-21T06:00:00.000Z",
-      "matchLiveMin": "90",
-      "buyOdd": "受让一球",
-      "place": "客",
-      "oddVal": "0.88",
-      "oddTime": "11/21/2020, 01:58",
-      "sumVal": 1,
-      "isEnd": "y",
-      "OddData": [
-        {
-          "hkjc": {
-            "end": {
-              "point": "受让一球",
-              "home": "0.88",
-              "away": "0.88"
-            }
-          }
-        }
-      ],
-      "res": "贏"
-    },
-    {
-      "league": "日職乙",
-      "time": "14:00",
-      "status": "",
-      "home": "松本山雅",
-      "away": "岡山綠雉",
-      "HomeFScore": "1",
-      "AwayFScore": "0",
-      "id": "1873272",
-      "matchDate": "21/11 14:00",
-      "hkjcDate": " 星期六 12 ",
-      "momentDate": "2020-11-21T06:00:00.000Z",
-      "matchLiveMin": "90",
-      "place": "不買",
-      "sumVal": 0,
-      "oddTime": "11/21/2020, 01:58",
-      "isEnd": "y"
+      "home": "東京綠茵",
+      "away": "山口雷法",
+      "HomeFScore": "-",
+      "AwayFScore": "-",
+      "id": "1873271",
+      "matchDate": "22/11 13:00",
+      "hkjcDate": " 星期日 1 "
     },
     {
       "league": "日職聯",
       "time": "15:00",
       "status": "",
-      "home": "大阪櫻花",
-      "away": "廣島三箭",
-      "HomeFScore": "0",
-      "AwayFScore": "1",
-      "id": "1872562",
-      "matchDate": "21/11 15:00",
-      "hkjcDate": " 星期六 13 ",
-      "momentDate": "2020-11-21T07:00:00.000Z",
-      "matchLiveMin": "90",
-      "isEnd": "y"
+      "home": "浦和紅鑽",
+      "away": "大阪飛腳",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1872560",
+      "matchDate": "22/11 15:00",
+      "hkjcDate": " 星期日 2 "
     },
     {
-      "league": "日職乙",
-      "time": "15:00",
+      "league": "意甲",
+      "time": "19:30",
       "status": "",
-      "home": "FC琉球",
-      "away": "北九州向日葵",
-      "HomeFScore": "1",
-      "AwayFScore": "1",
-      "id": "1873273",
-      "matchDate": "21/11 15:00",
-      "hkjcDate": " 星期六 14 ",
-      "momentDate": "2020-11-21T07:00:00.000Z",
-      "matchLiveMin": "90",
-      "isEnd": "y"
-    },
-    {
-      "league": "日職聯",
-      "time": "16:00",
-      "status": "",
-      "home": "名古屋鯨魚",
-      "away": "湘南比馬",
-      "HomeFScore": "3",
-      "AwayFScore": "1",
-      "id": "1872566",
-      "matchDate": "21/11 16:00",
-      "hkjcDate": " 星期六 15 ",
-      "momentDate": "2020-11-21T08:00:00.000Z",
-      "matchLiveMin": "90",
-      "place": "不買",
-      "sumVal": 0,
-      "oddTime": "11/21/2020, 03:56",
-      "isEnd": "y"
-    },
-    {
-      "league": "日職乙",
-      "time": "17:00",
-      "status": "",
-      "home": "櫪木SC",
-      "away": "水戶蜀葵",
-      "HomeFScore": "1",
-      "AwayFScore": "3",
-      "id": "1873268",
-      "matchDate": "21/11 17:00",
-      "hkjcDate": " 星期六 16 ",
-      "momentDate": "2020-11-21T09:00:00.000Z",
-      "matchLiveMin": "90",
-      "place": "不買",
-      "sumVal": 0,
-      "oddTime": "11/21/2020, 05:00",
-      "isEnd": "y"
-    },
-    {
-      "league": "亞冠盃",
-      "time": "18:00",
-      "status": "",
-      "home": "FC首爾",
-      "away": "FC北京",
-      "HomeFScore": "1",
-      "AwayFScore": "2",
-      "buyOdd": "受让半球/一球",
-      "oddVal": "0.98",
-      "oddTime": "11/21/2020, 01:58",
-      "id": "1840862",
-      "matchDate": "21/11 18:00",
-      "hkjcDate": " 星期六 17 ",
-      "place": "客",
-      "sumVal": 0.5,
-      "momentDate": "2020-11-21T10:00:00.000Z",
-      "matchLiveMin": "90",
-      "OddData": [
-        {
-          "hkjc": {
-            "end": {
-              "point": "受让半球/一球",
-              "home": "0.98",
-              "away": "0.98"
-            }
-          }
-        }
-      ],
-      "isEnd": "y",
-      "res": "贏半"
-    },
-    {
-      "league": "俄超",
-      "time": "19:00",
-      "status": "",
-      "home": "卡斯洛達",
-      "away": "FC坦波夫",
-      "HomeFScore": "1",
-      "AwayFScore": "0",
-      "id": "1886688",
-      "matchDate": "21/11 19:00",
-      "hkjcDate": " 星期六 18 ",
-      "momentDate": "2020-11-21T11:00:00.000Z",
-      "matchLiveMin": "90",
-      "buyOdd": "一球/球半",
-      "place": "客",
-      "oddVal": "0.88",
-      "oddTime": "11/21/2020, 06:56",
-      "sumVal": 0.5,
-      "isEnd": "y",
-      "OddData": [
-        {
-          "hkjc": {
-            "end": {
-              "point": "一球/球半",
-              "home": "0.88",
-              "away": "0.88"
-            }
-          }
-        }
-      ],
-      "res": "贏半"
-    },
-    {
-      "league": "德乙",
-      "time": "20:00",
-      "status": "",
-      "home": "基爾",
-      "away": "海登咸",
-      "HomeFScore": "2",
-      "AwayFScore": "2",
-      "id": "1894924",
-      "matchDate": "21/11 20:00",
-      "hkjcDate": " 星期六 19 ",
-      "momentDate": "2020-11-21T12:00:00.000Z",
-      "matchLiveMin": "90",
-      "buyOdd": "平手/半球",
-      "place": "主",
-      "oddVal": "0.97",
-      "oddTime": "11/21/2020, 07:56",
-      "sumVal": -0.5,
-      "isEnd": "y",
-      "OddData": [
-        {
-          "hkjc": {
-            "end": {
-              "point": "平手/半球",
-              "home": "0.97",
-              "away": "0.97"
-            }
-          }
-        }
-      ],
-      "res": "輸半"
-    },
-    {
-      "league": "德乙",
-      "time": "20:00",
-      "status": "",
-      "home": "杜塞爾多夫",
-      "away": "辛特侯遜",
-      "HomeFScore": "1",
-      "AwayFScore": "0",
-      "id": "1894921",
-      "matchDate": "21/11 20:00",
-      "hkjcDate": " 星期六 21 ",
-      "momentDate": "2020-11-21T12:00:00.000Z",
-      "matchLiveMin": "90",
-      "place": "不買",
-      "sumVal": 0,
-      "oddTime": "11/21/2020, 07:56",
-      "isEnd": "y"
-    },
-    {
-      "league": "德乙",
-      "time": "20:00",
-      "status": "",
-      "home": "柏達邦",
-      "away": "聖保利",
-      "HomeFScore": "2",
-      "AwayFScore": "0",
-      "id": "1894925",
-      "matchDate": "21/11 20:00",
-      "hkjcDate": " 星期六 22 ",
-      "momentDate": "2020-11-21T12:00:00.000Z",
-      "matchLiveMin": "90",
-      "place": "不買",
-      "sumVal": 0,
-      "oddTime": "11/21/2020, 07:56",
-      "isEnd": "y"
+      "home": "費倫天拿",
+      "away": "賓尼雲圖",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1915340",
+      "matchDate": "22/11 19:30",
+      "hkjcDate": " 星期日 6 "
     },
     {
       "league": "英超",
+      "time": "20:00",
+      "status": "",
+      "home": "富咸",
+      "away": "愛華頓",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1903876",
+      "matchDate": "22/11 20:00",
+      "hkjcDate": " 星期日 7 "
+    },
+    {
+      "league": "法甲",
+      "time": "20:00",
+      "status": "",
+      "home": "南特",
+      "away": "梅斯",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1877317",
+      "matchDate": "22/11 20:00",
+      "hkjcDate": " 星期日 8 "
+    },
+    {
+      "league": "蘇超",
+      "time": "20:00",
+      "status": "",
+      "home": "格拉斯哥流浪",
+      "away": "鴨巴甸",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1878062",
+      "matchDate": "22/11 20:00",
+      "hkjcDate": " 星期日 9 "
+    },
+    {
+      "league": "德乙",
       "time": "20:30",
       "status": "",
-      "home": "紐卡素",
-      "away": "車路士",
-      "HomeFScore": "0",
-      "AwayFScore": "2",
-      "id": "1903874",
-      "matchDate": "21/11 20:30",
-      "hkjcDate": " 星期六 23 ",
-      "momentDate": "2020-11-21T12:30:00.000Z",
-      "matchLiveMin": "90",
-      "buyOdd": "受让一球/球半",
-      "place": "主",
-      "oddVal": "0.84",
-      "oddTime": "11/21/2020, 08:24",
-      "sumVal": -1,
-      "isEnd": "y",
-      "OddData": [
-        {
-          "hkjc": {
-            "end": {
-              "point": "受让一球/球半",
-              "home": "0.84",
-              "away": "0.84"
-            }
-          }
-        }
-      ],
-      "res": "輸"
+      "home": "奧厄",
+      "away": "達斯泰特",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1894919",
+      "matchDate": "22/11 20:30",
+      "hkjcDate": " 星期日 11 "
     },
     {
-      "league": "英冠",
+      "league": "德乙",
       "time": "20:30",
       "status": "",
-      "home": "般尼茅夫",
-      "away": "雷丁",
-      "HomeFScore": "4",
-      "AwayFScore": "2",
-      "id": "1906149",
-      "matchDate": "21/11 20:30",
-      "hkjcDate": " 星期六 24 ",
-      "momentDate": "2020-11-21T12:30:00.000Z",
-      "matchLiveMin": "90",
-      "buyOdd": "半球/一球",
-      "place": "客",
-      "oddVal": "0.80",
-      "oddTime": "11/21/2020, 08:24",
-      "sumVal": -1,
-      "isEnd": "y",
-      "OddData": [
-        {
-          "hkjc": {
-            "end": {
-              "point": "半球/一球",
-              "home": "0.80",
-              "away": "0.80"
-            }
-          }
-        }
-      ],
-      "res": "輸"
+      "home": "格雷特霍夫",
+      "away": "雷根斯堡",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1894922",
+      "matchDate": "22/11 20:30",
+      "hkjcDate": " 星期日 12 "
     },
     {
-      "league": "西甲",
-      "time": "21:00",
+      "league": "德乙",
+      "time": "20:30",
       "status": "",
-      "home": "利雲特",
-      "away": "艾爾切",
-      "HomeFScore": "1",
-      "AwayFScore": "1",
-      "id": "1913872",
-      "matchDate": "21/11 21:00",
-      "hkjcDate": " 星期六 25 ",
-      "momentDate": "2020-11-21T13:00:00.000Z",
-      "matchLiveMin": "90",
-      "place": "不買",
-      "sumVal": 0,
-      "oddTime": "11/21/2020, 08:56",
-      "isEnd": "y"
+      "home": "漢堡",
+      "away": "波琴",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1894923",
+      "matchDate": "22/11 20:30",
+      "hkjcDate": " 星期日 13 "
     },
     {
-      "league": "英甲",
-      "time": "21:00",
+      "league": "德乙",
+      "time": "20:30",
       "status": "",
-      "home": "基寧咸",
-      "away": "查爾頓",
-      "HomeFScore": "1",
-      "AwayFScore": "1",
-      "id": "1905592",
-      "matchDate": "21/11 21:00",
-      "hkjcDate": " 星期六 26 ",
-      "momentDate": "2020-11-21T13:00:00.000Z",
-      "matchLiveMin": "90",
-      "place": "不買",
-      "sumVal": 0,
-      "oddTime": "11/21/2020, 08:56",
-      "isEnd": "y"
+      "home": "禾斯貝加踢球者",
+      "away": "漢諾威",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1894927",
+      "matchDate": "22/11 20:30",
+      "hkjcDate": " 星期日 14 "
     },
     {
       "league": "亞冠盃",
       "time": "21:00",
       "status": "",
-      "home": "蔚山現代",
-      "away": "FC上海",
-      "HomeFScore": "3",
-      "AwayFScore": "1",
-      "id": "1840876",
-      "matchDate": "21/11 21:00",
-      "hkjcDate": " 星期六 27 ",
-      "momentDate": "2020-11-21T13:00:00.000Z",
-      "matchLiveMin": "90",
-      "buyOdd": "一球/球半",
-      "place": "主",
-      "oddVal": "1.07",
-      "oddTime": "11/21/2020, 08:56",
-      "sumVal": 1,
-      "isEnd": "y",
-      "OddData": [
-        {
-          "hkjc": {
-            "end": {
-              "point": "一球/球半",
-              "home": "1.07",
-              "away": "1.07"
-            }
-          }
-        }
-      ],
-      "res": "贏"
+      "home": "全北汽車",
+      "away": "上海SP",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1840900",
+      "matchDate": "22/11 21:00",
+      "hkjcDate": " 星期日 16 "
     },
     {
-      "league": "俄超",
+      "league": "荷甲",
       "time": "21:30",
       "status": "",
-      "home": "艾卡馬特",
-      "away": "辛尼特",
-      "HomeFScore": "2",
-      "AwayFScore": "2",
-      "id": "1886687",
-      "matchDate": "21/11 21:30",
-      "hkjcDate": " 星期六 29 ",
-      "momentDate": "2020-11-21T13:30:00.000Z",
-      "matchLiveMin": "90",
-      "buyOdd": "受让半球/一球",
-      "place": "客",
-      "oddVal": "1.17",
-      "oddTime": "11/21/2020, 09:24",
-      "sumVal": -1,
-      "isEnd": "y",
-      "OddData": [
-        {
-          "hkjc": {
-            "end": {
-              "point": "受让半球/一球",
-              "home": "1.17",
-              "away": "1.17"
-            }
-          }
-        }
-      ],
-      "res": "輸"
+      "home": "幸運薛達",
+      "away": "飛燕諾",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1883899",
+      "matchDate": "22/11 21:30",
+      "hkjcDate": " 星期日 17 "
+    },
+    {
+      "league": "英超",
+      "time": "22:00",
+      "status": "",
+      "home": "錫菲聯",
+      "away": "韋斯咸",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1903879",
+      "matchDate": "22/11 22:00",
+      "hkjcDate": " 星期日 24 "
     },
     {
       "league": "意甲",
       "time": "22:00",
       "status": "",
-      "home": "克羅托內",
-      "away": "拉素",
-      "HomeFScore": "0",
-      "AwayFScore": "2",
-      "id": "1915339",
-      "matchDate": "21/11 22:00",
-      "hkjcDate": " 星期六 30 ",
-      "momentDate": "2020-11-21T14:00:00.000Z",
-      "matchLiveMin": "90",
-      "place": "不買",
-      "sumVal": 0,
-      "oddTime": "11/21/2020, 10:00",
-      "isEnd": "y"
+      "home": "國際米蘭",
+      "away": "拖連奴",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1915341",
+      "matchDate": "22/11 22:00",
+      "hkjcDate": " 星期日 25 "
     },
     {
-      "league": "法乙",
+      "league": "意甲",
       "time": "22:00",
       "status": "",
-      "home": "勒哈弗爾",
-      "away": "卡昂",
-      "HomeFScore": "1",
-      "AwayFScore": "2",
-      "id": "1877697",
-      "matchDate": "21/11 22:00",
-      "hkjcDate": " 星期六 31 ",
-      "momentDate": "2020-11-21T14:00:00.000Z",
-      "matchLiveMin": "90",
-      "place": "不買",
-      "sumVal": 0,
-      "oddTime": "11/21/2020, 10:00",
-      "isEnd": "y"
+      "home": "羅馬",
+      "away": "帕爾馬",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1915338",
+      "matchDate": "22/11 22:00",
+      "hkjcDate": " 星期日 26 "
     },
     {
-      "league": "德甲",
-      "time": "22:30",
+      "league": "法甲",
+      "time": "22:00",
       "status": "",
-      "home": "拜仁慕尼黑",
-      "away": "雲達不來梅",
-      "HomeFScore": "1",
-      "AwayFScore": "1",
-      "id": "1894614",
-      "matchDate": "21/11 22:30",
-      "hkjcDate": " 星期六 32 ",
-      "momentDate": "2020-11-21T14:30:00.000Z",
-      "matchLiveMin": "90",
-      "place": "不買",
-      "sumVal": 0,
-      "oddTime": "11/21/2020, 10:25",
-      "isEnd": "y"
-    },
-    {
-      "league": "德甲",
-      "time": "22:30",
-      "status": "",
-      "home": "比勒費爾德",
-      "away": "利華古遜",
-      "HomeFScore": "1",
-      "AwayFScore": "2",
-      "id": "1894613",
-      "matchDate": "21/11 22:30",
-      "hkjcDate": " 星期六 33 ",
-      "momentDate": "2020-11-21T14:30:00.000Z",
-      "matchLiveMin": "90",
-      "buyOdd": "受让一球",
-      "place": "不買",
-      "oddVal": "0.84",
-      "oddTime": "11/21/2020, 10:25",
-      "sumVal": 0,
-      "isEnd": "y"
-    },
-    {
-      "league": "德甲",
-      "time": "22:30",
-      "status": "",
-      "home": "慕遜加柏",
-      "away": "奧格斯堡",
-      "HomeFScore": "1",
-      "AwayFScore": "1",
-      "id": "1894615",
-      "matchDate": "21/11 22:30",
-      "hkjcDate": " 星期六 35 ",
-      "momentDate": "2020-11-21T14:30:00.000Z",
-      "matchLiveMin": "90",
-      "place": "不買",
-      "sumVal": 0,
-      "oddTime": "11/21/2020, 10:25",
-      "isEnd": "y"
-    },
-    {
-      "league": "德甲",
-      "time": "22:30",
-      "status": "",
-      "home": "史浩克04",
-      "away": "禾夫斯堡",
-      "HomeFScore": "0",
-      "AwayFScore": "2",
-      "id": "1894621",
-      "matchDate": "21/11 22:30",
-      "hkjcDate": " 星期六 36 ",
-      "momentDate": "2020-11-21T14:30:00.000Z",
-      "matchLiveMin": "90",
-      "buyOdd": "受让平手/半球",
-      "place": "不買",
-      "oddVal": "1.21",
-      "oddTime": "11/21/2020, 10:25",
-      "sumVal": 0,
-      "isEnd": "y"
-    },
-    {
-      "league": "英超",
-      "time": "23:00",
-      "status": "",
-      "home": "阿士東維拉",
-      "away": "白禮頓",
-      "HomeFScore": "1",
-      "AwayFScore": "2",
-      "id": "1903878",
-      "matchDate": "21/11 23:00",
-      "hkjcDate": " 星期六 37 ",
-      "momentDate": "2020-11-21T15:00:00.000Z",
-      "matchLiveMin": "90",
-      "place": "不買",
-      "sumVal": 0,
-      "oddTime": "11/21/2020, 10:55",
-      "isEnd": "y"
-    },
-    {
-      "league": "英冠",
-      "time": "23:00",
-      "status": "",
-      "home": "班士利",
-      "away": "諾定咸森林",
-      "HomeFScore": "2",
-      "AwayFScore": "0",
-      "id": "1906159",
-      "matchDate": "21/11 23:00",
-      "hkjcDate": " 星期六 38 ",
-      "momentDate": "2020-11-21T15:00:00.000Z",
-      "matchLiveMin": "90",
-      "place": "不買",
-      "sumVal": 0,
-      "oddTime": "11/21/2020, 10:55",
-      "isEnd": "y"
-    },
-    {
-      "league": "英冠",
-      "time": "23:00",
-      "status": "",
-      "home": "布里斯托城",
-      "away": "打比郡",
-      "HomeFScore": "1",
-      "AwayFScore": "0",
-      "id": "1906153",
-      "matchDate": "21/11 23:00",
-      "hkjcDate": " 星期六 39 ",
-      "momentDate": "2020-11-21T15:00:00.000Z",
-      "matchLiveMin": "90",
-      "buyOdd": "平手/半球",
-      "place": "客",
-      "oddVal": "0.84",
-      "oddTime": "11/21/2020, 10:55",
-      "sumVal": -1,
-      "isEnd": "y",
-      "OddData": [
-        {
-          "hkjc": {
-            "end": {
-              "point": "平手/半球",
-              "home": "0.84",
-              "away": "0.84"
-            }
-          }
-        }
-      ],
-      "res": "輸"
-    },
-    {
-      "league": "英冠",
-      "time": "23:00",
-      "status": "",
-      "home": "米禾爾",
-      "away": "卡迪夫城",
-      "HomeFScore": "1",
-      "AwayFScore": "1",
-      "id": "1906150",
-      "matchDate": "21/11 23:00",
-      "hkjcDate": " 星期六 42 ",
-      "momentDate": "2020-11-21T15:00:00.000Z",
-      "matchLiveMin": "90",
-      "buyOdd": "平手",
-      "place": "主",
-      "oddVal": "0.76",
-      "oddTime": "11/21/2020, 10:55",
-      "sumVal": 0,
-      "isEnd": "y",
-      "OddData": [
-        {
-          "hkjc": {
-            "end": {
-              "point": "平手",
-              "home": "0.76",
-              "away": "0.76"
-            }
-          }
-        }
-      ],
-      "res": "走"
-    },
-    {
-      "league": "蘇超",
-      "time": "23:00",
-      "status": "",
-      "home": "喜伯年",
-      "away": "些路迪",
-      "HomeFScore": "2",
-      "AwayFScore": "2",
-      "id": "1878061",
-      "matchDate": "21/11 23:00",
-      "hkjcDate": " 星期六 60 ",
-      "momentDate": "2020-11-21T15:00:00.000Z",
-      "matchLiveMin": "90",
-      "buyOdd": "受让一球",
-      "place": "客",
-      "oddVal": "0.80",
-      "oddTime": "11/21/2020, 10:55",
-      "sumVal": -1,
-      "isEnd": "y",
-      "OddData": [
-        {
-          "hkjc": {
-            "end": {
-              "point": "受让一球",
-              "home": "0.80",
-              "away": "0.80"
-            }
-          }
-        }
-      ],
-      "res": "輸"
+      "home": "迪安",
+      "away": "朗斯",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1877312",
+      "matchDate": "22/11 22:00",
+      "hkjcDate": " 星期日 29 "
     },
     {
       "league": "西甲",
       "time": "23:15",
       "status": "",
-      "home": "維拉利爾",
-      "away": "皇家馬德里",
-      "HomeFScore": "1",
-      "AwayFScore": "1",
-      "id": "1913877",
-      "matchDate": "21/11 23:15",
-      "hkjcDate": " 星期六 65 ",
-      "momentDate": "2020-11-21T15:15:00.000Z",
-      "matchLiveMin": "90",
-      "buyOdd": "平手",
-      "place": "主",
-      "oddVal": "0.91",
-      "oddTime": "11/21/2020, 11:09",
-      "sumVal": 0,
-      "isEnd": "y",
-      "OddData": [
-        {
-          "hkjc": {
-            "end": {
-              "point": "平手",
-              "home": "0.91",
-              "away": "0.91"
-            }
-          }
-        }
-      ],
-      "res": "走"
-    },
-    {
-      "league": "荷乙",
-      "time": "23:30",
-      "status": "",
-      "home": "阿梅爾城",
-      "away": "伊高斯",
-      "HomeFScore": "3",
-      "AwayFScore": "0",
-      "id": "1884800",
-      "matchDate": "21/11 23:30",
-      "hkjcDate": " 星期六 67 ",
-      "momentDate": "2020-11-21T15:30:00.000Z",
-      "matchLiveMin": "90",
-      "buyOdd": "平手/半球",
-      "place": "主",
-      "oddVal": "0.98",
-      "oddTime": "11/21/2020, 11:24",
-      "sumVal": 1,
-      "isEnd": "y",
-      "OddData": [
-        {
-          "hkjc": {
-            "end": {
-              "point": "平手/半球",
-              "home": "0.98",
-              "away": "0.98"
-            }
-          }
-        }
-      ],
-      "res": "贏"
+      "home": "卡迪斯",
+      "away": "皇家蘇斯達",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1913876",
+      "matchDate": "22/11 23:15",
+      "hkjcDate": " 星期日 34 "
     },
     {
       "league": "法甲",
       "time": "23:59",
       "status": "",
-      "home": "比斯特",
-      "away": "聖伊天",
-      "HomeFScore": "4",
-      "AwayFScore": "1",
-      "id": "1877311",
-      "matchDate": "22/11 00:00",
-      "hkjcDate": " 星期六 68 ",
-      "momentDate": "2020-11-21T16:00:00.000Z",
-      "matchLiveMin": "90",
-      "buyOdd": "平手/半球",
-      "place": "主",
-      "oddVal": "0.92",
-      "oddTime": "11/21/2020, 11:54",
-      "sumVal": 1,
-      "isEnd": "y",
-      "OddData": [
-        {
-          "hkjc": {
-            "end": {
-              "point": "平手/半球",
-              "home": "0.92",
-              "away": "0.92"
-            }
-          }
-        }
-      ],
-      "res": "贏"
+      "home": "昂熱",
+      "away": "里昂",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1877310",
+      "matchDate": "23/11 00:00",
+      "hkjcDate": " 星期日 37 "
     },
     {
-      "league": "俄超",
-      "time": "23:59",
+      "league": "英超",
+      "time": "00:30",
       "status": "",
-      "home": "莫斯科斯巴達",
-      "away": "莫斯科戴拿模",
-      "HomeFScore": "1",
-      "AwayFScore": "1",
-      "id": "1886685",
-      "matchDate": "22/11 00:00",
-      "hkjcDate": " 星期六 69 ",
-      "momentDate": "2020-11-21T16:00:00.000Z",
-      "matchLiveMin": "90",
-      "place": "不買",
-      "sumVal": 0,
-      "oddTime": "11/21/2020, 11:54",
-      "isEnd": "y"
+      "home": "列斯聯",
+      "away": "阿仙奴",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1903875",
+      "matchDate": "23/11 00:30",
+      "hkjcDate": " 星期日 39 "
     },
     {
       "league": "意甲",
       "time": "01:00",
       "status": "",
-      "home": "史柏斯亞",
-      "away": "阿特蘭大",
-      "HomeFScore": "0",
-      "AwayFScore": "0",
-      "id": "1915345",
-      "matchDate": "22/11 01:00",
-      "hkjcDate": " 星期六 71 ",
-      "momentDate": "2020-11-21T17:00:00.000Z",
-      "matchLiveMin": "90",
-      "buyOdd": "受让一球/球半",
-      "place": "客",
-      "oddVal": "0.70",
-      "oddTime": "11/22/2020, 12:54",
-      "sumVal": -1,
-      "isEnd": "y",
-      "OddData": [
-        {
-          "hkjc": {
-            "end": {
-              "point": "受让一球/球半",
-              "home": "0.70",
-              "away": "0.70"
-            }
-          }
-        }
-      ],
-      "res": "輸"
+      "home": "烏甸尼斯",
+      "away": "熱拿亞",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1915346",
+      "matchDate": "23/11 01:00",
+      "hkjcDate": " 星期日 42 "
     },
     {
-      "league": "英超",
-      "time": "01:30",
+      "league": "德甲",
+      "time": "01:00",
       "status": "",
-      "home": "熱刺",
-      "away": "曼城",
-      "HomeFScore": "2",
-      "AwayFScore": "0",
-      "id": "1903880",
-      "matchDate": "22/11 01:30",
-      "hkjcDate": " 星期六 74 ",
-      "momentDate": "2020-11-21T17:30:00.000Z",
-      "matchLiveMin": "90",
-      "place": "不買",
-      "sumVal": 0,
-      "oddTime": "11/22/2020, 01:24",
-      "isEnd": "y"
+      "home": "科隆",
+      "away": "柏林聯",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1894617",
+      "matchDate": "23/11 01:00",
+      "hkjcDate": " 星期日 43 "
     },
     {
       "league": "西甲",
       "time": "01:30",
       "status": "",
-      "home": "西維爾",
-      "away": "切爾達",
-      "HomeFScore": "4",
-      "AwayFScore": "2",
-      "id": "1913875",
-      "matchDate": "22/11 01:30",
-      "hkjcDate": " 星期六 75 ",
-      "momentDate": "2020-11-21T17:30:00.000Z",
-      "matchLiveMin": "90",
-      "buyOdd": "半球/一球",
-      "place": "客",
-      "oddVal": "0.92",
-      "oddTime": "11/22/2020, 01:24",
-      "sumVal": -1,
-      "isEnd": "y",
-      "OddData": [
-        {
-          "hkjc": {
-            "end": {
-              "point": "半球/一球",
-              "home": "0.92",
-              "away": "0.92"
-            }
-          }
-        }
-      ],
-      "res": "輸"
+      "home": "格蘭納達",
+      "away": "華拉度列",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1913879",
+      "matchDate": "23/11 01:30",
+      "hkjcDate": " 星期日 49 "
     },
     {
-      "league": "德甲",
-      "time": "01:30",
-      "status": "",
-      "home": "法蘭克福",
-      "away": "RB萊比錫",
-      "HomeFScore": "1",
-      "AwayFScore": "1",
-      "id": "1894616",
-      "matchDate": "22/11 01:30",
-      "hkjcDate": " 星期六 76 ",
-      "momentDate": "2020-11-21T17:30:00.000Z",
-      "matchLiveMin": "90",
-      "place": "不買",
-      "sumVal": 0,
-      "oddTime": "11/22/2020, 01:24",
-      "isEnd": "y"
-    },
-    {
-      "league": "荷甲",
-      "time": "01:45",
-      "status": "",
-      "home": "威廉二世",
-      "away": "芬洛",
-      "HomeFScore": "2",
-      "AwayFScore": "1",
-      "id": "1883904",
-      "matchDate": "22/11 01:45",
-      "hkjcDate": " 星期六 79 ",
-      "momentDate": "2020-11-21T17:45:00.000Z",
-      "matchLiveMin": "90",
-      "place": "不買",
-      "sumVal": 0,
-      "oddTime": "11/22/2020, 01:39",
-      "isEnd": "y"
-    },
-    {
-      "league": "法乙",
-      "time": "02:00",
-      "status": "",
-      "home": "巴黎FC",
-      "away": "歐塞爾",
-      "HomeFScore": "0",
-      "AwayFScore": "3",
-      "id": "1877700",
-      "matchDate": "22/11 02:00",
-      "hkjcDate": " 星期六 84 ",
-      "momentDate": "2020-11-21T18:00:00.000Z",
-      "matchLiveMin": "90",
-      "buyOdd": "平手/半球",
-      "place": "主",
-      "oddVal": "0.94",
-      "oddTime": "11/22/2020, 01:54",
-      "sumVal": -1,
-      "isEnd": "y",
-      "OddData": [
-        {
-          "hkjc": {
-            "end": {
-              "point": "平手/半球",
-              "home": "0.94",
-              "away": "0.94"
-            }
-          }
-        }
-      ],
-      "res": "輸"
-    },
-    {
-      "league": "荷甲",
+      "league": "巴西甲",
       "time": "03:00",
       "status": "",
-      "home": "格羅寧根",
-      "away": "維迪斯",
-      "HomeFScore": "1",
-      "AwayFScore": "1",
-      "id": "1883898",
-      "matchDate": "22/11 03:00",
-      "hkjcDate": " 星期六 87 ",
-      "momentDate": "2020-11-21T19:00:00.000Z",
-      "matchLiveMin": "90",
-      "buyOdd": "受让平手/半球",
-      "place": "客",
-      "oddVal": "0.97",
-      "oddTime": "11/22/2020, 02:54",
-      "sumVal": -0.5,
-      "isEnd": "y",
-      "OddData": [
-        {
-          "hkjc": {
-            "end": {
-              "point": "受让平手/半球",
-              "home": "0.97",
-              "away": "0.97"
-            }
-          }
-        }
-      ],
-      "res": "輸半"
+      "home": "施亞拉",
+      "away": "明尼路",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1858793",
+      "matchDate": "23/11 03:00",
+      "hkjcDate": " 星期日 51 "
     },
     {
-      "league": "德甲",
-      "time": "03:30",
+      "league": "英超",
+      "time": "03:15",
       "status": "",
-      "home": "哈化柏林",
-      "away": "多蒙特",
-      "HomeFScore": "2",
-      "AwayFScore": "5",
-      "id": "1894619",
-      "matchDate": "22/11 03:30",
-      "hkjcDate": " 星期六 88 ",
-      "momentDate": "2020-11-21T19:30:00.000Z",
-      "matchLiveMin": "90",
-      "buyOdd": "受让一球",
-      "place": "客",
-      "oddVal": "0.92",
-      "oddTime": "11/22/2020, 03:24",
-      "sumVal": 1,
-      "isEnd": "y",
-      "OddData": [
-        {
-          "hkjc": {
-            "end": {
-              "point": "受让一球",
-              "home": "0.92",
-              "away": "0.92"
-            }
-          }
-        }
-      ],
-      "res": "贏"
+      "home": "利物浦",
+      "away": "李斯特城",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1903877",
+      "matchDate": "23/11 03:15",
+      "hkjcDate": " 星期日 54 "
     },
     {
       "league": "意甲",
       "time": "03:45",
       "status": "",
-      "home": "祖雲達斯",
-      "away": "卡利亞里",
-      "HomeFScore": "2",
-      "AwayFScore": "0",
-      "id": "1915342",
-      "matchDate": "22/11 03:45",
-      "hkjcDate": " 星期六 89 ",
-      "momentDate": "2020-11-21T19:45:00.000Z",
-      "matchLiveMin": "90",
-      "place": "不買",
-      "sumVal": 0,
-      "oddTime": "11/22/2020, 03:39",
-      "isEnd": "y"
-    },
-    {
-      "league": "英超",
-      "time": "04:00",
-      "status": "",
-      "home": "曼聯",
-      "away": "西布朗",
-      "HomeFScore": "1",
-      "AwayFScore": "0",
-      "id": "1903881",
-      "matchDate": "22/11 04:00",
-      "hkjcDate": " 星期六 91 ",
-      "momentDate": "2020-11-21T20:00:00.000Z",
-      "matchLiveMin": "90",
-      "place": "不買",
-      "sumVal": 0,
-      "oddTime": "11/22/2020, 03:54",
-      "isEnd": "y"
+      "home": "拿玻里",
+      "away": "AC米蘭",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1915343",
+      "matchDate": "23/11 03:45",
+      "hkjcDate": " 星期日 55 "
     },
     {
       "league": "西甲",
       "time": "04:00",
       "status": "",
-      "home": "馬德里體育會",
-      "away": "巴塞隆拿",
-      "HomeFScore": "1",
-      "AwayFScore": "0",
-      "id": "1913874",
-      "matchDate": "22/11 04:00",
-      "hkjcDate": " 星期六 92 ",
-      "momentDate": "2020-11-21T20:00:00.000Z",
-      "matchLiveMin": "90",
-      "buyOdd": "平手",
-      "place": "主",
-      "oddVal": "1.00",
-      "oddTime": "11/22/2020, 03:54",
-      "sumVal": 1,
-      "isEnd": "y",
-      "OddData": [
-        {
-          "hkjc": {
-            "end": {
-              "point": "平手",
-              "home": "1.00",
-              "away": "1.00"
-            }
-          }
-        }
-      ],
-      "res": "贏"
+      "home": "艾拉維斯",
+      "away": "華倫西亞",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1913873",
+      "matchDate": "23/11 04:00",
+      "hkjcDate": " 星期日 57 "
+    },
+    {
+      "league": "美職業附",
+      "time": "05:00",
+      "status": "",
+      "home": "肯薩斯體育會",
+      "away": "聖荷西地震",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1950004",
+      "matchDate": "23/11 05:00",
+      "hkjcDate": " 星期日 60 "
     },
     {
       "league": "巴西甲",
-      "time": "06:00",
+      "time": "05:15",
       "status": "",
-      "home": "法林明高",
-      "away": "哥列迪巴",
-      "HomeFScore": "3",
-      "AwayFScore": "1",
-      "id": "1858792",
-      "matchDate": "22/11 06:00",
-      "hkjcDate": " 星期六 97 ",
-      "momentDate": "2020-11-21T22:00:00.000Z",
-      "matchLiveMin": "90",
-      "buyOdd": "一球/球半",
-      "place": "主",
-      "oddVal": "0.83",
-      "oddTime": "11/22/2020, 05:54",
-      "sumVal": 1,
-      "isEnd": "y",
-      "OddData": [
-        {
-          "hkjc": {
-            "end": {
-              "point": "一球/球半",
-              "home": "0.83",
-              "away": "0.83"
-            }
-          }
-        }
-      ],
-      "res": "贏"
+      "home": "保地花高",
+      "away": "福塔雷薩",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1858794",
+      "matchDate": "23/11 05:15",
+      "hkjcDate": " 星期日 61 "
     },
     {
       "league": "智利甲",
       "time": "06:15",
       "status": "",
-      "home": "哥甘保",
-      "away": "卡拉雷聯",
-      "HomeFScore": "1",
-      "AwayFScore": "2",
-      "id": "1950474",
-      "matchDate": "22/11 06:15",
-      "hkjcDate": " 星期六 98 ",
-      "momentDate": "2020-11-21T22:15:00.000Z",
-      "matchLiveMin": "90",
-      "buyOdd": "受让半球/一球",
-      "place": "客",
-      "oddVal": "1.19",
-      "oddTime": "11/22/2020, 06:09",
-      "sumVal": 0.5,
-      "isEnd": "y",
-      "OddData": [
-        {
-          "hkjc": {
-            "end": {
-              "point": "受让半球/一球",
-              "home": "1.19",
-              "away": "1.19"
-            }
-          }
-        }
-      ],
-      "res": "贏半"
+      "home": "維拿迪馬愛華頓",
+      "away": "智利大學",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1950476",
+      "matchDate": "23/11 06:15",
+      "hkjcDate": " 星期日 63 "
     },
     {
-      "league": "巴西甲",
-      "time": "08:00",
+      "league": "美職業附",
+      "time": "08:30",
       "status": "",
-      "home": "戈亞斯",
-      "away": "彭美拉斯",
-      "HomeFScore": "1",
-      "AwayFScore": "0",
-      "id": "1858789",
-      "matchDate": "22/11 08:00",
-      "hkjcDate": " 星期六 100 ",
-      "momentDate": "2020-11-22T00:00:00.000Z",
-      "matchLiveMin": "90",
-      "buyOdd": "受让半球/一球",
-      "place": "客",
-      "oddVal": "1.07",
-      "oddTime": "11/22/2020, 07:54",
-      "sumVal": -1,
-      "isEnd": "y",
-      "OddData": [
-        {
-          "hkjc": {
-            "end": {
-              "point": "受让半球/一球",
-              "home": "1.07",
-              "away": "1.07"
-            }
-          }
-        }
-      ],
-      "res": "輸"
+      "home": "明尼蘇達聯",
+      "away": "科羅拉多急流",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1950005",
+      "matchDate": "23/11 08:30",
+      "hkjcDate": " 星期日 67 "
+    },
+    {
+      "league": "墨西聯春",
+      "time": "09:00",
+      "status": "",
+      "home": "堤格雷斯",
+      "away": "托盧卡",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1950055",
+      "matchDate": "23/11 09:00",
+      "hkjcDate": " 星期日 69 "
     }
   ]
 }
