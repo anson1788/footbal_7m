@@ -1,0 +1,101 @@
+{
+  "matchDate": "周四賽事",
+  "matchList": [
+    {
+      "league": "亞冠盃",
+      "time": "18:00",
+      "status": "",
+      "home": "FC悉尼",
+      "away": "上海SP",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1840890",
+      "matchDate": "19/11 18:00",
+      "hkjcDate": " 星期四 1 "
+    },
+    {
+      "league": "智利甲",
+      "time": "21:30",
+      "status": "",
+      "home": "安圖法加斯達",
+      "away": "維拿迪馬愛華頓",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1950287",
+      "matchDate": "19/11 21:30",
+      "hkjcDate": " 星期四 2 "
+    },
+    {
+      "league": "荷乙",
+      "time": "01:45",
+      "status": "",
+      "home": "泰斯達",
+      "away": "多德勒支",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1884802",
+      "matchDate": "20/11 01:45",
+      "hkjcDate": " 星期四 3 "
+    },
+    {
+      "league": "智利甲",
+      "time": "04:00",
+      "status": "",
+      "home": "侯治柏度",
+      "away": "伊基克",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1950288",
+      "matchDate": "20/11 03:15",
+      "hkjcDate": " 星期四 4 "
+    },
+    {
+      "league": "荷乙",
+      "time": "04:00",
+      "status": "",
+      "home": "迪加史卓普",
+      "away": "甘堡爾",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1884799",
+      "matchDate": "20/11 04:00",
+      "hkjcDate": " 星期四 5 "
+    },
+    {
+      "league": "智利甲",
+      "time": "05:30",
+      "status": "",
+      "home": "高路高路",
+      "away": "奧達斯",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1950289",
+      "matchDate": "20/11 05:30",
+      "hkjcDate": " 星期四 6 "
+    },
+    {
+      "league": "巴西甲",
+      "time": "06:00",
+      "status": "",
+      "home": "華斯高",
+      "away": "福塔雷薩",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1858732",
+      "matchDate": "20/11 06:00",
+      "hkjcDate": " 星期四 7 "
+    },
+    {
+      "league": "智利甲",
+      "time": "08:30",
+      "status": "",
+      "home": "聖地牙哥漫遊者",
+      "away": "艾斯賓路拿",
+      "HomeFScore": "",
+      "AwayFScore": "",
+      "id": "1950290",
+      "matchDate": "20/11 08:00",
+      "hkjcDate": " 星期四 8 "
+    }
+  ]
+}

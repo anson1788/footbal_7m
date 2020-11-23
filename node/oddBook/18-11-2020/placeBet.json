@@ -1,0 +1,202 @@
+[
+  {
+    "home": "克羅地亞",
+    "away": "葡萄牙",
+    "id": "1858400",
+    "buyOdd": "受让半球/一球",
+    "up": "0.08",
+    "down": "-0.96",
+    "oddVal": "0.74",
+    "place": "主",
+    "time": "03:40",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "受让半球/一球",
+            "home": "0.74",
+            "away": "0.74"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "2",
+    "AwayFScore": "3",
+    "res": "輸半"
+  },
+  {
+    "home": "西班牙",
+    "away": "德國",
+    "id": "1858412",
+    "buyOdd": "平手/半球",
+    "up": "0.13",
+    "down": "-0.82",
+    "oddVal": "1.02",
+    "place": "主",
+    "time": "03:40",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "平手/半球",
+            "home": "1.02",
+            "away": "1.02"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "6",
+    "AwayFScore": "0",
+    "res": "贏"
+  },
+  {
+    "home": "法國",
+    "away": "瑞典",
+    "id": "1858401",
+    "buyOdd": "半球/一球",
+    "up": "1.89",
+    "down": "-3.15",
+    "oddVal": "0.70",
+    "place": "主",
+    "time": "03:45",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "半球/一球",
+            "home": "0.70",
+            "away": "0.70"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "4",
+    "AwayFScore": "2",
+    "res": "贏"
+  },
+  {
+    "home": "烏拉圭",
+    "away": "巴西",
+    "id": "1936412",
+    "buyOdd": "受让半球/一球",
+    "up": "-5.00",
+    "down": "5.55",
+    "oddVal": "1.23",
+    "place": "客",
+    "time": "06:56",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "受让半球/一球",
+            "home": "1.23",
+            "away": "1.23"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "0",
+    "AwayFScore": "2",
+    "res": "贏"
+  },
+  {
+    "home": "秘魯",
+    "away": "阿根廷",
+    "id": "1936413",
+    "buyOdd": "受让半球/一球",
+    "up": "-1.13",
+    "down": "0.44",
+    "oddVal": "0.74",
+    "place": "客",
+    "time": "08:24",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "受让半球/一球",
+            "home": "0.74",
+            "away": "0.74"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "0",
+    "AwayFScore": "2",
+    "res": "贏"
+  },
+  {
+    "home": "神戶勝利船",
+    "away": "浦和紅鑽",
+    "id": "1872592",
+    "buyOdd": "平手",
+    "up": "-7.78",
+    "down": "5.68",
+    "oddVal": "0.85",
+    "place": "客",
+    "time": "16:56",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "平手",
+            "home": "0.85",
+            "away": "0.85"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "0",
+    "AwayFScore": "1",
+    "res": "贏"
+  },
+  {
+    "home": "仙台維加泰",
+    "away": "FC東京",
+    "id": "1872599",
+    "buyOdd": "受让半球/一球",
+    "up": "-2.62",
+    "down": "2.41",
+    "oddVal": "1.14",
+    "place": "客",
+    "time": "17:56",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "受让半球/一球",
+            "home": "1.14",
+            "away": "1.14"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "2",
+    "AwayFScore": "2",
+    "res": "輸"
+  },
+  {
+    "home": "珀斯光輝(中)",
+    "away": "上海绿地申花",
+    "id": "1840866",
+    "buyOdd": "受让平手/半球",
+    "up": "-2.72",
+    "down": "1.78",
+    "oddVal": "1.04",
+    "place": "客",
+    "time": "17:56",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "受让平手/半球",
+            "home": "1.04",
+            "away": "1.04"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "1",
+    "AwayFScore": "2",
+    "res": "贏"
+  }
+]
