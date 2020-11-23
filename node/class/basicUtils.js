@@ -72,7 +72,7 @@ class basicUtils {
         await mPage.navigate({url: mUrl});
         await mPage.loadEventFired();
         //console.log('Page loaded! Now waiting a few seconds for all the JS to load...');
-        await timeout(1500) // give the JS some time to load
+        await timeout(50) // give the JS some time to load
         if(type=="bfHistory"){
            await this.bfJS1(mRuntime);
            await this.bfJS2(mRuntime);

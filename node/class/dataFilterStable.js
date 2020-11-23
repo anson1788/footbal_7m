@@ -33,7 +33,7 @@ class dataFilterStable extends dataFilterSingleLogic{
     var tgLog = ""
     for(var i=0;i<matchList.length;i++){
         var match = matchList[i]
-        console.log(match.home)
+        
         var feature = this.extractSameOddMatch(match, this.deepClone(pastList))
  
 
