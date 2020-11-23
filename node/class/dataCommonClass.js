@@ -1,5 +1,5 @@
 const { parse } = require("dashdash");
-
+var fs = require('fs');
 class dataCommomClass {
 
     constructor() {
@@ -568,5 +568,31 @@ class dataCommomClass {
     }
     return false
   }
+
+  async getMatchDateList(matchDate){
+    let rawdata = fs.readFileSync("oddBook.json");
+    let dataList = JSON.parse(rawdata)
+    var resultArr = []
+    for(var i=0;i<dataList.length;i++){
+        if(dataList[i].matchData == matchDate){
+            resultArr.push(dataList[i])
+        }
+    }
+    return resultArr
+  }
+
+  getSingleFieldArr(list,keyTarget){
+    for(var i=0;i<list.length;i++){
+        
+        for(var key in list[i]){
+            if(keyTarget!=key){
+               delete list[i][""+key]
+            }
+        }
+
+    }
+    return list
+  }
+
 }
 module.exports = dataCommomClass

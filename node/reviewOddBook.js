@@ -6,9 +6,9 @@ async function init(){
     var result = await oddBookUtils.getOddBookList()
     var oddPlacement = result[0]
     var dateList = result[1]
-   // console.log(JSON.stringify(oddPlacement))
+    console.table(oddPlacement)
+    /*
     var onccList = await oddBookUtils.getONCCDataList(dateList)
-    //console.table(onccList)
     var liveMatch = 0
     for(var i=0;i<onccList.length;i++){
         if(onccList[i].isLive == 'y'){
@@ -38,6 +38,7 @@ async function init(){
     }
     
     console.table(pushArr)
+    */
 
 }
 
