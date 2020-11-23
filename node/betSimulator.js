@@ -16,6 +16,7 @@ async function getCacheData(url, folder, cacheId , type ,isCache = true){
     var rtnArr = []
     if(isCache && fs.existsSync(folder+cacheId+".json")){
         let rawdata = fs.readFileSync(folder+cacheId+".json");
+        console.log(folder+cacheId+".json")
         rtnArr = JSON.parse(rawdata);   
     }else{        
         
@@ -58,7 +59,7 @@ async function init(){
     let rawdata = fs.readFileSync("oddBook.json");
     let dataList = JSON.parse(rawdata)
     let ftUtils = new filterUtils()
-    let matchList = await ftUtils.getMatchDateList("20201121")
+    let matchList = await ftUtils.getMatchDateList("20201114")
   //  matchList = ftUtils.getSingleFieldArr(matchList,"id")
     console.table(matchList)
   
@@ -88,7 +89,7 @@ async function init(){
         var downWin = parseFloat(upSide["輸半"]) + parseFloat(upSide["輸"])
         var dwnSide = hkjcData["下"][1]
 
-                if((parseFloat(upSide["p"])>0 || parseFloat(dwnSide["p"])>0)){
+                if((parseFloat(upSide["p"])>-0.5 || parseFloat(dwnSide["p"])>-0.50)){
             
                     var betData = {
                                 "home":match["home"],
@@ -106,6 +107,7 @@ async function init(){
                                 "贏": upSide["贏"],
                                 "輸":upSide["輸"],
                                 "輸半":upSide["輸半"],
+                                "diffP": Math.abs(upWin -downWin)/(upWin+downWin),
                                 "OddData" : [
                                     {
                                       "hkjc":{
@@ -120,24 +122,30 @@ async function init(){
                     if( parseFloat(upSide["p"])> parseFloat(dwnSide["p"])){
                             betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["home"]
                             betData["place"] = "主"
-                            /*
-                            if(Math.abs(upWin -downWin)<7){
-                                if(parseFloat(match.OddData[0]["香港马会"]["end"]["away"])>parseFloat(match.OddData[0]["香港马会"]["end"]["home"])){
+                            
+                            
+                            if(Math.abs(upWin -downWin)/(upWin+downWin)<0.08){
+                                if(parseFloat(match.OddData[0]["香港马会"]["end"]["away"])<1.1 &&
+                                    parseFloat(match.OddData[0]["香港马会"]["end"]["away"])>parseFloat(match.OddData[0]["香港马会"]["end"]["home"])){
                                     betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["away"]
                                     betData["place"] = "客"
+                                    betData["switch"] = 'Y'
                                 }
-                            }*/
+                            }
 
                     }else{
                             betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["away"]
                             betData["place"] = "客"
-                            /*
-                            if(Math.abs(upWin -downWin)<7){
-                                if(parseFloat(match.OddData[0]["香港马会"]["end"]["home"])>parseFloat(match.OddData[0]["香港马会"]["end"]["away"])){
+                            
+                            
+                            if(Math.abs(upWin -downWin)/(upWin+downWin)<0.08){
+                                if(parseFloat(match.OddData[0]["香港马会"]["end"]["home"])<1.1 &&
+                                    parseFloat(match.OddData[0]["香港马会"]["end"]["home"])>parseFloat(match.OddData[0]["香港马会"]["end"]["away"])){
                                     betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["home"]
                                     betData["place"] = "主"
+                                    betData["switch"] = 'Y'
                                 }
-                            }*/
+                            }
 
                     }
 

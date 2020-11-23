@@ -758,12 +758,12 @@ class dataFilter extends dataCommonClass{
             if(broker=="香港马会"){
                 var tmpList = this.singleOddSimilarOddList(broker,match,dataList)
                 
-                
+                 
                 var calculatorUp = this.calculateSingleResultAsianOddAdvance(match,tmpList,broker)
                 var calculatorDown = this.calculateSingleResultAsianOddAdvance(match,tmpList,broker,"客")
                 
-               /*
-               var calculatorUp = this.calculateSingleResultAsianOdd(tmpList,broker)
+               /* 
+                var calculatorUp = this.calculateSingleResultAsianOdd(tmpList,broker)
                 var calculatorDown = this.calculateSingleResultAsianOdd(tmpList,broker,"客")
                 */
                 tmp[broker] = {
