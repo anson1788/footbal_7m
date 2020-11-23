@@ -759,7 +759,7 @@ class dataFilter extends dataCommonClass{
                 var tmpList = this.singleOddSimilarOddList(broker,match,dataList)
                 
 
-                 
+                
                 var calculatorUp = this.calculateSingleResultAsianOddAdvance(match,tmpList,broker)
                 var calculatorDown = this.calculateSingleResultAsianOddAdvance(match,tmpList,broker,"客")
                 

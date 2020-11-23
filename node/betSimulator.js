@@ -59,7 +59,7 @@ async function init(){
     let rawdata = fs.readFileSync("oddBook.json");
     let dataList = JSON.parse(rawdata)
     let ftUtils = new filterUtils()
-    let matchList = await ftUtils.getMatchDateList("20201114")
+    let matchList = await ftUtils.getMatchDateList("20201121")
   //  matchList = ftUtils.getSingleFieldArr(matchList,"id")
     console.table(matchList)
   
@@ -69,7 +69,7 @@ async function init(){
     var notMakeSenseArr = []
     for(var i=0;i<matchId.length;i++){
         var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+matchId[i].id
-        var OddData =  await getCacheData(url,"bfData/odd/crt/",  matchId[i].id,"bfOdd",true)
+        var OddData =  await getCacheData(url,"bfData/odd/crt/",  matchId[i].id,"bfOdd",false)
         
         match = {
             "home":matchId[i].home,
@@ -89,7 +89,7 @@ async function init(){
         var downWin = parseFloat(upSide["輸半"]) + parseFloat(upSide["輸"])
         var dwnSide = hkjcData["下"][1]
 
-                if((parseFloat(upSide["p"])>-0.5 || parseFloat(dwnSide["p"])>-0.50)){
+                if((parseFloat(upSide["p"])>0 || parseFloat(dwnSide["p"])>0)){
             
                     var betData = {
                                 "home":match["home"],
@@ -182,6 +182,7 @@ async function init(){
     fs.writeFileSync("oddBook/testResult/o1.json",JSON.stringify(betArr,null))
     console.table(betArr)
     console.table([count])
+    console.log("today match " + matchId.length)
 }
 
 init()

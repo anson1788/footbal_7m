@@ -56,14 +56,16 @@ class dataFilterStable extends dataFilterSingleLogic{
           var upWin = parseFloat(upSide["贏半"]) + parseFloat(upSide["贏"])
           var downWin = parseFloat(upSide["輸半"]) + parseFloat(upSide["輸"])
 
+          var reverse = (Math.abs(upWin -downWin)/(upWin+downWin)<0.08)
           if( parseFloat(upSide["p"])> parseFloat(dwnSide["p"]))
             {
               betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["home"]
               betData["place"] = "主"
               
                    
-              if(Math.abs(upWin -downWin)<7){
-                if(parseFloat(match.OddData[0]["香港马会"]["end"]["away"])>parseFloat(match.OddData[0]["香港马会"]["end"]["home"])){
+              if(reverse){
+                if(parseFloat(match.OddData[0]["香港马会"]["end"]["away"])<1.1&&
+                  parseFloat(match.OddData[0]["香港马会"]["end"]["away"])>parseFloat(match.OddData[0]["香港马会"]["end"]["home"])){
                     betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["away"]
                     betData["place"] = "客"
                 }
@@ -72,8 +74,9 @@ class dataFilterStable extends dataFilterSingleLogic{
               betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["away"]
               betData["place"] = "客"
 
-              if(Math.abs(upWin -downWin)<7){
-                if(parseFloat(match.OddData[0]["香港马会"]["end"]["home"])>parseFloat(match.OddData[0]["香港马会"]["end"]["away"])){
+              if(reverse){
+                if( parseFloat(match.OddData[0]["香港马会"]["end"]["home"])<1.1&&
+                  parseFloat(match.OddData[0]["香港马会"]["end"]["home"])>parseFloat(match.OddData[0]["香港马会"]["end"]["away"])){
                     betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["home"]
                     betData["place"] = "主"
                 }
