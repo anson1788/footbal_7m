@@ -1,5 +1,4 @@
 ﻿
-
 let basicUtils = require('./class/basicUtils.js');
 let bfwinUtils = require('./class/bfWinUtils.js');
 let filterUtils = require('./class/dataFilterStable.js');
@@ -53,40 +52,53 @@ async function getCacheData(url, folder, cacheId , type ,isCache = true){
     return rtnArr
 }
 
-async function init(defaultRange=50){
+async function init(){
     
     
-    let rawdata = fs.readFileSync("oddBook.json");
-    let dataList = JSON.parse(rawdata)
-    let ftUtils = new filterUtils()
-    var matchId = ["1878062"]
-    for(var i=0;i<matchId.length;i++){
-        var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+matchId[i]
-        var OddData =  await getCacheData(url,"bfData/odd/crt/",  matchId[i],"bfOdd",false)
-        
-        /*
-        url = "http://vip.win007.com/OverDown_n.aspx?id="+matchId[i]
-        var BSOddData =  await getCacheData(url,"bfData/bsodd/crt/",  matchId[i] ,"bfBSOdd",false)
-       */
-        match = {
-            "id":matchId[i],
-            "OddData":OddData
-         //   "BSOddData" : BSOddData
+    let rawdata = fs.readFileSync("oddBook/21-11-2020/placeBet.json");
+    let dataList1 = JSON.parse(rawdata)
+    
+    var rtn = []
+    var startAdd =false
+    for(var i=0;i<dataList1.length;i++){
+        if(dataList1[i].id=="1872563"){
+            startAdd = true
         }
-      
-        var oddPerList = ftUtils.extractSameOddMatch(match,dataList)
-        if(!ftUtils.isDicEmpty(oddPerList)){
-            console.table([oddPerList])
+        if(startAdd){
+            rtn.push(dataList1[i])
         }
-        /*
-        var oddBSPerList = ftUtils.extractSameBSOddMatch(match,dataList)
-        if(!ftUtils.isDicEmpty(oddBSPerList)){
-            console.table([oddBSPerList])
-        }*/
     }
-    
+
+
+
+    let rawdata2 = fs.readFileSync("oddBook/22-11-2020/placeBet.json");
+    let dataList2 = JSON.parse(rawdata2)
+    var stopAdd = false
+    for(var i=0;i<dataList2.length;i++){
+   
+        if(!stopAdd){
+            rtn.push(dataList2[i])
+        }
+        if(dataList2[i].id=="1858789"){
+            stopAdd = true
+        }
+    }
+    console.table(rtn)
+ 
+    var count = {
+        "輸":0,
+        "輸半":0,
+        "走":0,
+        "贏半":0,
+        "贏":0,
+        "total":0
+    }
+    for(var i=0;i<rtn.length;i++){
+        count[rtn[i].res] = count[rtn[i].res]+1
+    }
+
+    console.table([count])
   
-    
 }
 
-init(450)
+init()

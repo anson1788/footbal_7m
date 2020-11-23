@@ -1,5 +1,5 @@
 const { parse } = require("dashdash");
-
+var fs = require('fs');
 class dataCommomClass {
 
     constructor() {
@@ -205,6 +205,106 @@ class dataCommomClass {
         return [workingList,count]
     }
 
+
+    calculateSingleResultAsianOddAdvance(match,rtnVal,broker, betOn = "主"){
+        var workingList = this.deepClone(rtnVal)
+        var count = {
+            "輸":0,
+            "輸半":0,
+            "走":0,
+            "贏半":0,
+            "贏":0,
+            "total":0
+        }
+
+        var winBet = 0
+        var lostBet = 0 
+        for(var i=0;i<workingList.length;i++){
+            workingList[i].betOn = betOn
+            var endOdd = workingList[i]["OddData"][0][broker]["end"]["point"]
+            //console.log("here "+ endOdd)
+            var oddIdx = this.getOddIdx(endOdd)
+            var oddDis = this.getAsianOdd(oddIdx)
+
+            var firstOdd = parseFloat(oddDis.split("/")[0])
+            var secondOdd =  parseFloat(oddDis.split("/")[0])
+
+            if(oddDis.split("/").length>1){
+                secondOdd = parseFloat(oddDis.split("/")[1])
+            }
+            
+            var hfScore = parseFloat(workingList[i]["HomeFScore"])
+            var afScore = parseFloat(workingList[i]["AwayFScore"])
+
+            var adH1afScore = afScore + firstOdd
+            var adH2afScore = afScore + secondOdd
+            
+            var w1 = 0
+            var w2 = 0
+            var winodd = parseFloat(workingList[i]["OddData"][0][broker]["end"]["home"])
+            if(betOn == "主"){
+                if(hfScore > adH1afScore){
+                    w1 = 1
+                }else if(hfScore<adH1afScore){
+                    w1 = -1
+                }
+                if(hfScore > adH2afScore){
+                    w2 = 1
+                }else if(hfScore<adH2afScore){
+                    w2 = -1
+                }
+            }else{
+                winodd = parseFloat(workingList[i]["OddData"][0][broker]["end"]["away"])
+                if(hfScore < adH1afScore){
+                    w1 = 1
+                }else if(hfScore > adH1afScore){
+                    w1 = -1
+                }
+                if(hfScore < adH2afScore){
+                    w2 = 1
+                }else if(hfScore>adH2afScore){
+                    w2 = -1
+                }
+            }
+
+            if(w1+w2 == 2 ){
+                workingList[i].res = "贏"
+            }else if(w1+w2 == -2 ){
+                workingList[i].res = "輸"
+            }else if(w1 == 0  && w2 == 0 ){
+                workingList[i].res = "走"
+            }else if(w1+w2 == 1 ){
+                workingList[i].res = "贏半"
+            }else if(w1+w2 == -1 ){
+                workingList[i].res = "輸半"
+            }
+
+            if(workingList[i].res=="贏" ){
+                if(betOn == "主"){
+                    winBet += parseFloat(match["OddData"][0][broker]["end"]["home"])
+                }else{
+                    winBet += parseFloat(match["OddData"][0][broker]["end"]["away"])
+                }
+            }else if(workingList[i].res=="半贏"){
+                if(betOn == "主"){
+                    winBet += parseFloat(match["OddData"][0][broker]["end"]["home"])/2
+                }else{
+                    winBet += parseFloat(match["OddData"][0][broker]["end"]["away"])/2
+                }
+            }else if(workingList[i].res=="輸半"){
+                lostBet += -0.5
+            }else if(workingList[i].res=="輸"){
+                lostBet += -1
+            }
+
+            count[workingList[i].res] = count[workingList[i].res] +1
+            count["total"] = count["total"] +1
+        }
+
+        count["p"] = (winBet +lostBet)/count["total"] * 10
+        count["p"] = count["p"].toFixed(2)
+        return [workingList,count]
+    }
 
     calculateSingleResultAsianOdd(rtnVal,broker, betOn = "主"){
         var workingList = this.deepClone(rtnVal)
@@ -468,5 +568,31 @@ class dataCommomClass {
     }
     return false
   }
+
+  async getMatchDateList(matchDate){
+    let rawdata = fs.readFileSync("oddBook.json");
+    let dataList = JSON.parse(rawdata)
+    var resultArr = []
+    for(var i=0;i<dataList.length;i++){
+        if(dataList[i].matchData == matchDate){
+            resultArr.push(dataList[i])
+        }
+    }
+    return resultArr
+  }
+
+  getSingleFieldArr(list,keyTarget){
+    for(var i=0;i<list.length;i++){
+        
+        for(var key in list[i]){
+            if(keyTarget!=key){
+               delete list[i][""+key]
+            }
+        }
+
+    }
+    return list
+  }
+
 }
 module.exports = dataCommomClass
