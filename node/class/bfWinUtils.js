@@ -5,11 +5,11 @@ class bfWinUtils {
     }
 
     //DD/MM HH:mm
-    timeFormatToMoment(string){
-        var hr = match["matchDate"].split(" ")[1].split(":")[0]
-        var min = match["matchDate"].split(" ")[1].split(":")[0]
-        var month = match["matchDate"].split(" ")[0].split("/")[1]
-        var days = match["matchDate"].split(" ")[0].split("/")[0]
+    timeFormatToMoment(stringData){
+        var hr = stringData.split(" ")[1].split(":")[0]
+        var min = stringData.split(" ")[1].split(":")[0]
+        var month = stringData.split(" ")[0].split("/")[1]
+        var days = stringData.split(" ")[0].split("/")[0]
         
         let d3 = moment({ 
             year :moment().year(), 
