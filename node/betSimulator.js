@@ -85,8 +85,9 @@ async function init(){
         var upSide = hkjcData["上"][1]
 
         var upWin = parseFloat(upSide["贏半"]) + parseFloat(upSide["贏"])
+        var downWin = parseFloat(upSide["輸半"]) + parseFloat(upSide["輸"])
         var dwnSide = hkjcData["下"][1]
-        var downWin = parseFloat(dwnSide["贏半"]) + parseFloat(dwnSide["贏"])
+
                 if((parseFloat(upSide["p"])>0 || parseFloat(dwnSide["p"])>0)){
             
                     var betData = {
@@ -100,6 +101,11 @@ async function init(){
                                 "down": dwnSide["p"],
                                 "total":upSide["total"],
                                 "diff" : Math.abs(upSide["p"]-dwnSide["p"]),
+                                "wayDiff":upWin-downWin,
+                                "贏半":upSide["贏半"],
+                                "贏": upSide["贏"],
+                                "輸":upSide["輸"],
+                                "輸半":upSide["輸半"],
                                 "OddData" : [
                                     {
                                       "hkjc":{
@@ -114,9 +120,25 @@ async function init(){
                     if( parseFloat(upSide["p"])> parseFloat(dwnSide["p"])){
                             betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["home"]
                             betData["place"] = "主"
+                            /*
+                            if(Math.abs(upWin -downWin)<7){
+                                if(parseFloat(match.OddData[0]["香港马会"]["end"]["away"])>parseFloat(match.OddData[0]["香港马会"]["end"]["home"])){
+                                    betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["away"]
+                                    betData["place"] = "客"
+                                }
+                            }*/
+
                     }else{
                             betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["away"]
                             betData["place"] = "客"
+                            /*
+                            if(Math.abs(upWin -downWin)<7){
+                                if(parseFloat(match.OddData[0]["香港马会"]["end"]["home"])>parseFloat(match.OddData[0]["香港马会"]["end"]["away"])){
+                                    betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["home"]
+                                    betData["place"] = "主"
+                                }
+                            }*/
+
                     }
 
                     betData.OddData[0]["hkjc"]["end"]["home"] = match.OddData[0]["香港马会"]["end"]["home"]
