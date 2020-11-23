@@ -52,13 +52,32 @@ class dataFilterStable extends dataFilterSingleLogic{
             "up": upSide["p"],
             "down": dwnSide["p"]
           }
+      
+          var upWin = parseFloat(upSide["贏半"]) + parseFloat(upSide["贏"])
+          var downWin = parseFloat(upSide["輸半"]) + parseFloat(upSide["輸"])
+
           if( parseFloat(upSide["p"])> parseFloat(dwnSide["p"]))
             {
               betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["home"]
               betData["place"] = "主"
+              
+                   
+              if(Math.abs(upWin -downWin)<7){
+                if(parseFloat(match.OddData[0]["香港马会"]["end"]["away"])>parseFloat(match.OddData[0]["香港马会"]["end"]["home"])){
+                    betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["away"]
+                    betData["place"] = "客"
+                }
+              }
             }else{
               betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["away"]
               betData["place"] = "客"
+
+              if(Math.abs(upWin -downWin)<7){
+                if(parseFloat(match.OddData[0]["香港马会"]["end"]["home"])>parseFloat(match.OddData[0]["香港马会"]["end"]["away"])){
+                    betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["home"]
+                    betData["place"] = "主"
+                }
+              }
             }
             betArr.push(betData)
         }else{
