@@ -214,6 +214,50 @@ class bfWinBetUtils extends bfWinUtils{
         
         return dataList
     }
+
+
+
+    async addOddDataWithCachePath(dataList,bcUtils,path,isCache = false){
+        var succesfulCount = 0
+        for(var i=0;i<dataList.length;i++){
+            var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+dataList[i].id
+            console.log("match url :"+url)
+            var dom = null 
+            var oddData = null
+            if(!isCache){
+                dom = await bcUtils.getHttpDomAsyn(url,"") 
+                oddData = await this.parseOdd(dom)
+            }else{
+                if(fs.existsSync(path+"/"+dataList[i].id+".json")){
+                    let rawdata = fs.readFileSync(path+"/"+dataList[i].id+".json");
+                    oddData = JSON.parse(rawdata);   
+                }else{
+                    dom = await bcUtils.getHttpDomAsyn(url,"") 
+                    oddData = await this.parseOdd(dom)
+                    if(oddData!=null){
+                        fs.writeFileSync(path+"/"+dataList[i].id+".json", JSON.stringify(oddData,null,2))
+                    }
+                }
+            }
+            dataList[i].isOddReady = true
+            if(oddData == null){
+                dataList[i].isOddReady = false
+                oddData = []
+            }
+            if(oddData.length >0 && typeof(oddData[0]["香港马会"])!=="undefined"){
+                dataList[i].OddData = oddData
+                succesfulCount++;
+                console.log(" get hkjc Data complete for "+dataList[i].id)
+            }else{
+                console.log("fail to get hkjc Data for "+dataList[i].id)
+            }
+        }
+        if(succesfulCount == dataList.length){
+            console.log("get data complete")
+        }
+        
+        return dataList
+    }
     replaceAll(str, find, replace) {
         return str.replace(new RegExp(find, 'g'), replace);
     }

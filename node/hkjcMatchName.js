@@ -15,6 +15,7 @@ async function init(){
     var liveMatchList  = fs.readFileSync("liveData/liveListTable.json");
     liveMatchList = JSON.parse(liveMatchList)
     await hkjcBE.outputDiffMatchName(liveMatchList);
+
 }
 
 init()
