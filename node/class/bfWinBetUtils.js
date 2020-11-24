@@ -1,6 +1,11 @@
 const bfWinUtils = require('./bfWinUtils.js')
+const hkjcEngine = require('./hkjcBetEngine.js')
+const bUntils = require('./dataCommonClass.js')
 var moment = require('moment');
 var fs = require('fs');
+var hkjcUtils = new hkjcEngine()
+var basicUtils = new bUntils()
+
 class bfWinBetUtils extends bfWinUtils{
     
     parseBFLiveMatch(crtDom){
@@ -132,7 +137,7 @@ class bfWinBetUtils extends bfWinUtils{
         var readyToCalculatedList = []
         for(var i=0;i<hkjcMatchList.length;i++){
             hkjcMatchList[i] = this.getCurrentTimeDiff(hkjcMatchList[i])
-            if(hkjcMatchList[i]<=mins){
+            if( hkjcMatchList[i]["timeBeforeStart"] > 0 &&hkjcMatchList[i]["timeBeforeStart"]<=mins){
                 readyToCalculatedList.push(hkjcMatchList[i])
             }
         }
@@ -177,8 +182,51 @@ class bfWinBetUtils extends bfWinUtils{
     
 
     async mergeInitOddData(matchList){
-        let rawdata = fs.readFileSync("bfData/odd/crt/"+dataList[i].id+".json");
-        var oddData = JSON.parse(rawdata);   
+
+        if(matchList.length>0){
+            var hkjcArr =  await hkjcUtils.gethkjcData()
+        
+            let rawdata = fs.readFileSync("./liveData/hkjcMatchOddData.json");
+            var oddDatalist = JSON.parse(rawdata)["matchList"];   
+            
+            for(var i=0;i<oddDatalist.length;i++){
+                var idx = -99
+                for(var j=0;j<hkjcArr.length;j++){
+                    if( 
+                        hkjcArr[j].match.includes(oddDatalist[i].home)&&
+                        hkjcArr[j].match.includes(oddDatalist[i].away)
+                    ){
+                        idx = j
+                    }
+                }
+                if(idx!=-99){
+                    //console.log(hkjcArr[idx].match)
+                    var oddPlacement = hkjcArr[idx].match.split(" 對 ")
+                    var gIdx = -99
+                    for(var g=0;g<basicUtils.getAsianOddHKJC().length;g++){
+                        if(oddPlacement[0].includes(basicUtils.getAsianOddHKJC()[g])){
+                            gIdx =g
+                        }
+                    }
+                    if(gIdx!=-99){
+                        oddDatalist[i]["OddData"][0]["香港马会"]["end"]["point"] = basicUtils.getOddIdxKey(gIdx)
+                        oddDatalist[i]["OddData"][0]["香港马会"]["end"]["home"] = hkjcArr[idx]["home"]
+                        oddDatalist[i]["OddData"][0]["香港马会"]["end"]["away"] = hkjcArr[idx]["away"]
+                        console.log(oddDatalist[i].home + " vs "+ oddDatalist[i].away)
+                    }
+                }
+            }
+            
+        
+            for(var i=0;i<oddDatalist.length;i++){
+                for(var j=0;j<matchList.length;j++){
+                   if(matchList[j].id==oddDatalist[i].id){
+                    matchList[j]["OddData"] = oddDatalist[i]["OddData"]
+                   }
+                } 
+            }
+        }
+        return matchList
     }
 
     async addOddData(dataList,bcUtils,isCache = false){

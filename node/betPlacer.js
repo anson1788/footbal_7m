@@ -15,25 +15,28 @@ let hkjcBE = new hkjcBetEngine()
 let programVersion = 1.27
 async function init(){
 
+
         var log = ""
         var hkjcTodayData = fs.readFileSync("liveData/hkjcList.json");
         hkjcTodayData = JSON.parse(hkjcTodayData)
 
         var hkjcMatchList = hkjcTodayData["matchList"]
-        var result = bfBetUtils.filterGetClosestMatch(hkjcMatchList,6)
+        var result = bfBetUtils.filterGetClosestMatch(hkjcMatchList,20)
         hkjcMatchList = result[1]
         //coneThisJson out
         var readyToStartList = JSON.parse(JSON.stringify(result[0]))
-
         console.log("------TBC match------")
-        console.table(readyToStartList)
-        var crtOddList = await bfBetUtils.addOddData(readyToStartList,bcUtils)
+
+        var crtOddList = await bfBetUtils.mergeInitOddData(readyToStartList)
+     
 
         let ftUtils = new filterUtils()
         var styList = bfBetUtils.getHKJCList(crtOddList)
+        console.table(styList)
         var calculatedResult = ftUtils.matchChecker(styList)
 
-        
+        console.table(calculatedResult[3])
+        return 
         var msg = calculatedResult[0]
         log += calculatedResult[1]
         log += calculatedResult[2]

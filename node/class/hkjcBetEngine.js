@@ -33,6 +33,46 @@ class hkjcBetEngine {
     async getHKJCOdd(matchList){
 
     }
+
+    async gethkjcData(){
+        let client;
+        var rtnArr = []
+        try {
+            const launchChrome = () =>
+            chromeLauncher.launch({ chromeFlags: ['--disable-gpu', '--headless'] });
+            const chrome = await launchChrome();
+            client = await CDP({ port: chrome.port });
+            const {Network, Page,Runtime} = client;
+            var dom = await this.loadUrlJSOM(Network, Page,Runtime,'https://bet.hkjc.com/football/odds/odds_hdc.aspx?lang=ch');
+            var matchList = dom.window.document.querySelectorAll(".couponRow")
+            for (var item of matchList) {
+                if(item.id.includes("rmid")){
+                    var cteams = dom.window.document.querySelector("#"+item.id+" .cteams").textContent;
+                    var tmp = {
+                        "match":cteams
+                    }
+                    var odds = dom.window.document.querySelectorAll("#"+item.id+" .codds")
+                
+                    for(var g=0;g<odds.length;g++){
+                      var input = odds[g].querySelectorAll("input")[0];
+                      if(input.id.includes("HDC_H")){
+                        tmp["home"] = (parseFloat(odds[g].textContent)-1).toFixed(2)
+                      }else{
+                       // console.log(odds[g].textContent)
+                        tmp["away"] = (parseFloat(odds[g].textContent)-1).toFixed(2)
+                      }
+                    }
+                    //console.table([tmp])
+                    rtnArr.push(tmp)
+                }
+            }
+            client.close();
+            chrome.kill();
+        }catch(e){
+
+        }
+        return rtnArr
+    }
     async outputDiffMatchName(m7list){
 
         console.log(JSON.stringify(NameMapping))
