@@ -176,6 +176,10 @@ class bfWinBetUtils extends bfWinUtils{
     }
     
 
+    async mergeInitOddData(matchList){
+        let rawdata = fs.readFileSync("bfData/odd/crt/"+dataList[i].id+".json");
+        var oddData = JSON.parse(rawdata);   
+    }
 
     async addOddData(dataList,bcUtils,isCache = false){
         for(var i=0;i<dataList.length;i++){

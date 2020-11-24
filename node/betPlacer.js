@@ -16,14 +16,11 @@ let programVersion = 1.27
 async function init(){
 
         var log = ""
-
-
         var hkjcTodayData = fs.readFileSync("liveData/hkjcList.json");
         hkjcTodayData = JSON.parse(hkjcTodayData)
 
         var hkjcMatchList = hkjcTodayData["matchList"]
         var result = bfBetUtils.filterGetClosestMatch(hkjcMatchList,6)
-        
         hkjcMatchList = result[1]
         //coneThisJson out
         var readyToStartList = JSON.parse(JSON.stringify(result[0]))

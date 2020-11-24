@@ -14,8 +14,8 @@ http://bf.win007.com/football/big/Over_20201022.htm
 
 async function init(){
     var liveMatchList  = fs.readFileSync("liveData/hkjcList.json");
-    liveMatchList = JSON.parse(liveMatchList)
-    liveMatchList = liveMatchList["matchList"]
+    var resultList = JSON.parse(liveMatchList)
+    liveMatchList = resultList["matchList"]
     var crtOddPath = "./liveData/crtOdd"
 
     if (!fs.existsSync(crtOddPath)){
@@ -26,7 +26,8 @@ async function init(){
     }
     console.table(liveMatchList)
     var result = await bfBetUtils.addOddDataWithCachePath(liveMatchList,bcUtils,crtOddPath)
-
+    resultList["matchList"] = result
+    fs.writeFileSync("./liveData/hkjcMatchOddData.json", JSON.stringify(resultList,null,2))
 }
 
 init()

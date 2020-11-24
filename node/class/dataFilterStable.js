@@ -67,6 +67,7 @@ class dataFilterStable extends dataFilterSingleLogic{
                 if(parseFloat(match.OddData[0]["香港马会"]["end"]["away"])<1.1&&
                   parseFloat(match.OddData[0]["香港马会"]["end"]["away"])>parseFloat(match.OddData[0]["香港马会"]["end"]["home"])){
                     betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["away"]
+                    console.log("here")
                     betData["place"] = "客"
                 }
               }
