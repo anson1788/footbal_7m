@@ -66,18 +66,22 @@ async function init(){
             
             if(winingVal[0]){
                 console.log("Total Daily Wining Bet :" + winingVal[1])
+                  if(!acct.betDebug){
                     await hkjcBE.buyOdd(
                         betArr,
                         acct
                     )
+                  }
             }   
        }catch(e){
             console.log(e.message)
             console.log("---- ")
-            await hkjcBE.buyOdd(
-                betArr,
-                acct
-            )
+            if(!acct.betDebug){
+                await hkjcBE.buyOdd(
+                    betArr,
+                    acct
+                )
+            }
        }
        process.exit()
     //}
