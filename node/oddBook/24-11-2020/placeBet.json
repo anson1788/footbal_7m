@@ -1,0 +1,302 @@
+[
+  {
+    "home": "般尼",
+    "away": "水晶宮",
+    "id": "1903882",
+    "buyOdd": "平手",
+    "up": "0.10",
+    "down": "-0.80",
+    "oddVal": "0.78",
+    "place": "主",
+    "time": "01:33",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "平手",
+            "home": "0.78",
+            "away": "0.78"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "1",
+    "AwayFScore": "0",
+    "res": "贏"
+  },
+  {
+    "home": "奧斯納布克",
+    "away": "紐倫堡",
+    "id": "1894926",
+    "buyOdd": "平手",
+    "up": "-2.07",
+    "down": "1.48",
+    "oddVal": "0.89",
+    "place": "客",
+    "time": "03:24",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "平手",
+            "home": "0.89",
+            "away": "0.89"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "1",
+    "AwayFScore": "4",
+    "res": "贏"
+  },
+  {
+    "home": "吉英坎",
+    "away": "阿些斯奧",
+    "id": "1877696",
+    "buyOdd": "平手/半球",
+    "up": "-1.49",
+    "down": "0.97",
+    "oddVal": "1.02",
+    "place": "客",
+    "time": "03:39",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "平手/半球",
+            "home": "1.02",
+            "away": "1.02"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "2",
+    "AwayFScore": "2",
+    "res": "贏半"
+  },
+  {
+    "home": "狼隊",
+    "away": "修咸頓",
+    "id": "1903883",
+    "buyOdd": "平手/半球",
+    "up": "0.23",
+    "down": "-0.88",
+    "oddVal": "1.02",
+    "place": "主",
+    "time": "03:54",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "平手/半球",
+            "home": "1.02",
+            "away": "1.02"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "1",
+    "AwayFScore": "1",
+    "res": "輸半"
+  },
+  {
+    "home": "畢爾包",
+    "away": "貝迪斯",
+    "id": "1913878",
+    "buyOdd": "平手/半球",
+    "up": "-1.35",
+    "down": "0.81",
+    "oddVal": "1.14",
+    "place": "客",
+    "time": "03:54",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "平手/半球",
+            "home": "1.14",
+            "away": "1.14"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "4",
+    "AwayFScore": "0",
+    "res": "輸"
+  },
+  {
+    "home": "葛度爾古斯",
+    "away": "羅沙里奧中央",
+    "id": "1945910",
+    "buyOdd": "受让平手/半球",
+    "up": "0.15",
+    "down": "-0.91",
+    "oddVal": "0.96",
+    "place": "主",
+    "time": "05:57",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "受让平手/半球",
+            "home": "0.96",
+            "away": "0.96"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "0",
+    "AwayFScore": "1",
+    "res": "輸"
+  },
+  {
+    "home": "U.康塞普森",
+    "away": "侯治柏度",
+    "id": "1950478",
+    "buyOdd": "平手",
+    "up": "-1.91",
+    "down": "1.33",
+    "oddVal": "0.95",
+    "place": "客",
+    "time": "06:09",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "平手",
+            "home": "0.95",
+            "away": "0.95"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "0",
+    "AwayFScore": "1",
+    "res": "贏"
+  },
+  {
+    "home": "利斯菲體育會",
+    "away": "戈亞尼恩斯",
+    "id": "1858791",
+    "buyOdd": "平手",
+    "up": "-1.06",
+    "down": "0.37",
+    "oddVal": "0.75",
+    "place": "客",
+    "time": "06:54",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "平手",
+            "home": "0.75",
+            "away": "0.75"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "0",
+    "AwayFScore": "1",
+    "res": "贏"
+  },
+  {
+    "home": "紐維爾舊生",
+    "away": "塔勒瑞斯",
+    "id": "1945920",
+    "buyOdd": "平手/半球",
+    "up": "0.08",
+    "down": "-0.77",
+    "oddVal": "0.92",
+    "place": "主",
+    "time": "08:09",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "平手/半球",
+            "home": "0.92",
+            "away": "0.92"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "1",
+    "AwayFScore": "1",
+    "res": "輸半"
+  },
+  {
+    "home": "艾斯賓路拿",
+    "away": "奧希金斯",
+    "id": "1950477",
+    "buyOdd": "半球/一球",
+    "up": "-1.88",
+    "down": "1.05",
+    "oddVal": "0.75",
+    "place": "客",
+    "time": "08:24",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "半球/一球",
+            "home": "0.75",
+            "away": "0.75"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "0",
+    "AwayFScore": "2",
+    "res": "贏"
+  },
+  {
+    "home": "FC東京(中)",
+    "away": "上海绿地申花",
+    "id": "1840870",
+    "buyOdd": "一球",
+    "up": "1.18",
+    "down": "-2.00",
+    "oddVal": "0.85",
+    "place": "主",
+    "time": "17:55",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "一球",
+            "home": "0.85",
+            "away": "0.85"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "0",
+    "AwayFScore": "1",
+    "res": "輸"
+  },
+  {
+    "home": "FC首爾(中)",
+    "away": "清萊聯",
+    "id": "1840857",
+    "buyOdd": "半球/一球",
+    "up": "-2.82",
+    "down": "1.40",
+    "oddVal": "1.09",
+    "place": "客",
+    "time": "21:00",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "半球/一球",
+            "home": "1.09",
+            "away": "1.09"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "5",
+    "AwayFScore": "0",
+    "res": "輸"
+  }
+]

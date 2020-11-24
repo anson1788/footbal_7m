@@ -1,0 +1,277 @@
+[
+  {
+    "home": "科隆",
+    "away": "柏林聯",
+    "id": "1894617",
+    "buyOdd": "受让平手/半球",
+    "up": "1.09",
+    "down": "-1.98",
+    "oddVal": "0.79",
+    "place": "主",
+    "time": "00:54",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "受让平手/半球",
+            "home": "0.79",
+            "away": "0.79"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "1",
+    "AwayFScore": "2",
+    "res": "輸"
+  },
+  {
+    "home": "烏甸尼斯",
+    "away": "熱拿亞",
+    "id": "1915346",
+    "buyOdd": "半球/一球",
+    "up": "-1.95",
+    "down": "1.13",
+    "oddVal": "0.77",
+    "place": "客",
+    "time": "00:54",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "半球/一球",
+            "home": "0.77",
+            "away": "0.77"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "1",
+    "AwayFScore": "0",
+    "res": "輸半"
+  },
+  {
+    "home": "艾克馬亞",
+    "away": "安曼",
+    "id": "1883902",
+    "buyOdd": "球半/两球",
+    "up": "-1.52",
+    "down": "1.00",
+    "oddVal": "1.03",
+    "place": "客",
+    "time": "02:54",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "球半/两球",
+            "home": "1.03",
+            "away": "1.03"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "1",
+    "AwayFScore": "0",
+    "res": "贏"
+  },
+  {
+    "home": "施亞拉",
+    "away": "明尼路",
+    "id": "1858793",
+    "buyOdd": "平手",
+    "up": "-1.19",
+    "down": "0.53",
+    "oddVal": "0.88",
+    "place": "客",
+    "time": "02:54",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "平手",
+            "home": "0.88",
+            "away": "0.88"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "2",
+    "AwayFScore": "2",
+    "res": "走"
+  },
+  {
+    "home": "拿玻里",
+    "away": "AC米蘭",
+    "id": "1915343",
+    "buyOdd": "平手/半球",
+    "up": "0.30",
+    "down": "-1.00",
+    "oddVal": "0.86",
+    "place": "主",
+    "time": "03:39",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "平手/半球",
+            "home": "0.86",
+            "away": "0.86"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "1",
+    "AwayFScore": "3",
+    "res": "輸"
+  },
+  {
+    "home": "利爾",
+    "away": "羅連安特",
+    "id": "1877313",
+    "buyOdd": "半球/一球",
+    "up": "-0.82",
+    "down": "0.14",
+    "oddVal": "1.05",
+    "place": "客",
+    "time": "03:54",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "半球/一球",
+            "home": "1.05",
+            "away": "1.05"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "4",
+    "AwayFScore": "0",
+    "res": "輸"
+  },
+  {
+    "home": "肯薩斯體育會",
+    "away": "聖荷西地震",
+    "id": "1950004",
+    "buyOdd": "一球",
+    "up": "-0.84",
+    "down": "0.39",
+    "oddVal": "0.89",
+    "place": "客",
+    "time": "04:54",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "一球",
+            "home": "0.89",
+            "away": "0.89"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "3",
+    "AwayFScore": "3",
+    "res": "贏"
+  },
+  {
+    "home": "保地花高",
+    "away": "科泰尼沙",
+    "id": "1858794",
+    "buyOdd": "平手/半球",
+    "up": "0.49",
+    "down": "-1.21",
+    "oddVal": "0.86",
+    "place": "主",
+    "time": "05:09",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "平手/半球",
+            "home": "0.86",
+            "away": "0.86"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "1",
+    "AwayFScore": "2",
+    "res": "輸"
+  },
+  {
+    "home": "維拿迪馬愛華頓",
+    "away": "智利大學",
+    "id": "1950476",
+    "buyOdd": "平手/半球",
+    "up": "0.33",
+    "down": "-1.03",
+    "oddVal": "0.90",
+    "place": "主",
+    "time": "06:09",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "平手/半球",
+            "home": "0.90",
+            "away": "0.90"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "1",
+    "AwayFScore": "1",
+    "res": "輸半"
+  },
+  {
+    "home": "明尼蘇達聯",
+    "away": "科羅拉多急流",
+    "id": "1950005",
+    "buyOdd": "平手/半球",
+    "up": "0.13",
+    "down": "-0.82",
+    "oddVal": "1.04",
+    "place": "主",
+    "time": "08:24",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "平手/半球",
+            "home": "1.04",
+            "away": "1.04"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "3",
+    "AwayFScore": "0",
+    "res": "贏"
+  },
+  {
+    "home": "烏法",
+    "away": "奇姆基",
+    "id": "1886692",
+    "buyOdd": "平手",
+    "up": "-0.91",
+    "down": "0.37",
+    "oddVal": "1.01",
+    "place": "客",
+    "time": "21:55",
+    "OddData": [
+      {
+        "hkjc": {
+          "end": {
+            "point": "平手",
+            "home": "1.01",
+            "away": "1.01"
+          }
+        }
+      }
+    ],
+    "HomeFScore": "1",
+    "AwayFScore": "2",
+    "res": "贏"
+  }
+]
