@@ -57,8 +57,8 @@ async function init(defaultRange=50){
 
     var total = 0
     var targetMatch = []
-    for(var i=2;i<defaultRange;i++){
-
+    for(var i=1;i<defaultRange;i++){
+        console.log(matchDate)
         var matchDate = bcUtils.generateDate(i)
         var url = "http://bf.win007.com/football/big/Over_%d.htm".replace("%d",matchDate)
         var bfDailyArr =  await getCacheData(url,"bfData/",matchDate, "bflist",(i==1)?false:true)

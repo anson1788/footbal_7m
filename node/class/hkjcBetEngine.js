@@ -29,6 +29,10 @@ class hkjcBetEngine {
         }
         return list
     }
+
+    async getHKJCOdd(matchList){
+
+    }
     async outputDiffMatchName(m7list){
 
         console.log(JSON.stringify(NameMapping))

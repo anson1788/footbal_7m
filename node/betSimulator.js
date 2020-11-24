@@ -59,7 +59,7 @@ async function init(){
     let rawdata = fs.readFileSync("oddBook.json");
     let dataList = JSON.parse(rawdata)
     let ftUtils = new filterUtils()
-    let matchList = await ftUtils.getMatchDateList("20201121")
+    let matchList = await ftUtils.getMatchDateList("20201123")
   //  matchList = ftUtils.getSingleFieldArr(matchList,"id")
     console.table(matchList)
   
