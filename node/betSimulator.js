@@ -59,7 +59,7 @@ async function init(){
     let rawdata = fs.readFileSync("oddBook.json");
     let dataList = JSON.parse(rawdata)
     let ftUtils = new filterUtils()
-    let matchList = await ftUtils.getMatchDateList("20201123")
+    let matchList = await ftUtils.getMatchDateList("20201124")
   //  matchList = ftUtils.getSingleFieldArr(matchList,"id")
     console.table(matchList)
   
@@ -89,7 +89,7 @@ async function init(){
         var downWin = parseFloat(upSide["輸半"]) + parseFloat(upSide["輸"])
         var dwnSide = hkjcData["下"][1]
 
-                if((parseFloat(upSide["p"])>0 || parseFloat(dwnSide["p"])>0)){
+                if(true){
             
                     var betData = {
                                 "home":match["home"],
@@ -119,7 +119,7 @@ async function init(){
                                   ]
                             }
 
-                    if( parseFloat(upSide["p"])> parseFloat(dwnSide["p"])){
+                    if( upWin> downWin){
                             betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["home"]
                             betData["place"] = "主"
                             
@@ -155,7 +155,7 @@ async function init(){
                     var result = ftUtils.calculateSingleResultAsianOdd([betData],"hkjc",betData["place"])
                     betData.res  = result[0][0].res
                     betArr.push(betData)
-
+            
                     }else{
                             notMakeSenseArr.push(
                                 {
@@ -165,7 +165,7 @@ async function init(){
                                 })
                 
                     }
-        
+                
     }
 
     var count = {

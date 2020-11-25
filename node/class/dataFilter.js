@@ -758,13 +758,11 @@ class dataFilter extends dataCommonClass{
             if(broker=="香港马会"){
                 var tmpList = this.singleOddSimilarOddList(broker,match,dataList)
                 
-
                 
                 var calculatorUp = this.calculateSingleResultAsianOddAdvance(match,tmpList,broker)
                 var calculatorDown = this.calculateSingleResultAsianOddAdvance(match,tmpList,broker,"客")
                 
-
-               /*
+                /*
                 var calculatorUp = this.calculateSingleResultAsianOdd(tmpList,broker)
                 var calculatorDown = this.calculateSingleResultAsianOdd(tmpList,broker,"客")
                 */
@@ -873,8 +871,8 @@ class dataFilter extends dataCommonClass{
             
                 if(this.isTwoMatchSimilar(crtOddPer,pastMatchOddPer) ){
                     rtnVal.push(Object.assign({},workingList[i]))
-                    rtnVal[rtnVal.length-1]["homeS"] = workingList[i]["OddData"][0][broker]["start"]["home"]
                     rtnVal[rtnVal.length-1]["homeE"] = workingList[i]["OddData"][0][broker]["end"]["home"]
+                    rtnVal[rtnVal.length-1]["awayE"] = workingList[i]["OddData"][0][broker]["end"]["away"]
                     rtnVal[rtnVal.length-1]["homeSP"] = pastMatchOddPer["Shome"]
                     rtnVal[rtnVal.length-1]["homeEP"] = pastMatchOddPer["Ehome"]
                     rtnVal[rtnVal.length-1]["oddE"] = workingList[i]["OddData"][0][broker]["end"]["point"]

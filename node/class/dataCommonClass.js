@@ -380,13 +380,15 @@ class dataCommomClass {
             }else if(workingList[i].res=="輸"){
                 lostBet += -1
             }
-
+            
             count[workingList[i].res] = count[workingList[i].res] +1
             count["total"] = count["total"] +1
         }
 
         count["p"] = (winBet +lostBet)/count["total"] * 10
         count["p"] = count["p"].toFixed(2)
+        console.table(workingList)
+
         return [workingList,count]
     }
 
@@ -637,10 +639,9 @@ class dataCommomClass {
 
     //console.log("m1 s:" +m1["Spoint"])
     //console.log("m1 e:" +m1["Epoint"])
-    if(m1["Spoint"]==m2["Spoint"] && 
+    if(
        m1["Epoint"]==m2["Epoint"] && 
-       Math.abs(m1["Shome"] - m2["Shome"]) <0.05 &&
-       Math.abs(m1["Ehome"] - m2["Ehome"]) <0.05 && 
+       Math.abs(m1["Ehome"] - m2["Ehome"]) <0.03 && 
        (
         (m1["Shome"] < m1["Ehome"] &&
         m2["Shome"] < m2["Ehome"] ) ||
