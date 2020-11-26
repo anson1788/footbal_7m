@@ -107,8 +107,7 @@ async function initA(str="20201112",opt){
         var downWin = parseFloat(upSide["輸半"]) + parseFloat(upSide["輸"])
         var dwnSide = hkjcData["下"][1]
 
-                
-            
+           
                     var betData = {
                                 "home":match["home"],
                                 "away":match["away"],
@@ -120,6 +119,7 @@ async function initA(str="20201112",opt){
                                 "S輸":parseFloat(upSide["輸"])+parseFloat(upSide["輸半"]),
                                 "A贏":parseFloat(dwnSide["贏半"])+parseFloat(dwnSide["贏"]),
                                 "A輸":parseFloat(dwnSide["輸"])+parseFloat(dwnSide["輸半"]),
+                             
                                 /*
                                 "start":(parseFloat(match.OddData[0]["香港马会"]["start"]["home"])+parseFloat(match.OddData[0]["香港马会"]["start"]["away"])).toFixed(2),
                                 "end":(parseFloat(match.OddData[0]["香港马会"]["end"]["home"])+parseFloat(match.OddData[0]["香港马会"]["end"]["away"])).toFixed(2),
@@ -135,10 +135,18 @@ async function initA(str="20201112",opt){
                                     }
                                   ]
                             }
-                            if(betData["S贏"]+betData["S輸"]>30 && betData["A贏"]+betData["A輸"]>30){
+
+                            var startD = Math.abs(betData["S贏"]-betData["S輸"])/(betData["S贏"]+betData["S輸"])
+                            var endD = Math.abs(betData["A贏"]-betData["A輸"])/(betData["A贏"]+betData["A輸"])
+                            betData["startD"] = startD
+                            betData["endD"] = endD
+                            if(betData["S贏"]+betData["S輸"]>30 && betData["A贏"]+betData["A輸"]>30
+                              && startD>0.1&& endD>0.1 
+                            ){
                                 if(betData["S贏"]>betData["S輸"] && betData["A贏"]>betData["A輸"]){
                                     betData["place"] = "主"
                                     betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["home"]
+                                    
                                     var result = ftUtils.calculateSingleResultAsianOdd([betData],"hkjc",betData["place"])
                                     betData.res  = result[0][0].res
                                     betArr.push(betData)
@@ -361,4 +369,4 @@ async function a(){
 //a()
 
 
-initA("20201101",10)
+initA("20201031",10)
