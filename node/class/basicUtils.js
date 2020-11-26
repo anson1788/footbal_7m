@@ -19,6 +19,7 @@ class basicUtils {
 
     async getHttpDomAsyn(url, type){
         return new Promise(resolve=>{
+            console.log(url)
             this.getHttpDom(url,type).then(result=>{
                 resolve(result)
             })

@@ -1,5 +1,6 @@
 const { parse } = require("dashdash");
 const dataCommonClass = require('./dataCommonClass.js')
+var moment = require('moment');
 class dataFilter extends dataCommonClass{
 
 
@@ -748,6 +749,117 @@ class dataFilter extends dataCommonClass{
         return rtnVal
     }
 
+
+    extractSameOddMatchAdance(match,dataList){
+        if(!this.isValidateMatch(match)){
+            return {}
+        }
+        var crtOdd = match["OddData"][0]
+        var tmp = {}
+        for(var broker in crtOdd){
+            if(broker=="香港马会"){
+                var tmpListStart = this.singleOddSimilarOddListAdance(broker,match,dataList,true)
+                var tmpListEnd = this.singleOddSimilarOddListAdance(broker,match,dataList,false)
+                
+                var calculatorUp = this.calculateSingleResultAsianOddAdvance(match,tmpListStart,broker)
+                var calculatorDown = this.calculateSingleResultAsianOddAdvance(match,tmpListEnd,broker)
+                
+                /*
+                var calculatorUp = this.calculateSingleResultAsianOdd(tmpList,broker)
+                var calculatorDown = this.calculateSingleResultAsianOdd(tmpList,broker,"客")
+                */
+                tmp[broker] = {
+                                    "上":calculatorUp,
+                                    "下":calculatorDown
+                }
+            }
+        }   
+
+        var upKey = "上"
+        var downKey = "下"
+
+        if(!this.isDicEmpty(tmp)){
+            var upCount = 0
+            var dwnCount = 0
+            var total = 0
+            var upbroker = ""
+            var dwnbroker = ""
+
+            for(var broker in tmp){
+                if(tmp[broker]["上"][0].length >8){
+                    var upP = tmp[broker]["上"][1]["p"]
+                    var dwnP = tmp[broker]["下"][1]["p"]
+                    total++
+                    
+                    if(upP>dwnP && upP>0.2){
+                        if(tmp[broker]["上"][1]["贏"]/ (tmp[broker]["上"][1]["贏"]+tmp[broker]["上"][1]["輸"]) > 0.65){
+                            upCount ++
+                            upbroker += tmp[broker]["上"][0][0]["oddE"]+"/"+broker + " ,"
+                        }
+                        //console.table([tmp[broker]["上"][1]])
+                    }
+                    if(dwnP>upP && dwnP>0.2){
+                        if(tmp[broker]["下"][1]["贏"]/ (tmp[broker]["下"][1]["贏"]+tmp[broker]["下"][1]["輸"]) > 0.65){
+                            dwnCount ++
+                            dwnbroker += tmp[broker]["下"][0][0]["oddE"]+"/"+broker + " ,"
+                        }
+                       // console.table(tmp[broker]["下"][0])
+                       // console.table([tmp[broker]["下"][1]])
+                    }
+                }
+            }
+            
+            var up = 0
+            var upbroker = ""
+            var down = 0
+            var downbroker = ""
+            var total = 0
+            var totalUp = 0
+            var totalDown = 0
+            var totalMMM = 0
+            for(var broker in tmp){
+                if(parseFloat(tmp[broker]["上"][1]["p"])>parseFloat(tmp[broker]["下"][1]["p"])){
+                    up ++
+                    upbroker += broker + " \n"
+                }else if(parseFloat(tmp[broker]["上"][1]["p"])<parseFloat(tmp[broker]["下"][1]["p"])){
+                    down ++
+                    downbroker+= broker + " \n"
+                }
+                    total ++
+                    console.table( "---"+broker+"----")
+                   // console.table(tmp[broker]["上"][0])
+                    console.table([tmp[broker]["上"][1]])
+                    //console.table(tmp[broker]["下"][0])
+                    console.table([tmp[broker]["下"][1]])
+
+                    if(parseFloat(tmp[broker]["上"][1]["total"])>100){
+                        totalMMM ++
+                        totalUp = totalUp + parseFloat(tmp[broker]["上"][1]["p"])
+                    }
+                    if(parseFloat(tmp[broker]["下"][1]["total"])>100){
+                        totalDown = totalDown + parseFloat(tmp[broker]["下"][1]["p"])
+                    }
+            }
+            console.table([{
+                "total":total,
+                "up":up,
+                "down":down,
+                "totalUp":(totalUp).toFixed(2),
+                "totalDwn":(totalDown).toFixed(2),
+            }])
+            return {
+                "total":total,
+                "up":upCount,
+                "down":dwnCount,
+                "upbroker":upbroker,
+                "downbroker":dwnbroker,
+                "hkjcData":tmp["香港马会"]
+            }
+        }
+
+        return tmp
+    }
+
     extractSameOddMatch(match,dataList){
         if(!this.isValidateMatch(match)){
             return {}
@@ -863,12 +975,47 @@ class dataFilter extends dataCommonClass{
         var crtOdd = match["OddData"][0]
         for(var i=0;i<workingList.length;i++){
             if(workingList[i].id == match.id )continue
+         
+            if(typeof(match.date)!="undefined"){
+                let matchDate = moment({ 
+                    year :match.date.split(" ")[0].split("/")[0], 
+                    month : parseFloat(match.date.split(" ")[0].split("/")[1])-1,
+                    day :match.date.split(" ")[0].split("/")[2],
+                    });
+                
+                let listDate = moment({   
+                        year :workingList[i].date.split(" ")[0].split("/")[0], 
+                        month : parseFloat(workingList[i].date.split(" ")[0].split("/")[1])-1,
+                        day :workingList[i].date.split(" ")[0].split("/")[2],
+                        });
+                var diff = matchDate.diff(listDate,"days")
+                if(diff<1){
+                    //console.log( listDate )
+                   // console.log( diff )
+                    continue
+                }
+            }
+            if(true){
+                if(workingList[i].date.includes("2019") || 
+                   workingList[i].date.includes("202001") ||
+                   workingList[i].date.includes("202002") ||
+                   workingList[i].date.includes("202003") ||
+                   workingList[i].date.includes("202004") ||
+                   workingList[i].date.includes("202005") ||
+                   workingList[i].date.includes("202006") ){
+                    continue
+                }
+            }
+
             if(!this.isValidateMatch(workingList[i])) continue
             var pastMatchOdd = workingList[i]["OddData"][0]
             if( typeof(pastMatchOdd[broker])!="undefined"){
                 var crtOddPer = this.oddPerMap(crtOdd[broker])
                 var pastMatchOddPer = this.oddPerMap(pastMatchOdd[broker])
-            
+                if(workingList[i].id =="1872555"){
+                    console.log("1. "+JSON.stringify(crtOddPer))
+                    console.log("2. "+JSON.stringify(pastMatchOddPer))
+                }
                 if(this.isTwoMatchSimilar(crtOddPer,pastMatchOddPer) ){
                     rtnVal.push(Object.assign({},workingList[i]))
                     rtnVal[rtnVal.length-1]["homeE"] = workingList[i]["OddData"][0][broker]["end"]["home"]
@@ -877,6 +1024,79 @@ class dataFilter extends dataCommonClass{
                     rtnVal[rtnVal.length-1]["homeEP"] = pastMatchOddPer["Ehome"]
                     rtnVal[rtnVal.length-1]["oddE"] = workingList[i]["OddData"][0][broker]["end"]["point"]
                 }
+            }
+        }
+        return rtnVal
+    }
+
+    singleOddSimilarOddListAdance(broker, match, dataList,isStart){
+        var workingList = this.deepClone(dataList)
+        var rtnVal =[]
+        var crtOdd = match["OddData"][0]
+        for(var i=0;i<workingList.length;i++){
+            if(workingList[i].id == match.id )continue
+         
+            if(typeof(match.date)!="undefined"){
+                let matchDate = moment({ 
+                    year :match.date.split(" ")[0].split("/")[0], 
+                    month : parseFloat(match.date.split(" ")[0].split("/")[1])-1,
+                    day :match.date.split(" ")[0].split("/")[2],
+                    });
+                
+                let listDate = moment({   
+                        year :workingList[i].date.split(" ")[0].split("/")[0], 
+                        month : parseFloat(workingList[i].date.split(" ")[0].split("/")[1])-1,
+                        day :workingList[i].date.split(" ")[0].split("/")[2],
+                        });
+                var diff = matchDate.diff(listDate,"days")
+                if(diff<1){
+                    //console.log( listDate )
+                   // console.log( diff )
+                    continue
+                }
+            }
+            if(true){
+                if(workingList[i].date.includes("2019") || 
+                   workingList[i].date.includes("202001") ||
+                   workingList[i].date.includes("202002") ||
+                   workingList[i].date.includes("202003") ||
+                   workingList[i].date.includes("202004") ||
+                   workingList[i].date.includes("202005") ||
+                   workingList[i].date.includes("202006") ){
+                    continue
+                }
+            }
+
+            if(!this.isValidateMatch(workingList[i])) continue
+            var pastMatchOdd = workingList[i]["OddData"][0]
+            if( typeof(pastMatchOdd[broker])!="undefined"){
+                var crtOddPer = this.oddPerMap(crtOdd[broker])
+                var pastMatchOddPer = this.oddPerMap(pastMatchOdd[broker])
+                if(workingList[i].id =="1872555"){
+                    console.log("1. "+JSON.stringify(crtOddPer))
+                    console.log("2. "+JSON.stringify(pastMatchOddPer))
+                }
+                if(isStart){
+                    if(this.isTwoMatchSimilarStart(crtOddPer,pastMatchOddPer) ){
+                        rtnVal.push(Object.assign({},workingList[i]))
+                        rtnVal[rtnVal.length-1]["homeE"] = workingList[i]["OddData"][0][broker]["start"]["home"]
+                        rtnVal[rtnVal.length-1]["awayE"] = workingList[i]["OddData"][0][broker]["start"]["away"]
+                        rtnVal[rtnVal.length-1]["homeSP"] = pastMatchOddPer["Shome"]
+                        rtnVal[rtnVal.length-1]["homeEP"] = pastMatchOddPer["Ehome"]
+                        rtnVal[rtnVal.length-1]["oddE"] = workingList[i]["OddData"][0][broker]["start"]["point"]
+                        rtnVal[rtnVal.length-1]["OddData"][0][broker]["end"]["point"] = workingList[i]["OddData"][0][broker]["start"]["point"]
+                    }
+                }else{
+                    if(this.isTwoMatchSimilarEnd(crtOddPer,pastMatchOddPer) ){
+                        rtnVal.push(Object.assign({},workingList[i]))
+                        rtnVal[rtnVal.length-1]["homeE"] = workingList[i]["OddData"][0][broker]["end"]["home"]
+                        rtnVal[rtnVal.length-1]["awayE"] = workingList[i]["OddData"][0][broker]["end"]["away"]
+                        rtnVal[rtnVal.length-1]["homeSP"] = pastMatchOddPer["Shome"]
+                        rtnVal[rtnVal.length-1]["homeEP"] = pastMatchOddPer["Ehome"]
+                        rtnVal[rtnVal.length-1]["oddE"] = workingList[i]["OddData"][0][broker]["end"]["point"]
+                    }
+                }
+                
             }
         }
         return rtnVal

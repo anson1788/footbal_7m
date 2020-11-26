@@ -615,8 +615,8 @@ class dataCommomClass {
     tmp["Saway"] = parseFloat(matchOdd["start"]["away"])/(parseFloat(matchOdd["start"]["home"]) + parseFloat(matchOdd["start"]["away"]))
     tmp["Spoint"] = matchOdd["start"]["point"]
 
-    tmp["Ehome"] = parseFloat(matchOdd["end"]["home"])/(parseFloat(matchOdd["end"]["home"]) + parseFloat(matchOdd["start"]["away"]))
-    tmp["Eaway"] = parseFloat(matchOdd["end"]["away"])/(parseFloat(matchOdd["end"]["home"]) + parseFloat(matchOdd["start"]["away"]))
+    tmp["Ehome"] = parseFloat(matchOdd["end"]["home"])/(parseFloat(matchOdd["end"]["home"]) + parseFloat(matchOdd["end"]["away"]))
+    tmp["Eaway"] = parseFloat(matchOdd["end"]["away"])/(parseFloat(matchOdd["end"]["home"]) + parseFloat(matchOdd["end"]["away"]))
     tmp["Epoint"] = matchOdd["end"]["point"]
 
     return tmp
@@ -640,20 +640,52 @@ class dataCommomClass {
     //console.log("m1 s:" +m1["Spoint"])
     //console.log("m1 e:" +m1["Epoint"])
     if(
-       m1["Epoint"]==m2["Epoint"] && 
+        m1["Spoint"]==m2["Spoint"] && 
+        m1["Epoint"]==m2["Epoint"] && 
        Math.abs(m1["Ehome"] - m2["Ehome"]) <0.03 && 
        (
-        (m1["Shome"] < m1["Ehome"] &&
-        m2["Shome"] < m2["Ehome"] ) ||
-        (m1["Shome"] > m1["Ehome"] &&
-        m2["Shome"] > m2["Ehome"] ) 
+        (m1["Shome"] < m1["Saway"] &&
+        m2["Shome"] < m2["Saway"] ) ||
+        (m1["Shome"] > m1["Saway"] &&
+        m2["Shome"]  > m2["Saway"] )
+       ) &&
+       (
+        (m1["Ehome"] < m1["Eaway"] &&
+        m2["Ehome"] < m2["Eaway"] ) ||
+        (m1["Ehome"] > m1["Eaway"] &&
+        m2["Ehome"]  > m2["Eaway"] )
        )
+       
     ){
       return true
     }
     return false
   }
 
+
+  isTwoMatchSimilarEnd(m1,m2){
+
+    //console.log("m1 s:" +m1["Spoint"])
+    //console.log("m1 e:" +m1["Epoint"])
+    if( 
+        m1["Epoint"]==m2["Epoint"] && 
+       Math.abs(m1["Ehome"] - m2["Ehome"]) <0.03 ){
+      return true
+    }
+    return false
+  }
+
+  isTwoMatchSimilarStart(m1,m2){
+
+    //console.log("m1 s:" +m1["Spoint"])
+    //console.log("m1 e:" +m1["Epoint"])
+    if( 
+        m1["Spoint"]==m2["Spoint"] && 
+       Math.abs(m1["Shome"] - m2["Shome"]) <0.03 ){
+      return true
+    }
+    return false
+  }
   async getMatchDateList(matchDate){
     let rawdata = fs.readFileSync("oddBook.json");
     let dataList = JSON.parse(rawdata)
