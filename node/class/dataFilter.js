@@ -763,9 +763,9 @@ class dataFilter extends dataCommonClass{
                 var calculatorDown = this.calculateSingleResultAsianOddAdvance(match,tmpList,broker,"客")
                 */
                
-               var calculatorUp = this.calculateSingleResultAsianOdd(tmpList,broker)
+                var calculatorUp = this.calculateSingleResultAsianOdd(tmpList,broker)
                 var calculatorDown = this.calculateSingleResultAsianOdd(tmpList,broker,"客")
-                
+                console.table(calculatorUp[0])
                 tmp[broker] = {
                                     "上":calculatorUp,
                                     "下":calculatorDown

@@ -383,6 +383,7 @@ class dataCommomClass {
         count["p"] = (count["贏"]*winodd + count["贏半"] * winodd/2 - count["輸"] - count["輸半"]*0.5 )/count["total"] * 10
        // count["win"] = (count["贏"]*2 + count["贏半"]) / (count["total"]*2)
         count["p"] = count["p"].toFixed(2)
+        
         return [workingList,count]
     }
 
@@ -555,8 +556,8 @@ class dataCommomClass {
     //console.log("m1 e:" +m1["Epoint"])
     if(m1["Spoint"]==m2["Spoint"] && 
        m1["Epoint"]==m2["Epoint"] && 
-       Math.abs(m1["Shome"] - m2["Shome"]) <0.05 &&
-       Math.abs(m1["Ehome"] - m2["Ehome"]) <0.05 && 
+       Math.abs(m1["Shome"] - m2["Shome"]) <0.03 &&
+       Math.abs(m1["Ehome"] - m2["Ehome"]) <0.03 && 
        (
         (m1["Shome"] < m1["Saway"] &&
         m2["Ehome"] < m2["Eaway"] ) ||
