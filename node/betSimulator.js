@@ -116,10 +116,17 @@ async function initA(str="20201112",opt){
                                 "HomeFScore": match.HomeFScore,
                                 "AwayFScore": match.AwayFScore,
                                 "S贏":parseFloat(upSide["贏半"])+parseFloat(upSide["贏"]),
+                                "S贏1":parseFloat(upSide["贏"]),
+                                "S贏2":parseFloat(upSide["贏半"]),
                                 "S輸":parseFloat(upSide["輸"])+parseFloat(upSide["輸半"]),
+                                "S輸1":parseFloat(upSide["輸"]),
+                                "S輸2":parseFloat(upSide["輸半"]),
                                 "A贏":parseFloat(dwnSide["贏半"])+parseFloat(dwnSide["贏"]),
+                                "A贏1":parseFloat(dwnSide["贏"]),
+                                "A贏2":parseFloat(dwnSide["贏半"]),
                                 "A輸":parseFloat(dwnSide["輸"])+parseFloat(dwnSide["輸半"]),
-                             
+                                "A輸1":parseFloat(dwnSide["輸"]),
+                                "A輸2":parseFloat(dwnSide["輸半"]),
                                 /*
                                 "start":(parseFloat(match.OddData[0]["香港马会"]["start"]["home"])+parseFloat(match.OddData[0]["香港马会"]["start"]["away"])).toFixed(2),
                                 "end":(parseFloat(match.OddData[0]["香港马会"]["end"]["home"])+parseFloat(match.OddData[0]["香港马会"]["end"]["away"])).toFixed(2),
@@ -138,138 +145,37 @@ async function initA(str="20201112",opt){
 
                             var startD = Math.abs(betData["S贏"]-betData["S輸"])/(betData["S贏"]+betData["S輸"])
                             var endD = Math.abs(betData["A贏"]-betData["A輸"])/(betData["A贏"]+betData["A輸"])
-                            betData["startD"] = startD
-                            betData["endD"] = endD
+                            betData["startD"] = startD.toFixed(2)
+                            betData["endD"] = endD.toFixed(2)
+
+
                             if(betData["S贏"]+betData["S輸"]>30 && betData["A贏"]+betData["A輸"]>30
                               && startD>0.1&& endD>0.1 
                             ){
-                                if(betData["S贏"]>betData["S輸"] && betData["A贏"]>betData["A輸"]){
-                                    betData["place"] = "主"
-                                    betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["home"]
-                                    
-                                    var result = ftUtils.calculateSingleResultAsianOdd([betData],"hkjc",betData["place"])
-                                    betData.res  = result[0][0].res
+
+
+                                if((betData["S贏1"]>= Math.max(betData["S輸1"],betData["S輸2"]) && betData["S贏2"]==0 && 
+                                   betData["A贏1"]>= Math.max(betData["A輸1"],betData["A輸2"]) && betData["A贏2"]==0 ) ||
+                                   (betData["S輸1"]>= Math.max(betData["S贏1"],betData["S贏2"]) && betData["S輸2"]==0 && 
+                                   betData["A輸1"]>= Math.max(betData["A贏1"],betData["A贏2"]) && betData["A輸2"]==0 )
+
+                                ){
+                                    if( betData["S贏1"]>= Math.max(betData["S輸1"],betData["S輸2"])){
+                                        betData = placeBet(betData,match,true,ftUtils)
+                                        betArr.push(betData)
+                                    }else{
+                                        betData = placeBet(betData,match,false,ftUtils)
+                                        betArr.push(betData)
+                                    }
+                               
+                                }else if(betData["S贏"]>betData["S輸"] && betData["A贏"]>betData["A輸"]){
+                                    betData = placeBet(betData,match,true,ftUtils)
                                     betArr.push(betData)
                                 }else if(betData["S輸"]>betData["S贏"] && betData["A輸"]>betData["A贏"]){
-                                    betData["place"] = "客"
-                                    betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["away"]
-                                    var result = ftUtils.calculateSingleResultAsianOdd([betData],"hkjc",betData["place"])
-                                    betData.res  = result[0][0].res
+                                    betData = placeBet(betData,match,false,ftUtils)
                                     betArr.push(betData)
                                 }
-                            }
-                    // var result = ftUtils.calculateSingleResultAsianOdd([betData],"hkjc",betData["place"])
-                 
-            
-                    /*
-                if(parseFloat(upSide["total"])>29 ){   
-                    if(upWin < downWin){
-                            betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["home"]
-                            betData["place"] = "主"
-                            
-                        
-
-                    }else{
-                            betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["away"]
-                            betData["place"] = "客"
-                            
-                        
-                    }
-
-
-                    betData.OddData[0]["hkjc"]["end"]["home"] = match.OddData[0]["香港马会"]["end"]["home"]
-                    betData.OddData[0]["hkjc"]["end"]["away"] = match.OddData[0]["香港马会"]["end"]["away"]
-                            
-               
-                    
-                    if(betData["buyOdd"].includes("/")){
-                        
-                     
-                        if(parseFloat( match.OddData[0]["香港马会"]["end"]["home"])>1.15 ||
-                        parseFloat( match.OddData[0]["香港马会"]["end"]["home"])<0.8
-                        ){
-                            betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["away"]
-                            betData["place"] = "客"    
-                            betData["switch"] = 'Y' 
-                        }
-                        if(parseFloat( match.OddData[0]["香港马会"]["end"]["away"])>1.15
-                        ||
-                        parseFloat( match.OddData[0]["香港马会"]["end"]["away"])<0.8){
-                            betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["home"]
-                            betData["place"] = "主"
-                            betData["switch"] = 'Y' 
-                        }
-
-                        
-                     
-                        if(parseFloat(downWin) / parseFloat(upWin)>1.9 && parseFloat(upSide["贏半"])==0 
-                        ){
-                            betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["away"]
-                            betData["place"] = "客"
-                            betData["switch"] = 'Y' 
-                        }
-
-                        if(parseFloat(upWin) / parseFloat(downWin)>1.9 && parseFloat(upSide["輸半"])==0 
-                        ){
-                            betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["home"]
-                            betData["place"] = "主"
-                            betData["switch"] = 'Y' 
-                        }
-                        if(Math.abs(upWin -downWin)/(upWin+downWin)>0.15){
-                            betArr.push(betData)
-                        }
-                    }else if(Math.abs(upWin -downWin)/(upWin+downWin)>0.15){
-                        if(upWin > downWin){
-                            betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["home"]
-                            betData["place"] = "主"
-                            betData["switch"] = 'Y' 
-                        }else{
-                            betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["away"]
-                            betData["place"] = "客"    
-                            betData["switch"] = 'Y' 
-                        }
-
-                        if(parseFloat( match.OddData[0]["香港马会"]["end"]["away"])<1 && 
-                           parseFloat( match.OddData[0]["香港马会"]["end"]["home"]) <1
-                        ){
-
-                            if( parseFloat( match.OddData[0]["香港马会"]["end"]["away"]) > 
-                                parseFloat( match.OddData[0]["香港马会"]["end"]["home"]) 
-                            ){  
-                                betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["away"]
-                                betData["place"] = "客"
-                                betData["switch"] = 'Y' 
-                            
-                            }else{
-                                betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["home"]
-                                betData["place"] = "主"
-                                betData["switch"] = 'Y' 
-                            }
-                        }
-                        if(parseFloat( match.OddData[0]["香港马会"]["end"]["home"])>1.13){
-                            betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["home"]
-                            betData["place"] = "主"    
-                            betData["switch"] = 'Y' 
-                        }
-                        if(parseFloat( match.OddData[0]["香港马会"]["end"]["away"])>1.13){
-                            betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["away"]
-                            betData["place"] = "客"    
-                            betData["switch"] = 'Y' 
-                        }
-                        betArr.push(betData)
-                    }
-                    var result = ftUtils.calculateSingleResultAsianOdd([betData],"hkjc",betData["place"])
-                    betData.res  = result[0][0].res
-                    }else{
-                            notMakeSenseArr.push(
-                                {
-                                "home":match["home"],
-                                "away":match["away"],
-                                "id":match["id"]
-                                })
-                
-                    }*/
-                
+                            }                
     }
 
    
@@ -291,6 +197,19 @@ async function initA(str="20201112",opt){
     console.log("today match " + matchId.length)
 
    return count
+}
+
+function placeBet(betData,match,up,ftUtils){
+    if(up){
+        betData["place"] = "主"
+        betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["home"]
+    }else{
+        betData["place"] = "客"
+        betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["away"]
+    }
+    var result = ftUtils.calculateSingleResultAsianOdd([betData],"hkjc",betData["place"])
+    betData.res  = result[0][0].res
+    return betData
 }
 
 var lg = [
@@ -366,7 +285,7 @@ async function a(){
 
     display()
 }
-//a()
+a()
 
 
-initA("20201031",10)
+//initA("20201027",10)

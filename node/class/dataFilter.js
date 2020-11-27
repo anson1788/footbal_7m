@@ -761,7 +761,7 @@ class dataFilter extends dataCommonClass{
                 var tmpListStart = this.singleOddSimilarOddListAdance(broker,match,dataList,true)
                 var tmpListEnd = this.singleOddSimilarOddListAdance(broker,match,dataList,false)
                 
-                var calculatorUp = this.calculateSingleResultAsianOddAdvance(match,tmpListStart,broker)
+                var calculatorUp = this.calculateSingleResultAsianOddAdvanceStart(match,tmpListStart,broker)
                 var calculatorDown = this.calculateSingleResultAsianOddAdvance(match,tmpListEnd,broker)
                 
                 /*
@@ -826,11 +826,7 @@ class dataFilter extends dataCommonClass{
                     downbroker+= broker + " \n"
                 }
                     total ++
-                    console.table( "---"+broker+"----")
-                   // console.table(tmp[broker]["上"][0])
-                    console.table([tmp[broker]["上"][1]])
-                    //console.table(tmp[broker]["下"][0])
-                    console.table([tmp[broker]["下"][1]])
+                   
 
                     if(parseFloat(tmp[broker]["上"][1]["total"])>100){
                         totalMMM ++
@@ -840,13 +836,14 @@ class dataFilter extends dataCommonClass{
                         totalDown = totalDown + parseFloat(tmp[broker]["下"][1]["p"])
                     }
             }
+            /*
             console.table([{
                 "total":total,
                 "up":up,
                 "down":down,
                 "totalUp":(totalUp).toFixed(2),
                 "totalDwn":(totalDown).toFixed(2),
-            }])
+            }])*/
             return {
                 "total":total,
                 "up":upCount,
@@ -1013,8 +1010,6 @@ class dataFilter extends dataCommonClass{
                 var crtOddPer = this.oddPerMap(crtOdd[broker])
                 var pastMatchOddPer = this.oddPerMap(pastMatchOdd[broker])
                 if(workingList[i].id =="1872555"){
-                    console.log("1. "+JSON.stringify(crtOddPer))
-                    console.log("2. "+JSON.stringify(pastMatchOddPer))
                 }
                 if(this.isTwoMatchSimilar(crtOddPer,pastMatchOddPer) ){
                     rtnVal.push(Object.assign({},workingList[i]))
@@ -1056,13 +1051,13 @@ class dataFilter extends dataCommonClass{
                 }
             }
             if(true){
-                if(workingList[i].date.includes("2019") || 
-                   workingList[i].date.includes("202001") ||
-                   workingList[i].date.includes("202002") ||
-                   workingList[i].date.includes("202003") ||
-                   workingList[i].date.includes("202004") ||
-                   workingList[i].date.includes("202005") ||
-                   workingList[i].date.includes("202006") ){
+                if(workingList[i].matchData.includes("2019") || 
+                   workingList[i].matchData.includes("202001") ||
+                   workingList[i].matchData.includes("202002") ||
+                   workingList[i].matchData.includes("202003") ||
+                   workingList[i].matchData.includes("202004") ||
+                   workingList[i].matchData.includes("202005") ||
+                   workingList[i].matchData.includes("202006") ){
                     continue
                 }
             }
@@ -1072,28 +1067,33 @@ class dataFilter extends dataCommonClass{
             if( typeof(pastMatchOdd[broker])!="undefined"){
                 var crtOddPer = this.oddPerMap(crtOdd[broker])
                 var pastMatchOddPer = this.oddPerMap(pastMatchOdd[broker])
+                /*
                 if(workingList[i].id =="1872555"){
                     console.log("1. "+JSON.stringify(crtOddPer))
                     console.log("2. "+JSON.stringify(pastMatchOddPer))
-                }
+                }*/
+                
                 if(isStart){
                     if(this.isTwoMatchSimilarStart(crtOddPer,pastMatchOddPer) ){
                         rtnVal.push(Object.assign({},workingList[i]))
+                        /*
                         rtnVal[rtnVal.length-1]["homeE"] = workingList[i]["OddData"][0][broker]["start"]["home"]
                         rtnVal[rtnVal.length-1]["awayE"] = workingList[i]["OddData"][0][broker]["start"]["away"]
                         rtnVal[rtnVal.length-1]["homeSP"] = pastMatchOddPer["Shome"]
                         rtnVal[rtnVal.length-1]["homeEP"] = pastMatchOddPer["Ehome"]
                         rtnVal[rtnVal.length-1]["oddE"] = workingList[i]["OddData"][0][broker]["start"]["point"]
-                        rtnVal[rtnVal.length-1]["OddData"][0][broker]["end"]["point"] = workingList[i]["OddData"][0][broker]["start"]["point"]
+                        */
                     }
                 }else{
                     if(this.isTwoMatchSimilarEnd(crtOddPer,pastMatchOddPer) ){
                         rtnVal.push(Object.assign({},workingList[i]))
+                        /*
                         rtnVal[rtnVal.length-1]["homeE"] = workingList[i]["OddData"][0][broker]["end"]["home"]
                         rtnVal[rtnVal.length-1]["awayE"] = workingList[i]["OddData"][0][broker]["end"]["away"]
                         rtnVal[rtnVal.length-1]["homeSP"] = pastMatchOddPer["Shome"]
                         rtnVal[rtnVal.length-1]["homeEP"] = pastMatchOddPer["Ehome"]
                         rtnVal[rtnVal.length-1]["oddE"] = workingList[i]["OddData"][0][broker]["end"]["point"]
+                        */
                     }
                 }
                 
