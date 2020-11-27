@@ -529,8 +529,8 @@ class dataCommomClass {
     tmp["Saway"] = parseFloat(matchOdd["start"]["away"])/(parseFloat(matchOdd["start"]["home"]) + parseFloat(matchOdd["start"]["away"]))
     tmp["Spoint"] = matchOdd["start"]["point"]
 
-    tmp["Ehome"] = parseFloat(matchOdd["end"]["home"])/(parseFloat(matchOdd["end"]["home"]) + parseFloat(matchOdd["start"]["away"]))
-    tmp["Eaway"] = parseFloat(matchOdd["end"]["away"])/(parseFloat(matchOdd["end"]["home"]) + parseFloat(matchOdd["start"]["away"]))
+    tmp["Ehome"] = parseFloat(matchOdd["end"]["home"])/(parseFloat(matchOdd["end"]["home"]) + parseFloat(matchOdd["end"]["away"]))
+    tmp["Eaway"] = parseFloat(matchOdd["end"]["away"])/(parseFloat(matchOdd["end"]["home"]) + parseFloat(matchOdd["end"]["away"]))
     tmp["Epoint"] = matchOdd["end"]["point"]
 
     return tmp
@@ -558,10 +558,10 @@ class dataCommomClass {
        Math.abs(m1["Shome"] - m2["Shome"]) <0.05 &&
        Math.abs(m1["Ehome"] - m2["Ehome"]) <0.05 && 
        (
-        (m1["Shome"] < m1["Ehome"] &&
-        m2["Shome"] < m2["Ehome"] ) ||
-        (m1["Shome"] > m1["Ehome"] &&
-        m2["Shome"] > m2["Ehome"] ) 
+        (m1["Shome"] < m1["Saway"] &&
+        m2["Ehome"] < m2["Eaway"] ) ||
+        (m1["Shome"] > m1["Saway"] &&
+        m2["Ehome"] > m2["Eaway"]) 
        )
     ){
       return true
