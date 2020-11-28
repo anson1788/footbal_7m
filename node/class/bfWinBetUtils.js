@@ -229,11 +229,11 @@ class bfWinBetUtils extends bfWinUtils{
             oddHistory = await this.parseOddHistory(dom)
           
             dataList[i].isOddHistoryReady = true
-            if(oddData == null){
+            if(oddHistory == null){
                 dataList[i].isOddHistoryReady = false
-                oddData = []
+                oddHistory = []
             }
-            if(oddData.length >0 && typeof(oddData[0]["香港马会"])!=="undefined"){
+            if(oddHistory.length >0){
                 dataList[i].oddHistory = oddHistory
                 console.log(oddHistory)
             }

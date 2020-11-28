@@ -872,7 +872,7 @@ class dataFilter extends dataCommonClass{
                 if(this.isTwoMatchSimilar(crtOddPer,pastMatchOddPer) ){
                     console.log(match.oddHistory.length)
                     console.log(workingList[i].oddHistory.length)
-                    if(Math.abs(match.oddHistory.length - workingList[i].oddHistory.length)<100){
+                    if(Math.abs(match.oddHistory.length - workingList[i].oddHistory.length)<2){
                         rtnVal.push(Object.assign({},workingList[i]))
                         rtnVal[rtnVal.length-1]["homeS"] = workingList[i]["OddData"][0][broker]["start"]["home"]
                         rtnVal[rtnVal.length-1]["homeE"] = workingList[i]["OddData"][0][broker]["end"]["home"]
