@@ -40,8 +40,46 @@ class dataFilterStable extends dataFilterSingleLogic{
         var hkjcData = feature["hkjcData"] 
         var upSide = hkjcData["上"][1]
         var dwnSide = hkjcData["下"][1]
+        
+      
+
+
         tgLog += match["home"] + " 對 "+ match["away"] +" "+match["id"]+
          "["+upSide["p"] +"/"+ dwnSide["p"]+"/" + upSide["total"]+"]"
+
+        tgLog +=  "\n"
+        var betData = {
+           "home":match["home"],
+           "away":match["away"],
+           "id":match["id"],
+           "buyOdd":match.OddData[0]["香港马会"]["end"]["point"],
+           "up": upSide["p"],
+           "down": dwnSide["p"]
+        }
+     
+        var upWin = parseFloat(upSide["贏半"]) + parseFloat(upSide["贏"])
+        var downWin = parseFloat(upSide["輸半"]) + parseFloat(upSide["輸"])
+        
+        if(parseFloat(upSide["total"])>0){
+          if(upWin>downWin){
+              betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["home"]
+              betData["place"] = "主"
+          }else{
+              betData["oddVal"] = match.OddData[0]["香港马会"]["end"]["away"]
+              betData["place"] = "客"
+          }
+          betArr.push(betData)
+        }else{
+          notMakeSenseArr.push(
+            {
+              "home":match["home"],
+              "away":match["away"],
+              "id":match["id"]
+            }
+          )
+          tgLog +=  "唔合理\n"
+        }
+        /*
         if(parseFloat(upSide["p"])>0 || parseFloat(dwnSide["p"])>0){
           tgLog +=  "\n"
           var betData = {
@@ -90,6 +128,8 @@ class dataFilterStable extends dataFilterSingleLogic{
           )
           tgLog +=  "唔合理\n"
         }
+        */
+
     }
 
     console.log("--1"+JSON.stringify(betArr))

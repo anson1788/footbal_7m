@@ -207,6 +207,38 @@ class bfWinBetUtils extends bfWinUtils{
                 dataList[i].OddData = oddData
                 console.log(oddData)
             }
+
+            
+            console.log("complete  :"+ JSON.stringify(dataList[i]))
+          
+        }
+
+        
+        return dataList
+    }
+
+    async addOddHistory(dataList,bcUtils,isCache = false){
+        for(var i=0;i<dataList.length;i++){
+            var url = "http://vip.win007.com/changeDetail/handicap.aspx?id="+dataList[i].id+"&companyID=48&l=0"
+        
+            console.log("match url :"+url)
+            var dom = null 
+            var oddHistory = null
+ 
+            dom = await bcUtils.getHttpDomAsyn(url,"") 
+            oddHistory = await this.parseOddHistory(dom)
+          
+            dataList[i].isOddHistoryReady = true
+            if(oddData == null){
+                dataList[i].isOddHistoryReady = false
+                oddData = []
+            }
+            if(oddData.length >0 && typeof(oddData[0]["香港马会"])!=="undefined"){
+                dataList[i].oddHistory = oddHistory
+                console.log(oddHistory)
+            }
+
+            
             console.log("complete  :"+ JSON.stringify(dataList[i]))
           
         }

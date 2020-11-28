@@ -35,6 +35,8 @@ async function init(){
         }
 
         crtOddList = await bfBetUtils.addOddData(hkjcCrtList,bcUtils)
+        crtOddList = await bfBetUtils.addOddHistory(crtOddList,bcUtils)
+
         let ftUtils = new filterUtils()
         var styList = bfBetUtils.getHKJCList(crtOddList)
         var calculatedResult = ftUtils.matchChecker(styList)
