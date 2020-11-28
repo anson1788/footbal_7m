@@ -75,7 +75,7 @@ async function init(defaultRange=50){
             var matchData = {}
             matchData = bfDailyArr[j]
             matchData.matchData = matchDate
-
+            matchData.date = year+"/"+month+"/"+matchData.date.split("日")[0]+" " +matchData.date.split("日")[1]
             if(typeof(bfDailyArr[j]["AwayFScore"])!=="undefined"){
                 var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+bfDailyArr[j].id
                 var OddData =  await getCacheData(url,"bfData/odd/"+matchDate+"/",  bfDailyArr[j].id ,"bfOdd")
