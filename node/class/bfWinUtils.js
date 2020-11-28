@@ -165,6 +165,7 @@ class bfWinUtils {
 
                         matchArr.push({
                             "league":league,
+                            "date":tds[1].textContent,
                             "home":home,
                             "away":away,
                             "HomeFScore":homeFullScore,

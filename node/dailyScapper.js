@@ -63,7 +63,8 @@ async function init(defaultRange=50){
 
         var matchDate = bcUtils.generateDate(i)
         var url = "http://bf.win007.com/football/big/Over_%d.htm".replace("%d",matchDate)
-        var bfDailyArr =  await getCacheData(url,"bfData/",matchDate, "bflist",(i==1)?false:true)
+       // var bfDailyArr =  await getCacheData(url,"bfData/",matchDate, "bflist",(i==1)?false:true)
+       var bfDailyArr =  await getCacheData(url,"bfData/",matchDate, "bflist",false)
         if(bfDailyArr.length==0){
             bcUtils.logError("dom is null in date "+matchDate)
             continue
