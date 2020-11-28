@@ -38,6 +38,8 @@ async function getCacheData(url, folder, cacheId , type ,isCache = true){
                     }
                 }else if(type=="bfHistory"){
                     rtnArr = await bfUtils.parseBFHistory(dom)  
+                }else if (type=="oddHistory"){
+                    rtnArr = await bfUtils.parseOddHistory(dom)
                 }
                 if(rtnArr.length>0){
                     if (!fs.existsSync(folder)){
@@ -80,6 +82,10 @@ async function init(defaultRange=50){
                 if(matchData.OddData.length > 0 && typeof(matchData.OddData[0]["香港马会"])!="undefined"){
                     halfHKJCMap ++ ;
                     
+
+                    var oddHis = "http://vip.win007.com/changeDetail/handicap.aspx?id="+bfDailyArr[j].id+"&companyID=48&l=0"
+                    var oddHistory =  await getCacheData(oddHis,"bfData/oddHistory/"+matchDate+"/",  bfDailyArr[j].id ,"oddHistory")
+                    matchData.oddHistory = oddHistory
                     /*
                     var url = bfDailyArr[j].url
                     var inMatchData =  await getCacheData(url,"bfData/matchData/"+matchDate+"/",  bfDailyArr[j].id ,"bfDetails")

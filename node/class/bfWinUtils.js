@@ -20,11 +20,34 @@ class bfWinUtils {
             });
         return d3
     }
+
+    async parseOddHistory(crtDom){
+        var rtnVal = []
+        var matchList = crtDom.window.document.querySelectorAll("span")
+        for(var i=0;i<matchList.length;i++){
+            if(matchList[i].id=="odds2"){
+                var trs = matchList[i].querySelectorAll("tr")
+                for(var j=1;j<trs.length;j++){
+                    console.log(trs[j].textContent.split("\n"))  
+                    
+                    rtnVal.push(
+                        {
+                            "home":trs[j].textContent.split("\n")[1],
+                            "away":trs[j].textContent.split("\n")[3],
+                            "point":trs[j].textContent.split("\n")[2],
+                            "time":trs[j].textContent.split("\n")[4],
+                            "status":trs[j].textContent.split("\n")[5]
+                        }
+                    )
+                }
+            }
+        }
+        //console.log(matchList.textContent)
+        return rtnVal
+    }
     async parseBFHistory(crtDom){
 
         var rtnVal = {}
-
-
         var homeMatch = []
         var matchList = crtDom.window.document.querySelectorAll("#table_hn")
         if(matchList.length > 0){
