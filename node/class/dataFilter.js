@@ -870,12 +870,17 @@ class dataFilter extends dataCommonClass{
                 var pastMatchOddPer = this.oddPerMap(pastMatchOdd[broker])
             
                 if(this.isTwoMatchSimilar(crtOddPer,pastMatchOddPer) ){
-                    rtnVal.push(Object.assign({},workingList[i]))
-                    rtnVal[rtnVal.length-1]["homeS"] = workingList[i]["OddData"][0][broker]["start"]["home"]
-                    rtnVal[rtnVal.length-1]["homeE"] = workingList[i]["OddData"][0][broker]["end"]["home"]
-                    rtnVal[rtnVal.length-1]["homeSP"] = pastMatchOddPer["Shome"]
-                    rtnVal[rtnVal.length-1]["homeEP"] = pastMatchOddPer["Ehome"]
-                    rtnVal[rtnVal.length-1]["oddE"] = workingList[i]["OddData"][0][broker]["end"]["point"]
+                    console.log(match.oddHistory.length)
+                    console.log(workingList[i].oddHistory.length)
+                    if(Math.abs(match.oddHistory.length - workingList[i].oddHistory.length)<100){
+                        rtnVal.push(Object.assign({},workingList[i]))
+                        rtnVal[rtnVal.length-1]["homeS"] = workingList[i]["OddData"][0][broker]["start"]["home"]
+                        rtnVal[rtnVal.length-1]["homeE"] = workingList[i]["OddData"][0][broker]["end"]["home"]
+                        rtnVal[rtnVal.length-1]["homeSP"] = pastMatchOddPer["Shome"]
+                        rtnVal[rtnVal.length-1]["homeEP"] = pastMatchOddPer["Ehome"]
+                        rtnVal[rtnVal.length-1]["oddLength"] = workingList[i].oddHistory.length
+                        rtnVal[rtnVal.length-1]["oddE"] = workingList[i]["OddData"][0][broker]["end"]["point"]
+                    }
                 }
             }
         }

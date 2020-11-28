@@ -21,6 +21,7 @@ async function getCacheData(url, folder, cacheId , type ,isCache = true){
     }else{        
         
         try{
+                console.log(url)
                 dom = await bcUtils.getHttpDomAsyn(url,type) 
                 if(type=="bflist"){
                     rtnArr = await bfUtils.parseBFDailyList(dom)  
@@ -59,12 +60,12 @@ async function init(defaultRange=50){
 
     var total = 0
     var targetMatch = []
-    for(var i=2;i<defaultRange;i++){
+    for(var i=3;i<defaultRange;i++){
 
         var matchDate = bcUtils.generateDate(i)
         var url = "http://bf.win007.com/football/big/Over_%d.htm".replace("%d",matchDate)
-       // var bfDailyArr =  await getCacheData(url,"bfData/",matchDate, "bflist",(i==1)?false:true)
-       var bfDailyArr =  await getCacheData(url,"bfData/",matchDate, "bflist",false)
+        var bfDailyArr =  await getCacheData(url,"bfData/",matchDate, "bflist",(i==1)?false:true)
+       //var bfDailyArr =  await getCacheData(url,"bfData/",matchDate, "bflist",false)
         if(bfDailyArr.length==0){
             bcUtils.logError("dom is null in date "+matchDate)
             continue
@@ -75,6 +76,10 @@ async function init(defaultRange=50){
             var matchData = {}
             matchData = bfDailyArr[j]
             matchData.matchData = matchDate
+            var year = matchDate.substring(0, 4);
+            var month = matchDate.substring(4, 6);
+            //console.log("year "+year)
+            //console.log("month "+month)
             matchData.date = year+"/"+month+"/"+matchData.date.split("日")[0]+" " +matchData.date.split("日")[1]
             if(typeof(bfDailyArr[j]["AwayFScore"])!=="undefined"){
                 var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+bfDailyArr[j].id
@@ -129,4 +134,4 @@ async function init(defaultRange=50){
     console.log("total: " + total)
 }
 
-init(450)
+init(400)

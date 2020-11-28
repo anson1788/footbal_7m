@@ -38,6 +38,8 @@ async function getCacheData(url, folder, cacheId , type ,isCache = true){
                     }
                 }else if(type=="bfHistory"){
                     rtnArr = await bfUtils.parseBFHistory(dom)  
+                }else if (type=="oddHistory"){
+                    rtnArr = await bfUtils.parseOddHistory(dom)
                 }
                 if(rtnArr.length>0){
                     if (!fs.existsSync(folder)){
@@ -59,11 +61,15 @@ async function init(defaultRange=50){
     let rawdata = fs.readFileSync("oddBook.json");
     let dataList = JSON.parse(rawdata)
     let ftUtils = new filterUtils()
-    var matchId = ["1894929"]
+    var matchId = ["1915349"]
     for(var i=0;i<matchId.length;i++){
         var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+matchId[i]
-        var OddData =  await getCacheData(url,"bfData/odd/crt/",  matchId[i],"bfOdd",false)
+        var OddData =  await getCacheData(url,"bfData/odd/crt/",  matchId[i],"bfOdd",true)
         
+
+        var oddHis = "http://vip.win007.com/changeDetail/handicap.aspx?id="+matchId[i]+"&companyID=48&l=0"
+        var oddHistory =  await getCacheData(oddHis,"bfData/odd/oddhistory/crt/",  matchId[i] ,"oddHistory",true)
+      
         /*
         url = "http://vip.win007.com/OverDown_n.aspx?id="+matchId[i]
         var BSOddData =  await getCacheData(url,"bfData/bsodd/crt/",  matchId[i] ,"bfBSOdd",false)
@@ -73,7 +79,10 @@ async function init(defaultRange=50){
             "OddData":OddData
          //   "BSOddData" : BSOddData
         }
-      
+        match.oddHistory = oddHistory
+        console.log(JSON.stringify(match.oddHistory))
+        console.log('url '+oddHis)
+        console.log("--")
         var oddPerList = ftUtils.extractSameOddMatch(match,dataList)
         if(!ftUtils.isDicEmpty(oddPerList)){
             console.table([oddPerList])

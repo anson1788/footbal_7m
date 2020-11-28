@@ -1,6 +1,7 @@
 [
   {
     "league": "墨西乙",
+    "date": "28日11:05",
     "home": "西瑪羅雷斯索諾拉",
     "away": "帕蒂特蘭德莫雷洛斯",
     "HomeFScore": "2",
@@ -12,6 +13,7 @@
   },
   {
     "league": "哈薩甲",
+    "date": "28日13:00",
     "home": "阿迪拿奧",
     "away": "斯迪尤索",
     "HomeFScore": "1",
@@ -23,6 +25,7 @@
   },
   {
     "league": "哈薩甲",
+    "date": "28日13:00",
     "home": "阿克圖比",
     "away": "FK阿雷斯",
     "HomeFScore": "1",
@@ -34,6 +37,7 @@
   },
   {
     "league": "中甲",
+    "date": "28日14:30",
     "home": "江西聯盛",
     "away": "黑龍江火山鳴泉",
     "HomeFScore": "1",
@@ -45,6 +49,7 @@
   },
   {
     "league": "中甲",
+    "date": "28日15:00",
     "home": "昆山FC",
     "away": "成都興城",
     "HomeFScore": "1",
@@ -56,6 +61,7 @@
   },
   {
     "league": "中甲",
+    "date": "28日15:00",
     "home": "四川九牛",
     "away": "貴州恒丰智誠",
     "HomeFScore": "2",
@@ -67,6 +73,7 @@
   },
   {
     "league": "日皇盃",
+    "date": "28日15:00",
     "home": "FC本田",
     "away": "丸安岡崎",
     "HomeFScore": "1",
@@ -78,6 +85,7 @@
   },
   {
     "league": "中超",
+    "date": "28日15:30",
     "home": "深圳佳兆業",
     "away": "石家莊永昌",
     "HomeFScore": "1",
@@ -89,6 +97,7 @@
   },
   {
     "league": "哈薩甲",
+    "date": "28日16:00",
     "home": "馬克塔拉",
     "away": "塔蘭",
     "HomeFScore": "0",
@@ -100,6 +109,7 @@
   },
   {
     "league": "俄乙",
+    "date": "28日17:00",
     "home": "蘇維杜夫B隊",
     "away": "新西伯利亞",
     "HomeFScore": "2",
@@ -111,6 +121,7 @@
   },
   {
     "league": "俄青聯",
+    "date": "28日17:00",
     "home": "聖彼德斯堡青年隊",
     "away": "烏拉爾青年隊",
     "HomeFScore": "4",
@@ -122,6 +133,7 @@
   },
   {
     "league": "哈薩甲",
+    "date": "28日17:00",
     "home": "斯咸迪蘇B隊",
     "away": "奧杜斯基克",
     "HomeFScore": "2",
@@ -133,6 +145,7 @@
   },
   {
     "league": "烏茲甲",
+    "date": "28日17:00",
     "home": "費爾幹納夫茲",
     "away": "圖倫努庫斯",
     "HomeFScore": "1",
@@ -144,6 +157,19 @@
   },
   {
     "league": "日職聯",
+    "date": "28日18:00",
+    "home": "廣島三箭",
+    "away": "橫濱水手",
+    "HomeFScore": "3",
+    "AwayFScore": "1",
+    "HomeHScore": "1",
+    "AwayHScore": "0",
+    "id": "1872601",
+    "url": "http://live.win007.com/detail/1872601.htm"
+  },
+  {
+    "league": "日職聯",
+    "date": "28日18:00",
     "home": "仙台維加泰",
     "away": "神戶勝利船",
     "HomeFScore": "2",
@@ -155,6 +181,7 @@
   },
   {
     "league": "日職聯",
+    "date": "28日18:00",
     "home": "FC東京",
     "away": "柏雷素爾",
     "HomeFScore": "1",
@@ -165,18 +192,8 @@
     "url": "http://live.win007.com/detail/1872579.htm"
   },
   {
-    "league": "日職聯",
-    "home": "廣島三箭",
-    "away": "橫濱水手",
-    "HomeFScore": "3",
-    "AwayFScore": "1",
-    "HomeHScore": "1",
-    "AwayHScore": "0",
-    "id": "1872601",
-    "url": "http://live.win007.com/detail/1872601.htm"
-  },
-  {
     "league": "中甲",
+    "date": "28日18:00",
     "home": "南通支雲",
     "away": "蘇州東吳",
     "HomeFScore": "1",
@@ -188,6 +205,7 @@
   },
   {
     "league": "日丙",
+    "date": "28日18:00",
     "home": "大阪飛腳U23",
     "away": "福島聯",
     "HomeFScore": "0",
@@ -199,6 +217,7 @@
   },
   {
     "league": "日皇盃",
+    "date": "28日18:00",
     "home": "鹿屋體育大學",
     "away": "偉士帕大分",
     "HomeFScore": "1",
@@ -210,6 +229,7 @@
   },
   {
     "league": "烏茲超",
+    "date": "28日18:00",
     "home": "特爾梅茲",
     "away": "塔什乾火車頭",
     "HomeFScore": "1",
@@ -221,6 +241,7 @@
   },
   {
     "league": "俄青聯",
+    "date": "28日18:00",
     "home": "洛特伏爾加格勒青年隊",
     "away": "莫斯科切爾塔諾沃青年隊",
     "HomeFScore": "1",
@@ -232,6 +253,7 @@
   },
   {
     "league": "格魯乙",
+    "date": "28日18:00",
     "home": "魯斯塔維",
     "away": "瑪瑞尼",
     "HomeFScore": "3",
@@ -243,105 +265,19 @@
   },
   {
     "league": "土乙",
-    "home": "伊約普",
-    "away": "佩迪卡斯堡",
-    "HomeFScore": "1",
-    "AwayFScore": "0",
-    "HomeHScore": "0",
-    "AwayHScore": "0",
-    "id": "1926054",
-    "url": "http://live.win007.com/detail/1926054.htm"
-  },
-  {
-    "league": "土乙",
-    "home": "伊尼高爾士邦",
-    "away": "阿菲永士邦",
-    "HomeFScore": "2",
-    "AwayFScore": "2",
-    "HomeHScore": "0",
-    "AwayHScore": "2",
-    "id": "1924702",
-    "url": "http://live.win007.com/detail/1924702.htm"
-  },
-  {
-    "league": "土乙",
-    "home": "赫克莫古特拉仲",
-    "away": "烏塔斯烏沙克士邦",
-    "HomeFScore": "1",
-    "AwayFScore": "2",
-    "HomeHScore": "0",
-    "AwayHScore": "1",
-    "id": "1924698",
-    "url": "http://live.win007.com/detail/1924698.htm"
-  },
-  {
-    "league": "土乙",
-    "home": "俄辛康士邦",
-    "away": "哈錫迪比",
-    "HomeFScore": "2",
-    "AwayFScore": "0",
-    "HomeHScore": "0",
-    "AwayHScore": "0",
-    "id": "1924697",
-    "url": "http://live.win007.com/detail/1924697.htm"
-  },
-  {
-    "league": "土乙",
-    "home": "尼日德",
-    "away": "高卡爾利",
-    "HomeFScore": "0",
-    "AwayFScore": "0",
-    "HomeHScore": "0",
-    "AwayHScore": "0",
-    "id": "1924700",
-    "url": "http://live.win007.com/detail/1924700.htm"
-  },
-  {
-    "league": "土乙",
-    "home": "安卡拉德米斯堡",
-    "away": "文尼沙BB",
+    "date": "28日19:00",
+    "home": "基克拉爾利士邦",
+    "away": "基森海爾",
     "HomeFScore": "0",
     "AwayFScore": "1",
     "HomeHScore": "0",
     "AwayHScore": "0",
-    "id": "1924699",
-    "url": "http://live.win007.com/detail/1924699.htm"
+    "id": "1926055",
+    "url": "http://live.win007.com/detail/1926055.htm"
   },
   {
     "league": "土乙",
-    "home": "塞克爾士邦",
-    "away": "埃拉澤",
-    "HomeFScore": "3",
-    "AwayFScore": "0",
-    "HomeHScore": "1",
-    "AwayHScore": "0",
-    "id": "1926050",
-    "url": "http://live.win007.com/detail/1926050.htm"
-  },
-  {
-    "league": "土乙",
-    "home": "埃爾蓋內",
-    "away": "科魯姆",
-    "HomeFScore": "1",
-    "AwayFScore": "0",
-    "HomeHScore": "1",
-    "AwayHScore": "0",
-    "id": "1924701",
-    "url": "http://live.win007.com/detail/1924701.htm"
-  },
-  {
-    "league": "土乙",
-    "home": "沙卡亞斯普",
-    "away": "錫瓦斯貝萊迪耶",
-    "HomeFScore": "2",
-    "AwayFScore": "2",
-    "HomeHScore": "2",
-    "AwayHScore": "1",
-    "id": "1926056",
-    "url": "http://live.win007.com/detail/1926056.htm"
-  },
-  {
-    "league": "土乙",
+    "date": "28日19:00",
     "home": "帕薩士邦",
     "away": "布沙尼路費斯堡",
     "HomeFScore": "1",
@@ -353,6 +289,7 @@
   },
   {
     "league": "土乙",
+    "date": "28日19:00",
     "home": "伊梅斯古特",
     "away": "塞里克",
     "HomeFScore": "2",
@@ -364,6 +301,7 @@
   },
   {
     "league": "土乙",
+    "date": "28日19:00",
     "home": "塔蘇斯",
     "away": "布格薩斯",
     "HomeFScore": "4",
@@ -375,17 +313,115 @@
   },
   {
     "league": "土乙",
-    "home": "基克拉爾利士邦",
-    "away": "基森海爾",
+    "date": "28日19:00",
+    "home": "伊約普",
+    "away": "佩迪卡斯堡",
+    "HomeFScore": "1",
+    "AwayFScore": "0",
+    "HomeHScore": "0",
+    "AwayHScore": "0",
+    "id": "1926054",
+    "url": "http://live.win007.com/detail/1926054.htm"
+  },
+  {
+    "league": "土乙",
+    "date": "28日19:00",
+    "home": "伊尼高爾士邦",
+    "away": "阿菲永士邦",
+    "HomeFScore": "2",
+    "AwayFScore": "2",
+    "HomeHScore": "0",
+    "AwayHScore": "2",
+    "id": "1924702",
+    "url": "http://live.win007.com/detail/1924702.htm"
+  },
+  {
+    "league": "土乙",
+    "date": "28日19:00",
+    "home": "赫克莫古特拉仲",
+    "away": "烏塔斯烏沙克士邦",
+    "HomeFScore": "1",
+    "AwayFScore": "2",
+    "HomeHScore": "0",
+    "AwayHScore": "1",
+    "id": "1924698",
+    "url": "http://live.win007.com/detail/1924698.htm"
+  },
+  {
+    "league": "土乙",
+    "date": "28日19:00",
+    "home": "俄辛康士邦",
+    "away": "哈錫迪比",
+    "HomeFScore": "2",
+    "AwayFScore": "0",
+    "HomeHScore": "0",
+    "AwayHScore": "0",
+    "id": "1924697",
+    "url": "http://live.win007.com/detail/1924697.htm"
+  },
+  {
+    "league": "土乙",
+    "date": "28日19:00",
+    "home": "尼日德",
+    "away": "高卡爾利",
+    "HomeFScore": "0",
+    "AwayFScore": "0",
+    "HomeHScore": "0",
+    "AwayHScore": "0",
+    "id": "1924700",
+    "url": "http://live.win007.com/detail/1924700.htm"
+  },
+  {
+    "league": "土乙",
+    "date": "28日19:00",
+    "home": "安卡拉德米斯堡",
+    "away": "文尼沙BB",
     "HomeFScore": "0",
     "AwayFScore": "1",
     "HomeHScore": "0",
     "AwayHScore": "0",
-    "id": "1926055",
-    "url": "http://live.win007.com/detail/1926055.htm"
+    "id": "1924699",
+    "url": "http://live.win007.com/detail/1924699.htm"
+  },
+  {
+    "league": "土乙",
+    "date": "28日19:00",
+    "home": "塞克爾士邦",
+    "away": "埃拉澤",
+    "HomeFScore": "3",
+    "AwayFScore": "0",
+    "HomeHScore": "1",
+    "AwayHScore": "0",
+    "id": "1926050",
+    "url": "http://live.win007.com/detail/1926050.htm"
+  },
+  {
+    "league": "土乙",
+    "date": "28日19:00",
+    "home": "埃爾蓋內",
+    "away": "科魯姆",
+    "HomeFScore": "1",
+    "AwayFScore": "0",
+    "HomeHScore": "1",
+    "AwayHScore": "0",
+    "id": "1924701",
+    "url": "http://live.win007.com/detail/1924701.htm"
+  },
+  {
+    "league": "土乙",
+    "date": "28日19:00",
+    "home": "沙卡亞斯普",
+    "away": "錫瓦斯貝萊迪耶",
+    "HomeFScore": "2",
+    "AwayFScore": "2",
+    "HomeHScore": "2",
+    "AwayHScore": "1",
+    "id": "1926056",
+    "url": "http://live.win007.com/detail/1926056.htm"
   },
   {
     "league": "摩爾盃",
+    "date": "28日19:00",
     "home": "尼斯波雷尼",
     "away": "達西亞布卡尼",
     "HomeFScore": "1",
@@ -397,17 +433,7 @@
   },
   {
     "league": "土丙",
-    "home": "慕拉斯堡",
-    "away": "帕加馬",
-    "HomeFScore": "1",
-    "AwayFScore": "1",
-    "HomeHScore": "1",
-    "AwayHScore": "1",
-    "id": "1927342",
-    "url": "http://live.win007.com/detail/1927342.htm"
-  },
-  {
-    "league": "土丙",
+    "date": "28日19:00",
     "home": "耶尼亞廷達",
     "away": "厄洛克士邦",
     "HomeFScore": "0",
@@ -418,7 +444,20 @@
     "url": "http://live.win007.com/detail/1927090.htm"
   },
   {
+    "league": "土丙",
+    "date": "28日19:00",
+    "home": "慕拉斯堡",
+    "away": "帕加馬",
+    "HomeFScore": "1",
+    "AwayFScore": "1",
+    "HomeHScore": "1",
+    "AwayHScore": "1",
+    "id": "1927342",
+    "url": "http://live.win007.com/detail/1927342.htm"
+  },
+  {
     "league": "拉脫盃",
+    "date": "28日19:00",
     "home": "雲特史比斯",
     "away": "列加斯",
     "HomeFScore": "1",
@@ -430,6 +469,7 @@
   },
   {
     "league": "哈薩甲",
+    "date": "28日19:00",
     "home": "阿勒泰瑟美",
     "away": "伊基巴斯圖特",
     "HomeFScore": "0",
@@ -441,6 +481,7 @@
   },
   {
     "league": "塞爾U19",
+    "date": "28日19:00",
     "home": "格拉菲卡貝爾格萊德U19",
     "away": "貝爾格萊德拉德U19",
     "HomeFScore": "0",
@@ -452,6 +493,7 @@
   },
   {
     "league": "俄甲",
+    "date": "28日19:30",
     "home": "湯斯克",
     "away": "SKA哈巴羅夫斯克",
     "HomeFScore": "1",
@@ -463,6 +505,7 @@
   },
   {
     "league": "匈盃",
+    "date": "28日19:30",
     "home": "辛特羅尼克",
     "away": "普斯卡斯學院",
     "HomeFScore": "0",
@@ -474,6 +517,7 @@
   },
   {
     "league": "中超",
+    "date": "28日19:35",
     "home": "北京中赫國安",
     "away": "廣州恒大淘寶",
     "HomeFScore": "0",
@@ -485,6 +529,7 @@
   },
   {
     "league": "中甲",
+    "date": "28日19:35",
     "home": "北京北體大",
     "away": "新疆雪豹納歡",
     "HomeFScore": "1",
@@ -496,6 +541,7 @@
   },
   {
     "league": "中甲",
+    "date": "28日19:35",
     "home": "泰州遠大",
     "away": "長春亞泰",
     "HomeFScore": "0",
@@ -507,6 +553,7 @@
   },
   {
     "league": "俄甲",
+    "date": "28日20:00",
     "home": "莫斯科斯巴達B隊",
     "away": "克拉斯諾亞爾斯克",
     "HomeFScore": "1",
@@ -518,6 +565,7 @@
   },
   {
     "league": "波蘭甲",
+    "date": "28日20:00",
     "home": "拉多麥科",
     "away": "泰馳",
     "HomeFScore": "2",
@@ -529,6 +577,7 @@
   },
   {
     "league": "烏茲超",
+    "date": "28日20:00",
     "home": "馬沙爾",
     "away": "柏克塔哥",
     "HomeFScore": "1",
@@ -540,6 +589,7 @@
   },
   {
     "league": "塞爾U19",
+    "date": "28日20:00",
     "home": "拉尼奇1923U19",
     "away": "諾域斯U19",
     "HomeFScore": "2",
@@ -551,6 +601,7 @@
   },
   {
     "league": "塞爾U19",
+    "date": "28日20:00",
     "home": "瑞德尼基U19",
     "away": "FK國際U19",
     "HomeFScore": "2",
@@ -562,6 +613,7 @@
   },
   {
     "league": "塞爾U19",
+    "date": "28日20:00",
     "home": "拉尼奇新貝爾格萊德U19",
     "away": "馬拉多特U19",
     "HomeFScore": "1",
@@ -573,6 +625,7 @@
   },
   {
     "league": "塞爾U19",
+    "date": "28日20:10",
     "home": "柏迪遜U19",
     "away": "納普里達克U19",
     "HomeFScore": "5",
@@ -584,6 +637,7 @@
   },
   {
     "league": "塞浦乙",
+    "date": "28日20:35",
     "home": "科裏斯埃裏米",
     "away": "艾希爾利西",
     "HomeFScore": "2",
@@ -595,6 +649,7 @@
   },
   {
     "league": "德地區",
+    "date": "28日21:00",
     "home": "柏林安卡拉體育",
     "away": "艾爾格里尼克",
     "HomeFScore": "2",
@@ -606,6 +661,7 @@
   },
   {
     "league": "挪甲",
+    "date": "28日21:00",
     "home": "KFUM奧斯陸",
     "away": "基沙",
     "HomeFScore": "3",
@@ -617,6 +673,7 @@
   },
   {
     "league": "挪甲",
+    "date": "28日21:00",
     "home": "格魯德",
     "away": "阿薩納",
     "HomeFScore": "1",
@@ -628,6 +685,7 @@
   },
   {
     "league": "俄甲",
+    "date": "28日21:00",
     "home": "泰提席克",
     "away": "莫斯科魚雷",
     "HomeFScore": "1",
@@ -639,6 +697,7 @@
   },
   {
     "league": "俄甲",
+    "date": "28日21:00",
     "home": "諾夫哥羅德",
     "away": "奧倫堡",
     "HomeFScore": "0",
@@ -650,6 +709,7 @@
   },
   {
     "league": "意盃",
+    "date": "28日21:00",
     "home": "拖連奴",
     "away": "萊切",
     "HomeFScore": "1",
@@ -661,6 +721,7 @@
   },
   {
     "league": "匈U19",
+    "date": "28日21:00",
     "home": "費倫斯華路士U19",
     "away": "MTK布達佩斯U19",
     "HomeFScore": "2",
@@ -672,6 +733,7 @@
   },
   {
     "league": "拉脫盃",
+    "date": "28日21:00",
     "home": "利耶柏亞",
     "away": "瓦爾米耶拉",
     "HomeFScore": "2",
@@ -683,6 +745,7 @@
   },
   {
     "league": "羅乙",
+    "date": "28日21:00",
     "home": "添米索亞拿",
     "away": "克勒拉希",
     "HomeFScore": "1",
@@ -694,6 +757,7 @@
   },
   {
     "league": "羅乙",
+    "date": "28日21:00",
     "home": "哥利亞布沙",
     "away": "FK米耶爾庫雷亞丘克",
     "HomeFScore": "0",
@@ -705,6 +769,7 @@
   },
   {
     "league": "羅乙",
+    "date": "28日21:00",
     "home": "班度里",
     "away": "化奴",
     "HomeFScore": "0",
@@ -716,6 +781,7 @@
   },
   {
     "league": "波蘭丁",
+    "date": "28日21:00",
     "home": "薩比利斯B隊",
     "away": "达布热格",
     "HomeFScore": "1",
@@ -727,6 +793,7 @@
   },
   {
     "league": "克亞乙",
+    "date": "28日21:00",
     "home": "施巴利亞",
     "away": "夏積杜克B隊",
     "HomeFScore": "2",
@@ -738,6 +805,7 @@
   },
   {
     "league": "希U19",
+    "date": "28日21:00",
     "home": "阿里斯U19",
     "away": "艾普隆U19",
     "HomeFScore": "2",
@@ -749,6 +817,7 @@
   },
   {
     "league": "巴克甲",
+    "date": "28日21:00",
     "home": "貢卡倫斯",
     "away": "森柏歐RJ",
     "HomeFScore": "1",
@@ -760,17 +829,7 @@
   },
   {
     "league": "巴聖青聯",
-    "home": "保地花高青年隊",
-    "away": "法林明高青年隊",
-    "HomeFScore": "2",
-    "AwayFScore": "2",
-    "HomeHScore": "2",
-    "AwayHScore": "0",
-    "id": "1945791",
-    "url": "http://live.win007.com/detail/1945791.htm"
-  },
-  {
-    "league": "巴聖青聯",
+    "date": "28日21:00",
     "home": "美國RJ青年隊",
     "away": "馬卡青年隊",
     "HomeFScore": "2",
@@ -781,7 +840,20 @@
     "url": "http://live.win007.com/detail/1945790.htm"
   },
   {
+    "league": "巴聖青聯",
+    "date": "28日21:00",
+    "home": "保地花高青年隊",
+    "away": "法林明高青年隊",
+    "HomeFScore": "2",
+    "AwayFScore": "2",
+    "HomeHScore": "2",
+    "AwayHScore": "0",
+    "id": "1945791",
+    "url": "http://live.win007.com/detail/1945791.htm"
+  },
+  {
     "league": "俄青聯",
+    "date": "28日21:15",
     "home": "莫斯科戴拿模青年隊",
     "away": "坦波夫青年隊",
     "HomeFScore": "4",
@@ -793,6 +865,7 @@
   },
   {
     "league": "德地區",
+    "date": "28日21:30",
     "home": "費雷堡業餘隊",
     "away": "巴林格",
     "HomeFScore": "4",
@@ -804,6 +877,7 @@
   },
   {
     "league": "意盃",
+    "date": "28日21:30",
     "home": "卡利亞里",
     "away": "克雷莫納",
     "HomeFScore": "1",
@@ -815,6 +889,7 @@
   },
   {
     "league": "意丁",
+    "date": "28日21:30",
     "home": "萊尼亞諾",
     "away": "戈紮諾",
     "HomeFScore": "2",
@@ -826,6 +901,7 @@
   },
   {
     "league": "意丁",
+    "date": "28日21:30",
     "home": "TSV克劳斯多夫",
     "away": "AS卡薩爾",
     "HomeFScore": "2",
@@ -837,6 +913,7 @@
   },
   {
     "league": "意丁",
+    "date": "28日21:30",
     "home": "山基奧雲尼斯",
     "away": "皮阿尼斯",
     "HomeFScore": "0",
@@ -848,6 +925,7 @@
   },
   {
     "league": "意丁",
+    "date": "28日21:30",
     "home": "ASD帕特诺",
     "away": "SSD达蒂",
     "HomeFScore": "1",
@@ -859,6 +937,7 @@
   },
   {
     "league": "德地盃",
+    "date": "28日21:30",
     "home": "希尔德斯海姆",
     "away": "HSC漢諾威",
     "HomeFScore": "3",
@@ -870,6 +949,7 @@
   },
   {
     "league": "俄甲",
+    "date": "28日22:00",
     "home": "阿蘭尼亞瓦拉",
     "away": "阿克倫托格里蒂",
     "HomeFScore": "5",
@@ -881,6 +961,7 @@
   },
   {
     "league": "塞浦甲",
+    "date": "28日22:00",
     "home": "薩拉米斯",
     "away": "艾米斯",
     "HomeFScore": "0",
@@ -892,6 +973,7 @@
   },
   {
     "league": "意盃",
+    "date": "28日22:00",
     "home": "薛達迪拿",
     "away": "史柏斯亞",
     "HomeFScore": "0",
@@ -903,6 +985,7 @@
   },
   {
     "league": "意盃",
+    "date": "28日22:00",
     "home": "科森察",
     "away": "摩诺波利",
     "HomeFScore": "2",
@@ -914,6 +997,7 @@
   },
   {
     "league": "智利乙",
+    "date": "28日22:00",
     "home": "華迪維亞",
     "away": "流浪者",
     "HomeFScore": "0",
@@ -925,6 +1009,7 @@
   },
   {
     "league": "智利乙",
+    "date": "28日22:00",
     "home": "梅里比拉",
     "away": "科比亞波",
     "HomeFScore": "1",
@@ -936,6 +1021,7 @@
   },
   {
     "league": "俄甲",
+    "date": "28日22:30",
     "home": "艾立叙欧姆斯克",
     "away": "韋萊斯",
     "HomeFScore": "1",
@@ -947,6 +1033,7 @@
   },
   {
     "league": "俄甲",
+    "date": "28日22:30",
     "home": "沃爾加阿斯特拉罕",
     "away": "法克爾",
     "HomeFScore": "2",
@@ -958,6 +1045,7 @@
   },
   {
     "league": "科威特聯",
+    "date": "28日22:30",
     "home": "塔德蒙",
     "away": "Al蘇拉比科哈特",
     "HomeFScore": "1",
@@ -969,6 +1057,7 @@
   },
   {
     "league": "沙地甲",
+    "date": "28日22:40",
     "home": "諾積姆",
     "away": "卡赫利塞哈特",
     "HomeFScore": "1",
@@ -980,6 +1069,7 @@
   },
   {
     "league": "法丁",
+    "date": "28日23:00",
     "home": "利斯靴比亞斯",
     "away": "科隆米爾斯",
     "HomeFScore": "1",
@@ -991,6 +1081,7 @@
   },
   {
     "league": "瑞典乙",
+    "date": "28日23:00",
     "home": "托爾恩格魯本",
     "away": "桑德維肯斯",
     "HomeFScore": "0",
@@ -1002,6 +1093,7 @@
   },
   {
     "league": "俄甲",
+    "date": "28日23:00",
     "home": "內弗特赫米克",
     "away": "克拉斯諾達爾B隊",
     "HomeFScore": "5",
@@ -1013,6 +1105,7 @@
   },
   {
     "league": "俄甲",
+    "date": "28日23:00",
     "home": "蘇維杜夫",
     "away": "辛歷克",
     "HomeFScore": "4",
@@ -1024,6 +1117,7 @@
   },
   {
     "league": "俄甲",
+    "date": "28日23:00",
     "home": "布良斯克戴拿模",
     "away": "巴提卡",
     "HomeFScore": "1",
@@ -1035,6 +1129,7 @@
   },
   {
     "league": "俄甲",
+    "date": "28日23:00",
     "home": "莫斯科切爾塔諾沃",
     "away": "恰卡",
     "HomeFScore": "1",
@@ -1046,6 +1141,7 @@
   },
   {
     "league": "塞浦盃",
+    "date": "28日23:00",
     "home": "佩伊克",
     "away": "阿普爾",
     "HomeFScore": "0",
@@ -1057,6 +1153,7 @@
   },
   {
     "league": "塞浦甲",
+    "date": "28日23:00",
     "home": "艾治拿斯",
     "away": "安羅科薩斯",
     "HomeFScore": "0",
@@ -1068,17 +1165,7 @@
   },
   {
     "league": "意盃",
-    "home": "布雷西亞",
-    "away": "佩魯賈",
-    "HomeFScore": "3",
-    "AwayFScore": "0",
-    "HomeHScore": "2",
-    "AwayHScore": "0",
-    "id": "1943126",
-    "url": "http://live.win007.com/detail/1943126.htm"
-  },
-  {
-    "league": "意盃",
+    "date": "28日23:00",
     "home": "賓尼雲圖",
     "away": "恩波里",
     "HomeFScore": "2",
@@ -1089,7 +1176,20 @@
     "url": "http://live.win007.com/detail/1943125.htm"
   },
   {
+    "league": "意盃",
+    "date": "28日23:00",
+    "home": "布雷西亞",
+    "away": "佩魯賈",
+    "HomeFScore": "3",
+    "AwayFScore": "0",
+    "HomeHScore": "2",
+    "AwayHScore": "0",
+    "id": "1943126",
+    "url": "http://live.win007.com/detail/1943126.htm"
+  },
+  {
     "league": "斯亞甲",
+    "date": "28日23:00",
     "home": "哥裏卡",
     "away": "塔博塞扎納",
     "HomeFScore": "2",
@@ -1101,17 +1201,7 @@
   },
   {
     "league": "阿曼聯",
-    "home": "瑪斯卡特",
-    "away": "席貝",
-    "HomeFScore": "1",
-    "AwayFScore": "1",
-    "HomeHScore": "1",
-    "AwayHScore": "0",
-    "id": "1828451",
-    "url": "http://live.win007.com/detail/1828451.htm"
-  },
-  {
-    "league": "阿曼聯",
+    "date": "28日23:00",
     "home": "沙漢姆",
     "away": "迪赫弗",
     "HomeFScore": "1",
@@ -1122,7 +1212,20 @@
     "url": "http://live.win007.com/detail/1828450.htm"
   },
   {
+    "league": "阿曼聯",
+    "date": "28日23:00",
+    "home": "瑪斯卡特",
+    "away": "席貝",
+    "HomeFScore": "1",
+    "AwayFScore": "1",
+    "HomeHScore": "1",
+    "AwayHScore": "0",
+    "id": "1828451",
+    "url": "http://live.win007.com/detail/1828451.htm"
+  },
+  {
     "league": "羅乙",
+    "date": "28日23:00",
     "home": "佩特羅魯",
     "away": "CSS斯拉提拿",
     "HomeFScore": "1",
@@ -1134,6 +1237,7 @@
   },
   {
     "league": "塞爾U19",
+    "date": "28日23:00",
     "home": "貝爾格萊德紅星U19",
     "away": "沃日多瓦茨U19",
     "HomeFScore": "1",
@@ -1145,6 +1249,7 @@
   },
   {
     "league": "智利丙",
+    "date": "28日23:00",
     "home": "AC科林納",
     "away": "勞塔羅布因",
     "HomeFScore": "2",
@@ -1156,6 +1261,7 @@
   },
   {
     "league": "葡錦標",
+    "date": "28日23:00",
     "home": "洛利斯",
     "away": "艾華卡",
     "HomeFScore": "0",
@@ -1167,6 +1273,7 @@
   },
   {
     "league": "沙地甲",
+    "date": "28日23:25",
     "home": "吉達里比亞",
     "away": "查巴萊",
     "HomeFScore": "1",
@@ -1178,6 +1285,7 @@
   },
   {
     "league": "波斯甲",
+    "date": "28日23:30",
     "home": "薛謝斯歷卡",
     "away": "辛連斯基",
     "HomeFScore": "1",
@@ -1189,6 +1297,7 @@
   },
   {
     "league": "卡後備",
+    "date": "28日23:30",
     "home": "杜哈阿拉伯後備隊",
     "away": "恩沙巴後備隊",
     "HomeFScore": "1",
@@ -1200,6 +1309,7 @@
   },
   {
     "league": "意盃",
+    "date": "28日23:59",
     "home": "克羅托內",
     "away": "史帕爾",
     "HomeFScore": "0",
@@ -1211,6 +1321,7 @@
   },
   {
     "league": "意盃",
+    "date": "28日23:59",
     "home": "熱拿亞",
     "away": "卡坦薩羅",
     "HomeFScore": "2",
@@ -1222,6 +1333,7 @@
   },
   {
     "league": "意盃",
+    "date": "28日23:59",
     "home": "維羅納",
     "away": "威尼斯",
     "HomeFScore": "2",
@@ -1233,6 +1345,7 @@
   },
   {
     "league": "克亞甲",
+    "date": "28日23:59",
     "home": "比路樸",
     "away": "薩格勒布火車頭",
     "HomeFScore": "0",
@@ -1244,6 +1357,7 @@
   },
   {
     "league": "土乙",
+    "date": "28日23:59",
     "home": "阿美德",
     "away": "古姆森士邦",
     "HomeFScore": "2",
@@ -1255,6 +1369,7 @@
   },
   {
     "league": "格魯甲",
+    "date": "28日23:59",
     "home": "泰拉維",
     "away": "薩布塔洛",
     "HomeFScore": "1",
@@ -1266,6 +1381,7 @@
   },
   {
     "league": "秘魯乙",
+    "date": "28日23:59",
     "home": "莫里諾斯",
     "away": "甘馬斯安迪斯聯",
     "HomeFScore": "2",
@@ -1277,6 +1393,7 @@
   },
   {
     "league": "法丁",
+    "date": "29日00:30",
     "home": "尚馬利爾斯",
     "away": "昂熱B隊",
     "HomeFScore": "0",
@@ -1288,6 +1405,7 @@
   },
   {
     "league": "芬乙",
+    "date": "29日00:30",
     "home": "JBK佩特莎亞里",
     "away": "基斯特",
     "HomeFScore": "3",
@@ -1299,6 +1417,7 @@
   },
   {
     "league": "立陶甲",
+    "date": "29日00:30",
     "home": "瑞特瑞埃",
     "away": "巴提加",
     "HomeFScore": "1",
@@ -1310,6 +1429,7 @@
   },
   {
     "league": "智利乙",
+    "date": "29日00:30",
     "home": "麥哲倫",
     "away": "紐柏萊斯",
     "HomeFScore": "0",
@@ -1321,6 +1441,7 @@
   },
   {
     "league": "意盃",
+    "date": "29日00:40",
     "home": "費倫天拿",
     "away": "帕多瓦",
     "HomeFScore": "2",
@@ -1332,6 +1453,7 @@
   },
   {
     "league": "科威特聯",
+    "date": "29日00:45",
     "home": "艾沙巴柏",
     "away": "沙米亞",
     "HomeFScore": "1",
@@ -1343,6 +1465,7 @@
   },
   {
     "league": "法丙",
+    "date": "29日01:00",
     "home": "巴斯蒂亞波高",
     "away": "布羅尼",
     "HomeFScore": "2",
@@ -1354,6 +1477,7 @@
   },
   {
     "league": "芬乙",
+    "date": "29日01:00",
     "home": "GBK",
     "away": "維夫克",
     "HomeFScore": "0",
@@ -1365,6 +1489,7 @@
   },
   {
     "league": "挪甲",
+    "date": "29日01:00",
     "home": "桑恩達",
     "away": "謝夫",
     "HomeFScore": "1",
@@ -1376,6 +1501,7 @@
   },
   {
     "league": "挪甲",
+    "date": "29日01:00",
     "home": "辛尼斯",
     "away": "史杜文",
     "HomeFScore": "2",
@@ -1387,6 +1513,7 @@
   },
   {
     "league": "挪甲",
+    "date": "29日01:00",
     "home": "特羅素",
     "away": "咸卡姆",
     "HomeFScore": "3",
@@ -1398,6 +1525,7 @@
   },
   {
     "league": "挪甲",
+    "date": "29日01:00",
     "home": "艾伊加登",
     "away": "干斯雲加",
     "HomeFScore": "1",
@@ -1409,6 +1537,7 @@
   },
   {
     "league": "挪甲",
+    "date": "29日01:00",
     "home": "諾霍斯",
     "away": "利尼史特朗",
     "HomeFScore": "2",
@@ -1420,6 +1549,7 @@
   },
   {
     "league": "波蘭超",
+    "date": "29日01:00",
     "home": "克拉科夫",
     "away": "列治亞",
     "HomeFScore": "1",
@@ -1431,6 +1561,7 @@
   },
   {
     "league": "意盃",
+    "date": "29日01:00",
     "home": "帕爾馬",
     "away": "比斯卡拉",
     "HomeFScore": "3",
@@ -1442,6 +1573,7 @@
   },
   {
     "league": "意盃",
+    "date": "29日01:00",
     "home": "烏甸尼斯",
     "away": "維琴察",
     "HomeFScore": "3",
@@ -1453,6 +1585,7 @@
   },
   {
     "league": "斯亞甲",
+    "date": "29日01:00",
     "home": "高柏",
     "away": "佩利根",
     "HomeFScore": "3",
@@ -1464,6 +1597,7 @@
   },
   {
     "league": "愛沙甲",
+    "date": "29日01:00",
     "home": "科羅拉",
     "away": "派德",
     "HomeFScore": "1",
@@ -1475,6 +1609,7 @@
   },
   {
     "league": "法羅甲",
+    "date": "29日01:00",
     "home": "拖錫雲",
     "away": "NSI魯納維克",
     "HomeFScore": "2",
@@ -1486,6 +1621,7 @@
   },
   {
     "league": "愛沙盃",
+    "date": "29日01:00",
     "home": "卡里魯",
     "away": "塔林軍團",
     "HomeFScore": "3",
@@ -1497,6 +1633,7 @@
   },
   {
     "league": "西聯杯",
+    "date": "29日01:00",
     "home": "拉高斯迪拿",
     "away": "普拉格斯卡爾維亞",
     "HomeFScore": "3",
@@ -1508,6 +1645,7 @@
   },
   {
     "league": "德堡州聯",
+    "date": "29日01:00",
     "home": "奥本",
     "away": "SV林内兹",
     "HomeFScore": "3",
@@ -1519,6 +1657,7 @@
   },
   {
     "league": "德乙",
+    "date": "29日01:30",
     "home": "奧斯納布克",
     "away": "達斯泰特",
     "HomeFScore": "1",
@@ -1530,6 +1669,7 @@
   },
   {
     "league": "南非超",
+    "date": "29日01:30",
     "home": "奧蘭多海盜",
     "away": "斯泰倫博斯",
     "HomeFScore": "1",
@@ -1541,6 +1681,7 @@
   },
   {
     "league": "南非超",
+    "date": "29日01:30",
     "home": "辛當斯",
     "away": "塔斯哈克修瑪TM",
     "HomeFScore": "0",
@@ -1552,6 +1693,7 @@
   },
   {
     "league": "德堡州聯",
+    "date": "29日01:30",
     "home": "TSG巴克南",
     "away": "FSV08加工廠",
     "HomeFScore": "5",
@@ -1563,6 +1705,7 @@
   },
   {
     "league": "荷蘭盃",
+    "date": "29日01:45",
     "home": "海牙",
     "away": "鹿特丹斯巴達",
     "HomeFScore": "1",
@@ -1574,6 +1717,7 @@
   },
   {
     "league": "西丁",
+    "date": "29日01:50",
     "home": "格拉馬",
     "away": "费格雷斯",
     "HomeFScore": "0",
@@ -1585,6 +1729,7 @@
   },
   {
     "league": "歐冠盃",
+    "date": "29日01:55",
     "home": "克拉斯諾達爾",
     "away": "車路士",
     "HomeFScore": "0",
@@ -1596,6 +1741,7 @@
   },
   {
     "league": "歐冠盃",
+    "date": "29日01:55",
     "home": "伊斯坦堡",
     "away": "巴黎聖日門",
     "HomeFScore": "0",
@@ -1607,6 +1753,7 @@
   },
   {
     "league": "西乙",
+    "date": "29日02:00",
     "home": "阿爾巴塞特",
     "away": "拉斯彭馬斯",
     "HomeFScore": "1",
@@ -1618,6 +1765,7 @@
   },
   {
     "league": "西乙",
+    "date": "29日02:00",
     "home": "愛斯賓奴",
     "away": "邦弗拉甸拿",
     "HomeFScore": "2",
@@ -1629,6 +1777,7 @@
   },
   {
     "league": "西乙",
+    "date": "29日02:00",
     "home": "卡斯迪隆",
     "away": "艾美利亞",
     "HomeFScore": "1",
@@ -1640,6 +1789,7 @@
   },
   {
     "league": "瑞典超",
+    "date": "29日02:00",
     "home": "赫根",
     "away": "佐加頓斯",
     "HomeFScore": "0",
@@ -1651,6 +1801,7 @@
   },
   {
     "league": "德地區",
+    "date": "29日02:00",
     "home": "比紹夫斯韋達FV",
     "away": "真尼沙",
     "HomeFScore": "0",
@@ -1662,6 +1813,7 @@
   },
   {
     "league": "德地區",
+    "date": "29日02:00",
     "home": "哈爾伯施塔特",
     "away": "BSG化學萊比錫",
     "HomeFScore": "2",
@@ -1673,6 +1825,7 @@
   },
   {
     "league": "德地區",
+    "date": "29日02:00",
     "home": "斯科布倫茨",
     "away": "斯塔德阿倫道夫",
     "HomeFScore": "2",
@@ -1684,6 +1837,7 @@
   },
   {
     "league": "德地區",
+    "date": "29日02:00",
     "home": "巴比斯堡",
     "away": "奧爾巴赫",
     "HomeFScore": "3",
@@ -1695,6 +1849,7 @@
   },
   {
     "league": "德地區",
+    "date": "29日02:00",
     "home": "柏林戴拿模",
     "away": "利希滕貝格47",
     "HomeFScore": "3",
@@ -1706,6 +1861,7 @@
   },
   {
     "league": "德地區",
+    "date": "29日02:00",
     "home": "萊比錫火車頭",
     "away": "馬瑟維茲英",
     "HomeFScore": "1",
@@ -1717,6 +1873,7 @@
   },
   {
     "league": "葡盃",
+    "date": "29日02:00",
     "home": "塞圖巴爾",
     "away": "維塞烏",
     "HomeFScore": "0",
@@ -1728,6 +1885,7 @@
   },
   {
     "league": "法羅甲",
+    "date": "29日02:00",
     "home": "維京人",
     "away": "基卡拉斯域卡",
     "HomeFScore": "1",
@@ -1739,6 +1897,7 @@
   },
   {
     "league": "奧丙",
+    "date": "29日02:00",
     "home": "維也納利尼恩",
     "away": "卡臘巴卡",
     "HomeFScore": "2",
@@ -1750,6 +1909,7 @@
   },
   {
     "league": "巴聖青聯",
+    "date": "29日02:00",
     "home": "賓古青年隊",
     "away": "康柏費倫斯U20",
     "HomeFScore": "3",
@@ -1761,17 +1921,19 @@
   },
   {
     "league": "巴青盃",
-    "home": "華斯高U20",
-    "away": "摩托聖路易青年隊",
-    "HomeFScore": "4",
+    "date": "29日02:00",
+    "home": "聖保羅U20",
+    "away": "哥列迪巴青年隊",
+    "HomeFScore": "1",
     "AwayFScore": "1",
-    "HomeHScore": "3",
-    "AwayHScore": "0",
-    "id": "1943380",
-    "url": "http://live.win007.com/detail/1943380.htm"
+    "HomeHScore": "0",
+    "AwayHScore": "1",
+    "id": "1945799",
+    "url": "http://live.win007.com/detail/1945799.htm"
   },
   {
     "league": "巴青盃",
+    "date": "29日02:00",
     "home": "巴希亞青年隊",
     "away": "卡爾拉青年隊",
     "HomeFScore": "1",
@@ -1783,17 +1945,19 @@
   },
   {
     "league": "巴青盃",
-    "home": "聖保羅U20",
-    "away": "哥列迪巴青年隊",
-    "HomeFScore": "1",
+    "date": "29日02:00",
+    "home": "華斯高U20",
+    "away": "摩托聖路易青年隊",
+    "HomeFScore": "4",
     "AwayFScore": "1",
-    "HomeHScore": "0",
-    "AwayHScore": "1",
-    "id": "1945799",
-    "url": "http://live.win007.com/detail/1945799.htm"
+    "HomeHScore": "3",
+    "AwayHScore": "0",
+    "id": "1943380",
+    "url": "http://live.win007.com/detail/1943380.htm"
   },
   {
     "league": "巴聖青聯",
+    "date": "29日02:20",
     "home": "雷森德青年隊",
     "away": "波圖格薩青年隊",
     "HomeFScore": "5",
@@ -1805,6 +1969,7 @@
   },
   {
     "league": "德地區",
+    "date": "29日02:30",
     "home": "路肯瓦德",
     "away": "特拉諾夫",
     "HomeFScore": "1",
@@ -1816,6 +1981,7 @@
   },
   {
     "league": "德地區",
+    "date": "29日02:30",
     "home": "羅迪豪森",
     "away": "漢堡格",
     "HomeFScore": "4",
@@ -1827,6 +1993,7 @@
   },
   {
     "league": "德堡州聯",
+    "date": "29日02:30",
     "home": "航林SC",
     "away": "埃姆登",
     "HomeFScore": "4",
@@ -1838,6 +2005,19 @@
   },
   {
     "league": "荷蘭盃",
+    "date": "29日02:45",
+    "home": "安曼",
+    "away": "FC燕豪芬",
+    "HomeFScore": "2",
+    "AwayFScore": "0",
+    "HomeHScore": "0",
+    "AwayHScore": "0",
+    "id": "1943100",
+    "url": "http://live.win007.com/detail/1943100.htm"
+  },
+  {
+    "league": "荷蘭盃",
+    "date": "29日02:45",
     "home": "荷華高斯",
     "away": "泰斯達",
     "HomeFScore": "3",
@@ -1849,6 +2029,7 @@
   },
   {
     "league": "荷蘭盃",
+    "date": "29日02:45",
     "home": "RKC華域克",
     "away": "甘堡爾",
     "HomeFScore": "2",
@@ -1859,18 +2040,8 @@
     "url": "http://live.win007.com/detail/1943099.htm"
   },
   {
-    "league": "荷蘭盃",
-    "home": "安曼",
-    "away": "FC燕豪芬",
-    "HomeFScore": "2",
-    "AwayFScore": "0",
-    "HomeHScore": "0",
-    "AwayHScore": "0",
-    "id": "1943100",
-    "url": "http://live.win007.com/detail/1943100.htm"
-  },
-  {
     "league": "英冠",
+    "date": "29日03:00",
     "home": "普雷斯頓",
     "away": "米禾爾",
     "HomeFScore": "0",
@@ -1882,6 +2053,7 @@
   },
   {
     "league": "法丙",
+    "date": "29日03:00",
     "home": "布里歐齊",
     "away": "奧爾良",
     "HomeFScore": "0",
@@ -1893,6 +2065,7 @@
   },
   {
     "league": "挪甲",
+    "date": "29日03:00",
     "home": "雲希姆",
     "away": "斯塔達爾斯",
     "HomeFScore": "2",
@@ -1904,6 +2077,7 @@
   },
   {
     "league": "智利甲",
+    "date": "29日03:00",
     "home": "維拿迪馬愛華頓",
     "away": "高路高路",
     "HomeFScore": "1",
@@ -1915,6 +2089,7 @@
   },
   {
     "league": "巴西盃",
+    "date": "29日03:00",
     "home": "山度士",
     "away": "施亞拉",
     "HomeFScore": "0",
@@ -1926,6 +2101,7 @@
   },
   {
     "league": "西丁",
+    "date": "29日03:00",
     "home": "巴斯科尼亞",
     "away": "CD維多利亞(SPA)",
     "HomeFScore": "0",
@@ -1937,6 +2113,7 @@
   },
   {
     "league": "巴聖塔乙",
+    "date": "29日03:00",
     "home": "班德蘭特",
     "away": "阿拉薩圖巴馬競",
     "HomeFScore": "2",
@@ -1948,6 +2125,7 @@
   },
   {
     "league": "巴聖塔乙",
+    "date": "29日03:00",
     "home": "聖約斯",
     "away": "曼斯奎拉",
     "HomeFScore": "1",
@@ -1959,6 +2137,7 @@
   },
   {
     "league": "意丙1",
+    "date": "29日03:30",
     "home": "比谢列1913",
     "away": "卡維斯",
     "HomeFScore": "0",
@@ -1970,6 +2149,7 @@
   },
   {
     "league": "法羅甲",
+    "date": "29日03:30",
     "home": "福格拉夫約杜爾",
     "away": "B36拖錫雲",
     "HomeFScore": "1",
@@ -1981,6 +2161,7 @@
   },
   {
     "league": "英冠",
+    "date": "29日03:45",
     "home": "打比郡",
     "away": "卡迪夫城",
     "HomeFScore": "1",
@@ -1992,6 +2173,7 @@
   },
   {
     "league": "英冠",
+    "date": "29日03:45",
     "home": "般尼茅夫",
     "away": "布里斯托城",
     "HomeFScore": "1",
@@ -2003,6 +2185,7 @@
   },
   {
     "league": "英冠",
+    "date": "29日03:45",
     "home": "伯明翰",
     "away": "哈德斯菲爾德",
     "HomeFScore": "2",
@@ -2014,6 +2197,7 @@
   },
   {
     "league": "英冠",
+    "date": "29日03:45",
     "home": "盧頓",
     "away": "諾定咸森林",
     "HomeFScore": "1",
@@ -2025,6 +2209,7 @@
   },
   {
     "league": "英議北",
+    "date": "29日03:45",
     "home": "菲爾德",
     "away": "基特寧",
     "HomeFScore": "3",
@@ -2036,6 +2221,7 @@
   },
   {
     "league": "英依超",
+    "date": "29日03:45",
     "home": "克雷",
     "away": "梅爾斯哈",
     "HomeFScore": "6",
@@ -2047,6 +2233,7 @@
   },
   {
     "league": "愛超",
+    "date": "29日03:45",
     "home": "費恩夏普",
     "away": "聖巴特里",
     "HomeFScore": "3",
@@ -2058,6 +2245,7 @@
   },
   {
     "league": "蘇低聯",
+    "date": "29日03:45",
     "home": "BSC格拉斯哥",
     "away": "坎伯諾爾德",
     "HomeFScore": "4",
@@ -2069,6 +2257,7 @@
   },
   {
     "league": "英冠",
+    "date": "29日03:55",
     "home": "洛達咸",
     "away": "錫周三",
     "HomeFScore": "3",
@@ -2080,6 +2269,7 @@
   },
   {
     "league": "歐冠盃",
+    "date": "29日04:00",
     "home": "西維爾",
     "away": "雷恩",
     "HomeFScore": "1",
@@ -2091,28 +2281,7 @@
   },
   {
     "league": "歐冠盃",
-    "home": "費倫斯華路士",
-    "away": "基輔戴拿模",
-    "HomeFScore": "2",
-    "AwayFScore": "2",
-    "HomeHScore": "0",
-    "AwayHScore": "2",
-    "id": "1936152",
-    "url": "http://live.win007.com/detail/1936152.htm"
-  },
-  {
-    "league": "歐冠盃",
-    "home": "布魯日",
-    "away": "拉素",
-    "HomeFScore": "1",
-    "AwayFScore": "1",
-    "HomeHScore": "1",
-    "AwayHScore": "1",
-    "id": "1936140",
-    "url": "http://live.win007.com/detail/1936140.htm"
-  },
-  {
-    "league": "歐冠盃",
+    "date": "29日04:00",
     "home": "祖雲達斯",
     "away": "巴塞隆拿",
     "HomeFScore": "0",
@@ -2124,6 +2293,31 @@
   },
   {
     "league": "歐冠盃",
+    "date": "29日04:00",
+    "home": "費倫斯華路士",
+    "away": "基輔戴拿模",
+    "HomeFScore": "2",
+    "AwayFScore": "2",
+    "HomeHScore": "0",
+    "AwayHScore": "2",
+    "id": "1936152",
+    "url": "http://live.win007.com/detail/1936152.htm"
+  },
+  {
+    "league": "歐冠盃",
+    "date": "29日04:00",
+    "home": "布魯日",
+    "away": "拉素",
+    "HomeFScore": "1",
+    "AwayFScore": "1",
+    "HomeHScore": "1",
+    "AwayHScore": "1",
+    "id": "1936140",
+    "url": "http://live.win007.com/detail/1936140.htm"
+  },
+  {
+    "league": "歐冠盃",
+    "date": "29日04:00",
     "home": "曼聯",
     "away": "RB萊比錫",
     "HomeFScore": "5",
@@ -2135,6 +2329,7 @@
   },
   {
     "league": "歐冠盃",
+    "date": "29日04:00",
     "home": "多蒙特",
     "away": "聖彼德斯堡",
     "HomeFScore": "2",
@@ -2146,6 +2341,7 @@
   },
   {
     "league": "荷蘭盃",
+    "date": "29日04:00",
     "home": "洛達",
     "away": "幸運薛達",
     "HomeFScore": "0",
@@ -2157,6 +2353,7 @@
   },
   {
     "league": "巴女甲",
+    "date": "29日04:00",
     "home": "金德曼女足",
     "away": "國際體育會女足",
     "HomeFScore": "3",
@@ -2168,6 +2365,7 @@
   },
   {
     "league": "巴青盃",
+    "date": "29日04:00",
     "home": "明尼路青年隊",
     "away": "伯拉根森青年隊",
     "HomeFScore": "3",
@@ -2179,6 +2377,7 @@
   },
   {
     "league": "巴青盃",
+    "date": "29日04:15",
     "home": "加爾韋斯青年隊",
     "away": "國際體育會青年隊",
     "HomeFScore": "0",
@@ -2190,6 +2389,7 @@
   },
   {
     "league": "西乙",
+    "date": "29日04:30",
     "home": "奧維多",
     "away": "UD洛哥尼斯",
     "HomeFScore": "2",
@@ -2201,6 +2401,7 @@
   },
   {
     "league": "秘魯乙",
+    "date": "29日04:30",
     "home": "阿里安沙體育會",
     "away": "CD基隆",
     "HomeFScore": "2",
@@ -2212,6 +2413,7 @@
   },
   {
     "league": "委內超",
+    "date": "29日05:00",
     "home": "港發院",
     "away": "卡拉波波",
     "HomeFScore": "2",
@@ -2223,6 +2425,7 @@
   },
   {
     "league": "哥斯甲",
+    "date": "29日05:00",
     "home": "聖何塞體育",
     "away": "澤倫頓",
     "HomeFScore": "2",
@@ -2234,6 +2437,7 @@
   },
   {
     "league": "洪都甲",
+    "date": "29日05:00",
     "home": "馬拉頓",
     "away": "CD維達",
     "HomeFScore": "0",
@@ -2245,6 +2449,7 @@
   },
   {
     "league": "洪都甲",
+    "date": "29日05:00",
     "home": "托克亞皇家蘇斯達",
     "away": "摩塔格",
     "HomeFScore": "1",
@@ -2256,6 +2461,7 @@
   },
   {
     "league": "葡超",
+    "date": "29日05:45",
     "home": "士砵亭",
     "away": "基維辛迪",
     "HomeFScore": "3",
@@ -2267,6 +2473,7 @@
   },
   {
     "league": "巴西盃",
+    "date": "29日06:00",
     "home": "戈亞尼恩斯",
     "away": "國際體育會",
     "HomeFScore": "1",
@@ -2278,6 +2485,7 @@
   },
   {
     "league": "南球盃",
+    "date": "29日06:15",
     "home": "盧捷諾體育會",
     "away": "防衛者",
     "HomeFScore": "1",
@@ -2289,6 +2497,7 @@
   },
   {
     "league": "南球盃",
+    "date": "29日06:15",
     "home": "拉魯斯",
     "away": "聖保羅",
     "HomeFScore": "3",
@@ -2300,6 +2509,7 @@
   },
   {
     "league": "南球盃",
+    "date": "29日06:15",
     "home": "國民體育會",
     "away": "蒙特維多河床",
     "HomeFScore": "1",
@@ -2311,6 +2521,7 @@
   },
   {
     "league": "南球盃",
+    "date": "29日06:15",
     "home": "芬歷斯",
     "away": "侯治柏度",
     "HomeFScore": "3",
@@ -2322,6 +2533,7 @@
   },
   {
     "league": "巴女甲",
+    "date": "29日06:30",
     "home": "彭美拉斯SP女足",
     "away": "費羅維亞里亞女足",
     "HomeFScore": "2",
@@ -2333,6 +2545,7 @@
   },
   {
     "league": "巴女甲",
+    "date": "29日06:30",
     "home": "聖保羅女足",
     "away": "山度士女足",
     "HomeFScore": "0",
@@ -2344,6 +2557,7 @@
   },
   {
     "league": "美職業",
+    "date": "29日07:00",
     "home": "紐約紅牛",
     "away": "新英倫革命",
     "HomeFScore": "1",
@@ -2355,6 +2569,7 @@
   },
   {
     "league": "墨西乙",
+    "date": "29日07:00",
     "home": "塞拉亞",
     "away": "梅利達",
     "HomeFScore": "2",
@@ -2366,28 +2581,7 @@
   },
   {
     "league": "美職業",
-    "home": "多倫多FC",
-    "away": "紐約城",
-    "HomeFScore": "0",
-    "AwayFScore": "1",
-    "HomeHScore": "0",
-    "AwayHScore": "0",
-    "id": "1932644",
-    "url": "http://live.win007.com/detail/1932644.htm"
-  },
-  {
-    "league": "美職業",
-    "home": "費城聯",
-    "away": "芝加哥火燄",
-    "HomeFScore": "2",
-    "AwayFScore": "1",
-    "HomeHScore": "1",
-    "AwayHScore": "1",
-    "id": "1932643",
-    "url": "http://live.win007.com/detail/1932643.htm"
-  },
-  {
-    "league": "美職業",
+    "date": "29日07:30",
     "home": "辛辛那提",
     "away": "肯薩斯體育會",
     "HomeFScore": "0",
@@ -2399,6 +2593,31 @@
   },
   {
     "league": "美職業",
+    "date": "29日07:30",
+    "home": "多倫多FC",
+    "away": "紐約城",
+    "HomeFScore": "0",
+    "AwayFScore": "1",
+    "HomeHScore": "0",
+    "AwayHScore": "0",
+    "id": "1932644",
+    "url": "http://live.win007.com/detail/1932644.htm"
+  },
+  {
+    "league": "美職業",
+    "date": "29日07:30",
+    "home": "費城聯",
+    "away": "芝加哥火燄",
+    "HomeFScore": "2",
+    "AwayFScore": "1",
+    "HomeHScore": "1",
+    "AwayHScore": "1",
+    "id": "1932643",
+    "url": "http://live.win007.com/detail/1932643.htm"
+  },
+  {
+    "league": "美職業",
+    "date": "29日07:55",
     "home": "奧蘭多城",
     "away": "亞特蘭大聯",
     "HomeFScore": "4",
@@ -2410,6 +2629,7 @@
   },
   {
     "league": "美職業",
+    "date": "29日08:00",
     "home": "明尼蘇達聯",
     "away": "科羅拉多急流",
     "HomeFScore": "2",
@@ -2421,6 +2641,7 @@
   },
   {
     "league": "美職業",
+    "date": "29日08:00",
     "home": "華盛頓聯隊",
     "away": "哥倫布機員",
     "HomeFScore": "1",
@@ -2432,6 +2653,7 @@
   },
   {
     "league": "委內超",
+    "date": "29日08:00",
     "home": "亞拉庫雅諾斯",
     "away": "委內瑞拉競技",
     "HomeFScore": "4",
@@ -2443,6 +2665,7 @@
   },
   {
     "league": "哥倫盃",
+    "date": "29日08:00",
     "home": "奎迪奧",
     "away": "賈奎斯科爾多巴",
     "HomeFScore": "0",
@@ -2454,6 +2677,7 @@
   },
   {
     "league": "美職業",
+    "date": "29日08:30",
     "home": "FC達拉斯",
     "away": "國際邁阿密",
     "HomeFScore": "2",
@@ -2465,6 +2689,7 @@
   },
   {
     "league": "南球盃",
+    "date": "29日08:30",
     "home": "沙士菲",
     "away": "彭拿路",
     "HomeFScore": "0",
@@ -2476,6 +2701,7 @@
   },
   {
     "league": "南球盃",
+    "date": "29日08:30",
     "home": "華斯高",
     "away": "卡拉卡斯",
     "HomeFScore": "1",
@@ -2487,6 +2713,7 @@
   },
   {
     "league": "南球盃",
+    "date": "29日08:30",
     "home": "米倫拿列奧",
     "away": "卡利",
     "HomeFScore": "1",
@@ -2498,6 +2725,7 @@
   },
   {
     "league": "巴西盃",
+    "date": "29日08:30",
     "home": "哥連泰斯",
     "away": "阿美利加明尼路",
     "HomeFScore": "0",
@@ -2509,6 +2737,7 @@
   },
   {
     "league": "巴西盃",
+    "date": "29日08:30",
     "home": "巴拉納體育會",
     "away": "法林明高",
     "HomeFScore": "0",
@@ -2520,6 +2749,7 @@
   },
   {
     "league": "哥倫盃",
+    "date": "29日08:40",
     "home": "卡達斯",
     "away": "恩維加多",
     "HomeFScore": "2",
@@ -2531,6 +2761,7 @@
   },
   {
     "league": "洪都甲",
+    "date": "29日09:00",
     "home": "洪都拉斯普雷索",
     "away": "伊斯柏納",
     "HomeFScore": "0",
@@ -2542,6 +2773,7 @@
   },
   {
     "league": "尼拉甲",
+    "date": "29日09:00",
     "home": "幕尼西波爾哈拉帕",
     "away": "艾斯特利",
     "HomeFScore": "1",
@@ -2553,6 +2785,7 @@
   },
   {
     "league": "墨西乙",
+    "date": "29日09:05",
     "home": "克雷卡米諾斯",
     "away": "塔巴蒂奧",
     "HomeFScore": "0",
@@ -2564,6 +2797,7 @@
   },
   {
     "league": "哥斯甲",
+    "date": "29日10:00",
     "home": "阿拉倫斯",
     "away": "希卡拉爾",
     "HomeFScore": "2",
@@ -2575,6 +2809,7 @@
   },
   {
     "league": "尼拉甲",
+    "date": "29日10:00",
     "home": "沃特爾菲爾蒂",
     "away": "迪利安格恩",
     "HomeFScore": "0",
@@ -2586,6 +2821,7 @@
   },
   {
     "league": "美職業",
+    "date": "29日10:10",
     "home": "波特蘭伐木者",
     "away": "洛杉磯銀河",
     "HomeFScore": "5",
@@ -2597,6 +2833,7 @@
   },
   {
     "league": "澳昆女超",
+    "date": "28日17:20",
     "home": "南查理斯頓布女足",
     "away": "洛根利泰檸女足",
     "HomeFScore": "2",
@@ -2608,6 +2845,7 @@
   },
   {
     "league": "德堡州聯",
+    "date": "29日03:00",
     "home": "布勞弗裏斯多夫",
     "away": "杜倫",
     "HomeFScore": " ",
