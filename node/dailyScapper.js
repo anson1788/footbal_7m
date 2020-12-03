@@ -60,7 +60,7 @@ async function init(defaultRange=50){
 
     var total = 0
     var targetMatch = []
-    for(var i=3;i<defaultRange;i++){
+    for(var i=2;i<defaultRange;i++){
 
         var matchDate = bcUtils.generateDate(i)
         var url = "http://bf.win007.com/football/big/Over_%d.htm".replace("%d",matchDate)
