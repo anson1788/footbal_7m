@@ -134,4 +134,4 @@ async function init(defaultRange=50){
     console.log("total: " + total)
 }
 
-init(400)
+init(450)
