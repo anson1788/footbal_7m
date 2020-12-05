@@ -765,7 +765,38 @@ class dataFilter extends dataCommonClass{
                
                 var calculatorUp = this.calculateSingleResultAsianOdd(tmpList,broker)
                 var calculatorDown = this.calculateSingleResultAsianOdd(tmpList,broker,"客")
-                console.table(calculatorUp[0])
+                var printData = this.deepClone(calculatorUp[0])
+                var displayArr = []
+                for(var i in printData){
+                    delete printData[i].OddData
+                    delete printData[i].url
+                    delete printData[i].homeSP
+                    delete printData[i].homeEP
+                    delete printData[i].homeS
+                    delete printData[i].homeE
+                    delete printData[i].date
+                    delete printData[i].HomeHScore
+                    delete printData[i].AwayHScore
+                    delete printData[i].home
+                    delete printData[i].away
+                    delete printData[i].league
+                    var oddStr = ""
+                    for(var d in printData[i].oddHistory){
+                          var homeOdd = parseFloat(printData[i].oddHistory[d]["home"])
+                          var awayOdd = parseFloat(printData[i].oddHistory[d]["away"])
+
+                          var th = (homeOdd/(homeOdd+awayOdd)).toFixed(2)
+                          var ta = (awayOdd/(homeOdd+awayOdd)).toFixed(2)
+                            oddStr += th+"|"
+                       
+                    }
+                    delete printData[i].oddHistory
+                    if(printData[i].res!="走"){
+                        printData[i].oddStr = oddStr
+                        displayArr.push(printData[i])
+                    }
+                }
+                console.table(displayArr)
                 tmp[broker] = {
                                     "上":calculatorUp,
                                     "下":calculatorDown
@@ -825,9 +856,7 @@ class dataFilter extends dataCommonClass{
                 }
                     total ++
                     console.table( "---"+broker+"----")
-                   // console.table(tmp[broker]["上"][0])
                     console.table([tmp[broker]["上"][1]])
-                    //console.table(tmp[broker]["下"][0])
                     console.table([tmp[broker]["下"][1]])
 
                     if(parseFloat(tmp[broker]["上"][1]["total"])>100){
@@ -838,6 +867,7 @@ class dataFilter extends dataCommonClass{
                         totalDown = totalDown + parseFloat(tmp[broker]["下"][1]["p"])
                     }
             }
+            /*
             console.table([{
                 "total":total,
                 "up":up,
@@ -845,6 +875,7 @@ class dataFilter extends dataCommonClass{
                 "totalUp":(totalUp).toFixed(2),
                 "totalDwn":(totalDown).toFixed(2),
             }])
+            */
             return {
                 "total":total,
                 "up":upCount,

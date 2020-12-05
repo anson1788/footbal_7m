@@ -556,8 +556,8 @@ class dataCommomClass {
     //console.log("m1 e:" +m1["Epoint"])
     if(m1["Spoint"]==m2["Spoint"] && 
        m1["Epoint"]==m2["Epoint"] && 
-       Math.abs(m1["Shome"] - m2["Shome"]) <0.03 &&
-       Math.abs(m1["Ehome"] - m2["Ehome"]) <0.03 && 
+       Math.abs(m1["Shome"] - m2["Shome"]) <0.02 &&
+       Math.abs(m1["Ehome"] - m2["Ehome"]) <0.02 && 
        (
         (m1["Shome"] < m1["Saway"] &&
         m2["Ehome"] < m2["Eaway"] ) ||
