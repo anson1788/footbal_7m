@@ -1,5 +1,6 @@
 const { parse } = require("dashdash");
 const dataCommonClass = require('./dataCommonClass.js')
+const Excel = require('exceljs')
 class dataFilter extends dataCommonClass{
 
 
@@ -767,6 +768,16 @@ class dataFilter extends dataCommonClass{
                 var calculatorDown = this.calculateSingleResultAsianOdd(tmpList,broker,"客")
                 var printData = this.deepClone(calculatorUp[0])
                 var displayArr = []
+
+                let workbook = new Excel.Workbook()
+                const worksheet = workbook.addWorksheet("My Sheet");
+                worksheet.columns = [
+                    {header: 'Id', key: 'id', width: 10},
+                    {header: 'res', key: 'res', width: 32}, 
+                    {header: 'oddStr', key: 'oddStr', width: 60,}
+                   ];
+                
+              
                 for(var i in printData){
                     delete printData[i].OddData
                     delete printData[i].url
@@ -790,13 +801,18 @@ class dataFilter extends dataCommonClass{
                             oddStr += th+"|"
                        
                     }
+       
+                
                     delete printData[i].oddHistory
                     if(printData[i].res!="走"){
                         printData[i].oddStr = oddStr
                         displayArr.push(printData[i])
+                        worksheet.addRow({id: printData[i].id, res: printData[i].res, oddStr: oddStr});
                     }
                 }
                 console.table(displayArr)
+
+                workbook.xlsx.writeFile('test.xlsx')
                 tmp[broker] = {
                                     "上":calculatorUp,
                                     "下":calculatorDown

@@ -15,6 +15,7 @@
     "chrome-launcher": "^0.13.4",
     "chrome-remote-interface": "^0.28.2",
     "dashdash": "^2.0.0",
+    "exceljs": "^4.2.0",
     "fs": "0.0.1-security",
     "g": "^2.0.1",
     "jsdom": "^16.4.0",
