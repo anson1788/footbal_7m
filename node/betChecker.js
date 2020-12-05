@@ -34,8 +34,10 @@ async function init(){
             log += hkjcCrtList[i].id + " "+hkjcCrtList[i]["home"] + " vs "+hkjcCrtList[i]["away"] +"\n"
         }
 
-        crtOddList = await bfBetUtils.addOddData(hkjcCrtList,bcUtils)
-        crtOddList = await bfBetUtils.addOddHistory(crtOddList,bcUtils)
+        crtOddList = await bfBetUtils.addOddDataFromHistoryTrend(hkjcCrtList,bcUtils)
+        console.log(JSON.stringify(crtOddList))
+       // crtOddList = await bfBetUtils.addOddData(hkjcCrtList,bcUtils)
+       // crtOddList = await bfBetUtils.addOddHistory(crtOddList,bcUtils)
 
         let ftUtils = new filterUtils()
         var styList = bfBetUtils.getHKJCList(crtOddList)

@@ -112,6 +112,9 @@ class bfWinBetUtils extends bfWinUtils{
         var min20List = []
         var min7List = []
         for(var i=0;i<dataList.length;i++){
+            if(dataList[i].id=="1883918"){
+                min7List.push(dataList[i])
+            }else 
             if(this.requiredToFillTime(dataList[i])==3){
                 min20List.push(dataList[i])
             }else if (this.requiredToFillTime(dataList[i])==2){
@@ -175,7 +178,57 @@ class bfWinBetUtils extends bfWinUtils{
         return [InListData,notInListData]
     }
     
+    async addOddDataFromHistoryTrend(dataList,bcUtils){
+        for(var i=0;i<dataList.length;i++){
+            var url = "http://vip.win007.com/changeDetail/handicap.aspx?id="+dataList[i].id+"&companyID=48&l=0"
+        
+            console.log("match url :"+url)
+            var dom = null 
+            var oddHistory = null
+ 
+            dom = await bcUtils.getHttpDomAsyn(url,"") 
+            oddHistory = await this.parseOddHistory(dom)
+          
+            dataList[i].isOddHistoryReady = true
+            if(oddHistory == null){
+                dataList[i].isOddHistoryReady = false
+                oddHistory = []
+            }
+            if(oddHistory.length >0){
+                dataList[i].oddHistory = oddHistory
+                console.log(oddHistory)
 
+                
+                var tmpEnd ={
+                    "home":dataList[i].oddHistory[0]["home"],
+                    "away":dataList[i].oddHistory[0]["away"],
+                    "point":dataList[i].oddHistory[0]["point"]
+                } 
+
+                var tmpStart ={
+                    "home":dataList[i].oddHistory[dataList[i].oddHistory.length-1]["home"],
+                    "away":dataList[i].oddHistory[dataList[i].oddHistory.length-1]["away"],
+                    "point":dataList[i].oddHistory[dataList[i].oddHistory.length-1]["point"]
+                } 
+                dataList[i].isOddReady = true
+                dataList[i].OddData = [
+                    {
+                        "香港马会":{
+                            "start":tmpStart,
+                            "end":tmpEnd
+                        }
+                    }
+                ]
+            }
+
+            
+            console.log("complete  :"+ JSON.stringify(dataList[i]))
+          
+        }
+
+        
+        return dataList
+    }
 
     async addOddData(dataList,bcUtils,isCache = false){
         for(var i=0;i<dataList.length;i++){

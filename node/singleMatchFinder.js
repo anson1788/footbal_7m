@@ -61,7 +61,7 @@ async function init(defaultRange=50){
     let rawdata = fs.readFileSync("oddBook.json");
     let dataList = JSON.parse(rawdata)
     let ftUtils = new filterUtils()
-    var matchId = ["1894633"]
+    var matchId = ["1894632"]
     for(var i=0;i<matchId.length;i++){
         var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+matchId[i]
         var OddData =  await getCacheData(url,"bfData/odd/crt/",  matchId[i],"bfOdd",true)
