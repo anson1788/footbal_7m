@@ -42,8 +42,14 @@ class bfWinUtils {
                 }
             }
         }
-        //console.log(matchList.textContent)
-        return rtnVal
+        var outArr = []
+        for(var i=0;i<rtnVal.length;i++){
+           // if(rtnVal[i].status=="即"){
+                outArr.push(rtnVal[i])
+           // }
+            
+        }
+        return outArr
     }
     async parseBFHistory(crtDom){
 

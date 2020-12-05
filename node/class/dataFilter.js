@@ -812,7 +812,7 @@ class dataFilter extends dataCommonClass{
                 }
                 console.table(displayArr)
 
-               // workbook.xlsx.writeFile('test.xlsx')
+                workbook.xlsx.writeFile('test.xlsx')
                 tmp[broker] = {
                                     "上":calculatorUp,
                                     "下":calculatorDown
@@ -917,6 +917,14 @@ class dataFilter extends dataCommonClass{
                 var pastMatchOddPer = this.oddPerMap(pastMatchOdd[broker])
             
                 if(this.isTwoMatchSimilar(crtOddPer,pastMatchOddPer) ){
+                    var outArr = []
+                    for(var z=0;z<workingList[i].oddHistory.length;z++){
+                         if(workingList[i].oddHistory[z].status=="即"){
+                             outArr.push(workingList[i].oddHistory[z])
+                         }
+                     }
+                     console.log("o am here")
+                     workingList[i].oddHistory = outArr
                     console.log(match.oddHistory.length)
                     console.log(workingList[i].oddHistory.length)
                     if(Math.abs(match.oddHistory.length - workingList[i].oddHistory.length)<2){
