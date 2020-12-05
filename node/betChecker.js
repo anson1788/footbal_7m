@@ -12,7 +12,7 @@ var fs = require('fs');
 const { type } = require('os');
 let hkjcBE = new hkjcBetEngine()
 
-let programVersion = 1.28
+let programVersion = 1.29
 async function init(){
 
         var log = ""
