@@ -112,9 +112,6 @@ class bfWinBetUtils extends bfWinUtils{
         var min20List = []
         var min7List = []
         for(var i=0;i<dataList.length;i++){
-            if(dataList[i].id=="1883918"){
-                min7List.push(dataList[i])
-            }else 
             if(this.requiredToFillTime(dataList[i])==3){
                 min20List.push(dataList[i])
             }else if (this.requiredToFillTime(dataList[i])==2){
