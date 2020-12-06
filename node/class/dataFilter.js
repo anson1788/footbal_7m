@@ -812,7 +812,7 @@ class dataFilter extends dataCommonClass{
                 }
                 console.table(displayArr)
 
-               // workbook.xlsx.writeFile('test.xlsx')
+                workbook.xlsx.writeFile('test.xlsx')
                 tmp[broker] = {
                                     "上":calculatorUp,
                                     "下":calculatorDown
