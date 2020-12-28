@@ -757,69 +757,33 @@ class dataFilter extends dataCommonClass{
         var tmp = {}
         for(var broker in crtOdd){
             if(broker=="香港马会"){
-                var tmpList = this.singleOddSimilarOddList(broker,match,dataList)
-                
-                /*
+               
+               var tmpList = this.caluclateKValue(broker,match,dataList)
+
+               tmpList.sort(function(a, b) {
+                    var keyA = a.kNVal,
+                    keyB = b.kNVal;
+                    // Compare the 2 dates
+                    if (keyA < keyB) return -1;
+                    if (keyA > keyB) return 1;
+                    return 0;
+                })
+                tmpList = tmpList.slice(0, 10)  
+                var knTotal = 0
+                for(var i=0;i<tmpList.length;i++){
+                    knTotal += tmpList[i].kNVal
+                }
                 var calculatorUp = this.calculateSingleResultAsianOddAdvance(match,tmpList,broker)
                 var calculatorDown = this.calculateSingleResultAsianOddAdvance(match,tmpList,broker,"客")
-                */
-               
-                var calculatorUp = this.calculateSingleResultAsianOdd(tmpList,broker)
-                var calculatorDown = this.calculateSingleResultAsianOdd(tmpList,broker,"客")
-                var printData = this.deepClone(calculatorUp[0])
-                var displayArr = []
-
-                let workbook = new Excel.Workbook()
-                const worksheet = workbook.addWorksheet("My Sheet");
-                worksheet.columns = [
-                    {header: 'Id', key: 'id', width: 10},
-                    {header: 'res', key: 'res', width: 32}, 
-                    {header: 'oddStr', key: 'oddStr', width: 60,}
-                   ];
-                
-              
-                for(var i in printData){
-                    delete printData[i].OddData
-                    delete printData[i].url
-                    delete printData[i].homeSP
-                    delete printData[i].homeEP
-                    delete printData[i].homeS
-                    delete printData[i].homeE
-                    delete printData[i].date
-                    delete printData[i].HomeHScore
-                    delete printData[i].AwayHScore
-                    delete printData[i].home
-                    delete printData[i].away
-                    delete printData[i].league
-                    var oddStr = ""
-                    for(var d in printData[i].oddHistory){
-                          var homeOdd = parseFloat(printData[i].oddHistory[d]["home"])
-                          var awayOdd = parseFloat(printData[i].oddHistory[d]["away"])
-
-                          var th = (homeOdd/(homeOdd+awayOdd)).toFixed(2)
-                          var ta = (awayOdd/(homeOdd+awayOdd)).toFixed(2)
-                            oddStr += th+"|"
-                       
-                    }
-       
-                
-                    delete printData[i].oddHistory
-                    if(printData[i].res!="走"){
-                        printData[i].oddStr = oddStr
-                        displayArr.push(printData[i])
-                        worksheet.addRow({id: printData[i].id, res: printData[i].res, oddStr: oddStr});
-                    }
-                }
-                console.table(displayArr)
-
-                workbook.xlsx.writeFile('test.xlsx')
                 tmp[broker] = {
-                                    "上":calculatorUp,
-                                    "下":calculatorDown
-                }
+                    "上":calculatorUp,
+                    "下":calculatorDown,
+                    "kNtotal":knTotal
+                }   
             }
         }   
 
+        
         var upKey = "上"
         var downKey = "下"
 
@@ -883,27 +847,66 @@ class dataFilter extends dataCommonClass{
                         totalDown = totalDown + parseFloat(tmp[broker]["下"][1]["p"])
                     }
             }
-            /*
-            console.table([{
-                "total":total,
-                "up":up,
-                "down":down,
-                "totalUp":(totalUp).toFixed(2),
-                "totalDwn":(totalDown).toFixed(2),
-            }])
-            */
+    
             return {
                 "total":total,
                 "up":upCount,
                 "down":dwnCount,
                 "upbroker":upbroker,
                 "downbroker":dwnbroker,
-                "hkjcData":tmp["香港马会"]
+                "hkjcData":tmp["香港马会"],
+                "kNtotal":tmp["香港马会"]["kNtotal"]
             }
         }
 
         return tmp
+     
     }
+
+    kNCalculateValue(match,workingList,sV){
+       var a1 = Math.pow(match.kN[sV].minH - workingList.kN[sV].minH,2)
+       a1 += Math.pow(match.kN[sV].maxH - workingList.kN[sV].maxH,2)
+       a1 += Math.pow(match.kN[sV].minA - workingList.kN[sV].minA,2)
+       a1 += Math.pow(match.kN[sV].maxH - workingList.kN[sV].maxH,2)
+        var goalMin =  Math.pow(0.01,2)
+        if(match.kN[sV].goalMin - workingList.kN[sV].goalMin==0){
+            goalMin = 0
+        }
+        a1 +=goalMin
+        var goalMax = Math.pow(0.01,2)
+       if(match.kN[sV].goalMax - workingList.kN[sV].goalMax==0){
+            goalMax = 0
+        }
+        a1 +=goalMax
+
+        return a1
+    }
+    
+    caluclateKValue(broker, match, dataList){
+        console.log("===")
+        var workingList = this.deepClone(dataList)
+        var rtnVal =[]
+        var crtOdd = match["OddData"][0]
+        for(var i=0;i<workingList.length;i++){
+            if(workingList[i].id == match.id )continue
+            if(!this.isValidateMatch(workingList[i])) continue
+
+            var matchDate = this.timeFormatToMoment(match.date)
+            var historyDate = this.timeFormatToMoment(workingList[i].date)
+            //console.log(matchDate.diff(historyDate,"days"))
+            if(matchDate.diff(historyDate,"days") < 1  || matchDate.diff(historyDate,"days") > 30)continue
+
+            var total = this.kNCalculateValue(match,workingList[i],"s3")
+             total += this.kNCalculateValue(match,workingList[i],"s6")
+             total += this.kNCalculateValue(match,workingList[i],"s9")
+             workingList[i].kNVal = total
+             rtnVal.push(workingList[i])
+
+        }
+        return rtnVal
+    }
+
+
     singleOddSimilarOddList(broker, match, dataList){
         var workingList = this.deepClone(dataList)
         var rtnVal =[]

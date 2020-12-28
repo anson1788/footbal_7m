@@ -1,9 +1,27 @@
 const { parse } = require("dashdash");
 var fs = require('fs');
+var moment = require('moment');
 class dataCommomClass {
 
     constructor() {
 
+    }
+    //DD/MM HH:mm
+    timeFormatToMoment(string){
+     
+        var hr = string.split(" ")[1].split(":")[0]
+        var min = string.split(" ")[1].split(":")[1]
+        var month = string.split(" ")[0].split("/")[1]
+        var days = string.split(" ")[0].split("/")[2]
+        var year1 = string.split(" ")[0].split("/")[0]
+        let d3 = moment({ 
+            year :year1, 
+            month :parseFloat(month)-1, 
+            day :days, 
+            hour :hr, 
+            minute :min
+            });
+        return d3
     }
 
     clearMatchName(name){
@@ -571,15 +589,122 @@ class dataCommomClass {
   }
 
   async getMatchDateList(matchDate){
+    /*
     let rawdata = fs.readFileSync("oddBook.json");
     let dataList = JSON.parse(rawdata)
+    */
+    let dataList =  this.getUpdateData()
     var resultArr = []
     for(var i=0;i<dataList.length;i++){
         if(dataList[i].matchData == matchDate){
             resultArr.push(dataList[i])
+            console.log(dataList[i].kN)
         }
     }
     return resultArr
+  }
+
+  getUpdateData(){
+    let rawdata = fs.readFileSync("oddBook.json");
+    var dataList = JSON.parse(rawdata)
+    dataList = this.processHistory(dataList)
+    return dataList
+  }
+
+  processHistory(dataList){
+    for(var i=0;i<dataList.length;i++){
+        
+
+        var oddTimeS9 = this.timeFormatToMoment(dataList[i].date).subtract(9,"hours")
+        var oddTimeS6 = this.timeFormatToMoment(dataList[i].date).subtract(6,"hours")
+        var oddTimeS3 = this.timeFormatToMoment(dataList[i].date).subtract(3,"hours")
+
+        var S9Arr = []
+        for(var j=0;j<dataList[i].oddHistory.length;j++){
+            var histTime = this.timeFormatToMoment("2020/"+ dataList[i].oddHistory[j].time.replace("-","/"))
+            var diff = histTime.diff(oddTimeS9,"minutes")
+            var diffF = oddTimeS6.diff(histTime,"minutes")
+            if(diff>0&& diffF >0){
+                S9Arr.push(dataList[i].oddHistory[j])
+            }
+            if(dataList[i].oddHistory.length-1 == j && S9Arr.length == 0 ){
+                S9Arr.push(dataList[i].oddHistory[j])
+            }
+        }
+
+        var S6Arr = []
+        for(var j=0;j<dataList[i].oddHistory.length;j++){
+            var histTime = this.timeFormatToMoment("2020/"+ dataList[i].oddHistory[j].time.replace("-","/"))
+     
+            var diff = histTime.diff(oddTimeS6,"minutes")
+            var diffF = oddTimeS3.diff(histTime,"minutes")
+            if(diff>0 && diffF >0){
+                S6Arr.push(dataList[i].oddHistory[j])
+            }
+            if(dataList[i].oddHistory.length-1 == j && S6Arr.length == 0 ){
+                S6Arr.push(dataList[i].oddHistory[j])
+            }
+        }
+
+        var S3Arr = []
+        for(var j=0;j<dataList[i].oddHistory.length;j++){
+            var histTime = this.timeFormatToMoment("2020/"+ dataList[i].oddHistory[j].time.replace("-","/"))
+            var diff = histTime.diff(oddTimeS3,"minutes")
+            if(diff>0 ){
+                S3Arr.push(dataList[i].oddHistory[j])
+            }
+            if(dataList[i].oddHistory.length-1 == j && S3Arr.length == 0 ){
+                S3Arr.push(dataList[i].oddHistory[j])
+            }
+        }
+
+        var AllSTrend={
+            "s3":this.getMaxMinObj(S3Arr),
+            "s6":this.getMaxMinObj(S6Arr),
+            "s9":this.getMaxMinObj(S9Arr)
+        }
+        dataList[i].kN = AllSTrend
+    }
+    return dataList
+  }
+
+  getMaxMinObj(S3Arr){
+    var minH = 999
+    var maxH = -999
+
+    var minA = 999
+    var maxA = -999
+
+    var goalMin = 999
+    var goalMax = -999
+    for(var i=0;i<S3Arr.length;i++){
+        if(minH > parseFloat(S3Arr[i].home)){
+            minH = parseFloat(S3Arr[i].home)
+        }
+        if(maxH < parseFloat(S3Arr[i].home)){
+            maxH = parseFloat(S3Arr[i].home)
+        }
+        if(minA > parseFloat(S3Arr[i].away)){
+            minA = parseFloat(S3Arr[i].away)
+        }
+        if(maxA < parseFloat(S3Arr[i].away)){
+            maxA = parseFloat(S3Arr[i].away)
+        }
+        if(goalMin >this.getOddIdx(S3Arr[i].point)){
+            goalMin = this.getOddIdx(S3Arr[i].point)
+        }
+        if(goalMax <this.getOddIdx(S3Arr[i].point)){
+            goalMax = this.getOddIdx(S3Arr[i].point)
+        }
+    }
+    return {
+        "minH":minH,
+        "maxH":maxH,
+        "minA":minA,
+        "maxH":maxH,
+        "goalMin":goalMin,
+        "goalMax":goalMax
+    }
   }
 
   getSingleFieldArr(list,keyTarget){
