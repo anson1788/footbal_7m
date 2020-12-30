@@ -398,9 +398,7 @@ class dataCommomClass {
             count["total"] = count["total"] +1
         }
 
-        count["p"] = (count["贏"]*winodd + count["贏半"] * winodd/2 - count["輸"] - count["輸半"]*0.5 )/count["total"] * 10
-       // count["win"] = (count["贏"]*2 + count["贏半"]) / (count["total"]*2)
-        count["p"] = count["p"].toFixed(2)
+   
         
         return [workingList,count]
     }
@@ -588,17 +586,15 @@ class dataCommomClass {
     return false
   }
 
-  async getMatchDateList(matchDate){
+  async getMatchDateList(matchDate,dataList){
     /*
     let rawdata = fs.readFileSync("oddBook.json");
     let dataList = JSON.parse(rawdata)
     */
-    let dataList =  this.getUpdateData()
     var resultArr = []
     for(var i=0;i<dataList.length;i++){
         if(dataList[i].matchData == matchDate){
-            resultArr.push(dataList[i])
-            console.log(dataList[i].kN)
+            resultArr.push(this.deepClone(dataList[i]))
         }
     }
     return resultArr
@@ -613,12 +609,11 @@ class dataCommomClass {
 
   processHistory(dataList){
     for(var i=0;i<dataList.length;i++){
-        
-
+    
         var oddTimeS9 = this.timeFormatToMoment(dataList[i].date).subtract(9,"hours")
         var oddTimeS6 = this.timeFormatToMoment(dataList[i].date).subtract(6,"hours")
         var oddTimeS3 = this.timeFormatToMoment(dataList[i].date).subtract(3,"hours")
-
+        var oddTimeS5M = this.timeFormatToMoment(dataList[i].date).subtract(5,"minutes")
         var S9Arr = []
         for(var j=0;j<dataList[i].oddHistory.length;j++){
             var histTime = this.timeFormatToMoment("2020/"+ dataList[i].oddHistory[j].time.replace("-","/"))
@@ -649,8 +644,11 @@ class dataCommomClass {
         var S3Arr = []
         for(var j=0;j<dataList[i].oddHistory.length;j++){
             var histTime = this.timeFormatToMoment("2020/"+ dataList[i].oddHistory[j].time.replace("-","/"))
+
             var diff = histTime.diff(oddTimeS3,"minutes")
-            if(diff>0 ){
+            var diffF = oddTimeS5M.diff(histTime,"minutes")
+
+            if(diff>0 && diffF >0){
                 S3Arr.push(dataList[i].oddHistory[j])
             }
             if(dataList[i].oddHistory.length-1 == j && S3Arr.length == 0 ){
@@ -665,8 +663,77 @@ class dataCommomClass {
         }
         dataList[i].kN = AllSTrend
     }
+
+
+    /*
+    dataList =  dataList.sort(function(a, b) {
+
+        function AtimeFormatToMoment(str){
+            var hr = str.split(" ")[1].split(":")[0]
+            var min = str.split(" ")[1].split(":")[1]
+            var month = str.split(" ")[0].split("/")[1]
+            var days = str.split(" ")[0].split("/")[2]
+            var year1 = str.split(" ")[0].split("/")[0]
+            let d3 = moment({ 
+                year :parseFloat(year1), 
+                month :parseFloat(month)-1, 
+                day :parseFloat(days), 
+                hour :parseFloat(hr), 
+                minute :parseFloat(min)
+                });
+            return d3
+        }
+
+        var keyA = AtimeFormatToMoment(a.date),
+        keyB = AtimeFormatToMoment(b.date);
+        
+        if (keyA.diff(keyB,"minutes")>0){
+            return -1 
+        }
+        if (keyA.diff(keyB,"minutes")<0){
+            return 1
+        }
+        return 0;
+    })*/
+    for(var i=0;i<dataList.length;i++){
+        function BtimeFormatToMoment(str){
+   
+            var hr = str.split(" ")[1].split(":")[0]
+            var min = str.split(" ")[1].split(":")[1]
+            var month = str.split(" ")[0].split("/")[1]
+            var days = str.split(" ")[0].split("/")[2]
+            var year1 = str.split(" ")[0].split("/")[0]
+            let d3 = moment({ 
+                year :parseFloat(year1), 
+                month :parseFloat(month)-1, 
+                day :parseFloat(days), 
+                hour :parseFloat(hr), 
+                minute :parseFloat(min)
+                });
+            return d3
+        }
+        function CtimeFormatToMoment(str){
+            var year1 = str.slice(0,4)
+            var month = str.slice(4,6)
+            var days = str.slice(6,8)
+            let d3 = moment({ 
+                year :parseFloat(year1), 
+                month :parseFloat(month)-1, 
+                day :parseFloat(days)
+                });
+            return d3
+        }
+        dataList[i].dateM = BtimeFormatToMoment( dataList[i].date )
+        dataList[i].matchDateM = CtimeFormatToMoment( dataList[i].matchData )
+    }
+  
+    
     return dataList
   }
+
+
+
+
 
   getMaxMinObj(S3Arr){
     var minH = 999

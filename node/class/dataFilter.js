@@ -749,7 +749,7 @@ class dataFilter extends dataCommonClass{
         return rtnVal
     }
 
-    extractSameOddMatch(match,dataList){
+    extractSameOddMatch(match,dataList,backwardDateRange, sliceSize){
         if(!this.isValidateMatch(match)){
             return {}
         }
@@ -758,7 +758,7 @@ class dataFilter extends dataCommonClass{
         for(var broker in crtOdd){
             if(broker=="香港马会"){
                
-               var tmpList = this.caluclateKValue(broker,match,dataList)
+               var tmpList = this.caluclateKValue(broker,match,dataList,backwardDateRange)
 
                tmpList.sort(function(a, b) {
                     var keyA = a.kNVal,
@@ -768,13 +768,13 @@ class dataFilter extends dataCommonClass{
                     if (keyA > keyB) return 1;
                     return 0;
                 })
-                tmpList = tmpList.slice(0, 10)  
+                tmpList = tmpList.slice(0, sliceSize)  
                 var knTotal = 0
                 for(var i=0;i<tmpList.length;i++){
                     knTotal += tmpList[i].kNVal
                 }
-                var calculatorUp = this.calculateSingleResultAsianOddAdvance(match,tmpList,broker)
-                var calculatorDown = this.calculateSingleResultAsianOddAdvance(match,tmpList,broker,"客")
+                var calculatorUp = this.calculateSingleResultAsianOdd(tmpList,broker)
+                var calculatorDown = this.calculateSingleResultAsianOdd(tmpList,broker,"客")
                 tmp[broker] = {
                     "上":calculatorUp,
                     "下":calculatorDown,
@@ -835,10 +835,11 @@ class dataFilter extends dataCommonClass{
                     downbroker+= broker + " \n"
                 }
                     total ++
+                    /*
                     console.table( "---"+broker+"----")
                     console.table([tmp[broker]["上"][1]])
                     console.table([tmp[broker]["下"][1]])
-
+                    */
                     if(parseFloat(tmp[broker]["上"][1]["total"])>100){
                         totalMMM ++
                         totalUp = totalUp + parseFloat(tmp[broker]["上"][1]["p"])
@@ -868,6 +869,7 @@ class dataFilter extends dataCommonClass{
        a1 += Math.pow(match.kN[sV].maxH - workingList.kN[sV].maxH,2)
        a1 += Math.pow(match.kN[sV].minA - workingList.kN[sV].minA,2)
        a1 += Math.pow(match.kN[sV].maxH - workingList.kN[sV].maxH,2)
+       /*
         var goalMin =  Math.pow(0.01,2)
         if(match.kN[sV].goalMin - workingList.kN[sV].goalMin==0){
             goalMin = 0
@@ -878,30 +880,34 @@ class dataFilter extends dataCommonClass{
             goalMax = 0
         }
         a1 +=goalMax
-
+        */
         return a1
     }
     
-    caluclateKValue(broker, match, dataList){
-        console.log("===")
-        var workingList = this.deepClone(dataList)
+    caluclateKValue(broker, match, dataList,backwardLengthSize){
+    
+        var workingList = dataList
         var rtnVal =[]
-        var crtOdd = match["OddData"][0]
+        var matchDate = match.matchDateM
         for(var i=0;i<workingList.length;i++){
+           
+
             if(workingList[i].id == match.id )continue
+      
             if(!this.isValidateMatch(workingList[i])) continue
+           
 
-            var matchDate = this.timeFormatToMoment(match.date)
-            var historyDate = this.timeFormatToMoment(workingList[i].date)
-            //console.log(matchDate.diff(historyDate,"days"))
-            if(matchDate.diff(historyDate,"days") < 1  || matchDate.diff(historyDate,"days") > 30)continue
+            var historyDate = workingList[i].matchDateM
 
-            var total = this.kNCalculateValue(match,workingList[i],"s3")
-             total += this.kNCalculateValue(match,workingList[i],"s6")
-             total += this.kNCalculateValue(match,workingList[i],"s9")
-             workingList[i].kNVal = total
-             rtnVal.push(workingList[i])
-
+   
+            if(matchDate.diff(historyDate,"days") > 1) {
+                if(matchDate.diff(historyDate,"days") > backwardLengthSize) return rtnVal
+                var total = this.kNCalculateValue(match,workingList[i],"s3")
+                total += this.kNCalculateValue(match,workingList[i],"s6")
+                total += this.kNCalculateValue(match,workingList[i],"s9")
+                rtnVal.push(this.deepClone(workingList[i]))
+                rtnVal[rtnVal.length-1].kNVal = total
+            }
         }
         return rtnVal
     }

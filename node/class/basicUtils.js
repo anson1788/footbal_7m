@@ -15,7 +15,15 @@ class basicUtils {
        return moment().subtract(minus, "days").format(format);
     }
 
-
+    generateDateWithStart(startDate,minus=0, format="YYYYMMDD"){
+        let d3 = moment({ 
+            year :startDate.slice(0,4), 
+            month :startDate.slice(4,6)-1, 
+            day :startDate.slice(6,8)
+            });
+        return d3.subtract(minus, "days").format(format);
+     }
+ 
 
     async getHttpDomAsyn(url, type){
         return new Promise(resolve=>{
