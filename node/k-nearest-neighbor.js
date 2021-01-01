@@ -56,7 +56,7 @@ async function getCacheData(url, folder, cacheId , type ,isCache = true){
     return rtnArr
 }
 
-async function calculateExpectedDate(targetDate,dataList, KVal,backwardDateRange, sliceSize,brench){
+async function calculateExpectedDate(targetDate,dataList, KVal,backwardDateRange, sliceSize,brench,parameterWeight){
     
     
     let ftUtils = new filterUtils()
@@ -81,6 +81,7 @@ async function calculateExpectedDate(targetDate,dataList, KVal,backwardDateRange
                 });
             return d3
         }
+     
         match = {
             "home":matchId[i].home,
             "away":matchId[i].away,
@@ -93,8 +94,8 @@ async function calculateExpectedDate(targetDate,dataList, KVal,backwardDateRange
             "matchDateM":CtimeFormatToMoment(targetDate)
         }
        // console.log(match.date)
-        
-        var feature = ftUtils.extractSameOddMatch(match,dataList,backwardDateRange, sliceSize)
+       //console.log(JSON.stringify(matchId[i].kN))
+        var feature = ftUtils.extractSameOddMatch(match,dataList,backwardDateRange, sliceSize,parameterWeight)
     
         var hkjcData = feature["hkjcData"] 
         var upSide = hkjcData["上"][1]
@@ -102,8 +103,9 @@ async function calculateExpectedDate(targetDate,dataList, KVal,backwardDateRange
         var upWin = parseFloat(upSide["贏"]) + parseFloat(upSide["贏半"])
         var downWin = parseFloat(upSide["輸"]) + parseFloat(upSide["輸半"])
         
-        /*
-        console.log(feature["kNtotal"] + " "+KVal)
+     
+       // console.log(feature["kNtotal"] + " "+KVal)
+    /*
         console.table([upSide])
         */
 
@@ -182,12 +184,20 @@ async function calculateExpectedDate(targetDate,dataList, KVal,backwardDateRange
     //fs.writeFileSync("oddBook/testResult/o1.json",JSON.stringify(betArr,null))
 
 
-
+    betArr.sort(function(a, b) {
+        var keyA = a.kNtotal,
+        keyB = b.kNtotal;
+        // Compare the 2 dates
+        if (keyA < keyB) return 1;
+        if (keyA > keyB) return -1;
+        return 0;
+    })
+    console.table(betArr)
     return [count]
     
 }
 
-async function tuneParameter(dataList,defaultRange,startDate,KVal,backwardDateRange, sliceSize,brench){
+async function tuneParameter(dataList,defaultRange,startDate,KVal,backwardDateRange, sliceSize,brench,parameterWeight){
     var dateResult = []
     console.table([{
         "kVal":KVal,
@@ -196,7 +206,7 @@ async function tuneParameter(dataList,defaultRange,startDate,KVal,backwardDateRa
     }])
     for(var i=0;i<defaultRange;i++){
         var matchDate = bcUtils.generateDateWithStart(startDate,i)
-        var dateResultSingle = await calculateExpectedDate(matchDate,dataList,KVal,backwardDateRange, sliceSize,brench)
+        var dateResultSingle = await calculateExpectedDate(matchDate,dataList,KVal,backwardDateRange, sliceSize,brench,parameterWeight)
         dateResult.push(dateResultSingle[0])
         
     }
@@ -239,7 +249,7 @@ async function getParameter(calculateDate){
     var sliceArr = []
     for(var i=0;i<10;i++){
     
-        var kVal = 0.30 - i*0.015
+        var kVal = 5 + i*0.5
         for(var j=0;j<6;j++){
             var sliceSize = 6+j
             for(var k=0;k<3;k++){
@@ -261,7 +271,14 @@ async function getParameter(calculateDate){
         console.log("start ")
         await Promise.all(kValArr.map(async (tmp) => {
             console.log("st "+ tmp["kVal"] + " "+ tmp["kVal"]+ " "+tmp["brenchMark"])
-            var param = await tuneParameter(dataList,8, calculateDate , tmp["kVal"],10,tmp["sliceSize"],tmp["brenchMark"])
+            var param = await tuneParameter(dataList,8, calculateDate , tmp["kVal"],10,tmp["sliceSize"],tmp["brenchMark"], {
+                "startOddHome":0.1,
+                "startOddAway":0.1,
+                "endOddHome":0.1,
+                "endOddAway":0.1,
+                "startPointDiff":0.1,
+                "endPointDiff":0.1
+            })
             resultPush.push(param)
         }));
         console.log("end "+resultPush.length)
@@ -287,7 +304,7 @@ async function getParameter(calculateDate){
 
 async function getTotalResultDate(startDate){
     var totalResult = []
-    for(var i=0;i<15;i++){
+    for(var i=0;i<30;i++){
         var matchDate = bcUtils.generateDateWithStart(startDate,i)
         data = await getParameter(matchDate)
         totalResult.push(data)
@@ -300,10 +317,18 @@ async function getTotalResultDate(startDate){
 async function getResult(){
     let ftUtils = new filterUtils()
     let dataList = ftUtils.getUpdateData()
-    var kVal =  0.3
-    var sliceSize = 10
+    var kVal = 5.5
+    var sliceSize =8
     var brench = 0.45
-    var param = await tuneParameter(dataList,1,"20201220", kVal,10,sliceSize,brench)
+    var param = await tuneParameter(dataList,6,"20201230", kVal,10,sliceSize,brench,
+    {
+        "startOddHome":0.1,
+        "startOddAway":0.1,
+        "endOddHome":0.1,
+        "endOddAway":0.1,
+        "startPointDiff":0.1,
+        "endPointDiff":0.1
+    })
     console.table([param])
 
 }

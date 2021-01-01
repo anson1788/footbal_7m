@@ -749,7 +749,7 @@ class dataFilter extends dataCommonClass{
         return rtnVal
     }
 
-    extractSameOddMatch(match,dataList,backwardDateRange, sliceSize){
+    extractSameOddMatch(match,dataList,backwardDateRange, sliceSize,parameterWeight){
         if(!this.isValidateMatch(match)){
             return {}
         }
@@ -758,7 +758,7 @@ class dataFilter extends dataCommonClass{
         for(var broker in crtOdd){
             if(broker=="香港马会"){
                
-               var tmpList = this.caluclateKValue(broker,match,dataList,backwardDateRange)
+               var tmpList = this.caluclateKValue(broker,match,dataList,backwardDateRange,parameterWeight)
 
                tmpList.sort(function(a, b) {
                     var keyA = a.kNVal,
@@ -883,8 +883,29 @@ class dataFilter extends dataCommonClass{
         */
         return a1
     }
+
+
+    kNCalculateValueCAll(match,workingList,s1,s2,s3){
+        var a1 = Math.pow(match.kN[sV].minH - workingList.kN[sV].minH,2)
+        a1 += Math.pow(match.kN[sV].maxH - workingList.kN[sV].maxH,2)
+        a1 += Math.pow(match.kN[sV].minA - workingList.kN[sV].minA,2)
+        a1 += Math.pow(match.kN[sV].maxH - workingList.kN[sV].maxH,2)
+        /*
+         var goalMin =  Math.pow(0.01,2)
+         if(match.kN[sV].goalMin - workingList.kN[sV].goalMin==0){
+             goalMin = 0
+         }
+         a1 +=goalMin
+         var goalMax = Math.pow(0.01,2)
+        if(match.kN[sV].goalMax - workingList.kN[sV].goalMax==0){
+             goalMax = 0
+         }
+         a1 +=goalMax
+         */
+         return a1
+     }
     
-    caluclateKValue(broker, match, dataList,backwardLengthSize){
+    caluclateKValue(broker, match, dataList,backwardLengthSize, parameterWeight){
     
         var workingList = dataList
         var rtnVal =[]
@@ -902,11 +923,34 @@ class dataFilter extends dataCommonClass{
    
             if(matchDate.diff(historyDate,"days") > 1) {
                 if(matchDate.diff(historyDate,"days") > backwardLengthSize) return rtnVal
+                /*
                 var total = this.kNCalculateValue(match,workingList[i],"s3")
                 total += this.kNCalculateValue(match,workingList[i],"s6")
                 total += this.kNCalculateValue(match,workingList[i],"s9")
+                */
+                var total = 0
+
+                var endOddHome = (match.kN["endOdd"].home - workingList[i].kN["endOdd"].home)/0.5
+                total += Math.pow(endOddHome,2)
+
+                var endOddAway = (match.kN["endOdd"].away - workingList[i].kN["endOdd"].away)/0.5
+                total += Math.pow(endOddAway,2)
+
+                var startOddHome= (match.kN["startOdd"].home - workingList[i].kN["startOdd"].home)/0.5
+                total += Math.pow(startOddHome,2)
+
+                var startOddAway =  (match.kN["startOdd"].away - workingList[i].kN["startOdd"].away)/0.5
+                total += Math.pow(startOddAway,2)
+
+
+                var startPointDiff = (this.getOddIdx(match.kN["startOdd"].point)-this.getOddIdx(workingList[i].kN["startOdd"].point))/4
+                total += Math.pow(startPointDiff,2)
+
+                var endPointDiff = (this.getOddIdx(match.kN["endOdd"].point)-this.getOddIdx(workingList[i].kN["endOdd"].point))/4
+                total += Math.pow(endPointDiff,2)
+
                 rtnVal.push(this.deepClone(workingList[i]))
-                rtnVal[rtnVal.length-1].kNVal = total
+                rtnVal[rtnVal.length-1].kNVal = Math.sqrt(total)
             }
         }
         return rtnVal

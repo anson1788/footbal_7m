@@ -608,60 +608,76 @@ class dataCommomClass {
   }
 
   processHistory(dataList){
+    var returnArr = []
     for(var i=0;i<dataList.length;i++){
-    
-        var oddTimeS9 = this.timeFormatToMoment(dataList[i].date).subtract(9,"hours")
-        var oddTimeS6 = this.timeFormatToMoment(dataList[i].date).subtract(6,"hours")
-        var oddTimeS3 = this.timeFormatToMoment(dataList[i].date).subtract(3,"hours")
-        var oddTimeS5M = this.timeFormatToMoment(dataList[i].date).subtract(5,"minutes")
-        var S9Arr = []
-        for(var j=0;j<dataList[i].oddHistory.length;j++){
-            var histTime = this.timeFormatToMoment("2020/"+ dataList[i].oddHistory[j].time.replace("-","/"))
-            var diff = histTime.diff(oddTimeS9,"minutes")
-            var diffF = oddTimeS6.diff(histTime,"minutes")
-            if(diff>0&& diffF >0){
-                S9Arr.push(dataList[i].oddHistory[j])
-            }
-            if(dataList[i].oddHistory.length-1 == j && S9Arr.length == 0 ){
-                S9Arr.push(dataList[i].oddHistory[j])
-            }
-        }
+        if(!dataList[i].date.includes("2019") && !dataList[i].date.includes("2020/01")&& !dataList[i].date.includes("2020/01")){
+            var oddTimeS9 = this.timeFormatToMoment(dataList[i].date).subtract(9,"hours")
+            var oddTimeS6 = this.timeFormatToMoment(dataList[i].date).subtract(6,"hours")
+            var oddTimeS3 = this.timeFormatToMoment(dataList[i].date).subtract(3,"hours")
+            var oddTimeS5M = this.timeFormatToMoment(dataList[i].date).subtract(5,"minutes")
+            var S9Arr = []
 
-        var S6Arr = []
-        for(var j=0;j<dataList[i].oddHistory.length;j++){
-            var histTime = this.timeFormatToMoment("2020/"+ dataList[i].oddHistory[j].time.replace("-","/"))
+            var holder = 0
+            for(var j=0;j<dataList[i].oddHistory.length;j++){
+                var histTime = this.timeFormatToMoment("2020/"+ dataList[i].oddHistory[j].time.replace("-","/"))
+                var diff = histTime.diff(oddTimeS9,"minutes")
+                var diffF = oddTimeS6.diff(histTime,"minutes")
+                if(diff>0&& diffF >0){
+                    S9Arr.push(dataList[i].oddHistory[j])
+                }else if(diff>0 && diffF <0 && holder ==0){
+                    holder = j
+                }
+                if(dataList[i].oddHistory.length-1 == j && S9Arr.length == 0 ){
+                    S9Arr.push(dataList[i].oddHistory[holder])
+                }
+            }
+
      
-            var diff = histTime.diff(oddTimeS6,"minutes")
-            var diffF = oddTimeS3.diff(histTime,"minutes")
-            if(diff>0 && diffF >0){
-                S6Arr.push(dataList[i].oddHistory[j])
+            holder = 0
+            var S6Arr = []
+            for(var j=0;j<dataList[i].oddHistory.length;j++){
+                var histTime = this.timeFormatToMoment("2020/"+ dataList[i].oddHistory[j].time.replace("-","/"))
+        
+                var diff = histTime.diff(oddTimeS6,"minutes")
+                var diffF = oddTimeS3.diff(histTime,"minutes")
+                if(diff>0 && diffF >0){
+                    S6Arr.push(dataList[i].oddHistory[j])
+                }else if(diff>0 && diffF <0 && holder ==0){
+                    holder = j
+                }
+                if(dataList[i].oddHistory.length-1 == j && S6Arr.length == 0 ){
+                    S6Arr.push(dataList[i].oddHistory[holder])
+                }
             }
-            if(dataList[i].oddHistory.length-1 == j && S6Arr.length == 0 ){
-                S6Arr.push(dataList[i].oddHistory[j])
+            holder = 0
+            var S3Arr = []
+            for(var j=0;j<dataList[i].oddHistory.length;j++){
+                var histTime = this.timeFormatToMoment("2020/"+ dataList[i].oddHistory[j].time.replace("-","/"))
+
+                var diff = histTime.diff(oddTimeS3,"minutes")
+                var diffF = oddTimeS5M.diff(histTime,"minutes")
+                if(diff>0 && diffF >0){
+                    S3Arr.push(dataList[i].oddHistory[j])
+                }else if(diff>0 && diffF <0 && holder ==0){
+                    holder = j
+                }
+                if(dataList[i].oddHistory.length-1 == j && S3Arr.length == 0 ){
+                    S3Arr.push(dataList[i].oddHistory[holder])
+                }
             }
+
+   
+            var AllSTrend={
+                "s3":this.getMaxMinObj(S3Arr),
+                "s6":this.getMaxMinObj(S6Arr),
+                "s9":this.getMaxMinObj(S9Arr),
+                "endOdd":this.getMaxMinObj(S3Arr)["start"],
+                "startOdd":dataList[i].oddHistory[dataList[i].oddHistory.length-1]
+            }
+      
+            dataList[i].kN = AllSTrend
+            returnArr.push( this.deepClone(dataList[i]))
         }
-
-        var S3Arr = []
-        for(var j=0;j<dataList[i].oddHistory.length;j++){
-            var histTime = this.timeFormatToMoment("2020/"+ dataList[i].oddHistory[j].time.replace("-","/"))
-
-            var diff = histTime.diff(oddTimeS3,"minutes")
-            var diffF = oddTimeS5M.diff(histTime,"minutes")
-
-            if(diff>0 && diffF >0){
-                S3Arr.push(dataList[i].oddHistory[j])
-            }
-            if(dataList[i].oddHistory.length-1 == j && S3Arr.length == 0 ){
-                S3Arr.push(dataList[i].oddHistory[j])
-            }
-        }
-
-        var AllSTrend={
-            "s3":this.getMaxMinObj(S3Arr),
-            "s6":this.getMaxMinObj(S6Arr),
-            "s9":this.getMaxMinObj(S9Arr)
-        }
-        dataList[i].kN = AllSTrend
     }
 
 
@@ -695,7 +711,7 @@ class dataCommomClass {
         }
         return 0;
     })*/
-    for(var i=0;i<dataList.length;i++){
+    for(var i=0;i<returnArr.length;i++){
         function BtimeFormatToMoment(str){
    
             var hr = str.split(" ")[1].split(":")[0]
@@ -723,12 +739,12 @@ class dataCommomClass {
                 });
             return d3
         }
-        dataList[i].dateM = BtimeFormatToMoment( dataList[i].date )
-        dataList[i].matchDateM = CtimeFormatToMoment( dataList[i].matchData )
+        returnArr[i].dateM = BtimeFormatToMoment( returnArr[i].date )
+        returnArr[i].matchDateM = CtimeFormatToMoment( returnArr[i].matchData )
     }
   
     
-    return dataList
+    return returnArr
   }
 
 
@@ -764,13 +780,16 @@ class dataCommomClass {
             goalMax = this.getOddIdx(S3Arr[i].point)
         }
     }
+
     return {
         "minH":minH,
         "maxH":maxH,
         "minA":minA,
         "maxH":maxH,
         "goalMin":goalMin,
-        "goalMax":goalMax
+        "goalMax":goalMax,
+        "start":S3Arr[0],
+        "end":S3Arr[S3Arr.length-1]
     }
   }
 
