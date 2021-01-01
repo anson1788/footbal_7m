@@ -930,24 +930,31 @@ class dataFilter extends dataCommonClass{
                 */
                 var total = 0
 
+                //console.log(JSON.stringify(parameterWeight))
                 var endOddHome = (match.kN["endOdd"].home - workingList[i].kN["endOdd"].home)/0.5
-                total += Math.pow(endOddHome,2)
+                total += parameterWeight["endOddHome"] *Math.pow(endOddHome,2)
 
                 var endOddAway = (match.kN["endOdd"].away - workingList[i].kN["endOdd"].away)/0.5
-                total += Math.pow(endOddAway,2)
+                total += parameterWeight["endOddAway"] *Math.pow(endOddAway,2)
 
                 var startOddHome= (match.kN["startOdd"].home - workingList[i].kN["startOdd"].home)/0.5
-                total += Math.pow(startOddHome,2)
+                total += parameterWeight["startOddHome"] *Math.pow(startOddHome,2)
 
                 var startOddAway =  (match.kN["startOdd"].away - workingList[i].kN["startOdd"].away)/0.5
-                total += Math.pow(startOddAway,2)
+                total += parameterWeight["startOddAway"] *Math.pow(startOddAway,2)
 
 
                 var startPointDiff = (this.getOddIdx(match.kN["startOdd"].point)-this.getOddIdx(workingList[i].kN["startOdd"].point))/4
-                total += Math.pow(startPointDiff,2)
+                total += parameterWeight["startPointDiff"] *Math.pow(startPointDiff,2)
 
                 var endPointDiff = (this.getOddIdx(match.kN["endOdd"].point)-this.getOddIdx(workingList[i].kN["endOdd"].point))/4
-                total += Math.pow(endPointDiff,2)
+                total +=  parameterWeight["endPointDiff"] *Math.pow(endPointDiff,2)
+
+
+                var rangeTimeDiff = (match.rangeTime - workingList[i].rangeTime)/88
+                total += parameterWeight["rangeTime"] *Math.pow(rangeTimeDiff,2)
+
+                //rangeTime
 
                 rtnVal.push(this.deepClone(workingList[i]))
                 rtnVal[rtnVal.length-1].kNVal = Math.sqrt(total)

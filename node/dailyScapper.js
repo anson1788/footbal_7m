@@ -12,6 +12,8 @@ http://bf.win007.com/football/big/Over_20201022.htm
 
 */
 
+var moment = require('moment');
+
 async function getCacheData(url, folder, cacheId , type ,isCache = true){
 
     var rtnArr = []
@@ -60,7 +62,7 @@ async function init(defaultRange=50){
 
     var total = 0
     var targetMatch = []
-    for(var i=2;i<defaultRange;i++){
+    for(var i=5;i<defaultRange;i++){
 
         var matchDate = bcUtils.generateDate(i)
         var url = "http://bf.win007.com/football/big/Over_%d.htm".replace("%d",matchDate)
@@ -71,6 +73,22 @@ async function init(defaultRange=50){
             continue
         }
         
+        function AtimeFormatToMoment(str){
+            var hr = str.split(" ")[1].split(":")[0]
+            var min = str.split(" ")[1].split(":")[1]
+            var month = str.split(" ")[0].split("/")[1]
+            var days = str.split(" ")[0].split("/")[2]
+            var year1 = str.split(" ")[0].split("/")[0]
+            let d3 = moment({ 
+                year :parseFloat(year1), 
+                month :parseFloat(month)-1, 
+                day :parseFloat(days), 
+                hour :parseFloat(hr), 
+                minute :parseFloat(min)
+                });
+            return d3
+        }
+
         var halfHKJCMap = 0
         for(var j=0;j<bfDailyArr.length;j++){
             var matchData = {}
@@ -78,9 +96,25 @@ async function init(defaultRange=50){
             matchData.matchData = matchDate
             var year = matchDate.substring(0, 4);
             var month = matchDate.substring(4, 6);
-            //console.log("year "+year)
-            //console.log("month "+month)
-            matchData.date = year+"/"+month+"/"+matchData.date.split("日")[0]+" " +matchData.date.split("日")[1]
+
+            let fromMatchList = moment({ 
+                year :parseFloat(year), 
+                month :parseFloat(month)-1, 
+                day :parseFloat(matchData.date.split("日")[0])
+            });
+
+
+            let fromGenerateDate = moment({ 
+                year :parseFloat(year), 
+                month :parseFloat(month)-1, 
+                day :parseFloat(matchDate.substring(6, 8))
+            });
+
+            if(fromMatchList.diff(fromGenerateDate,"days")>=0){
+                matchData.date = year+"/"+month+"/"+matchData.date.split("日")[0]+" " +matchData.date.split("日")[1]
+            }else{
+                matchData.date = year+"/"+(parseFloat(month)+1)+"/"+matchData.date.split("日")[0]+" " +matchData.date.split("日")[1]
+            }
             if(typeof(bfDailyArr[j]["AwayFScore"])!=="undefined"){
                 var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+bfDailyArr[j].id
                 var OddData =  await getCacheData(url,"bfData/odd/"+matchDate+"/",  bfDailyArr[j].id ,"bfOdd")
@@ -111,8 +145,12 @@ async function init(defaultRange=50){
                     //matchData.history = history
                   
                     //targetMatch.push(matchData)
-                    
-                   targetMatch.push(matchData)
+                    if(oddHistory.length>0){
+                        targetMatch.push(matchData)
+                    }else{
+                        console.log(oddHistory.length + " "+ matchData.id)
+                    }
+                   
                 }
    
             }

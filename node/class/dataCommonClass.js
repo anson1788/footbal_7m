@@ -607,6 +607,31 @@ class dataCommomClass {
     return dataList
   }
 
+
+  getPreciseMonths(matchListDate, oddDate){
+    let fromGenerateDate = moment({ 
+        year :parseFloat(matchListDate.split("/")[0]), 
+        month :parseFloat(oddDate.split("/")[0])-1, 
+        day :parseFloat(oddDate.split("/")[1])
+    });
+
+    let fromMatchList = moment({ 
+        year :parseFloat(matchListDate.split("/")[0]), 
+        month :parseFloat(matchListDate.split("/")[0])-1, 
+        day :parseFloat(matchListDate.split("/")[1])
+    });
+    
+    if(fromMatchList.diff(fromGenerateDate,"days")>=0){
+       // matchData.date = matchListDate.split("/")[0]+"/"+matchListDate.split("/")[1]+"/"+matchData.date.split("日")[0]+" " +matchData.date.split("日")[1]
+        return matchListDate.split("/")[1]
+    }else{
+       // matchData.date = matchListDate.split("/")[0]+"/"+(parseFloat(matchListDate.split("/")[1])+1)+"/"+matchData.date.split("日")[0]+" " +matchData.date.split("日")[1]
+        return (parseFloat(matchListDate.split("/")[1])+1)
+    }
+  }
+
+
+
   processHistory(dataList){
     var returnArr = []
     for(var i=0;i<dataList.length;i++){
@@ -619,6 +644,9 @@ class dataCommomClass {
 
             var holder = 0
             for(var j=0;j<dataList[i].oddHistory.length;j++){
+
+                //var preciseYear = this.getPreciseYear(dataList[i].date, dataList[i].oddHistory[j].time.replace("-","/"))
+
                 var histTime = this.timeFormatToMoment("2020/"+ dataList[i].oddHistory[j].time.replace("-","/"))
                 var diff = histTime.diff(oddTimeS9,"minutes")
                 var diffF = oddTimeS6.diff(histTime,"minutes")
@@ -674,40 +702,33 @@ class dataCommomClass {
                 "endOdd":this.getMaxMinObj(S3Arr)["start"],
                 "startOdd":dataList[i].oddHistory[dataList[i].oddHistory.length-1]
             }
-      
+
+            var endOdd = this.timeFormatToMoment(dataList[i].date.replace("-","/"))
+            var startOdd = this.timeFormatToMoment("2020/"+ AllSTrend["startOdd"].time.replace("-","/"))
+            /*
+            console.log("------")
+            console.log(endOdd.diff(startOdd,"hours"))
+            console.log(endOdd.format("YYYY/MM/DD HH:mm") + " "+dataList[i].id)
+            console.log(startOdd.format("YYYY/MM/DD HH:mm"))
+            */
             dataList[i].kN = AllSTrend
-            returnArr.push( this.deepClone(dataList[i]))
+            dataList[i].rangeTime = moment.duration(endOdd.diff(startOdd)).asHours()
+            if(dataList[i].rangeTime<89){
+                returnArr.push( this.deepClone(dataList[i]))
+            }
         }
     }
 
 
     /*
-    dataList =  dataList.sort(function(a, b) {
-
-        function AtimeFormatToMoment(str){
-            var hr = str.split(" ")[1].split(":")[0]
-            var min = str.split(" ")[1].split(":")[1]
-            var month = str.split(" ")[0].split("/")[1]
-            var days = str.split(" ")[0].split("/")[2]
-            var year1 = str.split(" ")[0].split("/")[0]
-            let d3 = moment({ 
-                year :parseFloat(year1), 
-                month :parseFloat(month)-1, 
-                day :parseFloat(days), 
-                hour :parseFloat(hr), 
-                minute :parseFloat(min)
-                });
-            return d3
-        }
-
-        var keyA = AtimeFormatToMoment(a.date),
-        keyB = AtimeFormatToMoment(b.date);
+    returnArr =  returnArr.sort(function(a, b) {
+        var keyA = a.rangeTime,
+        keyB = b.rangeTime;
         
-        if (keyA.diff(keyB,"minutes")>0){
-            return -1 
-        }
-        if (keyA.diff(keyB,"minutes")<0){
+        if (keyA>keyB){
             return 1
+        }else{
+            return -1
         }
         return 0;
     })*/
