@@ -699,7 +699,7 @@ class dataCommomClass {
                 "s3":this.getMaxMinObj(S3Arr),
                 "s6":this.getMaxMinObj(S6Arr),
                 "s9":this.getMaxMinObj(S9Arr),
-                "endOdd":this.getMaxMinObj(S3Arr)["start"],
+                "endOdd":dataList[i].oddHistory[0],
                 "startOdd":dataList[i].oddHistory[dataList[i].oddHistory.length-1]
             }
 

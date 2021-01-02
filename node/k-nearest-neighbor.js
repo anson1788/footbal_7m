@@ -129,7 +129,8 @@ async function calculateExpectedDate(targetDate,dataList, KVal,backwardDateRange
                 if((  Math.abs(upWin/(upWin+downWin)) > brench || Math.abs(downWin/(upWin+downWin)) > brench) &&
                     feature["kNtotal"]<KVal){
                 */
-               if((  Math.abs(upWin/(upWin+downWin)) > brench || Math.abs(downWin/(upWin+downWin)) > brench)){
+               if((  Math.abs(upWin/(upWin+downWin)) > brench || Math.abs(downWin/(upWin+downWin)) > brench)&&
+               feature["kNtotal"]<6){
                         
                     var betData = {
                                 "home":match["home"],
@@ -211,6 +212,7 @@ async function calculateExpectedDate(targetDate,dataList, KVal,backwardDateRange
         if (keyA > keyB) return -1;
         return 0;
     })
+    console.table(betArr)
     return [count]
     
 }
@@ -249,14 +251,15 @@ async function tuneParameter(dataList,defaultRange,startDate,KVal,backwardDateRa
             "backwardDateRange":backwardDateRange, 
             "KVal":KVal,
             "sliceSize":sliceSize,
-            "brench":brench,
+            "brench":brench
+            /*,
             "startOddHome":parameterWeight["startOddHome"],
             "startOddAway":parameterWeight["startOddAway"],
             "endOddHome":parameterWeight["endOddHome"],
             "endOddAway":parameterWeight["endOddAway"],
             "startPointDiff":parameterWeight["startPointDiff"],
             "endPointDiff":parameterWeight["endPointDiff"],
-            "rangeTime":parameterWeight["rangeTime"]
+            "rangeTime":parameterWeight["rangeTime"]*/
     }
 
 
@@ -365,7 +368,7 @@ async function getResult(){
     let dataList = ftUtils.getUpdateData()
     var kVal = 5.5
     var sliceSize =8
-    var brench = 0.45
+    var brench = 0.7
 
 
     var array = [
@@ -395,7 +398,7 @@ async function getResult(){
         "endPointDiff":array[0][1]/7,
         "rangeTime":array[0][6]/7
     }
-    var param = await tuneParameter(dataList,2,"20201220", kVal,10,sliceSize,brench,
+    var param = await tuneParameter(dataList,1,"20201219", kVal,10,sliceSize,brench,
     tmpSquare
     )
     console.table([param])

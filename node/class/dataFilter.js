@@ -769,10 +769,19 @@ class dataFilter extends dataCommonClass{
                     return 0;
                 })
                 tmpList = tmpList.slice(0, sliceSize)  
+                console.log("----")
+                console.table([match])
+                console.table(tmpList)
                 var knTotal = 0
                 for(var i=0;i<tmpList.length;i++){
                     knTotal += tmpList[i].kNVal
                 }
+                for(var i=0;i<tmpList.length;i++){
+                    if(tmpList[i].kNVal>1){
+                        knTotal = 100
+                    }
+                }
+                
                 var calculatorUp = this.calculateSingleResultAsianOdd(tmpList,broker)
                 var calculatorDown = this.calculateSingleResultAsianOdd(tmpList,broker,"客")
                 tmp[broker] = {
@@ -922,42 +931,79 @@ class dataFilter extends dataCommonClass{
 
    
             if(matchDate.diff(historyDate,"days") > 1) {
-                if(matchDate.diff(historyDate,"days") > backwardLengthSize) return rtnVal
+                if(matchDate.diff(historyDate,"days") > 200 ) return rtnVal
                 /*
                 var total = this.kNCalculateValue(match,workingList[i],"s3")
                 total += this.kNCalculateValue(match,workingList[i],"s6")
                 total += this.kNCalculateValue(match,workingList[i],"s9")
                 */
-                var total = 0
 
-                //console.log(JSON.stringify(parameterWeight))
-                var endOddHome = (match.kN["endOdd"].home - workingList[i].kN["endOdd"].home)/0.5
-                total += parameterWeight["endOddHome"] *Math.pow(endOddHome,2)
+                   
+               var startPointDiff = (this.getOddIdx(match.kN["startOdd"].point)-this.getOddIdx(workingList[i].kN["startOdd"].point))
+               var endPointDiff = (this.getOddIdx(match.kN["endOdd"].point)-this.getOddIdx(workingList[i].kN["endOdd"].point))
 
-                var endOddAway = (match.kN["endOdd"].away - workingList[i].kN["endOdd"].away)/0.5
-                total += parameterWeight["endOddAway"] *Math.pow(endOddAway,2)
-
-                var startOddHome= (match.kN["startOdd"].home - workingList[i].kN["startOdd"].home)/0.5
-                total += parameterWeight["startOddHome"] *Math.pow(startOddHome,2)
-
-                var startOddAway =  (match.kN["startOdd"].away - workingList[i].kN["startOdd"].away)/0.5
-                total += parameterWeight["startOddAway"] *Math.pow(startOddAway,2)
+               var startPointChange = (this.getOddIdx(match.kN["startOdd"].point)-this.getOddIdx(match.kN["endOdd"].point))
+               var endPointChange = (this.getOddIdx(workingList[i].kN["startOdd"].point)-this.getOddIdx(workingList[i].kN["endOdd"].point))
 
 
-                var startPointDiff = (this.getOddIdx(match.kN["startOdd"].point)-this.getOddIdx(workingList[i].kN["startOdd"].point))/4
-                total += parameterWeight["startPointDiff"] *Math.pow(startPointDiff,2)
+                if( Math.abs(match.rangeTime - workingList[i].rangeTime)<5 && (startPointChange == endPointChange)){
+                    var total = 0
 
-                var endPointDiff = (this.getOddIdx(match.kN["endOdd"].point)-this.getOddIdx(workingList[i].kN["endOdd"].point))/4
-                total +=  parameterWeight["endPointDiff"] *Math.pow(endPointDiff,2)
+                    var endOddMatchHome = parseFloat(match.kN["endOdd"].home)/(parseFloat(match.kN["endOdd"].home) +parseFloat(match.kN["endOdd"].away ))
+                    var startOddMatchHome = parseFloat(match.kN["startOdd"].home)/(parseFloat(match.kN["startOdd"].home) +parseFloat(match.kN["startOdd"].away ))
 
+                    var endOddWorkHome = parseFloat(workingList[i].kN["endOdd"].home)/(parseFloat(workingList[i].kN["endOdd"].home) +parseFloat(workingList[i].kN["endOdd"].away ))
+                    var startOddWorkHome = parseFloat(workingList[i].kN["startOdd"].home)/(parseFloat(workingList[i].kN["startOdd"].home) +parseFloat(workingList[i].kN["startOdd"].away ))
 
-                var rangeTimeDiff = (match.rangeTime - workingList[i].rangeTime)/88
-                total += parameterWeight["rangeTime"] *Math.pow(rangeTimeDiff,2)
+                    var endOddHome = (endOddMatchHome- endOddWorkHome)
+                    total += Math.pow(endOddHome,2)
+                    
+                    var startOddHome= (startOddMatchHome - startOddWorkHome)
+                    total += Math.pow(startOddHome,2)
+                    /*
+                    var endOddHome = (match.kN["endOdd"].home - workingList[i].kN["endOdd"].home)
+                    total += Math.pow(endOddHome,2)
 
-                //rangeTime
+                    var endOddAway = (match.kN["endOdd"].away - workingList[i].kN["endOdd"].away)
+                    total += Math.pow(endOddAway,2)
 
-                rtnVal.push(this.deepClone(workingList[i]))
-                rtnVal[rtnVal.length-1].kNVal = Math.sqrt(total)
+                    var startOddHome= (match.kN["startOdd"].home - workingList[i].kN["startOdd"].home)
+                    total += Math.pow(startOddHome,2)
+
+                    var startOddAway =  (match.kN["startOdd"].away - workingList[i].kN["startOdd"].away)
+                    total += Math.pow(startOddAway,2)
+                    */
+
+                    
+                    //var startPointDiff = (this.getOddIdx(match.kN["startOdd"].point)-this.getOddIdx(workingList[i].kN["startOdd"].point))
+                    //total += Math.pow(startPointDiff,2)
+
+                    //var endPointDiff = (this.getOddIdx(match.kN["endOdd"].point)-this.getOddIdx(workingList[i].kN["endOdd"].point))
+                    //total += Math.pow(endPointDiff,2)
+
+                    /*
+                    var oddChangeMatch= (this.getOddIdx(match.kN["endOdd"].point)- this.getOddIdx(match.kN["startOdd"].point))
+                    var oddChangeWorking = (this.getOddIdx(workingList[i].kN["endOdd"].point)- this.getOddIdx(workingList[i].kN["startOdd"].point))
+                    total += Math.pow(oddChangeMatch-oddChangeWorking,2)
+                    */                    
+                        
+                    /*
+                    var rangeTimeDiff = (match.rangeTime - workingList[i].rangeTime)/88
+                    total += parameterWeight["rangeTime"] *Math.pow(rangeTimeDiff,2)
+                    */
+        
+
+                    rtnVal.push(this.deepClone(workingList[i]))
+                    rtnVal[rtnVal.length-1].kNVal = parseFloat(Math.sqrt(total).toFixed(2))
+                    delete rtnVal[rtnVal.length-1].url
+                    delete rtnVal[rtnVal.length-1].HomeHScore
+                    delete rtnVal[rtnVal.length-1].AwayHScore
+                    delete rtnVal[rtnVal.length-1].rangeTime
+                    delete rtnVal[rtnVal.length-1].dateM
+                    delete rtnVal[rtnVal.length-1].matchDateM
+                    delete rtnVal[rtnVal.length-1].league
+                    delete rtnVal[rtnVal.length-1].kN
+                }
             }
         }
         return rtnVal
