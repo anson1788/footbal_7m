@@ -324,6 +324,9 @@ class dataCommomClass {
         return [workingList,count]
     }
 
+
+
+
     calculateSingleResultAsianOdd(rtnVal,broker, betOn = "主"){
         var workingList = this.deepClone(rtnVal)
         var count = {

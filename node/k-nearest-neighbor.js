@@ -124,13 +124,14 @@ async function calculateExpectedDate(targetDate,dataList, KVal,backwardDateRange
         var upWin = parseFloat(upSide["贏"]) + parseFloat(upSide["贏半"])
         var downWin = parseFloat(upSide["輸"]) + parseFloat(upSide["輸半"])
         
-     
-                /*
-                if((  Math.abs(upWin/(upWin+downWin)) > brench || Math.abs(downWin/(upWin+downWin)) > brench) &&
-                    feature["kNtotal"]<KVal){
-                */
-               if((  Math.abs(upWin/(upWin+downWin)) > brench || Math.abs(downWin/(upWin+downWin)) > brench)&&
-               feature["kNtotal"]<6){
+        
+        console.log("---- " + match.id)
+        console.table(hkjcData["上"][0])
+        
+       // console.table(tmpList)
+
+
+               if((  Math.abs(upWin/(upWin+downWin+parseFloat(upSide["走"]))) > brench || Math.abs(downWin/(upWin+downWin+parseFloat(upSide["走"]))) > brench)){
                         
                     var betData = {
                                 "home":match["home"],
@@ -212,7 +213,16 @@ async function calculateExpectedDate(targetDate,dataList, KVal,backwardDateRange
         if (keyA > keyB) return -1;
         return 0;
     })
-    console.table(betArr)
+    
+    var printVal = JSON.parse(JSON.stringify(betArr))
+    for(var i=0;i<printVal.length;i++){
+        delete printVal[i].home
+        delete printVal[i].away
+        delete printVal[i].kNtotal
+        delete printVal[i].OddData
+    }
+    console.table(printVal)
+
     return [count]
     
 }
@@ -275,16 +285,10 @@ async function getParameter(calculateDate){
 
     var kValArr = []
     var sliceArr = []
+    /*
     for(var i=0;i<1;i++){
     
-        /*
-        var kVal = 5 + i*0.5
-        for(var j=0;j<1;j++){
-            var sliceSize =10
-            for(var k=0;k<1;k++){
-                var brenchMark = 0.65
-
-        */
+     
        var kVal = 5 
        var brenchMark = 0.65
        var sliceSize = 10
@@ -318,74 +322,17 @@ async function getParameter(calculateDate){
                     }
                     kValArr.push(tmp)
                 }
-        /*
-            }
-            
-        }*/
-    }
       
-        await Promise.all(kValArr.map(async (tmp) => {
-            console.log("st "+ tmp["kVal"] + " "+ tmp["kVal"]+ " "+tmp["brenchMark"] + " " +JSON.stringify(tmp["weightMatrix"]))
-            var param = await tuneParameter(dataList,8, calculateDate , tmp["kVal"],10,tmp["sliceSize"],tmp["brenchMark"], tmp["weightMatrix"])
-            resultPush.push(param)
-        }));
-        console.log("end "+resultPush.length)
-       // return []
-    
-    var bestCase = resultPush.sort(function(a, b) {
-        var keyA = a.diff,
-        keyB = b.diff;
-        // Compare the 2 dates
-        if (keyA < keyB) return 1;
-        if (keyA > keyB) return -1;
-        return 0;
-    })
-    
-    console.log("----")
-    console.log("best Case")
-    console.table(bestCase)
-    console.log("----")
-    
-    return bestCase[0]
-    
+    }*/
+      
 
-}
-
-async function getTotalResultDate(startDate){
-    var totalResult = []
-    for(var i=0;i<10;i++){
-        var matchDate = bcUtils.generateDateWithStart(startDate,i)
-        data = await getParameter(matchDate)
-        totalResult.push(data)
-    }
-    console.table(totalResult)
-    fs.writeFileSync("result.json", JSON.stringify(totalResult,null,2))
-}
-//getTotalResultDate("20201220")
-
-async function getResult(){
-    let ftUtils = new filterUtils()
-    let dataList = ftUtils.getUpdateData()
     var kVal = 5.5
     var sliceSize =8
     var brench = 0.7
 
 
     var array = [
-        
         [1  , 1,    1 , 1,     1 , 1     , 1]
-       /*
-        [2  , 1,   0.5,0.5,    1 , 1      ,1],
-        */
-        //[1  , 1,     1,  1,  0.5 , 0.5    ,2]
-      /*
-        [1  , 1,   0.5,0.5,    1 , 1      ,2]
-
-        [1  , 1,     1,  1,  0.5 , 0.5    ,2],
-        [0.5, 2,    1 , 1,     1 , 1      ,0.5],
-        [1, 2,    0.5 , 0.5,     1 , 1      ,1],
-        [1, 2,    1 , 1,     0.5 ,0.5      ,1]
-        */
     ]
     
 
@@ -398,7 +345,73 @@ async function getResult(){
         "endPointDiff":array[0][1]/7,
         "rangeTime":array[0][6]/7
     }
-    var param = await tuneParameter(dataList,1,"20201219", kVal,10,sliceSize,brench,
+    var param = await tuneParameter(dataList,1,calculateDate, kVal,10,sliceSize,brench,tmpSquare)
+    /*
+     await Promise.all(kValArr.map(async (tmp) => {
+            console.log("st "+ tmp["kVal"] + " "+ tmp["kVal"]+ " "+tmp["brenchMark"] + " " +JSON.stringify(tmp["weightMatrix"]))
+            var param = await tuneParameter(dataList,1, calculateDate , tmp["kVal"],10,tmp["sliceSize"],tmp["brenchMark"], tmp["weightMatrix"])
+            resultPush.push(param)
+    }));
+    */
+   resultPush.push(param)
+   console.log("end "+resultPush.length)
+     
+    
+    var bestCase = resultPush.sort(function(a, b) {
+        var keyA = a.diff,
+        keyB = b.diff;
+        // Compare the 2 dates
+        if (keyA < keyB) return 1;
+        if (keyA > keyB) return -1;
+        return 0;
+    })
+    
+    console.log("----")
+    console.log("best Case")
+    console.table(bestCase.length)
+    
+    console.log("----")
+    
+    return bestCase[0]
+    
+
+}
+
+async function getTotalResultDate(startDate){
+    var totalResult = []
+    for(var i=0;i<60;i++){
+        var matchDate = bcUtils.generateDateWithStart(startDate,i)
+        data = await getParameter(matchDate)
+        totalResult.push(data)
+    }
+    console.table(totalResult)
+   // fs.writeFileSync("result.json", JSON.stringify(totalResult,null,2))
+}
+//getTotalResultDate("20201220")
+
+async function getResult(){
+    let ftUtils = new filterUtils()
+    let dataList = ftUtils.getUpdateData()
+    var kVal = 5.5
+    var sliceSize =8
+    var brench = 0.7
+
+
+    var array = [
+        [1  , 1,    1 , 1,     1 , 1     , 1]
+    ]
+    
+
+    var tmpSquare = {
+        "startOddHome":array[0][2]/7,
+        "startOddAway":array[0][3]/7,
+        "endOddHome":array[0][4]/7,
+        "endOddAway":array[0][5]/7,
+        "startPointDiff":array[0][0]/7,
+        "endPointDiff":array[0][1]/7,
+        "rangeTime":array[0][6]/7
+    }
+    var param = await tuneParameter(dataList,1,"20201113", kVal,10,sliceSize,brench,
     tmpSquare
     )
     console.table([param])

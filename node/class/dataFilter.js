@@ -769,9 +769,7 @@ class dataFilter extends dataCommonClass{
                     return 0;
                 })
                 tmpList = tmpList.slice(0, sliceSize)  
-                console.log("----")
-                console.table([match])
-                console.table(tmpList)
+
                 var knTotal = 0
                 for(var i=0;i<tmpList.length;i++){
                     knTotal += tmpList[i].kNVal
@@ -946,7 +944,23 @@ class dataFilter extends dataCommonClass{
                var endPointChange = (this.getOddIdx(workingList[i].kN["startOdd"].point)-this.getOddIdx(workingList[i].kN["endOdd"].point))
 
 
-                if( Math.abs(match.rangeTime - workingList[i].rangeTime)<5 && (startPointChange == endPointChange)){
+                if( Math.abs(match.rangeTime - workingList[i].rangeTime)<5 &&  
+                (startPointChange == endPointChange) &&
+                (match.kN["endOdd"].point.includes("受让") && workingList[i].kN["endOdd"].point.includes("受让") ||
+                !match.kN["endOdd"].point.includes("受让") && !workingList[i].kN["endOdd"].point.includes("受让") 
+                ) && 
+                (
+                    (
+                        workingList[i].kN["endOdd"].home - workingList[i].kN["endOdd"].away > 0 && 
+                        match.kN["endOdd"].home - match.kN["endOdd"].away > 0 
+                    ) ||
+                    (
+                        workingList[i].kN["endOdd"].home - workingList[i].kN["endOdd"].away <= 0 && 
+                        match.kN["endOdd"].home - match.kN["endOdd"].away <= 0 
+                    ) 
+                )
+
+                ){
                     var total = 0
 
                     var endOddMatchHome = parseFloat(match.kN["endOdd"].home)/(parseFloat(match.kN["endOdd"].home) +parseFloat(match.kN["endOdd"].away ))
@@ -1003,6 +1017,10 @@ class dataFilter extends dataCommonClass{
                     delete rtnVal[rtnVal.length-1].matchDateM
                     delete rtnVal[rtnVal.length-1].league
                     delete rtnVal[rtnVal.length-1].kN
+                    delete rtnVal[rtnVal.length-1].matchData
+                    delete rtnVal[rtnVal.length-1].date
+                    delete rtnVal[rtnVal.length-1].home
+                    delete rtnVal[rtnVal.length-1].away
                 }
             }
         }
