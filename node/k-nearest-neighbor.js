@@ -379,7 +379,7 @@ async function getParameter(calculateDate){
 
 async function getTotalResultDate(startDate){
     var totalResult = []
-    for(var i=0;i<60;i++){
+    for(var i=0;i<20;i++){
         var matchDate = bcUtils.generateDateWithStart(startDate,i)
         data = await getParameter(matchDate)
         totalResult.push(data)
@@ -387,7 +387,7 @@ async function getTotalResultDate(startDate){
     console.table(totalResult)
    // fs.writeFileSync("result.json", JSON.stringify(totalResult,null,2))
 }
-//getTotalResultDate("20201220")
+getTotalResultDate("20201220")
 
 async function getResult(){
     let ftUtils = new filterUtils()
@@ -411,10 +411,10 @@ async function getResult(){
         "endPointDiff":array[0][1]/7,
         "rangeTime":array[0][6]/7
     }
-    var param = await tuneParameter(dataList,1,"20201113", kVal,10,sliceSize,brench,
+    var param = await tuneParameter(dataList,1,"20201201", kVal,10,sliceSize,brench,
     tmpSquare
     )
     console.table([param])
 
 }
-getResult()
+//getResult()

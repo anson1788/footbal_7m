@@ -959,7 +959,6 @@ class dataFilter extends dataCommonClass{
                         match.kN["endOdd"].home - match.kN["endOdd"].away <= 0 
                     ) 
                 )
-
                 ){
                     var total = 0
 

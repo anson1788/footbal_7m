@@ -21,10 +21,11 @@ async function getCacheData(url, folder, cacheId , type ,isCache = true){
         let rawdata = fs.readFileSync(folder+cacheId+".json");
         rtnArr = JSON.parse(rawdata);   
     }else{        
-        
+        const timeout = ms => new Promise(resolve => setTimeout(resolve, ms))
         try{
                 console.log(url)
                 dom = await bcUtils.getHttpDomAsyn(url,type) 
+                await timeout(1000)
                 if(type=="bflist"){
                     rtnArr = await bfUtils.parseBFDailyList(dom)  
                 }else if(type=="bfDetails"){
@@ -62,7 +63,8 @@ async function init(defaultRange=50){
 
     var total = 0
     var targetMatch = []
-    for(var i=5;i<defaultRange;i++){
+
+    for(var i=10;i<defaultRange;i++){
 
         var matchDate = bcUtils.generateDate(i)
         var url = "http://bf.win007.com/football/big/Over_%d.htm".replace("%d",matchDate)
@@ -119,13 +121,25 @@ async function init(defaultRange=50){
                 var url = "http://vip.win007.com/AsianOdds_n.aspx?id="+bfDailyArr[j].id
                 var OddData =  await getCacheData(url,"bfData/odd/"+matchDate+"/",  bfDailyArr[j].id ,"bfOdd")
                 matchData.OddData = OddData
-                if(matchData.OddData.length > 0 && typeof(matchData.OddData[0]["香港马会"])!="undefined"){
+ 
+                //if(matchData.OddData.length > 0 && typeof(matchData.OddData[0]["香港马会"])!="undefined"){
+                if(matchData.OddData.length > 0 && typeof(matchData.OddData[0]["澳门"])!="undefined"){
                     halfHKJCMap ++ ;
                     
 
-                    var oddHis = "http://vip.win007.com/changeDetail/handicap.aspx?id="+bfDailyArr[j].id+"&companyID=48&l=0"
-                    var oddHistory =  await getCacheData(oddHis,"bfData/oddHistory/"+matchDate+"/",  bfDailyArr[j].id ,"oddHistory")
-                    matchData.oddHistory = oddHistory
+                    //var oddHis = "http://vip.win007.com/changeDetail/handicap.aspx?id="+bfDailyArr[j].id+"&companyID=48&l=0"
+                    var oddHisMO = "http://vip.win007.com/changeDetail/handicap.aspx?id="+bfDailyArr[j].id+"&companyID=1&l=0"
+                    var oddHistoryMO =  await getCacheData(oddHisMO,"bfData/oddHistoryMO/"+matchDate+"/",  bfDailyArr[j].id ,"oddHistory")
+                    matchData.oddHistoryMO = oddHistoryMO
+                
+
+                    if(matchData.OddData.length > 0 && typeof(matchData.OddData[0]["香港马会"])!="undefined"){
+                        var oddHis = "http://vip.win007.com/changeDetail/handicap.aspx?id="+bfDailyArr[j].id+"&companyID=48&l=0"
+                        var oddHistory =  await getCacheData(oddHis,"bfData/oddHistory/"+matchDate+"/",  bfDailyArr[j].id ,"oddHistory")
+                        matchData.oddHistory = oddHistory
+                  
+                    }
+
                     /*
                     var url = bfDailyArr[j].url
                     var inMatchData =  await getCacheData(url,"bfData/matchData/"+matchDate+"/",  bfDailyArr[j].id ,"bfDetails")

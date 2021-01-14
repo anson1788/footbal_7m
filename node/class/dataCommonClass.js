@@ -703,7 +703,8 @@ class dataCommomClass {
                 "s6":this.getMaxMinObj(S6Arr),
                 "s9":this.getMaxMinObj(S9Arr),
                 "endOdd":dataList[i].oddHistory[0],
-                "startOdd":dataList[i].oddHistory[dataList[i].oddHistory.length-1]
+                "startOdd":dataList[i].oddHistory[dataList[i].oddHistory.length-1],
+                "oddOL":dataList[i].oddHistory.length
             }
 
             var endOdd = this.timeFormatToMoment(dataList[i].date.replace("-","/"))
