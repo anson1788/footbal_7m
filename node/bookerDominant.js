@@ -227,115 +227,60 @@ async function calculateExpectedDate(targetDate,dataList, KVal,backwardDateRange
     
 }
 
-async function tuneParameter(dataList,defaultRange,startDate,KVal,backwardDateRange, sliceSize,brench,parameterWeight){
-    var dateResult = []
-    console.table([{
-        "kVal":KVal,
-        "sliceSize":sliceSize,
-        "brench":brench
-    }])
-    for(var i=0;i<defaultRange;i++){
-        var matchDate = bcUtils.generateDateWithStart(startDate,i)
-        var dateResultSingle = await calculateExpectedDate(matchDate,dataList,KVal,backwardDateRange, sliceSize,brench,parameterWeight)
-        dateResult.push(dateResultSingle[0])
-        
-    }
-     var totalWin = 0
-     var totalWinHalf = 0
-     var totalLost = 0
-     var totalLostHalf = 0
-     for(var i=0;i<dateResult.length;i++){
-        totalWin += dateResult[i]["贏"]
-        totalLost += dateResult[i]["輸"]
-        totalWinHalf+= dateResult[i]["贏半"]
-        totalLostHalf+= dateResult[i]["輸半"]
+async function tuneParameter(dataList,startDate){
+    var targetDateList = []
+    for(var i=0;i<dataList.length;i++){
+        if(dataList[i].matchData== startDate)
+            targetDateList.push(dataList[i])
     }
  
-    return {
-            "totalWin":totalWin,
-            "totalWinHalf":totalWinHalf,
-            "totalLostHalf":totalLostHalf,
-            "totalLost":totalLost,
-            "diff":(totalWin+totalWinHalf*0.5-(totalLost+totalLostHalf*0.5)),
-            "startDate":startDate,
-            "backwardDateRange":backwardDateRange, 
-            "KVal":KVal,
-            "sliceSize":sliceSize,
-            "brench":brench
+    var betArr = bfUtils.pickUpBetting(targetDateList)
+    var result = []
+    for(var key in betArr){
+        betArr[key].id = key
+        result.push(betArr[key])
     }
 
+    var count = {
+        "輸":0,
+        "輸半":0,
+        "走":0,
+        "贏半":0,
+        "贏":0,
+        "total":0
+    }
+
+    for(var i=0;i<result.length;i++){
+        for(var keyB in count){
+            if(keyB==result[i]["result"]){
+                count[keyB]++
+            }
+        }
+    }
+    console.table(count)
+    console.table(result)
+    return 0 
 
 }
 
-async function getParameter(calculateDate){
-            
-    let ftUtils = new filterUtils()
-    let dataList = ftUtils.getUpdateData()
-
-
-    var resultPush = []
-
-    var kValArr = []
-    var sliceArr = []
+async function getParameter(dataList,calculateDate){
    
 
-    var kVal = 5.5
-    var sliceSize =8
-    var brench = 0.7
-
-
-    var array = [
-        [1  , 1,    1 , 1,     1 , 1     , 1]
-    ]
+    var param = await tuneParameter(dataList,calculateDate)
     
-
-    var tmpSquare = {
-        "startOddHome":array[0][2]/7,
-        "startOddAway":array[0][3]/7,
-        "endOddHome":array[0][4]/7,
-        "endOddAway":array[0][5]/7,
-        "startPointDiff":array[0][0]/7,
-        "endPointDiff":array[0][1]/7,
-        "rangeTime":array[0][6]/7
-    }
-    var param = await tuneParameter(dataList,1,calculateDate, kVal,10,sliceSize,brench,tmpSquare)
-    /*
-     await Promise.all(kValArr.map(async (tmp) => {
-            console.log("st "+ tmp["kVal"] + " "+ tmp["kVal"]+ " "+tmp["brenchMark"] + " " +JSON.stringify(tmp["weightMatrix"]))
-            var param = await tuneParameter(dataList,1, calculateDate , tmp["kVal"],10,tmp["sliceSize"],tmp["brenchMark"], tmp["weightMatrix"])
-            resultPush.push(param)
-    }));
-    */
-   resultPush.push(param)
-   console.log("end "+resultPush.length)
-     
-    
-    var bestCase = resultPush.sort(function(a, b) {
-        var keyA = a.diff,
-        keyB = b.diff;
-        // Compare the 2 dates
-        if (keyA < keyB) return 1;
-        if (keyA > keyB) return -1;
-        return 0;
-    })
-    
-    console.log("----")
-    console.log("best Case")
-    console.table(bestCase.length)
-    
-    console.log("----")
-    
-    return bestCase[0]
-    
+    return 0;
 
 }
 
 async function getTotalResultDate(startDate){
     var totalResult = []
+                
+    let ftUtils = new filterUtils()
+    let dataList = ftUtils.getPureData()
+
     for(var i=0;i<20;i++){
         var matchDate = bcUtils.generateDateWithStart(startDate,i)
-        console.log(matchDate)
-        //data = await getParameter(matchDate)
+        var data = await getParameter(dataList,matchDate)
         //totalResult.push(data)
     }
     //console.table(totalResult)

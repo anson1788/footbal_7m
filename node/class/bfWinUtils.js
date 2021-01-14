@@ -1,4 +1,5 @@
 var moment = require('moment');
+let filterUtils = require('./dataFilterStable.js');
 class bfWinUtils {
 
     constructor() {
@@ -20,6 +21,63 @@ class bfWinUtils {
             });
         return d3
     }
+
+
+    pickUpBetting(targetDateList){
+        var betPlacement = {}
+        let ftUtils = new filterUtils()
+        for(var i=0;i<targetDateList.length;i++){
+            var data = this.pickUpBettingPositionForSingleMatch(targetDateList[i])
+            if(data["id"] !== undefined){
+                betPlacement[data["id"]] = {}
+                betPlacement[data["id"]].betOn = data["Placement"]
+                betPlacement[data["id"]].Odd = data["Odd"]
+                betPlacement[data["id"]].point = data["point"]
+                betPlacement[data["id"]].spoint = data["spoint"]
+                var result = ftUtils.calculatedSingleMatchLiner({
+                    "homeFS":targetDateList[i].HomeFScore,
+                    "awayFS":targetDateList[i].AwayFScore,
+                    'betOn':data["Placement"],
+                    "point":targetDateList[i].OddData[0]["澳门"]["end"]["point"]
+                })
+                betPlacement[data["id"]].result = result
+            }
+        }
+        return betPlacement
+    }
+
+
+    pickUpBettingPositionForSingleMatch(singleMatch){
+        var hkjcOddData = singleMatch.OddData[0]["澳门"]
+        var betOn = {}
+        if(hkjcOddData["start"]["point"]==hkjcOddData["end"]["point"]){
+            if(singleMatch.id=="1936146"){
+                console.log(JSON.stringify(singleMatch))
+            }
+            var homeDiff = parseFloat(hkjcOddData["end"]["home"]) - parseFloat(hkjcOddData["start"]["home"])
+            var awayDiff = parseFloat(hkjcOddData["end"]["away"]) - parseFloat(hkjcOddData["start"]["away"])
+
+            var total = 1/parseFloat(hkjcOddData["end"]["home"]) + 1/parseFloat(hkjcOddData["end"]["away"])
+            if(homeDiff>awayDiff  && awayDiff <0 && homeDiff>0){
+                betOn.Placement = "主"
+                betOn.Odd =  1/parseFloat(hkjcOddData["end"]["home"])/total
+                betOn.id = singleMatch.id
+                betOn.point = hkjcOddData["end"]["point"]
+                betOn.spoint = hkjcOddData["start"]["point"]
+            }
+            if(homeDiff<awayDiff   && awayDiff >0 && homeDiff<0){
+                betOn.Placement = "客"
+                betOn.Odd =  1/parseFloat(hkjcOddData["end"]["away"])/total
+                betOn.id = singleMatch.id
+                betOn.point = hkjcOddData["end"]["point"]
+                betOn.spoint = hkjcOddData["start"]["point"]
+            }
+        }
+        return betOn
+    }
+
+
+
 
     async parseOddHistory(crtDom){
         var rtnVal = []

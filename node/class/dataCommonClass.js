@@ -407,6 +407,65 @@ class dataCommomClass {
     }
 
 
+    calculatedSingleMatchLiner(dataStructue){
+       // console.log(JSON.stringify(dataStructue))
+       // dataStructue("point")
+        var oddIdx = this.getOddIdx(dataStructue["point"])
+        var oddDis = this.getAsianOdd(oddIdx)
+        var firstOdd = parseFloat(oddDis.split("/")[0])
+        var secondOdd =  parseFloat(oddDis.split("/")[0])
+        if(oddDis.split("/").length>1){
+            secondOdd = parseFloat(oddDis.split("/")[1])
+        }
+
+
+        var hfScore = parseFloat(dataStructue["homeFS"])
+        var afScore = parseFloat(dataStructue["awayFS"])
+
+        var adH1afScore = afScore + firstOdd
+        var adH2afScore = afScore + secondOdd
+        
+        var w1 = 0
+        var w2 = 0
+        if(dataStructue["betOn"] == "主"){
+            if(hfScore > adH1afScore){
+                w1 = 1
+            }else if(hfScore<adH1afScore){
+                w1 = -1
+            }
+            if(hfScore > adH2afScore){
+                w2 = 1
+            }else if(hfScore<adH2afScore){
+                w2 = -1
+            }
+        }else{
+            if(hfScore < adH1afScore){
+                w1 = 1
+            }else if(hfScore > adH1afScore){
+                w1 = -1
+            }
+            if(hfScore < adH2afScore){
+                w2 = 1
+            }else if(hfScore>adH2afScore){
+                w2 = -1
+            }
+        }
+
+        var result = ""
+        if(w1+w2 == 2 ){
+            result = "贏"
+        }else if(w1+w2 == -2 ){
+            result = "輸"
+        }else if(w1 == 0  && w2 == 0 ){
+            result = "走"
+        }else if(w1+w2 == 1 ){
+            result = "贏半"
+        }else if(w1+w2 == -1 ){
+            result = "輸半"
+        }
+        return result
+    }
+
     calculateResultAsianOdd(rtnVal, betOn="上"){
         var workingList = this.deepClone(rtnVal)
         var count = {
@@ -601,6 +660,12 @@ class dataCommomClass {
         }
     }
     return resultArr
+  }
+
+  getPureData(){
+    let rawdata = fs.readFileSync("oddBook.json");
+    var dataList = JSON.parse(rawdata)
+    return dataList
   }
 
   getUpdateData(){
